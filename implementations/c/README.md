@@ -1,0 +1,62 @@
+# C
+
+Language target ID: `c`
+
+Runtime family: systems
+
+Primary extension: `.c`
+
+Expected runtime/toolchain: native
+
+## Coverage
+
+- Planned algorithms: 1000
+- Generated catalog-adapter records: 1000
+- Verified implementations: 7
+- Status: partial verified
+
+## Full-Catalog Adapter
+
+This language target has a generated full-catalog adapter at:
+
+```text
+implementations/c/catalog/algorithms.json
+```
+
+That adapter contains all 1000 GRIMOIRE records for C. It is meant for discovery, code generation, docs, and audit tooling. It is not counted as a native algorithm implementation.
+
+## Verified Cells
+
+- Boyer-Moore (`boyermoore`): `gcc implementations/c/string-search/boyermoore/boyer_moore.c -DTEST -o output/implementation-tests/boyermoore_c.exe && .\output\implementation-tests\boyermoore_c.exe`
+- Jump Consistency Hashing (`jumphash`): `gcc implementations/c/hashing/jumphash/jump_hash.c -DTEST -o output/implementation-tests/jumphash_c.exe && .\output\implementation-tests\jumphash_c.exe`
+- Reservoir Sampling (`reservoir`): `gcc implementations/c/sampling/reservoir/reservoir.c -DTEST -o output/implementation-tests/reservoir_c.exe && .\output\implementation-tests\reservoir_c.exe`
+- Cycle Sort (`cyclesort`): `gcc implementations/c/sorting/cyclesort/cyclesort.c -DTEST -o output/implementation-tests/cyclesort_c.exe && .\output\implementation-tests\cyclesort_c.exe`
+- Stooge Sort (`stoogesort`): `gcc implementations/c/sorting/stoogesort/stoogesort.c -o output/implementation-tests/stoogesort_c.exe && .\output\implementation-tests\stoogesort_c.exe`
+- Cocktail Shaker Sort (`cocktail`): `gcc implementations/c/sorting/cocktail/cocktail_sort.c -DTEST -o output/implementation-tests/cocktail_c.exe && .\output\implementation-tests\cocktail_c.exe`
+- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `gcc implementations/c/string-search/v8-knuth-morris-pratt-d7l8/kmp.c -o output/implementation-tests/kmp_c.exe && .\output\implementation-tests\kmp_c.exe`
+
+## Required Shape For Each Algorithm
+
+Future algorithm folders under this language must include real runnable code, not decorative pseudocode. Every implementation must document:
+
+- input/output contract
+- algorithm family and catalog record ID
+- time and space complexity
+- test command
+- source/provenance note
+- limitations and non-goals
+
+## First Recommended Batch
+
+Start with algorithms that are small, testable, and useful across languages:
+
+1. Boyer-Moore
+2. Bloom Filter
+3. Reservoir Sampling
+4. Cycle Sort
+5. Jump Consistent Hashing
+6. A* Search
+7. HyperLogLog
+8. Union-Find / Disjoint Set
+9. Dijkstra Shortest Path
+10. Fast Inverse Square Root

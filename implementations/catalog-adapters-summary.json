@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-05T06:52:07.394Z",
+  "catalogVersion": "0.9.13-local",
+  "adapterKind": "grimoire-language-catalog-adapter",
+  "languageCount": 50,
+  "recordsPerLanguage": 1000,
+  "adapterCells": 50000,
+  "status": "generated-full-catalog",
+  "languages": [
+    {
+      "languageId": "javascript",
+      "languageName": "JavaScript",
+      "path": "implementations/javascript/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "typescript",
+      "languageName": "TypeScript",
+      "path": "implementations/typescript/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "python",
+      "languageName": "Python",
+      "path": "implementations/python/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "java",
+      "languageName": "Java",
+      "path": "implementations/java/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "c",
+      "languageName": "C",
+      "path": "implementations/c/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "cpp",
+      "languageName": "C++",
+      "path": "implementations/cpp/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "csharp",
+      "languageName": "C#",
+      "path": "implementations/csharp/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "go",
+      "languageName": "Go",
+      "path": "implementations/go/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "rust",
+      "languageName": "Rust",
+      "path": "implementations/rust/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "kotlin",
+      "languageName": "Kotlin",
+      "path": "implementations/kotlin/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "swift",
+      "languageName": "Swift",
+      "path": "implementations/swift/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "ruby",
+      "languageName": "Ruby",
+      "path": "implementations/ruby/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "php",
+      "languageName": "PHP",
+      "path": "implementations/php/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "r",
+      "languageName": "R",
+      "path": "implementations/r/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "julia",
+      "languageName": "Julia",
+      "path": "implementations/julia/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "scala",
+      "languageName": "Scala",
+      "path": "implementations/scala/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "dart",
+      "languageName": "Dart",
+      "path": "implementations/dart/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "lua",
+      "languageName": "Lua",
+      "path": "implementations/lua/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "perl",
+      "languageName": "Perl",
+      "path": "implementations/perl/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "bash",
+      "languageName": "Bash",
+      "path": "implementations/bash/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "powershell",
+      "languageName": "PowerShell",
+      "path": "implementations/powershell/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "sql",
+      "languageName": "SQL",
+      "path": "implementations/sql/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "matlab-octave",
+      "languageName": "MATLAB / Octave",
+      "path": "implementations/matlab-octave/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "haskell",
+      "languageName": "Haskell",
+      "path": "implementations/haskell/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "elixir",
+      "languageName": "Elixir",
+      "path": "implementations/elixir/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "erlang",
+      "languageName": "Erlang",
+      "path": "implementations/erlang/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "clojure",
+      "languageName": "Clojure",
+      "path": "implementations/clojure/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "fsharp",
+      "languageName": "F#",
+      "path": "implementations/fsharp/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "ocaml",
+      "languageName": "OCaml",
+      "path": "implementations/ocaml/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "zig",
+      "languageName": "Zig",
+      "path": "implementations/zig/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "nim",
+      "languageName": "Nim",
+      "path": "implementations/nim/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "crystal",
+      "languageName": "Crystal",
+      "path": "implementations/crystal/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "d",
+      "languageName": "D",
+      "path": "implementations/d/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "ada",
+      "languageName": "Ada",
+      "path": "implementations/ada/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "fortran",
+      "languageName": "Fortran",
+      "path": "implementations/fortran/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "cobol",
+      "languageName": "COBOL",
+      "path": "implementations/cobol/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "common-lisp",
+      "languageName": "Common Lisp",
+      "path": "implementations/common-lisp/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "scheme",
+      "languageName": "Scheme",
+      "path": "implementations/scheme/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "racket",
+      "languageName": "Racket",
+      "path": "implementations/racket/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "prolog",
+      "languageName": "Prolog",
+      "path": "implementations/prolog/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "objective-c",
+      "languageName": "Objective-C",
+      "path": "implementations/objective-c/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "groovy",
+      "languageName": "Groovy",
+      "path": "implementations/groovy/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "visual-basic",
+      "languageName": "Visual Basic .NET",
+      "path": "implementations/visual-basic/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "vba",
+      "languageName": "VBA",
+      "path": "implementations/vba/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "solidity",
+      "languageName": "Solidity",
+      "path": "implementations/solidity/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "move",
+      "languageName": "Move",
+      "path": "implementations/move/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "assembly-x86-64",
+      "languageName": "x86-64 Assembly",
+      "path": "implementations/assembly-x86-64/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "webassembly-wat",
+      "languageName": "WebAssembly Text",
+      "path": "implementations/webassembly-wat/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "cuda-cpp",
+      "languageName": "CUDA C++",
+      "path": "implementations/cuda-cpp/catalog/algorithms.json",
+      "recordCount": 1000
+    },
+    {
+      "languageId": "verilog-systemverilog",
+      "languageName": "Verilog / SystemVerilog",
+      "path": "implementations/verilog-systemverilog/catalog/algorithms.json",
+      "recordCount": 1000
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use, fork, study, remix, or cite this project, preserve attribution to the creator and rights holder."
+title: "GRIMOIRE - Algorithms of the Arcane"
+version: "0.9.13-local"
+date-released: "2026-07-05"
+authors:
+  - family-names: "Donahue"
+    given-names: "Alexander"
+    affiliation: "0thernes LLC"
+repository-code: "https://github.com/0thernes/grimoire-algorithms-of-the-arcane"
+license: "LicenseRef-PolyForm-Noncommercial-1.0.0 AND CC-BY-NC-SA-4.0"
+abstract: "A static 1000-record algorithm atlas with visual, sonic, source, and 50-language implementation matrix scaffolds."
