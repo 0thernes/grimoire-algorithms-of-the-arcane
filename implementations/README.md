@@ -9,7 +9,7 @@ Current status: scaffold plus first verified implementation cells. The matrix in
 - Algorithms/records: 1000
 - Language/script targets: 50
 - Planned implementation cells: 50000
-- Current verified implementation cells: 13
+- Current verified implementation cells: 14
 - Verification ledger: `implementations/verified-cells.json`
 
 ## Folder Convention

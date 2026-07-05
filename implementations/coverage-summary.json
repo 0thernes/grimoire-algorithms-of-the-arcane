@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-05T02:32:32.273Z",
+  "generatedAt": "2026-07-05T02:37:43.400Z",
   "catalogVersion": "0.9.13-local",
   "recordCount": 1000,
   "languageCount": 50,
   "plannedCells": 50000,
-  "verifiedCells": 13,
+  "verifiedCells": 14,
   "status": "partial-verified",
   "coverageByLanguage": [
     {
@@ -201,8 +201,8 @@
       "languageId": "fsharp",
       "languageName": "F#",
       "planned": 1000,
-      "verified": 0,
-      "status": "planned"
+      "verified": 1,
+      "status": "partial"
     },
     {
       "languageId": "ocaml",
@@ -364,7 +364,7 @@
       "engine": "graph",
       "records": 135,
       "plannedCells": 6750,
-      "verifiedCells": 13
+      "verifiedCells": 14
     },
     {
       "engine": "logic",

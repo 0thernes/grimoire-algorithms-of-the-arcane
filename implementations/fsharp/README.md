@@ -11,12 +11,12 @@ Expected runtime/toolchain: .NET
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 0
-- Status: planned scaffold
+- Verified implementations: 1
+- Status: partial verified
 
 ## Verified Cells
 
-- None yet.
+- Boyer-Moore (`boyermoore`): `dotnet build implementations/fsharp/string-search/boyermoore/BoyerMoore.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin/ && dotnet .\output\implementation-tests\fsharp-bin\BoyerMoore.dll`
 
 ## Required Shape For Each Algorithm
 

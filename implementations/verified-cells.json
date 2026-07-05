@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "catalogVersion": "0.9.13-local",
-  "generatedAt": "2026-07-05T02:32:20.289Z",
+  "generatedAt": "2026-07-05T02:37:09.474Z",
   "verificationPolicy": "A cell is verified only when its source files exist and its testCommand passes locally.",
   "verifiedCells": [
     {
@@ -98,6 +98,23 @@
       ],
       "readme": "implementations/csharp/string-search/boyermoore/README.md",
       "testCommand": "dotnet build implementations/csharp/string-search/boyermoore/BoyerMoore.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin/ && dotnet .\\output\\implementation-tests\\csharp-bin\\BoyerMoore.dll",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "fsharp:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "fsharp",
+      "sourceFiles": [
+        "implementations/fsharp/string-search/boyermoore/Program.fs",
+        "implementations/fsharp/string-search/boyermoore/BoyerMoore.fsproj"
+      ],
+      "readme": "implementations/fsharp/string-search/boyermoore/README.md",
+      "testCommand": "dotnet build implementations/fsharp/string-search/boyermoore/BoyerMoore.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin/ && dotnet .\\output\\implementation-tests\\fsharp-bin\\BoyerMoore.dll",
       "verifiedAt": "2026-07-05",
       "status": "verified-local"
     },

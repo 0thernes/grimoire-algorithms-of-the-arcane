@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T02:34:25.640Z",
+  "generatedAt": "2026-07-05T02:38:37.342Z",
   "target": "objective requirement evidence audit",
   "version": "0.9.13-local",
   "status": "verified-with-open-blockers",
@@ -123,7 +123,7 @@
       "status": "verified",
       "languageTargets": 50,
       "plannedCells": 50000,
-      "verifiedCells": 13
+      "verifiedCells": 14
     },
     {
       "id": "implementation-tests",
@@ -134,8 +134,8 @@
         "output/implementation-tests/implementation-test-summary.json"
       ],
       "status": "verified",
-      "totalCells": 13,
-      "passed": 13,
+      "totalCells": 14,
+      "passed": 14,
       "failed": 0
     },
     {
@@ -218,8 +218,8 @@
         "output/pages-artifact/pages-artifact-audit-summary.json"
       ],
       "status": "verified",
-      "siteFileCount": 137,
-      "siteBytes": 7316602,
+      "siteFileCount": 140,
+      "siteBytes": 7322130,
       "siteRemovedAfterAudit": true
     },
     {
@@ -287,7 +287,7 @@
       ],
       "status": "open",
       "plannedCells": 50000,
-      "verifiedCells": 13
+      "verifiedCells": 14
     }
   ],
   "issues": [],

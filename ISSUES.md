@@ -4,7 +4,7 @@
 
 1. Per-record historical bibliography slots are now present, but unfilled. The active source-class ledger keeps current context rows honest; individual records still need record-specific citations before naming inventors, exact first-publication dates, primary users, or deployments.
 2. Some categories are broad by design; future audit should split any group that becomes too blended.
-3. The 1000 x 50 implementation matrix is still mostly scaffold. It has 50,000 planned cells, 13 locally verified Boyer-Moore cells, and 49,987 cells still requiring real code, tests, complexity notes, and provenance notes.
+3. The 1000 x 50 implementation matrix is still mostly scaffold. It has 50,000 planned cells, 14 locally verified Boyer-Moore cells, and 49,986 cells still requiring real code, tests, complexity notes, and provenance notes.
 
 ## Closed
 

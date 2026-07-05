@@ -9,7 +9,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Catalog records | 1000 |
 | Language/script targets | 50 |
 | Planned implementation cells | 50000 |
-| Verified implementation cells | 13 |
+| Verified implementation cells | 14 |
 
 ## Language Targets
 
@@ -42,7 +42,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Elixir | `elixir` | actor/concurrent | `.ex` | 1000 | 0 |
 | Erlang | `erlang` | actor/concurrent | `.erl` | 1000 | 0 |
 | Clojure | `clojure` | Lisp/JVM | `.clj` | 1000 | 0 |
-| F# | `fsharp` | functional .NET | `.fs` | 1000 | 0 |
+| F# | `fsharp` | functional .NET | `.fs` | 1000 | 1 |
 | OCaml | `ocaml` | ML functional | `.ml` | 1000 | 0 |
 | Zig | `zig` | systems | `.zig` | 1000 | 0 |
 | Nim | `nim` | systems scripting | `.nim` | 1000 | 0 |
@@ -70,7 +70,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 
 | Engine | Records | Planned Cells | Verified Cells |
 |---|---:|---:|---:|
-| graph | 135 | 6750 | 13 |
+| graph | 135 | 6750 | 14 |
 | logic | 122 | 6100 | 0 |
 | probability | 122 | 6100 | 0 |
 | optimization | 104 | 5200 | 0 |
@@ -95,6 +95,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Boyer-Moore | `boyermoore` | powershell | string-search | `pwsh -NoProfile -File implementations/powershell/string-search/boyermoore/test.ps1` |
 | Boyer-Moore | `boyermoore` | java | string-search | `javac -d output/implementation-tests implementations/java/string-search/boyermoore/BoyerMoore.java && java -cp output/implementation-tests BoyerMoore` |
 | Boyer-Moore | `boyermoore` | csharp | string-search | `dotnet build implementations/csharp/string-search/boyermoore/BoyerMoore.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin/ && dotnet .\output\implementation-tests\csharp-bin\BoyerMoore.dll` |
+| Boyer-Moore | `boyermoore` | fsharp | string-search | `dotnet build implementations/fsharp/string-search/boyermoore/BoyerMoore.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin/ && dotnet .\output\implementation-tests\fsharp-bin\BoyerMoore.dll` |
 | Boyer-Moore | `boyermoore` | c | string-search | `gcc implementations/c/string-search/boyermoore/boyer_moore.c -DTEST -o output/implementation-tests/boyermoore_c.exe && .\output\implementation-tests\boyermoore_c.exe` |
 | Boyer-Moore | `boyermoore` | cpp | string-search | `g++ implementations/cpp/string-search/boyermoore/boyer_moore.cpp -std=c++17 -o output/implementation-tests/boyermoore_cpp.exe && .\output\implementation-tests\boyermoore_cpp.exe` |
 | Boyer-Moore | `boyermoore` | go | string-search | `go run implementations/go/string-search/boyermoore/boyer_moore.go` |
