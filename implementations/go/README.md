@@ -11,12 +11,15 @@ Expected runtime/toolchain: native
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 1
+- Verified implementations: 4
 - Status: partial verified
 
 ## Verified Cells
 
 - Boyer-Moore (`boyermoore`): `go run implementations/go/string-search/boyermoore/boyer_moore.go`
+- Jump Consistency Hashing (`jumphash`): `go run implementations/go/hashing/jumphash/jump_hash.go`
+- Reservoir Sampling (`reservoir`): `go run implementations/go/sampling/reservoir/reservoir.go`
+- Cycle Sort (`cyclesort`): `go run implementations/go/sorting/cyclesort/cyclesort.go`
 
 ## Required Shape For Each Algorithm
 

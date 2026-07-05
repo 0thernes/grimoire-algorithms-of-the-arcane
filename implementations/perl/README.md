@@ -11,12 +11,15 @@ Expected runtime/toolchain: Perl
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 1
+- Verified implementations: 4
 - Status: partial verified
 
 ## Verified Cells
 
 - Boyer-Moore (`boyermoore`): `perl implementations/perl/string-search/boyermoore/boyer_moore.pl`
+- Jump Consistency Hashing (`jumphash`): `perl implementations/perl/hashing/jumphash/jump_hash.pl`
+- Reservoir Sampling (`reservoir`): `perl implementations/perl/sampling/reservoir/reservoir.pl`
+- Cycle Sort (`cyclesort`): `perl implementations/perl/sorting/cyclesort/cyclesort.pl`
 
 ## Required Shape For Each Algorithm
 

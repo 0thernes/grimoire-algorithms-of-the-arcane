@@ -11,12 +11,15 @@ Expected runtime/toolchain: PowerShell
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 1
+- Verified implementations: 4
 - Status: partial verified
 
 ## Verified Cells
 
 - Boyer-Moore (`boyermoore`): `pwsh -NoProfile -File implementations/powershell/string-search/boyermoore/test.ps1`
+- Jump Consistency Hashing (`jumphash`): `pwsh -NoProfile -File implementations/powershell/hashing/jumphash/test.ps1`
+- Reservoir Sampling (`reservoir`): `pwsh -NoProfile -File implementations/powershell/sampling/reservoir/test.ps1`
+- Cycle Sort (`cyclesort`): `pwsh -NoProfile -File implementations/powershell/sorting/cyclesort/test.ps1`
 
 ## Required Shape For Each Algorithm
 

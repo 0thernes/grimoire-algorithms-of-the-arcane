@@ -11,12 +11,15 @@ Expected runtime/toolchain: POSIX shell
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 1
+- Verified implementations: 4
 - Status: partial verified
 
 ## Verified Cells
 
 - Boyer-Moore (`boyermoore`): `bash implementations/bash/string-search/boyermoore/test.sh`
+- Jump Consistency Hashing (`jumphash`): `bash implementations/bash/hashing/jumphash/test.sh`
+- Reservoir Sampling (`reservoir`): `bash implementations/bash/sampling/reservoir/test.sh`
+- Cycle Sort (`cyclesort`): `bash implementations/bash/sorting/cyclesort/test.sh`
 
 ## Required Shape For Each Algorithm
 

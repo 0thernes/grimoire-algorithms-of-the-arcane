@@ -11,12 +11,15 @@ Expected runtime/toolchain: MRI / JRuby
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 1
+- Verified implementations: 4
 - Status: partial verified
 
 ## Verified Cells
 
 - Boyer-Moore (`boyermoore`): `ruby implementations/ruby/string-search/boyermoore/boyer_moore.rb`
+- Jump Consistency Hashing (`jumphash`): `ruby implementations/ruby/hashing/jumphash/jump_hash.rb`
+- Reservoir Sampling (`reservoir`): `ruby implementations/ruby/sampling/reservoir/reservoir.rb`
+- Cycle Sort (`cyclesort`): `ruby implementations/ruby/sorting/cyclesort/cyclesort.rb`
 
 ## Required Shape For Each Algorithm
 

@@ -11,12 +11,15 @@ Expected runtime/toolchain: native
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 1
+- Verified implementations: 4
 - Status: partial verified
 
 ## Verified Cells
 
 - Boyer-Moore (`boyermoore`): `g++ implementations/cpp/string-search/boyermoore/boyer_moore.cpp -std=c++17 -o output/implementation-tests/boyermoore_cpp.exe && .\output\implementation-tests\boyermoore_cpp.exe`
+- Jump Consistency Hashing (`jumphash`): `g++ implementations/cpp/hashing/jumphash/jump_hash.cpp -std=c++17 -o output/implementation-tests/jumphash_cpp.exe && .\output\implementation-tests\jumphash_cpp.exe`
+- Reservoir Sampling (`reservoir`): `g++ implementations/cpp/sampling/reservoir/reservoir.cpp -std=c++17 -o output/implementation-tests/reservoir_cpp.exe && .\output\implementation-tests\reservoir_cpp.exe`
+- Cycle Sort (`cyclesort`): `g++ implementations/cpp/sorting/cyclesort/cyclesort.cpp -std=c++17 -o output/implementation-tests/cyclesort_cpp.exe && .\output\implementation-tests\cyclesort_cpp.exe`
 
 ## Required Shape For Each Algorithm
 

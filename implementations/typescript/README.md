@@ -11,12 +11,15 @@ Expected runtime/toolchain: Node.js / browser
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 1
+- Verified implementations: 4
 - Status: partial verified
 
 ## Verified Cells
 
 - Boyer-Moore (`boyermoore`): `deno run --quiet implementations/typescript/string-search/boyermoore/test.ts`
+- Jump Consistency Hashing (`jumphash`): `deno run --quiet implementations/typescript/hashing/jumphash/test.ts`
+- Reservoir Sampling (`reservoir`): `deno run --quiet implementations/typescript/sampling/reservoir/test.ts`
+- Cycle Sort (`cyclesort`): `deno run --quiet implementations/typescript/sorting/cyclesort/test.ts`
 
 ## Required Shape For Each Algorithm
 

@@ -1,67 +1,67 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-05T02:58:50.987Z",
+  "generatedAt": "2026-07-05T03:35:43.391Z",
   "catalogVersion": "0.9.13-local",
   "recordCount": 1000,
   "languageCount": 50,
   "plannedCells": 50000,
-  "verifiedCells": 15,
+  "verifiedCells": 57,
   "status": "partial-verified",
   "coverageByLanguage": [
     {
       "languageId": "javascript",
       "languageName": "JavaScript",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
       "languageId": "typescript",
       "languageName": "TypeScript",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
       "languageId": "python",
       "languageName": "Python",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
       "languageId": "java",
       "languageName": "Java",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
       "languageId": "c",
       "languageName": "C",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
       "languageId": "cpp",
       "languageName": "C++",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
       "languageId": "csharp",
       "languageName": "C#",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
       "languageId": "go",
       "languageName": "Go",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
@@ -89,7 +89,7 @@
       "languageId": "ruby",
       "languageName": "Ruby",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
@@ -138,21 +138,21 @@
       "languageId": "perl",
       "languageName": "Perl",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
       "languageId": "bash",
       "languageName": "Bash",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
       "languageId": "powershell",
       "languageName": "PowerShell",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
@@ -201,7 +201,7 @@
       "languageId": "fsharp",
       "languageName": "F#",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
@@ -306,7 +306,7 @@
       "languageId": "visual-basic",
       "languageName": "Visual Basic .NET",
       "planned": 1000,
-      "verified": 1,
+      "verified": 4,
       "status": "partial"
     },
     {
@@ -376,13 +376,13 @@
       "engine": "probability",
       "records": 122,
       "plannedCells": 6100,
-      "verifiedCells": 0
+      "verifiedCells": 14
     },
     {
       "engine": "optimization",
       "records": 104,
       "plannedCells": 5200,
-      "verifiedCells": 0
+      "verifiedCells": 14
     },
     {
       "engine": "distributed",
@@ -400,7 +400,7 @@
       "engine": "sketch",
       "records": 70,
       "plannedCells": 3500,
-      "verifiedCells": 0
+      "verifiedCells": 14
     },
     {
       "engine": "topology",

@@ -11,12 +11,15 @@ Expected runtime/toolchain: Node.js / browser
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 1
+- Verified implementations: 4
 - Status: partial verified
 
 ## Verified Cells
 
 - Boyer-Moore (`boyermoore`): `node implementations/javascript/string-search/boyermoore/test.js`
+- Jump Consistency Hashing (`jumphash`): `node implementations/javascript/hashing/jumphash/test.js`
+- Reservoir Sampling (`reservoir`): `node implementations/javascript/sampling/reservoir/test.js`
+- Cycle Sort (`cyclesort`): `node implementations/javascript/sorting/cyclesort/test.js`
 
 ## Required Shape For Each Algorithm
 
