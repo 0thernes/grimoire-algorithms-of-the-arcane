@@ -12,7 +12,7 @@ Expected runtime/toolchain: MRI / JRuby
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 6
+- Verified implementations: 7
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -33,6 +33,7 @@ That adapter contains all 1000 GRIMOIRE records for Ruby. It is meant for discov
 - Cycle Sort (`cyclesort`): `ruby implementations/ruby/sorting/cyclesort/cyclesort.rb`
 - Stooge Sort (`stoogesort`): `ruby implementations/ruby/sorting/stoogesort/stoogesort.rb`
 - Cocktail Shaker Sort (`cocktail`): `ruby implementations/ruby/sorting/cocktail/cocktail_sort.rb`
+- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `ruby implementations/ruby/string-search/v8-knuth-morris-pratt-d7l8/kmp.rb`
 
 ## Required Shape For Each Algorithm
 

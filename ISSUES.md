@@ -4,7 +4,7 @@
 
 1. Per-record historical bibliography slots are now present, but unfilled. The active source-class ledger keeps current context rows honest; individual records still need record-specific citations before naming inventors, exact first-publication dates, primary users, or deployments.
 2. Some categories are broad by design; future audit should split any group that becomes too blended.
-3. The 1000 x 50 implementation matrix is still mostly scaffold for native code. It has 50,000 planned native cells, 50,000 generated full-catalog adapter cells, 87 locally verified native cells, and the remaining native cells still requiring real code, tests, complexity notes, and provenance notes.
+3. The 1000 x 50 implementation matrix is still mostly scaffold for native code. It has 50,000 planned native cells, 50,000 generated full-catalog adapter cells, 103 locally verified native cells, and the remaining native cells still requiring real code, tests, complexity notes, and provenance notes.
 
 ## Closed
 

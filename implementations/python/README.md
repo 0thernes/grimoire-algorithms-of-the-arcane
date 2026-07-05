@@ -12,7 +12,7 @@ Expected runtime/toolchain: CPython
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 6
+- Verified implementations: 7
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -33,6 +33,7 @@ That adapter contains all 1000 GRIMOIRE records for Python. It is meant for disc
 - Cycle Sort (`cyclesort`): `python -B implementations/python/sorting/cyclesort/test_cyclesort.py`
 - Stooge Sort (`stoogesort`): `python -B implementations/python/sorting/stoogesort/test_stoogesort.py`
 - Cocktail Shaker Sort (`cocktail`): `python -B implementations/python/sorting/cocktail/test_cocktail.py`
+- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `python -B implementations/python/string-search/v8-knuth-morris-pratt-d7l8/test_kmp.py`
 
 ## Required Shape For Each Algorithm
 

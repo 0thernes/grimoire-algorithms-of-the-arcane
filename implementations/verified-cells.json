@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "catalogVersion": "0.9.13-local",
-  "generatedAt": "2026-07-05T05:21:57.399Z",
+  "generatedAt": "2026-07-05T06:52:07.103Z",
   "verificationPolicy": "A cell is verified only when its source files exist and its testCommand passes locally.",
   "verifiedCells": [
     {
@@ -1408,6 +1408,265 @@
       ],
       "readme": "implementations/fortran/sorting/cocktail/README.md",
       "testCommand": "gfortran implementations/fortran/sorting/cocktail/cocktail_sort.f90 -o output/implementation-tests/cocktail_fortran.exe && .\\output\\implementation-tests\\cocktail_fortran.exe",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "javascript:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "javascript",
+      "sourceFiles": [
+        "implementations/javascript/string-search/v8-knuth-morris-pratt-d7l8/kmp.js"
+      ],
+      "readme": "implementations/javascript/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "node implementations/javascript/string-search/v8-knuth-morris-pratt-d7l8/test.js",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "typescript:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "typescript",
+      "sourceFiles": [
+        "implementations/typescript/string-search/v8-knuth-morris-pratt-d7l8/kmp.ts"
+      ],
+      "readme": "implementations/typescript/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "deno run --quiet implementations/typescript/string-search/v8-knuth-morris-pratt-d7l8/test.ts",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "python:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "python",
+      "sourceFiles": [
+        "implementations/python/string-search/v8-knuth-morris-pratt-d7l8/kmp.py"
+      ],
+      "readme": "implementations/python/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "python -B implementations/python/string-search/v8-knuth-morris-pratt-d7l8/test_kmp.py",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "powershell:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "powershell",
+      "sourceFiles": [
+        "implementations/powershell/string-search/v8-knuth-morris-pratt-d7l8/kmp.ps1"
+      ],
+      "readme": "implementations/powershell/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "pwsh -NoProfile -File implementations/powershell/string-search/v8-knuth-morris-pratt-d7l8/test.ps1",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "java:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "java",
+      "sourceFiles": [
+        "implementations/java/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.java"
+      ],
+      "readme": "implementations/java/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "javac -d output/implementation-tests implementations/java/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.java && java -cp output/implementation-tests KmpSearch",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "csharp:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "csharp",
+      "sourceFiles": [
+        "implementations/csharp/string-search/v8-knuth-morris-pratt-d7l8/Program.cs",
+        "implementations/csharp/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.csproj"
+      ],
+      "readme": "implementations/csharp/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "dotnet build implementations/csharp/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-kmp/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-kmp/ && dotnet .\\output\\implementation-tests\\csharp-bin-kmp\\KmpSearch.dll",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "fsharp:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "fsharp",
+      "sourceFiles": [
+        "implementations/fsharp/string-search/v8-knuth-morris-pratt-d7l8/Program.fs",
+        "implementations/fsharp/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.fsproj"
+      ],
+      "readme": "implementations/fsharp/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "dotnet build implementations/fsharp/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-kmp/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-kmp/ && dotnet .\\output\\implementation-tests\\fsharp-bin-kmp\\KmpSearch.dll",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "c:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "c",
+      "sourceFiles": [
+        "implementations/c/string-search/v8-knuth-morris-pratt-d7l8/kmp.c"
+      ],
+      "readme": "implementations/c/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "gcc implementations/c/string-search/v8-knuth-morris-pratt-d7l8/kmp.c -o output/implementation-tests/kmp_c.exe && .\\output\\implementation-tests\\kmp_c.exe",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "cpp:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "cpp",
+      "sourceFiles": [
+        "implementations/cpp/string-search/v8-knuth-morris-pratt-d7l8/kmp.cpp"
+      ],
+      "readme": "implementations/cpp/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "g++ implementations/cpp/string-search/v8-knuth-morris-pratt-d7l8/kmp.cpp -std=c++17 -o output/implementation-tests/kmp_cpp.exe && .\\output\\implementation-tests\\kmp_cpp.exe",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "go:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "go",
+      "sourceFiles": [
+        "implementations/go/string-search/v8-knuth-morris-pratt-d7l8/kmp.go"
+      ],
+      "readme": "implementations/go/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "go run implementations/go/string-search/v8-knuth-morris-pratt-d7l8/kmp.go",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "rust:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "rust",
+      "sourceFiles": [
+        "implementations/rust/string-search/v8-knuth-morris-pratt-d7l8/kmp.rs"
+      ],
+      "readme": "implementations/rust/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "rustc --target x86_64-pc-windows-gnu implementations/rust/string-search/v8-knuth-morris-pratt-d7l8/kmp.rs -o output/implementation-tests/kmp_rust.exe && .\\output\\implementation-tests\\kmp_rust.exe",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "ruby:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "ruby",
+      "sourceFiles": [
+        "implementations/ruby/string-search/v8-knuth-morris-pratt-d7l8/kmp.rb"
+      ],
+      "readme": "implementations/ruby/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "ruby implementations/ruby/string-search/v8-knuth-morris-pratt-d7l8/kmp.rb",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "perl:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "perl",
+      "sourceFiles": [
+        "implementations/perl/string-search/v8-knuth-morris-pratt-d7l8/kmp.pl"
+      ],
+      "readme": "implementations/perl/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "perl implementations/perl/string-search/v8-knuth-morris-pratt-d7l8/kmp.pl",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "bash:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "bash",
+      "sourceFiles": [
+        "implementations/bash/string-search/v8-knuth-morris-pratt-d7l8/kmp.sh"
+      ],
+      "readme": "implementations/bash/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "bash implementations/bash/string-search/v8-knuth-morris-pratt-d7l8/test.sh",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "visual-basic:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "visual-basic",
+      "sourceFiles": [
+        "implementations/visual-basic/string-search/v8-knuth-morris-pratt-d7l8/Program.vb",
+        "implementations/visual-basic/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.vbproj"
+      ],
+      "readme": "implementations/visual-basic/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "dotnet build implementations/visual-basic/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-kmp/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-kmp/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-kmp\\KmpSearch.dll",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "fortran:v8-knuth-morris-pratt-d7l8",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V08-A-01",
+      "algorithmId": "v8-knuth-morris-pratt-d7l8",
+      "algorithmTitle": "Knuth-Morris-Pratt",
+      "domain": "string-search",
+      "languageId": "fortran",
+      "sourceFiles": [
+        "implementations/fortran/string-search/v8-knuth-morris-pratt-d7l8/kmp.f90"
+      ],
+      "readme": "implementations/fortran/string-search/v8-knuth-morris-pratt-d7l8/README.md",
+      "testCommand": "gfortran implementations/fortran/string-search/v8-knuth-morris-pratt-d7l8/kmp.f90 -o output/implementation-tests/kmp_fortran.exe && .\\output\\implementation-tests\\kmp_fortran.exe",
       "verifiedAt": "2026-07-05",
       "status": "verified-local"
     }

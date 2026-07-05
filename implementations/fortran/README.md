@@ -12,7 +12,7 @@ Expected runtime/toolchain: native
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 2
+- Verified implementations: 3
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -29,6 +29,7 @@ That adapter contains all 1000 GRIMOIRE records for Fortran. It is meant for dis
 
 - Boyer-Moore (`boyermoore`): `gfortran implementations/fortran/string-search/boyermoore/boyer_moore.f90 -o output/implementation-tests/boyermoore_fortran.exe && .\output\implementation-tests\boyermoore_fortran.exe`
 - Cocktail Shaker Sort (`cocktail`): `gfortran implementations/fortran/sorting/cocktail/cocktail_sort.f90 -o output/implementation-tests/cocktail_fortran.exe && .\output\implementation-tests\cocktail_fortran.exe`
+- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `gfortran implementations/fortran/string-search/v8-knuth-morris-pratt-d7l8/kmp.f90 -o output/implementation-tests/kmp_fortran.exe && .\output\implementation-tests\kmp_fortran.exe`
 
 ## Required Shape For Each Algorithm
 

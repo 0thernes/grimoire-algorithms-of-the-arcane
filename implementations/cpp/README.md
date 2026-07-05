@@ -12,7 +12,7 @@ Expected runtime/toolchain: native
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 6
+- Verified implementations: 7
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -33,6 +33,7 @@ That adapter contains all 1000 GRIMOIRE records for C++. It is meant for discove
 - Cycle Sort (`cyclesort`): `g++ implementations/cpp/sorting/cyclesort/cyclesort.cpp -std=c++17 -o output/implementation-tests/cyclesort_cpp.exe && .\output\implementation-tests\cyclesort_cpp.exe`
 - Stooge Sort (`stoogesort`): `g++ implementations/cpp/sorting/stoogesort/stoogesort.cpp -std=c++17 -o output/implementation-tests/stoogesort_cpp.exe && .\output\implementation-tests\stoogesort_cpp.exe`
 - Cocktail Shaker Sort (`cocktail`): `g++ implementations/cpp/sorting/cocktail/cocktail_sort.cpp -std=c++17 -o output/implementation-tests/cocktail_cpp.exe && .\output\implementation-tests\cocktail_cpp.exe`
+- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `g++ implementations/cpp/string-search/v8-knuth-morris-pratt-d7l8/kmp.cpp -std=c++17 -o output/implementation-tests/kmp_cpp.exe && .\output\implementation-tests\kmp_cpp.exe`
 
 ## Required Shape For Each Algorithm
 

@@ -12,7 +12,7 @@ Expected runtime/toolchain: .NET
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 6
+- Verified implementations: 7
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -33,6 +33,7 @@ That adapter contains all 1000 GRIMOIRE records for Visual Basic .NET. It is mea
 - Cycle Sort (`cyclesort`): `dotnet build implementations/visual-basic/sorting/cyclesort/CycleSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-cyclesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-cyclesort/ && dotnet .\output\implementation-tests\visual-basic-bin-cyclesort\CycleSort.dll`
 - Stooge Sort (`stoogesort`): `dotnet build implementations/visual-basic/sorting/stoogesort/StoogeSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-stoogesort/ && dotnet .\output\implementation-tests\visual-basic-bin-stoogesort\StoogeSort.dll`
 - Cocktail Shaker Sort (`cocktail`): `dotnet build implementations/visual-basic/sorting/cocktail/CocktailSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-cocktail/ && dotnet .\output\implementation-tests\visual-basic-bin-cocktail\CocktailSort.dll`
+- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `dotnet build implementations/visual-basic/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-kmp/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-kmp/ && dotnet .\output\implementation-tests\visual-basic-bin-kmp\KmpSearch.dll`
 
 ## Required Shape For Each Algorithm
 

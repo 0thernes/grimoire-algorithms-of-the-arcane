@@ -10,7 +10,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Language/script targets | 50 |
 | Planned implementation cells | 50000 |
 | Generated catalog-adapter cells | 50000 |
-| Verified implementation cells | 87 |
+| Verified implementation cells | 103 |
 
 ## Generated Catalog Adapters
 
@@ -26,41 +26,41 @@ These adapters expose all 1000 records to every language target for code generat
 
 | Language | ID | Family | Extension | Planned | Verified |
 |---|---|---|---|---:|---:|
-| JavaScript | `javascript` | web scripting | `.js` | 1000 | 6 |
-| TypeScript | `typescript` | typed web scripting | `.ts` | 1000 | 6 |
-| Python | `python` | general scripting | `.py` | 1000 | 6 |
-| Java | `java` | managed OO | `.java` | 1000 | 6 |
-| C | `c` | systems | `.c` | 1000 | 6 |
-| C++ | `cpp` | systems | `.cpp` | 1000 | 6 |
-| C# | `csharp` | managed OO | `.cs` | 1000 | 6 |
-| Go | `go` | systems/networking | `.go` | 1000 | 6 |
-| Rust | `rust` | safe systems | `.rs` | 1000 | 1 |
+| JavaScript | `javascript` | web scripting | `.js` | 1000 | 7 |
+| TypeScript | `typescript` | typed web scripting | `.ts` | 1000 | 7 |
+| Python | `python` | general scripting | `.py` | 1000 | 7 |
+| Java | `java` | managed OO | `.java` | 1000 | 7 |
+| C | `c` | systems | `.c` | 1000 | 7 |
+| C++ | `cpp` | systems | `.cpp` | 1000 | 7 |
+| C# | `csharp` | managed OO | `.cs` | 1000 | 7 |
+| Go | `go` | systems/networking | `.go` | 1000 | 7 |
+| Rust | `rust` | safe systems | `.rs` | 1000 | 2 |
 | Kotlin | `kotlin` | modern JVM | `.kt` | 1000 | 0 |
 | Swift | `swift` | Apple/native | `.swift` | 1000 | 0 |
-| Ruby | `ruby` | dynamic scripting | `.rb` | 1000 | 6 |
+| Ruby | `ruby` | dynamic scripting | `.rb` | 1000 | 7 |
 | PHP | `php` | web scripting | `.php` | 1000 | 0 |
 | R | `r` | statistics | `.R` | 1000 | 0 |
 | Julia | `julia` | scientific computing | `.jl` | 1000 | 0 |
 | Scala | `scala` | functional JVM | `.scala` | 1000 | 0 |
 | Dart | `dart` | app/web | `.dart` | 1000 | 0 |
 | Lua | `lua` | embedded scripting | `.lua` | 1000 | 0 |
-| Perl | `perl` | text scripting | `.pl` | 1000 | 6 |
-| Bash | `bash` | shell scripting | `.sh` | 1000 | 6 |
-| PowerShell | `powershell` | shell scripting | `.ps1` | 1000 | 6 |
+| Perl | `perl` | text scripting | `.pl` | 1000 | 7 |
+| Bash | `bash` | shell scripting | `.sh` | 1000 | 7 |
+| PowerShell | `powershell` | shell scripting | `.ps1` | 1000 | 7 |
 | SQL | `sql` | database query | `.sql` | 1000 | 0 |
 | MATLAB / Octave | `matlab-octave` | numerical computing | `.m` | 1000 | 0 |
 | Haskell | `haskell` | pure functional | `.hs` | 1000 | 0 |
 | Elixir | `elixir` | actor/concurrent | `.ex` | 1000 | 0 |
 | Erlang | `erlang` | actor/concurrent | `.erl` | 1000 | 0 |
 | Clojure | `clojure` | Lisp/JVM | `.clj` | 1000 | 0 |
-| F# | `fsharp` | functional .NET | `.fs` | 1000 | 6 |
+| F# | `fsharp` | functional .NET | `.fs` | 1000 | 7 |
 | OCaml | `ocaml` | ML functional | `.ml` | 1000 | 0 |
 | Zig | `zig` | systems | `.zig` | 1000 | 0 |
 | Nim | `nim` | systems scripting | `.nim` | 1000 | 0 |
 | Crystal | `crystal` | typed Ruby-like | `.cr` | 1000 | 0 |
 | D | `d` | systems | `.d` | 1000 | 0 |
 | Ada | `ada` | high-integrity systems | `.adb` | 1000 | 0 |
-| Fortran | `fortran` | scientific computing | `.f90` | 1000 | 2 |
+| Fortran | `fortran` | scientific computing | `.f90` | 1000 | 3 |
 | COBOL | `cobol` | business systems | `.cob` | 1000 | 0 |
 | Common Lisp | `common-lisp` | Lisp | `.lisp` | 1000 | 0 |
 | Scheme | `scheme` | Lisp | `.scm` | 1000 | 0 |
@@ -68,7 +68,7 @@ These adapters expose all 1000 records to every language target for code generat
 | Prolog | `prolog` | logic programming | `.pl` | 1000 | 0 |
 | Objective-C | `objective-c` | Apple/native | `.m` | 1000 | 0 |
 | Groovy | `groovy` | dynamic JVM | `.groovy` | 1000 | 0 |
-| Visual Basic .NET | `visual-basic` | managed OO | `.vb` | 1000 | 6 |
+| Visual Basic .NET | `visual-basic` | managed OO | `.vb` | 1000 | 7 |
 | VBA | `vba` | office automation | `.bas` | 1000 | 0 |
 | Solidity | `solidity` | smart contracts | `.sol` | 1000 | 0 |
 | Move | `move` | smart contracts | `.move` | 1000 | 0 |
@@ -90,7 +90,7 @@ These adapters expose all 1000 records to every language target for code generat
 | sketch | 70 | 3500 | 14 |
 | topology | 64 | 3200 | 0 |
 | flow | 60 | 3000 | 0 |
-| parsing | 50 | 2500 | 0 |
+| parsing | 50 | 2500 | 16 |
 | quantum | 44 | 2200 | 0 |
 | automata | 35 | 1750 | 0 |
 | undecidable | 20 | 1000 | 0 |
@@ -187,6 +187,22 @@ These adapters expose all 1000 records to every language target for code generat
 | Cocktail Shaker Sort | `cocktail` | bash | sorting | `bash implementations/bash/sorting/cocktail/test.sh` |
 | Cocktail Shaker Sort | `cocktail` | visual-basic | sorting | `dotnet build implementations/visual-basic/sorting/cocktail/CocktailSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-cocktail/ && dotnet .\output\implementation-tests\visual-basic-bin-cocktail\CocktailSort.dll` |
 | Cocktail Shaker Sort | `cocktail` | fortran | sorting | `gfortran implementations/fortran/sorting/cocktail/cocktail_sort.f90 -o output/implementation-tests/cocktail_fortran.exe && .\output\implementation-tests\cocktail_fortran.exe` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | javascript | string-search | `node implementations/javascript/string-search/v8-knuth-morris-pratt-d7l8/test.js` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | typescript | string-search | `deno run --quiet implementations/typescript/string-search/v8-knuth-morris-pratt-d7l8/test.ts` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | python | string-search | `python -B implementations/python/string-search/v8-knuth-morris-pratt-d7l8/test_kmp.py` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | powershell | string-search | `pwsh -NoProfile -File implementations/powershell/string-search/v8-knuth-morris-pratt-d7l8/test.ps1` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | java | string-search | `javac -d output/implementation-tests implementations/java/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.java && java -cp output/implementation-tests KmpSearch` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | csharp | string-search | `dotnet build implementations/csharp/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-kmp/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-kmp/ && dotnet .\output\implementation-tests\csharp-bin-kmp\KmpSearch.dll` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | fsharp | string-search | `dotnet build implementations/fsharp/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-kmp/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-kmp/ && dotnet .\output\implementation-tests\fsharp-bin-kmp\KmpSearch.dll` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | c | string-search | `gcc implementations/c/string-search/v8-knuth-morris-pratt-d7l8/kmp.c -o output/implementation-tests/kmp_c.exe && .\output\implementation-tests\kmp_c.exe` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | cpp | string-search | `g++ implementations/cpp/string-search/v8-knuth-morris-pratt-d7l8/kmp.cpp -std=c++17 -o output/implementation-tests/kmp_cpp.exe && .\output\implementation-tests\kmp_cpp.exe` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | go | string-search | `go run implementations/go/string-search/v8-knuth-morris-pratt-d7l8/kmp.go` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | rust | string-search | `rustc --target x86_64-pc-windows-gnu implementations/rust/string-search/v8-knuth-morris-pratt-d7l8/kmp.rs -o output/implementation-tests/kmp_rust.exe && .\output\implementation-tests\kmp_rust.exe` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | ruby | string-search | `ruby implementations/ruby/string-search/v8-knuth-morris-pratt-d7l8/kmp.rb` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | perl | string-search | `perl implementations/perl/string-search/v8-knuth-morris-pratt-d7l8/kmp.pl` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | bash | string-search | `bash implementations/bash/string-search/v8-knuth-morris-pratt-d7l8/test.sh` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | visual-basic | string-search | `dotnet build implementations/visual-basic/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-kmp/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-kmp/ && dotnet .\output\implementation-tests\visual-basic-bin-kmp\KmpSearch.dll` |
+| Knuth-Morris-Pratt | `v8-knuth-morris-pratt-d7l8` | fortran | string-search | `gfortran implementations/fortran/string-search/v8-knuth-morris-pratt-d7l8/kmp.f90 -o output/implementation-tests/kmp_fortran.exe && .\output\implementation-tests\kmp_fortran.exe` |
 
 ## Implementation Gate
 

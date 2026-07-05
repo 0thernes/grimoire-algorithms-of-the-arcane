@@ -10,7 +10,7 @@ Current status: generated 1000-record catalog adapters for every language plus f
 - Language/script targets: 50
 - Planned implementation cells: 50000
 - Generated catalog-adapter cells: 50000
-- Current verified implementation cells: 87
+- Current verified implementation cells: 103
 - Verification ledger: `implementations/verified-cells.json`
 - Adapter audit ledger: `implementations/catalog-adapters-summary.json`
 

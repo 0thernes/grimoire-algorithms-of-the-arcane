@@ -12,7 +12,7 @@ Expected runtime/toolchain: native
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 6
+- Verified implementations: 7
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -33,6 +33,7 @@ That adapter contains all 1000 GRIMOIRE records for C. It is meant for discovery
 - Cycle Sort (`cyclesort`): `gcc implementations/c/sorting/cyclesort/cyclesort.c -DTEST -o output/implementation-tests/cyclesort_c.exe && .\output\implementation-tests\cyclesort_c.exe`
 - Stooge Sort (`stoogesort`): `gcc implementations/c/sorting/stoogesort/stoogesort.c -o output/implementation-tests/stoogesort_c.exe && .\output\implementation-tests\stoogesort_c.exe`
 - Cocktail Shaker Sort (`cocktail`): `gcc implementations/c/sorting/cocktail/cocktail_sort.c -DTEST -o output/implementation-tests/cocktail_c.exe && .\output\implementation-tests\cocktail_c.exe`
+- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `gcc implementations/c/string-search/v8-knuth-morris-pratt-d7l8/kmp.c -o output/implementation-tests/kmp_c.exe && .\output\implementation-tests\kmp_c.exe`
 
 ## Required Shape For Each Algorithm
 

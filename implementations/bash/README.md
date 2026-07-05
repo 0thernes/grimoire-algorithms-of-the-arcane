@@ -12,7 +12,7 @@ Expected runtime/toolchain: POSIX shell
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 6
+- Verified implementations: 7
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -33,6 +33,7 @@ That adapter contains all 1000 GRIMOIRE records for Bash. It is meant for discov
 - Cycle Sort (`cyclesort`): `bash implementations/bash/sorting/cyclesort/test.sh`
 - Stooge Sort (`stoogesort`): `bash implementations/bash/sorting/stoogesort/test.sh`
 - Cocktail Shaker Sort (`cocktail`): `bash implementations/bash/sorting/cocktail/test.sh`
+- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `bash implementations/bash/string-search/v8-knuth-morris-pratt-d7l8/test.sh`
 
 ## Required Shape For Each Algorithm
 

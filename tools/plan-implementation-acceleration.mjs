@@ -429,7 +429,7 @@ Build emitters in this order:
 4. Graph fixture emitter: BFS/DFS, Dijkstra, A*, SCC, Union-Find, topological sort, shortest-path variants.
 5. Numerical/probability emitter: seeded RNG, vector math, toleranced assertions.
 
-This turns the work from 49,913 one-off cells into reusable contracts plus language emitters.
+This turns the work from ${summary.remainingCells.toLocaleString('en-US')} one-off cells into reusable contracts plus language emitters.
 `;
   fs.writeFileSync(docPath, `${doc.trimEnd()}\n`, 'utf8');
 }

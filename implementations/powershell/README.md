@@ -12,7 +12,7 @@ Expected runtime/toolchain: PowerShell
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 6
+- Verified implementations: 7
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -33,6 +33,7 @@ That adapter contains all 1000 GRIMOIRE records for PowerShell. It is meant for 
 - Cycle Sort (`cyclesort`): `pwsh -NoProfile -File implementations/powershell/sorting/cyclesort/test.ps1`
 - Stooge Sort (`stoogesort`): `pwsh -NoProfile -File implementations/powershell/sorting/stoogesort/test.ps1`
 - Cocktail Shaker Sort (`cocktail`): `pwsh -NoProfile -File implementations/powershell/sorting/cocktail/test.ps1`
+- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `pwsh -NoProfile -File implementations/powershell/string-search/v8-knuth-morris-pratt-d7l8/test.ps1`
 
 ## Required Shape For Each Algorithm
 

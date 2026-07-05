@@ -54,7 +54,7 @@ The 0.9.13 local audit adds the 50-language implementation scaffold and publishi
 - Per-record historical bibliography slots exist, but source URLs/citation keys are still open.
 - Exact inventor/date/primary-user/deployment claims remain intentionally excluded from card UI until record-specific citations exist.
 - Category splitting remains an ongoing review item if future source or UX review shows a group is too blended.
-- Most real language implementations remain future work; the current verified native corpus is a six-algorithm starter batch, while generated catalog adapters cover the full 50 x 1000 addressable matrix.
+- Most real language implementations remain future work; the current verified native corpus is a seven-algorithm starter batch, while generated catalog adapters cover the full 50 x 1000 addressable matrix.
 
 ## Verdict
 

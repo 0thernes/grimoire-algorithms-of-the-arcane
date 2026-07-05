@@ -1,80 +1,80 @@
 {
-  "generatedAt": "2026-07-05T06:13:27.657Z",
+  "generatedAt": "2026-07-05T06:54:47.308Z",
   "catalogVersion": "0.9.13-local",
   "totalRecords": 1000,
   "languageTargets": 50,
   "plannedCells": 50000,
-  "verifiedCells": 87,
-  "remainingCells": 49913,
+  "verifiedCells": 103,
+  "remainingCells": 49897,
   "currentRunnableLaneLanguages": 16,
   "currentRunnableLane": [
     {
       "languageId": "bash",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "c",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "cpp",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "csharp",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "fsharp",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "go",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "java",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "javascript",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "perl",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "powershell",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "python",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "ruby",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "typescript",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "visual-basic",
-      "verifiedCount": 6
+      "verifiedCount": 7
     },
     {
       "languageId": "fortran",
-      "verifiedCount": 2
+      "verifiedCount": 3
     },
     {
       "languageId": "rust",
-      "verifiedCount": 1
+      "verifiedCount": 2
     }
   ],
   "currentRunnableLanePotentialCells": 16000,
-  "currentRunnableLaneRemainingCells": 15913,
+  "currentRunnableLaneRemainingCells": 15897,
   "onlineFindings": [
     {
       "name": "TheAlgorithms",
@@ -118,7 +118,7 @@
       "records": 5,
       "plannedCells": 250,
       "currentLaneCells": 80,
-      "verifiedCells": 15
+      "verifiedCells": 31
     },
     {
       "archetypeId": "suffix-index",
@@ -388,40 +388,6 @@
       "archetypeLabel": "Comparison / permutation sort",
       "strategy": "emitter-ready",
       "priority": 1,
-      "verifiedCount": 0,
-      "missingCurrentLaneCount": 16,
-      "missingCurrentLane": [
-        "bash",
-        "c",
-        "cpp",
-        "csharp",
-        "fsharp",
-        "go",
-        "java",
-        "javascript",
-        "perl",
-        "powershell",
-        "python",
-        "ruby",
-        "typescript",
-        "visual-basic",
-        "fortran",
-        "rust"
-      ]
-    },
-    {
-      "id": "v8-knuth-morris-pratt-d7l8",
-      "navLabel": "V08-A-01",
-      "title": "Knuth-Morris-Pratt",
-      "engine": "parsing",
-      "tags": [
-        "Parsing",
-        "Search"
-      ],
-      "archetypeId": "string-search",
-      "archetypeLabel": "String search / sequence matching",
-      "strategy": "emitter-ready",
-      "priority": 2,
       "verifiedCount": 0,
       "missingCurrentLaneCount": 16,
       "missingCurrentLane": [
@@ -2963,6 +2929,40 @@
       "id": "v10-elias-gamma-coding-yjwsg",
       "navLabel": "V10-I-03",
       "title": "Elias Gamma Coding",
+      "engine": "sketch",
+      "tags": [
+        "Compression",
+        "Math"
+      ],
+      "archetypeId": "compression-coding",
+      "archetypeLabel": "Compression / entropy coding",
+      "strategy": "reference-needed",
+      "priority": 9,
+      "verifiedCount": 0,
+      "missingCurrentLaneCount": 16,
+      "missingCurrentLane": [
+        "bash",
+        "c",
+        "cpp",
+        "csharp",
+        "fsharp",
+        "go",
+        "java",
+        "javascript",
+        "perl",
+        "powershell",
+        "python",
+        "ruby",
+        "typescript",
+        "visual-basic",
+        "fortran",
+        "rust"
+      ]
+    },
+    {
+      "id": "v10-interpolative-coding-z0tts",
+      "navLabel": "V10-I-04",
+      "title": "Interpolative Coding",
       "engine": "sketch",
       "tags": [
         "Compression",

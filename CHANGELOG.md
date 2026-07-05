@@ -4,7 +4,8 @@
 
 - Bumped local patch version to `0.9.13-local` for the implementation matrix and publishing scaffold pass.
 - Added `implementations/` with 50 language/script target folders.
-- Added `implementations/languages.json`, `implementations/coverage-summary.json`, and `implementations/catalog-adapters-summary.json`; current coverage is 50,000 planned native cells, 50,000 generated catalog-adapter cells, and 87 locally verified native cells.
+- Added `implementations/languages.json`, `implementations/coverage-summary.json`, and `implementations/catalog-adapters-summary.json`; current coverage is 50,000 planned native cells, 50,000 generated catalog-adapter cells, and 103 locally verified native cells.
+- Added `tools/create-kmp-batch.mjs` and generated Knuth-Morris-Pratt implementations for the 16-language verified lane.
 - Added `tools/plan-implementation-acceleration.mjs`, `docs/IMPLEMENTATION-ACCELERATION.md`, and `output/implementation-acceleration/acceleration-summary.json` to replace one-by-one hand-porting with a contract/emitter plan.
 - Split the implementation acceleration queue into 18 honesty lanes, separating easy emitters from suffix indexes, coding theory, compression, succinct structures, distributed protocols, and specialist research records.
 - Added `tools/generate-matrix-cell.mjs` and `specs/` as the batch path for producing multi-language native implementation cells from JSON specs.

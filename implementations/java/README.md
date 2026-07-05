@@ -12,7 +12,7 @@ Expected runtime/toolchain: JVM
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 6
+- Verified implementations: 7
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -33,6 +33,7 @@ That adapter contains all 1000 GRIMOIRE records for Java. It is meant for discov
 - Cycle Sort (`cyclesort`): `javac -d output/implementation-tests implementations/java/sorting/cyclesort/CycleSort.java && java -cp output/implementation-tests CycleSort`
 - Stooge Sort (`stoogesort`): `javac -d output/implementation-tests implementations/java/sorting/stoogesort/StoogeSort.java && java -cp output/implementation-tests StoogeSort`
 - Cocktail Shaker Sort (`cocktail`): `javac -d output/implementation-tests implementations/java/sorting/cocktail/CocktailSort.java && java -cp output/implementation-tests CocktailSort`
+- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `javac -d output/implementation-tests implementations/java/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.java && java -cp output/implementation-tests KmpSearch`
 
 ## Required Shape For Each Algorithm
 

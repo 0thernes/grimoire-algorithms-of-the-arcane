@@ -12,7 +12,7 @@ Expected runtime/toolchain: native
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 6
+- Verified implementations: 7
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -33,6 +33,7 @@ That adapter contains all 1000 GRIMOIRE records for Go. It is meant for discover
 - Cycle Sort (`cyclesort`): `go run implementations/go/sorting/cyclesort/cyclesort.go`
 - Stooge Sort (`stoogesort`): `go run implementations/go/sorting/stoogesort/stoogesort.go`
 - Cocktail Shaker Sort (`cocktail`): `go run implementations/go/sorting/cocktail/cocktail_sort.go`
+- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `go run implementations/go/string-search/v8-knuth-morris-pratt-d7l8/kmp.go`
 
 ## Required Shape For Each Algorithm
 

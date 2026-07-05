@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T06:13:27.450Z",
+  "generatedAt": "2026-07-05T06:54:56.134Z",
   "target": "objective requirement evidence audit",
   "version": "0.9.13-local",
   "status": "verified-with-open-blockers",
@@ -125,7 +125,7 @@
       "languageTargets": 50,
       "plannedCells": 50000,
       "catalogAdapterCells": 50000,
-      "verifiedCells": 87
+      "verifiedCells": 103
     },
     {
       "id": "language-catalog-adapters",
@@ -152,8 +152,8 @@
         "output/implementation-tests/implementation-test-summary.json"
       ],
       "status": "verified",
-      "totalCells": 87,
-      "passed": 87,
+      "totalCells": 103,
+      "passed": 103,
       "failed": 0
     },
     {
@@ -307,7 +307,7 @@
       "status": "open",
       "plannedCells": 50000,
       "catalogAdapterCells": 50000,
-      "verifiedCells": 87
+      "verifiedCells": 103
     }
   ],
   "issues": [],
