@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T02:53:59.150Z",
+  "generatedAt": "2026-07-05T02:58:47.569Z",
   "target": "objective requirement evidence audit",
   "version": "0.9.13-local",
   "status": "verified-with-open-blockers",
@@ -192,19 +192,19 @@
         {
           "engine": "chromium",
           "file": "output/playwright/cross-browser-chromium.png",
-          "bytes": 374452,
+          "bytes": 373911,
           "exists": true
         },
         {
           "engine": "firefox",
           "file": "output/playwright/cross-browser-firefox.png",
-          "bytes": 389431,
+          "bytes": 389287,
           "exists": true
         },
         {
           "engine": "webkit",
           "file": "output/playwright/cross-browser-webkit.png",
-          "bytes": 303123,
+          "bytes": 303133,
           "exists": true
         }
       ],
