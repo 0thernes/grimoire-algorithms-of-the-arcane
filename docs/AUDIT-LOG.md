@@ -2,6 +2,27 @@
 
 ## 2026-07-05
 
+### Implementation acceleration planning pass
+
+Verified checks:
+
+- `node tools/plan-implementation-acceleration.mjs`: regenerated `docs/IMPLEMENTATION-ACCELERATION.md` and `output/implementation-acceleration/acceleration-summary.json`.
+- `node --check tools/plan-implementation-acceleration.mjs`: pass.
+- `node tools/verify-implementations.mjs`: 87 verified implementation cells, 87 passed, 0 failed.
+- `node tools/audit-requirement-evidence.mjs`: 16 requirement checks, 0 issues, 2 open items.
+- `git diff --check`: pass.
+
+Changes:
+
+- Added an implementation acceleration planner that classifies the 1000 x 50 native matrix into 18 archetype lanes.
+- Recorded the online research boundary: external algorithm repositories are useful for coverage maps, naming crosswalks, idioms, and test ideas, but source code should not be copied without per-file license review.
+- Replaced the naive "just refactor JS into 50 languages" path with a contract/emitter plan: canonical executable contracts, shared vectors, language emitters, and verified-native status only after passing local tests.
+- Corrected stale 71-cell prose to the current 87 verified native cells.
+
+Honesty boundary:
+
+- The plan is not itself 49,913 implementations. It is the fastest defensible route for generating and testing the remaining cells without turning the repo into a license or correctness mess.
+
 ### 0.9.13 implementation matrix and publishing scaffold
 
 Verified checks:

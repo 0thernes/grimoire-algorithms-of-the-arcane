@@ -9,6 +9,7 @@ Scope:
 - added `implementations/` as a 50-language/script source-code expansion scaffold
 - added `implementations/languages.json`, `implementations/coverage-summary.json`, `implementations/catalog-adapters-summary.json`, and `implementations/verified-cells.json` with 50,000 planned native cells, 50,000 generated catalog-adapter cells, and 87 verified native cells
 - added the first real Boyer-Moore source batch for JavaScript, TypeScript, Python, PowerShell, Java, C#, F#, C, C++, Fortran, Go, Ruby, Perl, Bash, and Visual Basic .NET
+- added `docs/IMPLEMENTATION-ACCELERATION.md` and `output/implementation-acceleration/acceleration-summary.json` to define the contract/emitter route for the remaining 49,913 planned native cells
 - added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`
 - added `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`
 - updated the GitHub Pages workflow to include root policy files, `docs/`, and `implementations/`
@@ -21,6 +22,8 @@ Scope:
 Evidence targets:
 
 - `implementations/coverage-summary.json`
+- `docs/IMPLEMENTATION-ACCELERATION.md`
+- `output/implementation-acceleration/acceleration-summary.json`
 - `docs/ALGORITHMS-1000.md`
 - `output/playwright/implementation-matrix-audit-summary.json`
 - `output/playwright/static-readiness-audit-summary.json`

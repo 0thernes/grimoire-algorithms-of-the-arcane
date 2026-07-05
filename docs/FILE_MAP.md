@@ -51,6 +51,7 @@
 - `docs/COMPLETION-AUDIT.md`: requirement-to-evidence matrix.
 - `docs/HANDOFF.md`: current operator handoff.
 - `docs/IMPLEMENTATION-MATRIX.md`: 1000 x 50 implementation matrix architecture.
+- `docs/IMPLEMENTATION-ACCELERATION.md`: contract/emitter acceleration plan for the remaining implementation matrix.
 - `docs/ALGORITHMS-1000.md`: generated catalog list of all 1000 records.
 - `docs/GITHUB-PUBLISHING.md`: GitHub repository and Pages publish plan.
 - `docs/LICENSE-POLICY.md`: license-selection notes and non-commercial warning.
@@ -74,6 +75,7 @@
 ## Tools
 
 - `tools/build-implementation-matrix.mjs`: regenerates implementation scaffold, full-catalog language adapters, and publishing docs from `catalog.json`.
+- `tools/plan-implementation-acceleration.mjs`: generates the implementation acceleration summary and no-hand-port plan.
 - `tools/generate-matrix-cell.mjs`: batch-generates native implementation cells from a JSON spec and rebuilds the implementation matrix.
 - `tools/audit-language-catalog-adapters.mjs`: verifies the 50 generated language catalog adapters and their 1000-record coverage.
 - `tools/verify-implementations.mjs`: executes verified-cell test commands and writes implementation test evidence.
@@ -94,6 +96,7 @@
 - `output/pages-artifact/pages-artifact-audit-summary.json`: latest simulated Pages artifact summary. The temporary copied `site/` folder is removed after audit.
 - `output/requirement-evidence/requirement-evidence-summary.json`: latest requirement evidence summary.
 - `output/implementation-tests/implementation-test-summary.json`: latest verified implementation-cell test summary. Compiled products in this folder are ignored.
+- `output/implementation-acceleration/acceleration-summary.json`: generated implementation acceleration queue and archetype summary.
 - `output/bibliography/bibliography-audit-summary.json`: latest bibliography scaffold audit summary.
 
 The Pages workflow deploys root runtime/docs, `docs/`, `implementations/`, and `bibliography/`. It does not deploy `output/playwright/` or local implementation-test binaries.
