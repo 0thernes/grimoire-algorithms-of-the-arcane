@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-07-05T01:21:00.290Z",
+  "target": "wfc",
+  "mid": {
+    "audio": {
+      "supported": true,
+      "enabled": true,
+      "unlocked": true,
+      "state": "running",
+      "mode": "overlap",
+      "liveEventSlots": 6,
+      "runVoiceCount": 1,
+      "audibleRunVoiceCount": 1,
+      "scheduledRunNotes": 12,
+      "runMasterGain": 0.48,
+      "boundedRunMs": 45000,
+      "lastMonsterCount": 0,
+      "lastMonsterAgeMs": null,
+      "runVoiceIds": [
+        "wfc"
+      ],
+      "runVoiceDetails": [
+        {
+          "id": "wfc",
+          "source": "run-button",
+          "maxMs": 45000,
+          "ageMs": 156,
+          "frames": 4,
+          "beat": 4,
+          "scheduledNotes": 6,
+          "cadenceMs": 132.41,
+          "energy": 0.807,
+          "audible": true
+        }
+      ]
+    },
+    "active": true,
+    "clickClass": true,
+    "code": "SR-0001-2711",
+    "sonic": "SR-0001-2711; phase-vector amplitude sonification; root 196Hz; vector [8-8-4-1-5-2-8-7] from title/tags/signature; hover plays the first three mapped states; cl"
+  },
+  "after": {
+    "active": false,
+    "running": false,
+    "audio": {
+      "supported": true,
+      "enabled": true,
+      "unlocked": true,
+      "state": "running",
+      "mode": "overlap",
+      "liveEventSlots": 6,
+      "runVoiceCount": 0,
+      "audibleRunVoiceCount": 0,
+      "scheduledRunNotes": 15,
+      "runMasterGain": 0.48,
+      "boundedRunMs": 45000,
+      "lastMonsterCount": 0,
+      "lastMonsterAgeMs": null,
+      "runVoiceIds": [],
+      "runVoiceDetails": []
+    }
+  },
+  "issues": []
+}

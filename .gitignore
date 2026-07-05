@@ -1,0 +1,11 @@
+.playwright-cli/
+output/implementation-tests/*
+!output/implementation-tests/implementation-test-summary.json
+output/pages-artifact/site/
+*.exe
+*.dll
+*.pdb
+*.class
+*.o
+*.obj
+*.ilk

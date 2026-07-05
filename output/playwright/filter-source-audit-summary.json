@@ -1,0 +1,234 @@
+{
+  "generatedAt": "2026-07-05T02:00:44.131Z",
+  "target": "record search/filter and visible source markers",
+  "totalSourceMarkers": 1000,
+  "totalSourceClass": 1000,
+  "sourceStatusByVolume": {
+    "V01": {
+      "cards": 100,
+      "markers": 100,
+      "sourceClass": 100
+    },
+    "V02": {
+      "cards": 100,
+      "markers": 100,
+      "sourceClass": 100
+    },
+    "V03": {
+      "cards": 100,
+      "markers": 100,
+      "sourceClass": 100
+    },
+    "V04": {
+      "cards": 100,
+      "markers": 100,
+      "sourceClass": 100
+    },
+    "V05": {
+      "cards": 100,
+      "markers": 100,
+      "sourceClass": 100
+    },
+    "V06": {
+      "cards": 100,
+      "markers": 100,
+      "sourceClass": 100
+    },
+    "V07": {
+      "cards": 100,
+      "markers": 100,
+      "sourceClass": 100
+    },
+    "V08": {
+      "cards": 100,
+      "markers": 100,
+      "sourceClass": 100
+    },
+    "V09": {
+      "cards": 100,
+      "markers": 100,
+      "sourceClass": 100
+    },
+    "V10": {
+      "cards": 100,
+      "markers": 100,
+      "sourceClass": 100
+    }
+  },
+  "samples": [
+    {
+      "action": "search-title",
+      "status": {
+        "activeVolume": 7,
+        "visible": 1,
+        "total": 100,
+        "filters": {
+          "search": "Bellman-Ford",
+          "tag": "all",
+          "engine": "all",
+          "source": "all",
+          "sonic": "all",
+          "visual": "all"
+        },
+        "sourceMarkers": 100,
+        "sourceStatuses": {
+          "source-class-only": 100
+        }
+      },
+      "text": "Filters: 1/100 visible · V07 Graph Rituals · search \"Bellman-Ford\""
+    },
+    {
+      "action": "tag-filter",
+      "tag": "Graph",
+      "status": {
+        "activeVolume": 7,
+        "visible": 90,
+        "total": 100,
+        "filters": {
+          "search": "",
+          "tag": "graph",
+          "engine": "all",
+          "source": "all",
+          "sonic": "all",
+          "visual": "all"
+        },
+        "sourceMarkers": 100,
+        "sourceStatuses": {
+          "source-class-only": 100
+        }
+      },
+      "text": "Filters: 90/100 visible · V07 Graph Rituals · tag:Graph"
+    },
+    {
+      "action": "engine-filter",
+      "engine": "graph",
+      "status": {
+        "activeVolume": 7,
+        "visible": 50,
+        "total": 100,
+        "filters": {
+          "search": "",
+          "tag": "graph",
+          "engine": "graph",
+          "source": "all",
+          "sonic": "all",
+          "visual": "all"
+        },
+        "sourceMarkers": 100,
+        "sourceStatuses": {
+          "source-class-only": 100
+        }
+      },
+      "text": "Filters: 50/100 visible · V07 Graph Rituals · tag:Graph · engine:Graph"
+    },
+    {
+      "action": "source-filter",
+      "status": {
+        "activeVolume": 7,
+        "visible": 50,
+        "total": 100,
+        "filters": {
+          "search": "",
+          "tag": "graph",
+          "engine": "graph",
+          "source": "source-class-only",
+          "sonic": "all",
+          "visual": "all"
+        },
+        "sourceMarkers": 100,
+        "sourceStatuses": {
+          "source-class-only": 100
+        }
+      },
+      "text": "Filters: 50/100 visible · V07 Graph Rituals · tag:Graph · engine:Graph · source:Source Class Only"
+    },
+    {
+      "action": "sonic-filter",
+      "sonic": "flow-graph",
+      "status": {
+        "activeVolume": 7,
+        "visible": 17,
+        "total": 100,
+        "filters": {
+          "search": "",
+          "tag": "graph",
+          "engine": "graph",
+          "source": "source-class-only",
+          "sonic": "flow-graph",
+          "visual": "all"
+        },
+        "sourceMarkers": 100,
+        "sourceStatuses": {
+          "source-class-only": 100
+        }
+      },
+      "text": "Filters: 17/100 visible · V07 Graph Rituals · tag:Graph · engine:Graph · source:Source Class Only · sonic:Flow Graph"
+    },
+    {
+      "action": "visual-filter",
+      "visual": "residual-flow-and-path-diagram",
+      "status": {
+        "activeVolume": 7,
+        "visible": 17,
+        "total": 100,
+        "filters": {
+          "search": "",
+          "tag": "graph",
+          "engine": "graph",
+          "source": "source-class-only",
+          "sonic": "flow-graph",
+          "visual": "residual-flow-and-path-diagram"
+        },
+        "sourceMarkers": 100,
+        "sourceStatuses": {
+          "source-class-only": 100
+        }
+      },
+      "text": "Filters: 17/100 visible · V07 Graph Rituals · tag:Graph · engine:Graph · source:Source Class Only · sonic:Flow Graph · visual:Residual Flow And Path Diagram"
+    },
+    {
+      "action": "volume-select",
+      "status": {
+        "activeVolume": 10,
+        "visible": 40,
+        "total": 100,
+        "filters": {
+          "search": "",
+          "tag": "all",
+          "engine": "graph",
+          "source": "source-class-only",
+          "sonic": "all",
+          "visual": "all"
+        },
+        "sourceMarkers": 100,
+        "sourceStatuses": {
+          "source-class-only": 100
+        }
+      },
+      "text": "Filters: 40/100 visible · V10 Data Relics · engine:Graph · source:Source Class Only"
+    },
+    {
+      "action": "reset",
+      "status": {
+        "activeVolume": 10,
+        "visible": 100,
+        "total": 100,
+        "filters": {
+          "search": "",
+          "tag": "all",
+          "engine": "all",
+          "source": "all",
+          "sonic": "all",
+          "visual": "all"
+        },
+        "sourceMarkers": 100,
+        "sourceStatuses": {
+          "source-class-only": 100
+        }
+      },
+      "pickerVisible": 100,
+      "text": "Filters: 100/100 visible · V10 Data Relics · none"
+    }
+  ],
+  "issues": []
+}

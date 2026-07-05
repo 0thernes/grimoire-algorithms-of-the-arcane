@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GRIMOIRE record bibliography ledger",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "catalogVersion",
+    "recordCount",
+    "statusPolicy",
+    "requiredCitationSlots",
+    "records"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "generatedAt": {
+      "type": "string"
+    },
+    "catalogVersion": {
+      "type": "string"
+    },
+    "recordCount": {
+      "type": "integer"
+    },
+    "statusPolicy": {
+      "type": "string"
+    },
+    "requiredCitationSlots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sourceLedgerCounts": {
+      "type": "object"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "recordId",
+          "navLabel",
+          "title",
+          "sourceLedgerId",
+          "bibliographyStatus",
+          "citationKeys",
+          "requiredCitationSlots",
+          "permittedClaims"
+        ],
+        "properties": {
+          "recordId": {
+            "type": "string"
+          },
+          "navLabel": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "sourceLedgerId": {
+            "type": "string"
+          },
+          "bibliographyStatus": {
+            "enum": [
+              "source-class-only",
+              "partially-cited",
+              "fully-cited"
+            ]
+          },
+          "citationKeys": {
+            "type": "array"
+          },
+          "requiredCitationSlots": {
+            "type": "array"
+          },
+          "permittedClaims": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "generatedAt": "2026-07-05T01:18:05.375Z",
+  "target": "continuous run sonification",
+  "generatedTarget": {
+    "id": "v10-b-tree-15sc2",
+    "label": "V10-A-01",
+    "title": "B-Tree"
+  },
+  "bounded": {
+    "supported": true,
+    "enabled": true,
+    "unlocked": true,
+    "state": "running",
+    "mode": "overlap",
+    "liveEventSlots": 1,
+    "runVoiceCount": 0,
+    "audibleRunVoiceCount": 0,
+    "scheduledRunNotes": 214,
+    "runMasterGain": 0.48,
+    "boundedRunMs": 45000,
+    "lastMonsterCount": 1000,
+    "lastMonsterAgeMs": 6975,
+    "runVoiceIds": [],
+    "runVoiceDetails": []
+  },
+  "samples": [
+    {
+      "label": "volume-1-wfc",
+      "before": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "solo",
+        "liveEventSlots": 1,
+        "runVoiceCount": 0,
+        "audibleRunVoiceCount": 0,
+        "scheduledRunNotes": 184,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 1000,
+        "lastMonsterAgeMs": 2783,
+        "runVoiceIds": [],
+        "runVoiceDetails": []
+      },
+      "during": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "solo",
+        "liveEventSlots": 1,
+        "runVoiceCount": 1,
+        "audibleRunVoiceCount": 1,
+        "scheduledRunNotes": 193,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 1000,
+        "lastMonsterAgeMs": 3790,
+        "runVoiceIds": [
+          "wfc"
+        ],
+        "runVoiceDetails": [
+          {
+            "id": "wfc",
+            "source": "run-button",
+            "maxMs": 45000,
+            "ageMs": 935,
+            "frames": 22,
+            "beat": 6,
+            "scheduledNotes": 9,
+            "cadenceMs": 40.02,
+            "energy": 0.99,
+            "audible": true
+          }
+        ]
+      },
+      "after": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "solo",
+        "liveEventSlots": 1,
+        "runVoiceCount": 0,
+        "audibleRunVoiceCount": 0,
+        "scheduledRunNotes": 193,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 1000,
+        "lastMonsterAgeMs": 3973,
+        "runVoiceIds": [],
+        "runVoiceDetails": []
+      }
+    },
+    {
+      "label": "volume-10-V10-A-01",
+      "before": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "solo",
+        "liveEventSlots": 1,
+        "runVoiceCount": 0,
+        "audibleRunVoiceCount": 0,
+        "scheduledRunNotes": 193,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 1000,
+        "lastMonsterAgeMs": 4320,
+        "runVoiceIds": [],
+        "runVoiceDetails": []
+      },
+      "during": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "solo",
+        "liveEventSlots": 1,
+        "runVoiceCount": 1,
+        "audibleRunVoiceCount": 1,
+        "scheduledRunNotes": 207,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 1000,
+        "lastMonsterAgeMs": 5326,
+        "runVoiceIds": [
+          "v10-b-tree-15sc2"
+        ],
+        "runVoiceDetails": [
+          {
+            "id": "v10-b-tree-15sc2",
+            "source": "run-button",
+            "maxMs": 45000,
+            "ageMs": 939,
+            "frames": 21,
+            "beat": 10,
+            "scheduledNotes": 14,
+            "cadenceMs": 49.43,
+            "energy": 1.192,
+            "audible": true
+          }
+        ]
+      },
+      "after": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "solo",
+        "liveEventSlots": 1,
+        "runVoiceCount": 0,
+        "audibleRunVoiceCount": 0,
+        "scheduledRunNotes": 207,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 1000,
+        "lastMonsterAgeMs": 5512,
+        "runVoiceIds": [],
+        "runVoiceDetails": []
+      }
+    }
+  ],
+  "issues": []
+}

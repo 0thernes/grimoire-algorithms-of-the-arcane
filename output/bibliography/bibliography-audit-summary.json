@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-07-05T02:29:03.105Z",
+  "target": "record-specific bibliography scaffold",
+  "catalogVersion": "0.9.13-local",
+  "bibliographyVersion": "0.9.13-local",
+  "recordCount": 1000,
+  "requiredSlotsPerRecord": 4,
+  "filledCitationSlots": 0,
+  "bibliographyStatusCounts": {
+    "source-class-only": 1000
+  },
+  "sourceLedgerCounts": {
+    "S-QNT": 44,
+    "S-OPT": 102,
+    "S-CRY": 77,
+    "S-TOP": 62,
+    "S-DST": 88,
+    "S-GPH": 123,
+    "S-PRB": 132,
+    "S-LOG": 114,
+    "S-SKT": 68,
+    "S-AUT": 37,
+    "S-UND": 23,
+    "S-EVO": 14,
+    "S-PRS": 54,
+    "S-FLW": 62
+  },
+  "missingFromLedger": [],
+  "extraInLedger": [],
+  "mismatches": [],
+  "slotIssues": [],
+  "forbiddenClaims": [],
+  "issues": []
+}

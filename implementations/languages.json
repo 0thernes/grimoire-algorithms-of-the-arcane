@@ -1,0 +1,710 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-05T02:29:02.929Z",
+  "catalogVersion": "0.9.13-local",
+  "languageCount": 50,
+  "languages": [
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "extension": "js",
+      "runtime": "Node.js / browser",
+      "family": "web scripting"
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "extension": "ts",
+      "runtime": "Node.js / browser",
+      "family": "typed web scripting"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "extension": "py",
+      "runtime": "CPython",
+      "family": "general scripting"
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "extension": "java",
+      "runtime": "JVM",
+      "family": "managed OO"
+    },
+    {
+      "id": "c",
+      "name": "C",
+      "extension": "c",
+      "runtime": "native",
+      "family": "systems"
+    },
+    {
+      "id": "cpp",
+      "name": "C++",
+      "extension": "cpp",
+      "runtime": "native",
+      "family": "systems"
+    },
+    {
+      "id": "csharp",
+      "name": "C#",
+      "extension": "cs",
+      "runtime": ".NET",
+      "family": "managed OO"
+    },
+    {
+      "id": "go",
+      "name": "Go",
+      "extension": "go",
+      "runtime": "native",
+      "family": "systems/networking"
+    },
+    {
+      "id": "rust",
+      "name": "Rust",
+      "extension": "rs",
+      "runtime": "native",
+      "family": "safe systems"
+    },
+    {
+      "id": "kotlin",
+      "name": "Kotlin",
+      "extension": "kt",
+      "runtime": "JVM / native",
+      "family": "modern JVM"
+    },
+    {
+      "id": "swift",
+      "name": "Swift",
+      "extension": "swift",
+      "runtime": "native",
+      "family": "Apple/native"
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "extension": "rb",
+      "runtime": "MRI / JRuby",
+      "family": "dynamic scripting"
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "extension": "php",
+      "runtime": "PHP runtime",
+      "family": "web scripting"
+    },
+    {
+      "id": "r",
+      "name": "R",
+      "extension": "R",
+      "runtime": "R",
+      "family": "statistics"
+    },
+    {
+      "id": "julia",
+      "name": "Julia",
+      "extension": "jl",
+      "runtime": "Julia",
+      "family": "scientific computing"
+    },
+    {
+      "id": "scala",
+      "name": "Scala",
+      "extension": "scala",
+      "runtime": "JVM",
+      "family": "functional JVM"
+    },
+    {
+      "id": "dart",
+      "name": "Dart",
+      "extension": "dart",
+      "runtime": "Dart / Flutter",
+      "family": "app/web"
+    },
+    {
+      "id": "lua",
+      "name": "Lua",
+      "extension": "lua",
+      "runtime": "Lua / LuaJIT",
+      "family": "embedded scripting"
+    },
+    {
+      "id": "perl",
+      "name": "Perl",
+      "extension": "pl",
+      "runtime": "Perl",
+      "family": "text scripting"
+    },
+    {
+      "id": "bash",
+      "name": "Bash",
+      "extension": "sh",
+      "runtime": "POSIX shell",
+      "family": "shell scripting"
+    },
+    {
+      "id": "powershell",
+      "name": "PowerShell",
+      "extension": "ps1",
+      "runtime": "PowerShell",
+      "family": "shell scripting"
+    },
+    {
+      "id": "sql",
+      "name": "SQL",
+      "extension": "sql",
+      "runtime": "ANSI SQL",
+      "family": "database query"
+    },
+    {
+      "id": "matlab-octave",
+      "name": "MATLAB / Octave",
+      "extension": "m",
+      "runtime": "MATLAB / GNU Octave",
+      "family": "numerical computing"
+    },
+    {
+      "id": "haskell",
+      "name": "Haskell",
+      "extension": "hs",
+      "runtime": "GHC",
+      "family": "pure functional"
+    },
+    {
+      "id": "elixir",
+      "name": "Elixir",
+      "extension": "ex",
+      "runtime": "BEAM",
+      "family": "actor/concurrent"
+    },
+    {
+      "id": "erlang",
+      "name": "Erlang",
+      "extension": "erl",
+      "runtime": "BEAM",
+      "family": "actor/concurrent"
+    },
+    {
+      "id": "clojure",
+      "name": "Clojure",
+      "extension": "clj",
+      "runtime": "JVM / JS",
+      "family": "Lisp/JVM"
+    },
+    {
+      "id": "fsharp",
+      "name": "F#",
+      "extension": "fs",
+      "runtime": ".NET",
+      "family": "functional .NET"
+    },
+    {
+      "id": "ocaml",
+      "name": "OCaml",
+      "extension": "ml",
+      "runtime": "native / bytecode",
+      "family": "ML functional"
+    },
+    {
+      "id": "zig",
+      "name": "Zig",
+      "extension": "zig",
+      "runtime": "native",
+      "family": "systems"
+    },
+    {
+      "id": "nim",
+      "name": "Nim",
+      "extension": "nim",
+      "runtime": "native / transpiled C",
+      "family": "systems scripting"
+    },
+    {
+      "id": "crystal",
+      "name": "Crystal",
+      "extension": "cr",
+      "runtime": "native",
+      "family": "typed Ruby-like"
+    },
+    {
+      "id": "d",
+      "name": "D",
+      "extension": "d",
+      "runtime": "native",
+      "family": "systems"
+    },
+    {
+      "id": "ada",
+      "name": "Ada",
+      "extension": "adb",
+      "runtime": "native",
+      "family": "high-integrity systems"
+    },
+    {
+      "id": "fortran",
+      "name": "Fortran",
+      "extension": "f90",
+      "runtime": "native",
+      "family": "scientific computing"
+    },
+    {
+      "id": "cobol",
+      "name": "COBOL",
+      "extension": "cob",
+      "runtime": "native / mainframe",
+      "family": "business systems"
+    },
+    {
+      "id": "common-lisp",
+      "name": "Common Lisp",
+      "extension": "lisp",
+      "runtime": "Common Lisp",
+      "family": "Lisp"
+    },
+    {
+      "id": "scheme",
+      "name": "Scheme",
+      "extension": "scm",
+      "runtime": "Scheme",
+      "family": "Lisp"
+    },
+    {
+      "id": "racket",
+      "name": "Racket",
+      "extension": "rkt",
+      "runtime": "Racket",
+      "family": "language lab"
+    },
+    {
+      "id": "prolog",
+      "name": "Prolog",
+      "extension": "pl",
+      "runtime": "SWI-Prolog",
+      "family": "logic programming"
+    },
+    {
+      "id": "objective-c",
+      "name": "Objective-C",
+      "extension": "m",
+      "runtime": "native / Apple",
+      "family": "Apple/native"
+    },
+    {
+      "id": "groovy",
+      "name": "Groovy",
+      "extension": "groovy",
+      "runtime": "JVM",
+      "family": "dynamic JVM"
+    },
+    {
+      "id": "visual-basic",
+      "name": "Visual Basic .NET",
+      "extension": "vb",
+      "runtime": ".NET",
+      "family": "managed OO"
+    },
+    {
+      "id": "vba",
+      "name": "VBA",
+      "extension": "bas",
+      "runtime": "Office host",
+      "family": "office automation"
+    },
+    {
+      "id": "solidity",
+      "name": "Solidity",
+      "extension": "sol",
+      "runtime": "EVM",
+      "family": "smart contracts"
+    },
+    {
+      "id": "move",
+      "name": "Move",
+      "extension": "move",
+      "runtime": "Move VM",
+      "family": "smart contracts"
+    },
+    {
+      "id": "assembly-x86-64",
+      "name": "x86-64 Assembly",
+      "extension": "asm",
+      "runtime": "native",
+      "family": "assembly"
+    },
+    {
+      "id": "webassembly-wat",
+      "name": "WebAssembly Text",
+      "extension": "wat",
+      "runtime": "WebAssembly",
+      "family": "portable bytecode"
+    },
+    {
+      "id": "cuda-cpp",
+      "name": "CUDA C++",
+      "extension": "cu",
+      "runtime": "CUDA",
+      "family": "GPU computing"
+    },
+    {
+      "id": "verilog-systemverilog",
+      "name": "Verilog / SystemVerilog",
+      "extension": "sv",
+      "runtime": "HDL simulator / synthesis",
+      "family": "hardware description"
+    }
+  ],
+  "targets": [
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "extension": "js",
+      "runtime": "Node.js / browser",
+      "family": "web scripting"
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "extension": "ts",
+      "runtime": "Node.js / browser",
+      "family": "typed web scripting"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "extension": "py",
+      "runtime": "CPython",
+      "family": "general scripting"
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "extension": "java",
+      "runtime": "JVM",
+      "family": "managed OO"
+    },
+    {
+      "id": "c",
+      "name": "C",
+      "extension": "c",
+      "runtime": "native",
+      "family": "systems"
+    },
+    {
+      "id": "cpp",
+      "name": "C++",
+      "extension": "cpp",
+      "runtime": "native",
+      "family": "systems"
+    },
+    {
+      "id": "csharp",
+      "name": "C#",
+      "extension": "cs",
+      "runtime": ".NET",
+      "family": "managed OO"
+    },
+    {
+      "id": "go",
+      "name": "Go",
+      "extension": "go",
+      "runtime": "native",
+      "family": "systems/networking"
+    },
+    {
+      "id": "rust",
+      "name": "Rust",
+      "extension": "rs",
+      "runtime": "native",
+      "family": "safe systems"
+    },
+    {
+      "id": "kotlin",
+      "name": "Kotlin",
+      "extension": "kt",
+      "runtime": "JVM / native",
+      "family": "modern JVM"
+    },
+    {
+      "id": "swift",
+      "name": "Swift",
+      "extension": "swift",
+      "runtime": "native",
+      "family": "Apple/native"
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "extension": "rb",
+      "runtime": "MRI / JRuby",
+      "family": "dynamic scripting"
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "extension": "php",
+      "runtime": "PHP runtime",
+      "family": "web scripting"
+    },
+    {
+      "id": "r",
+      "name": "R",
+      "extension": "R",
+      "runtime": "R",
+      "family": "statistics"
+    },
+    {
+      "id": "julia",
+      "name": "Julia",
+      "extension": "jl",
+      "runtime": "Julia",
+      "family": "scientific computing"
+    },
+    {
+      "id": "scala",
+      "name": "Scala",
+      "extension": "scala",
+      "runtime": "JVM",
+      "family": "functional JVM"
+    },
+    {
+      "id": "dart",
+      "name": "Dart",
+      "extension": "dart",
+      "runtime": "Dart / Flutter",
+      "family": "app/web"
+    },
+    {
+      "id": "lua",
+      "name": "Lua",
+      "extension": "lua",
+      "runtime": "Lua / LuaJIT",
+      "family": "embedded scripting"
+    },
+    {
+      "id": "perl",
+      "name": "Perl",
+      "extension": "pl",
+      "runtime": "Perl",
+      "family": "text scripting"
+    },
+    {
+      "id": "bash",
+      "name": "Bash",
+      "extension": "sh",
+      "runtime": "POSIX shell",
+      "family": "shell scripting"
+    },
+    {
+      "id": "powershell",
+      "name": "PowerShell",
+      "extension": "ps1",
+      "runtime": "PowerShell",
+      "family": "shell scripting"
+    },
+    {
+      "id": "sql",
+      "name": "SQL",
+      "extension": "sql",
+      "runtime": "ANSI SQL",
+      "family": "database query"
+    },
+    {
+      "id": "matlab-octave",
+      "name": "MATLAB / Octave",
+      "extension": "m",
+      "runtime": "MATLAB / GNU Octave",
+      "family": "numerical computing"
+    },
+    {
+      "id": "haskell",
+      "name": "Haskell",
+      "extension": "hs",
+      "runtime": "GHC",
+      "family": "pure functional"
+    },
+    {
+      "id": "elixir",
+      "name": "Elixir",
+      "extension": "ex",
+      "runtime": "BEAM",
+      "family": "actor/concurrent"
+    },
+    {
+      "id": "erlang",
+      "name": "Erlang",
+      "extension": "erl",
+      "runtime": "BEAM",
+      "family": "actor/concurrent"
+    },
+    {
+      "id": "clojure",
+      "name": "Clojure",
+      "extension": "clj",
+      "runtime": "JVM / JS",
+      "family": "Lisp/JVM"
+    },
+    {
+      "id": "fsharp",
+      "name": "F#",
+      "extension": "fs",
+      "runtime": ".NET",
+      "family": "functional .NET"
+    },
+    {
+      "id": "ocaml",
+      "name": "OCaml",
+      "extension": "ml",
+      "runtime": "native / bytecode",
+      "family": "ML functional"
+    },
+    {
+      "id": "zig",
+      "name": "Zig",
+      "extension": "zig",
+      "runtime": "native",
+      "family": "systems"
+    },
+    {
+      "id": "nim",
+      "name": "Nim",
+      "extension": "nim",
+      "runtime": "native / transpiled C",
+      "family": "systems scripting"
+    },
+    {
+      "id": "crystal",
+      "name": "Crystal",
+      "extension": "cr",
+      "runtime": "native",
+      "family": "typed Ruby-like"
+    },
+    {
+      "id": "d",
+      "name": "D",
+      "extension": "d",
+      "runtime": "native",
+      "family": "systems"
+    },
+    {
+      "id": "ada",
+      "name": "Ada",
+      "extension": "adb",
+      "runtime": "native",
+      "family": "high-integrity systems"
+    },
+    {
+      "id": "fortran",
+      "name": "Fortran",
+      "extension": "f90",
+      "runtime": "native",
+      "family": "scientific computing"
+    },
+    {
+      "id": "cobol",
+      "name": "COBOL",
+      "extension": "cob",
+      "runtime": "native / mainframe",
+      "family": "business systems"
+    },
+    {
+      "id": "common-lisp",
+      "name": "Common Lisp",
+      "extension": "lisp",
+      "runtime": "Common Lisp",
+      "family": "Lisp"
+    },
+    {
+      "id": "scheme",
+      "name": "Scheme",
+      "extension": "scm",
+      "runtime": "Scheme",
+      "family": "Lisp"
+    },
+    {
+      "id": "racket",
+      "name": "Racket",
+      "extension": "rkt",
+      "runtime": "Racket",
+      "family": "language lab"
+    },
+    {
+      "id": "prolog",
+      "name": "Prolog",
+      "extension": "pl",
+      "runtime": "SWI-Prolog",
+      "family": "logic programming"
+    },
+    {
+      "id": "objective-c",
+      "name": "Objective-C",
+      "extension": "m",
+      "runtime": "native / Apple",
+      "family": "Apple/native"
+    },
+    {
+      "id": "groovy",
+      "name": "Groovy",
+      "extension": "groovy",
+      "runtime": "JVM",
+      "family": "dynamic JVM"
+    },
+    {
+      "id": "visual-basic",
+      "name": "Visual Basic .NET",
+      "extension": "vb",
+      "runtime": ".NET",
+      "family": "managed OO"
+    },
+    {
+      "id": "vba",
+      "name": "VBA",
+      "extension": "bas",
+      "runtime": "Office host",
+      "family": "office automation"
+    },
+    {
+      "id": "solidity",
+      "name": "Solidity",
+      "extension": "sol",
+      "runtime": "EVM",
+      "family": "smart contracts"
+    },
+    {
+      "id": "move",
+      "name": "Move",
+      "extension": "move",
+      "runtime": "Move VM",
+      "family": "smart contracts"
+    },
+    {
+      "id": "assembly-x86-64",
+      "name": "x86-64 Assembly",
+      "extension": "asm",
+      "runtime": "native",
+      "family": "assembly"
+    },
+    {
+      "id": "webassembly-wat",
+      "name": "WebAssembly Text",
+      "extension": "wat",
+      "runtime": "WebAssembly",
+      "family": "portable bytecode"
+    },
+    {
+      "id": "cuda-cpp",
+      "name": "CUDA C++",
+      "extension": "cu",
+      "runtime": "CUDA",
+      "family": "GPU computing"
+    },
+    {
+      "id": "verilog-systemverilog",
+      "name": "Verilog / SystemVerilog",
+      "extension": "sv",
+      "runtime": "HDL simulator / synthesis",
+      "family": "hardware description"
+    }
+  ]
+}

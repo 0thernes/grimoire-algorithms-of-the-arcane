@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "0.9.13-local",
+  "generatedAt": "2026-07-05T02:27:05.356Z",
+  "verificationPolicy": "A cell is verified only when its source files exist and its testCommand passes locally.",
+  "verifiedCells": [
+    {
+      "id": "javascript:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "javascript",
+      "sourceFiles": [
+        "implementations/javascript/string-search/boyermoore/boyer_moore.js"
+      ],
+      "readme": "implementations/javascript/string-search/boyermoore/README.md",
+      "testCommand": "node implementations/javascript/string-search/boyermoore/test.js",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "typescript:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "typescript",
+      "sourceFiles": [
+        "implementations/typescript/string-search/boyermoore/boyer_moore.ts"
+      ],
+      "readme": "implementations/typescript/string-search/boyermoore/README.md",
+      "testCommand": "deno run --quiet implementations/typescript/string-search/boyermoore/test.ts",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "python:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "python",
+      "sourceFiles": [
+        "implementations/python/string-search/boyermoore/boyer_moore.py"
+      ],
+      "readme": "implementations/python/string-search/boyermoore/README.md",
+      "testCommand": "python -B implementations/python/string-search/boyermoore/test_boyer_moore.py",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "powershell:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "powershell",
+      "sourceFiles": [
+        "implementations/powershell/string-search/boyermoore/boyer_moore.ps1"
+      ],
+      "readme": "implementations/powershell/string-search/boyermoore/README.md",
+      "testCommand": "pwsh -NoProfile -File implementations/powershell/string-search/boyermoore/test.ps1",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "java:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "java",
+      "sourceFiles": [
+        "implementations/java/string-search/boyermoore/BoyerMoore.java"
+      ],
+      "readme": "implementations/java/string-search/boyermoore/README.md",
+      "testCommand": "javac -d output/implementation-tests implementations/java/string-search/boyermoore/BoyerMoore.java && java -cp output/implementation-tests BoyerMoore",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "c:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "c",
+      "sourceFiles": [
+        "implementations/c/string-search/boyermoore/boyer_moore.c"
+      ],
+      "readme": "implementations/c/string-search/boyermoore/README.md",
+      "testCommand": "gcc implementations/c/string-search/boyermoore/boyer_moore.c -DTEST -o output/implementation-tests/boyermoore_c.exe && .\\output\\implementation-tests\\boyermoore_c.exe",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "cpp:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "cpp",
+      "sourceFiles": [
+        "implementations/cpp/string-search/boyermoore/boyer_moore.cpp"
+      ],
+      "readme": "implementations/cpp/string-search/boyermoore/README.md",
+      "testCommand": "g++ implementations/cpp/string-search/boyermoore/boyer_moore.cpp -std=c++17 -o output/implementation-tests/boyermoore_cpp.exe && .\\output\\implementation-tests\\boyermoore_cpp.exe",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "go:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "go",
+      "sourceFiles": [
+        "implementations/go/string-search/boyermoore/boyer_moore.go"
+      ],
+      "readme": "implementations/go/string-search/boyermoore/README.md",
+      "testCommand": "go run implementations/go/string-search/boyermoore/boyer_moore.go",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "ruby:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "ruby",
+      "sourceFiles": [
+        "implementations/ruby/string-search/boyermoore/boyer_moore.rb"
+      ],
+      "readme": "implementations/ruby/string-search/boyermoore/README.md",
+      "testCommand": "ruby implementations/ruby/string-search/boyermoore/boyer_moore.rb",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "perl:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "perl",
+      "sourceFiles": [
+        "implementations/perl/string-search/boyermoore/boyer_moore.pl"
+      ],
+      "readme": "implementations/perl/string-search/boyermoore/README.md",
+      "testCommand": "perl implementations/perl/string-search/boyermoore/boyer_moore.pl",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "bash:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "bash",
+      "sourceFiles": [
+        "implementations/bash/string-search/boyermoore/boyer_moore.sh"
+      ],
+      "readme": "implementations/bash/string-search/boyermoore/README.md",
+      "testCommand": "bash implementations/bash/string-search/boyermoore/test.sh",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    }
+  ]
+}

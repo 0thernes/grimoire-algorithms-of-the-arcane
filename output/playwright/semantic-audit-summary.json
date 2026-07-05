@@ -1,0 +1,264 @@
+{
+  "totalCards": 200,
+  "proofCount": 1200,
+  "sampleCount": 36,
+  "uniqueHashes": 36,
+  "exactDuplicateHashes": 0,
+  "semanticProofRows": 36,
+  "oldTemplateRows": 0,
+  "lowLitSamples": [],
+  "samples": [
+    {
+      "nav": "V01-A-01",
+      "title": "Wave Function Collapse",
+      "hash": "adcc4394",
+      "lit": 853,
+      "proofVisual": "quantum circuit and amplitude-phase diagram; VR-0001-6D04; treemap budget; diamond marks; ribbon links; resample motion;"
+    },
+    {
+      "nav": "V01-A-08",
+      "title": "Marching Cubes",
+      "hash": "f8f6d9a0",
+      "lit": 470,
+      "proofVisual": "projected surface and incidence mesh; VR-0008-B4B1; treemap budget; cross marks; stepped links; settle motion; matrix he"
+    },
+    {
+      "nav": "V01-C-05",
+      "title": "Bloom Filter",
+      "hash": "f521d137",
+      "lit": 265,
+      "proofVisual": "streaming sketch or compression-state diagram; VR-0025-EA92; polar phase; ring marks; dashed links; resample motion; hor"
+    },
+    {
+      "nav": "V01-E-10",
+      "title": "Interactive Proofs",
+      "hash": "12e8dadb",
+      "lit": 490,
+      "proofVisual": "constraint/proof-state diagram; VR-0050-2606; barycentric simplex; circle marks; ribbon links; settle motion; channel tr"
+    },
+    {
+      "nav": "V01-H-05",
+      "title": "Wolff Cluster Algorithm",
+      "hash": "29919c6f",
+      "lit": 117,
+      "proofVisual": "probability mass and sampler-state diagram; VR-0075-A345; temporal lanes; circle marks; haystack links; cascade motion; "
+    },
+    {
+      "nav": "V01-J-07",
+      "title": "zk-SNARKs",
+      "hash": "8a3f4d79",
+      "lit": 281,
+      "proofVisual": "cryptographic witness and transcript diagram; VR-0097-F96B; braid worldlines; square marks; dashed links; resample motio"
+    },
+    {
+      "nav": "V02-A-01",
+      "title": "Post Correspondence Problem",
+      "hash": "eaedf285",
+      "lit": 477,
+      "proofVisual": "constraint/proof-state diagram; VR-0101-9894; constraint polytope; notch marks; orthogonal links; sweep motion; matrix h"
+    },
+    {
+      "nav": "V02-A-08",
+      "title": "Semi-Thue Systems",
+      "hash": "af2df03b",
+      "lit": 471,
+      "proofVisual": "constraint/proof-state diagram; VR-0108-4581; hex bin field; spark marks; magnetic links; pulse motion; channel trellis;"
+    },
+    {
+      "nav": "V02-C-05",
+      "title": "Homotopy Type Theory",
+      "hash": "28097729",
+      "lit": 368,
+      "proofVisual": "constraint/proof-state diagram; VR-0125-45A0; cartesian ticks; capsule marks; bezier links; breathe motion; small-multip"
+    },
+    {
+      "nav": "V02-E-10",
+      "title": "Quantifier Elimination",
+      "hash": "98751262",
+      "lit": 767,
+      "proofVisual": "constraint/proof-state diagram; VR-0150-3E52; treemap budget; triangle marks; stepped links; breathe motion; interval ba"
+    },
+    {
+      "nav": "V02-H-05",
+      "title": "Foundational Proof Certificates",
+      "hash": "8e344fae",
+      "lit": 287,
+      "proofVisual": "cryptographic witness and transcript diagram; VR-0175-A847; contour section; circle marks; magnetic links; breathe motio"
+    },
+    {
+      "nav": "V02-J-07",
+      "title": "ALC Tableau",
+      "hash": "86599985",
+      "lit": 453,
+      "proofVisual": "constraint/proof-state diagram; VR-0197-01A1; orbit clock; triangle marks; haystack links; resample motion; matrix heatm"
+    },
+    {
+      "nav": "V04-A-01",
+      "title": "Zab Atomic Broadcast",
+      "hash": "e2aec2bc",
+      "lit": 149,
+      "proofVisual": "distributed quorum and message-timeline diagram; VR-0301-0F40; compound graph cells; ring marks; stepped links; diffuse "
+    },
+    {
+      "nav": "V04-A-08",
+      "title": "State Machine Replication",
+      "hash": "0bb88a2e",
+      "lit": 298,
+      "proofVisual": "distributed quorum and message-timeline diagram; VR-0308-A30C; orbit clock; circle marks; bezier links; tick motion; str"
+    },
+    {
+      "nav": "V04-C-05",
+      "title": "Suzuki-Kasami Broadcast",
+      "hash": "aa7f29cb",
+      "lit": 165,
+      "proofVisual": "distributed quorum and message-timeline diagram; VR-0325-CB26; braid worldlines; ring marks; magnetic links; settle moti"
+    },
+    {
+      "nav": "V04-E-10",
+      "title": "Happens-Before Analysis",
+      "hash": "640b1a80",
+      "lit": 244,
+      "proofVisual": "distributed quorum and message-timeline diagram; VR-0350-410C; temporal lanes; square marks; straight links; phase motio"
+    },
+    {
+      "nav": "V04-H-05",
+      "title": "Lease-Based Coordination",
+      "hash": "4f7f67a0",
+      "lit": 232,
+      "proofVisual": "distributed quorum and message-timeline diagram; VR-0375-63A6; contour section; notch marks; stepped links; pulse motion"
+    },
+    {
+      "nav": "V04-J-07",
+      "title": "Ethereum Fork Choice LMD-GHOST",
+      "hash": "5dca0f02",
+      "lit": 185,
+      "proofVisual": "distributed quorum and message-timeline diagram; VR-0397-422A; constraint polytope; pill marks; ribbon links; sweep moti"
+    },
+    {
+      "nav": "V07-A-01",
+      "title": "Bellman-Ford",
+      "hash": "24b03325",
+      "lit": 286,
+      "proofVisual": "residual-flow and path diagram; VR-0601-2F0C; persistence barcode; circle marks; magnetic links; breathe motion; stream "
+    },
+    {
+      "nav": "V07-A-08",
+      "title": "Dial's Algorithm",
+      "hash": "582a22dd",
+      "lit": 167,
+      "proofVisual": "residual-flow and path diagram; VR-0608-9701; verlet constraint web; square marks; orthogonal links; resample motion; pa"
+    },
+    {
+      "nav": "V07-C-05",
+      "title": "Nagamochi-Ibaraki",
+      "hash": "95778e16",
+      "lit": 232,
+      "proofVisual": "residual-flow and path diagram; VR-0625-E159; butterfly transform; pill marks; bezier links; resample motion; parallel c"
+    },
+    {
+      "nav": "V07-E-10",
+      "title": "Degeneracy Ordering",
+      "hash": "c1dc6821",
+      "lit": 308,
+      "proofVisual": "graph semantic diagram; VR-0650-CD89; raster memory; triangle marks; ribbon links; phase motion; parallel coordinate bra"
+    },
+    {
+      "nav": "V07-H-05",
+      "title": "Mapper Algorithm",
+      "hash": "5177ed36",
+      "lit": 82,
+      "proofVisual": "topology semantic diagram; VR-0675-A159; constraint polytope; ring marks; ribbon links; sweep motion; small-multiple fac"
+    },
+    {
+      "nav": "V07-J-07",
+      "title": "Label Propagation",
+      "hash": "994056a6",
+      "lit": 241,
+      "proofVisual": "probability mass and sampler-state diagram; VR-0697-FAD2; wavelet packet; ring marks; haystack links; resample motion; g"
+    },
+    {
+      "nav": "V09-A-01",
+      "title": "Cooley-Tukey FFT",
+      "hash": "04b7374a",
+      "lit": 182,
+      "proofVisual": "numerical transform and error-propagation diagram; VR-0801-B5D6; braid worldlines; square marks; straight links; breathe"
+    },
+    {
+      "nav": "V09-A-08",
+      "title": "Mellin Transform",
+      "hash": "7d56c0ef",
+      "lit": 208,
+      "proofVisual": "numerical transform and error-propagation diagram; VR-0808-9249; wavelet packet; pill marks; straight links; cascade mot"
+    },
+    {
+      "nav": "V09-C-05",
+      "title": "CORDIC",
+      "hash": "d5e104fc",
+      "lit": 121,
+      "proofVisual": "numerical transform and error-propagation diagram; VR-0825-1358; hex bin field; ring marks; dashed links; sweep motion; "
+    },
+    {
+      "nav": "V09-E-10",
+      "title": "Baraff Constraint Solver",
+      "hash": "3a7637e5",
+      "lit": 681,
+      "proofVisual": "constraint/proof-state diagram; VR-0850-89C3; treemap budget; triangle marks; ribbon links; orbit motion; channel trelli"
+    },
+    {
+      "nav": "V09-H-05",
+      "title": "Centroidal Voronoi Tessellation",
+      "hash": "2222739f",
+      "lit": 770,
+      "proofVisual": "nearest-site geometry partition; VR-0875-4080; wavelet packet; circle marks; magnetic links; phase motion; lollipop stem"
+    },
+    {
+      "nav": "V09-J-07",
+      "title": "Differential Dynamic Programming",
+      "hash": "7e3122ee",
+      "lit": 245,
+      "proofVisual": "objective-landscape and solver-step diagram; VR-0897-E5BF; event ledger; triangle marks; dashed links; settle motion; co"
+    },
+    {
+      "nav": "V10-A-01",
+      "title": "B-Tree",
+      "hash": "1f469f19",
+      "lit": 140,
+      "proofVisual": "data-structure topology diagram; VR-0901-44DA; persistence barcode; pill marks; haystack links; sweep motion; lollipop s"
+    },
+    {
+      "nav": "V10-A-08",
+      "title": "Cover Tree",
+      "hash": "626d3e60",
+      "lit": 188,
+      "proofVisual": "data-structure topology diagram; VR-0908-C63F; hex bin field; triangle marks; orthogonal links; phase motion; lollipop s"
+    },
+    {
+      "nav": "V10-C-05",
+      "title": "Soft Heap",
+      "hash": "cb037722",
+      "lit": 195,
+      "proofVisual": "data-structure topology diagram; VR-0925-BF0D; barycentric simplex; square marks; straight links; cascade motion; lollip"
+    },
+    {
+      "nav": "V10-E-10",
+      "title": "Ternary Search Tree",
+      "hash": "cdda1f9b",
+      "lit": 356,
+      "proofVisual": "data-structure topology diagram; VR-0950-4EC9; hex bin field; notch marks; orthogonal links; pulse motion; matrix heatma"
+    },
+    {
+      "nav": "V10-H-05",
+      "title": "Zstandard",
+      "hash": "6aeced45",
+      "lit": 240,
+      "proofVisual": "streaming sketch or compression-state diagram; VR-0975-99B7; constraint polytope; circle marks; dashed links; sweep moti"
+    },
+    {
+      "nav": "V10-J-07",
+      "title": "Packed Memory Array",
+      "hash": "707c12a3",
+      "lit": 186,
+      "proofVisual": "data-structure topology diagram; VR-0997-C47C; verlet constraint web; circle marks; straight links; orbit motion; lollip"
+    }
+  ]
+}

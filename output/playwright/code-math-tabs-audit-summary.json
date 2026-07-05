@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-07-05T02:01:13.435Z",
+  "target": "1000 card controls and technical tabs",
+  "total": 1000,
+  "withAllControls": 1000,
+  "withTabs": 1000,
+  "withVisual": 1000,
+  "withCode": 1000,
+  "withMath": 1000,
+  "withVectors": 1000,
+  "withBoundary": 1000,
+  "uniqueCodeTitles": 1000,
+  "failureSamples": [],
+  "sample": [
+    {
+      "volume": 1,
+      "nav": "V01-A-01",
+      "id": "wfc",
+      "title": "Wave Function Collapse",
+      "controls": {
+        "run": true,
+        "stop": true,
+        "reset": true
+      },
+      "tabCount": 3,
+      "panelCount": 3,
+      "hasVisual": true,
+      "hasCode": true,
+      "hasMath": true,
+      "hasRatios": true,
+      "hasVector": true,
+      "honestyBoundary": true,
+      "codeLength": 951,
+      "mathLength": 838
+    },
+    {
+      "volume": 1,
+      "nav": "V01-A-02",
+      "id": "diffusion",
+      "title": "Diffusion",
+      "controls": {
+        "run": true,
+        "stop": true,
+        "reset": true
+      },
+      "tabCount": 3,
+      "panelCount": 3,
+      "hasVisual": true,
+      "hasCode": true,
+      "hasMath": true,
+      "hasRatios": true,
+      "hasVector": true,
+      "honestyBoundary": true,
+      "codeLength": 937,
+      "mathLength": 824
+    },
+    {
+      "volume": 1,
+      "nav": "V01-A-03",
+      "id": "annealing",
+      "title": "Simulated Annealing",
+      "controls": {
+        "run": true,
+        "stop": true,
+        "reset": true
+      },
+      "tabCount": 3,
+      "panelCount": 3,
+      "hasVisual": true,
+      "hasCode": true,
+      "hasMath": true,
+      "hasRatios": true,
+      "hasVector": true,
+      "honestyBoundary": true,
+      "codeLength": 957,
+      "mathLength": 847
+    },
+    {
+      "volume": 1,
+      "nav": "V01-A-04",
+      "id": "sleepsort",
+      "title": "Sleep Sort",
+      "controls": {
+        "run": true,
+        "stop": true,
+        "reset": true
+      },
+      "tabCount": 3,
+      "panelCount": 3,
+      "hasVisual": true,
+      "hasCode": true,
+      "hasMath": true,
+      "hasRatios": true,
+      "hasVector": true,
+      "honestyBoundary": true,
+      "codeLength": 944,
+      "mathLength": 836
+    },
+    {
+      "volume": 1,
+      "nav": "V01-A-05",
+      "id": "bogosort",
+      "title": "BogoSort",
+      "controls": {
+        "run": true,
+        "stop": true,
+        "reset": true
+      },
+      "tabCount": 3,
+      "panelCount": 3,
+      "hasVisual": true,
+      "hasCode": true,
+      "hasMath": true,
+      "hasRatios": true,
+      "hasVector": true,
+      "honestyBoundary": true,
+      "codeLength": 940,
+      "mathLength": 838
+    }
+  ],
+  "issues": []
+}

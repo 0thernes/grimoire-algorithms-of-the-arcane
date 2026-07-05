@@ -1,0 +1,159 @@
+{
+  "generatedAt": "2026-07-05T02:29:27.168Z",
+  "summaryFiles": 19,
+  "problemTotal": 0,
+  "details": [
+    {
+      "file": "output/playwright/accessibility-keyboard-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/audio-continuous-run-smoke-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/audio-control-modes-smoke-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/audio-integrity-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/audio-interaction-smoke-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/audio-live-sorting-smoke-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/browser-console-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/browser-console-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/catalog-export-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/catalog-integrity-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/code-math-tabs-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/cross-browser-smoke-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/filter-source-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/implementation-matrix-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/network-static-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/pages-readiness-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/polymath-1000-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/semantic-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/static-readiness-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    }
+  ]
+}

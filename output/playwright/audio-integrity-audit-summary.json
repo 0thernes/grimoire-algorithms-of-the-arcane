@@ -1,0 +1,156 @@
+{
+  "generatedAt": "2026-07-05T01:18:13.853Z",
+  "totalRecords": 1000,
+  "uniqueAudioCodes": 1000,
+  "uniqueAudioFingerprints": 1000,
+  "uniqueSonicProofRows": 1000,
+  "uniqueFingerprintTuples": 1000,
+  "sortingRecords": 8,
+  "sortingRecordsWithInversionTrace": 8,
+  "audioStatus": {
+    "supported": true,
+    "enabled": true,
+    "unlocked": true,
+    "state": "running",
+    "mode": "overlap",
+    "liveEventSlots": 7,
+    "runVoiceCount": 0,
+    "audibleRunVoiceCount": 0,
+    "scheduledRunNotes": 221,
+    "runMasterGain": 0.48,
+    "boundedRunMs": 45000,
+    "lastMonsterCount": 1000,
+    "lastMonsterAgeMs": 15453,
+    "runVoiceIds": [],
+    "runVoiceDetails": []
+  },
+  "liveSortingApi": true,
+  "continuousRunAudioApi": true,
+  "duplicateAudioCodeBuckets": [],
+  "duplicateAudioFingerprintBuckets": [],
+  "duplicateSonicProofBuckets": [],
+  "duplicateFingerprintTupleBuckets": [],
+  "sampleRows": [
+    {
+      "nav": "V01-A-01",
+      "title": "Wave Function Collapse",
+      "audioCode": "SR-0001-2711",
+      "kernel": "phase-vector amplitude sonification",
+      "vector": "8-8-4-1-5-2-8-7",
+      "root": "196",
+      "shimmer": "546.84",
+      "isSorting": false
+    },
+    {
+      "nav": "V01-A-02",
+      "title": "Diffusion",
+      "audioCode": "SR-0002-7C44",
+      "kernel": "phase-vector amplitude sonification",
+      "vector": "6-2-2-6-7-8-5-3",
+      "root": "73.42",
+      "shimmer": "201.17",
+      "isSorting": false
+    },
+    {
+      "nav": "V01-A-03",
+      "title": "Simulated Annealing",
+      "audioCode": "SR-0003-5B71",
+      "kernel": "objective-descent residual trace",
+      "vector": "1-5-8-4-6-6-9-3",
+      "root": "261.63",
+      "shimmer": "693.32",
+      "isSorting": false
+    },
+    {
+      "nav": "V01-A-04",
+      "title": "Sleep Sort",
+      "audioCode": "SR-0004-D31B",
+      "kernel": "comparison-sort inversion/write trace",
+      "vector": "4-1-4-5-3-6-3-9",
+      "root": "98",
+      "shimmer": "263.62",
+      "isSorting": true
+    },
+    {
+      "nav": "V01-A-05",
+      "title": "BogoSort",
+      "audioCode": "SR-0005-4940",
+      "kernel": "comparison-sort inversion/write trace",
+      "vector": "4-1-7-2-5-4-7-9",
+      "root": "116.54",
+      "shimmer": "312.33",
+      "isSorting": true
+    },
+    {
+      "nav": "V01-A-06",
+      "title": "RSA",
+      "audioCode": "SR-0006-A33E",
+      "kernel": "modular-residue ladder",
+      "vector": "5-8-3-8-9-8-4-7",
+      "root": "277.18",
+      "shimmer": "728.98",
+      "isSorting": false
+    },
+    {
+      "nav": "V01-A-07",
+      "title": "Shor's Algorithm",
+      "audioCode": "SR-0007-3536",
+      "kernel": "phase-vector amplitude sonification",
+      "vector": "6-2-2-5-5-7-7-5",
+      "root": "369.99",
+      "shimmer": "950.87",
+      "isSorting": false
+    },
+    {
+      "nav": "V01-A-08",
+      "title": "Marching Cubes",
+      "audioCode": "SR-0008-17F1",
+      "kernel": "iso-threshold surface trace",
+      "vector": "7-7-6-1-2-8-1-5",
+      "root": "110",
+      "shimmer": "328.9",
+      "isSorting": false
+    },
+    {
+      "nav": "V01-A-09",
+      "title": "Byzantine Generals / PBFT",
+      "audioCode": "SR-0009-4AD7",
+      "kernel": "quorum pulse train",
+      "vector": "4-5-6-4-2-9-4-4",
+      "root": "110",
+      "shimmer": "323.4",
+      "isSorting": false
+    },
+    {
+      "nav": "V01-A-10",
+      "title": "Boyer-Moore",
+      "audioCode": "SR-0010-F083",
+      "kernel": "failure-link automaton trace",
+      "vector": "2-6-1-8-6-1-3-2",
+      "root": "185",
+      "shimmer": "469.9",
+      "isSorting": false
+    },
+    {
+      "nav": "V01-B-01",
+      "title": "Stooge Sort",
+      "audioCode": "SR-0011-5994",
+      "kernel": "comparison-sort inversion/write trace",
+      "vector": "4-9-2-4-2-2-9-2",
+      "root": "493.88",
+      "shimmer": "1466.82",
+      "isSorting": true
+    },
+    {
+      "nav": "V01-B-02",
+      "title": "Quantum Bogosort",
+      "audioCode": "SR-0012-4C29",
+      "kernel": "comparison-sort inversion/write trace",
+      "vector": "2-5-6-8-1-1-4-9",
+      "root": "174.61",
+      "shimmer": "487.16",
+      "isSorting": true
+    }
+  ],
+  "issues": []
+}

@@ -1,0 +1,502 @@
+{
+  "generatedAt": "2026-07-05T02:01:33.560Z",
+  "target": "sonic transport controls",
+  "snapshots": [
+    {
+      "label": "overlap-wfc-diffusion",
+      "audio": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "overlap",
+        "liveEventSlots": 0,
+        "runVoiceCount": 2,
+        "audibleRunVoiceCount": 2,
+        "scheduledRunNotes": 24,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 0,
+        "lastMonsterAgeMs": null,
+        "runVoiceIds": [
+          "wfc",
+          "diffusion"
+        ],
+        "runVoiceDetails": [
+          {
+            "id": "wfc",
+            "source": "run-button",
+            "maxMs": 45000,
+            "ageMs": 2593,
+            "frames": 61,
+            "beat": 12,
+            "scheduledNotes": 17,
+            "cadenceMs": 39.61,
+            "energy": 0.624,
+            "audible": true
+          },
+          {
+            "id": "diffusion",
+            "source": "run-button",
+            "maxMs": 45000,
+            "ageMs": 801,
+            "frames": 20,
+            "beat": 5,
+            "scheduledNotes": 7,
+            "cadenceMs": 85.35,
+            "energy": 0.929,
+            "audible": true
+          }
+        ]
+      },
+      "auto": {
+        "active": false,
+        "nextIndex": 0,
+        "currentIndex": -1,
+        "currentNumber": 0,
+        "currentId": null,
+        "completed": 0,
+        "startedAt": 0,
+        "endsAt": 0,
+        "remainingMs": 0,
+        "runMs": 6200,
+        "handoffMs": 650
+      },
+      "consoleText": "Sound: overlap · 2 running · auto idle · running diffusion",
+      "stopLabel": "Stop All",
+      "resetLabel": "Reset All",
+      "recipes": 1000
+    },
+    {
+      "label": "global-stop",
+      "audio": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "overlap",
+        "liveEventSlots": 0,
+        "runVoiceCount": 0,
+        "audibleRunVoiceCount": 0,
+        "scheduledRunNotes": 24,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 0,
+        "lastMonsterAgeMs": null,
+        "runVoiceIds": [],
+        "runVoiceDetails": []
+      },
+      "auto": {
+        "active": false,
+        "nextIndex": 0,
+        "currentIndex": -1,
+        "currentNumber": 0,
+        "currentId": null,
+        "completed": 0,
+        "startedAt": 0,
+        "endsAt": 0,
+        "remainingMs": 0,
+        "runMs": 6200,
+        "handoffMs": 650
+      },
+      "consoleText": "Sound: overlap · 0 running · auto idle · all paused",
+      "stopLabel": "Stop All",
+      "resetLabel": "Reset All",
+      "recipes": 1000
+    },
+    {
+      "label": "global-reset-all",
+      "audio": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "overlap",
+        "liveEventSlots": 0,
+        "runVoiceCount": 0,
+        "audibleRunVoiceCount": 0,
+        "scheduledRunNotes": 24,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 0,
+        "lastMonsterAgeMs": null,
+        "runVoiceIds": [],
+        "runVoiceDetails": []
+      },
+      "auto": {
+        "active": false,
+        "nextIndex": 0,
+        "currentIndex": -1,
+        "currentNumber": 0,
+        "currentId": null,
+        "completed": 0,
+        "startedAt": 0,
+        "endsAt": 0,
+        "remainingMs": 0,
+        "runMs": 6200,
+        "handoffMs": 650
+      },
+      "consoleText": "Sound: overlap · 0 running · auto idle · all reset",
+      "stopLabel": "Stop All",
+      "resetLabel": "Reset All",
+      "recipes": 1000
+    },
+    {
+      "label": "card-stop",
+      "audio": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "overlap",
+        "liveEventSlots": 0,
+        "runVoiceCount": 0,
+        "audibleRunVoiceCount": 0,
+        "scheduledRunNotes": 31,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 0,
+        "lastMonsterAgeMs": null,
+        "runVoiceIds": [],
+        "runVoiceDetails": []
+      },
+      "auto": {
+        "active": false,
+        "nextIndex": 0,
+        "currentIndex": -1,
+        "currentNumber": 0,
+        "currentId": null,
+        "completed": 0,
+        "startedAt": 0,
+        "endsAt": 0,
+        "remainingMs": 0,
+        "runMs": 6200,
+        "handoffMs": 650
+      },
+      "consoleText": "Sound: overlap · 0 running · auto idle · paused wfc",
+      "stopLabel": "Stop All",
+      "resetLabel": "Reset All",
+      "recipes": 1000
+    },
+    {
+      "label": "card-reset",
+      "audio": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "overlap",
+        "liveEventSlots": 0,
+        "runVoiceCount": 1,
+        "audibleRunVoiceCount": 1,
+        "scheduledRunNotes": 38,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 0,
+        "lastMonsterAgeMs": null,
+        "runVoiceIds": [
+          "wfc"
+        ],
+        "runVoiceDetails": [
+          {
+            "id": "wfc",
+            "source": "reset-button",
+            "maxMs": 45000,
+            "ageMs": 537,
+            "frames": 12,
+            "beat": 5,
+            "scheduledNotes": 7,
+            "cadenceMs": 52.53,
+            "energy": 0.807,
+            "audible": true
+          }
+        ]
+      },
+      "auto": {
+        "active": false,
+        "nextIndex": 0,
+        "currentIndex": -1,
+        "currentNumber": 0,
+        "currentId": null,
+        "completed": 0,
+        "startedAt": 0,
+        "endsAt": 0,
+        "remainingMs": 0,
+        "runMs": 6200,
+        "handoffMs": 650
+      },
+      "consoleText": "Sound: overlap · 1 running · auto idle · reset wfc",
+      "stopLabel": "Stop All",
+      "resetLabel": "Reset All",
+      "recipes": 1000
+    },
+    {
+      "label": "bounded-timeout",
+      "audio": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "overlap",
+        "liveEventSlots": 0,
+        "runVoiceCount": 0,
+        "audibleRunVoiceCount": 0,
+        "scheduledRunNotes": 45,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 0,
+        "lastMonsterAgeMs": null,
+        "runVoiceIds": [],
+        "runVoiceDetails": []
+      },
+      "auto": {
+        "active": false,
+        "nextIndex": 0,
+        "currentIndex": -1,
+        "currentNumber": 0,
+        "currentId": null,
+        "completed": 0,
+        "startedAt": 0,
+        "endsAt": 0,
+        "remainingMs": 0,
+        "runMs": 6200,
+        "handoffMs": 650
+      },
+      "consoleText": "Sound: overlap · 0 running · auto idle · ended wfc",
+      "stopLabel": "Stop All",
+      "resetLabel": "Reset All",
+      "recipes": 1000
+    },
+    {
+      "label": "solo-switch",
+      "audio": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "solo",
+        "liveEventSlots": 0,
+        "runVoiceCount": 1,
+        "audibleRunVoiceCount": 1,
+        "scheduledRunNotes": 62,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 0,
+        "lastMonsterAgeMs": null,
+        "runVoiceIds": [
+          "diffusion"
+        ],
+        "runVoiceDetails": [
+          {
+            "id": "diffusion",
+            "source": "run-button",
+            "maxMs": 45000,
+            "ageMs": 578,
+            "frames": 13,
+            "beat": 4,
+            "scheduledNotes": 6,
+            "cadenceMs": 58.62,
+            "energy": 0.99,
+            "audible": true
+          }
+        ]
+      },
+      "auto": {
+        "active": false,
+        "nextIndex": 0,
+        "currentIndex": -1,
+        "currentNumber": 0,
+        "currentId": null,
+        "completed": 0,
+        "startedAt": 0,
+        "endsAt": 0,
+        "remainingMs": 0,
+        "runMs": 6200,
+        "handoffMs": 650
+      },
+      "consoleText": "Sound: solo · 1 running · auto idle · running diffusion",
+      "stopLabel": "Stop All",
+      "resetLabel": "Reset All",
+      "recipes": 1000
+    },
+    {
+      "label": "auto-first-slot",
+      "audio": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "solo",
+        "liveEventSlots": 0,
+        "runVoiceCount": 1,
+        "audibleRunVoiceCount": 1,
+        "scheduledRunNotes": 74,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 0,
+        "lastMonsterAgeMs": null,
+        "runVoiceIds": [
+          "wfc"
+        ],
+        "runVoiceDetails": [
+          {
+            "id": "wfc",
+            "source": "auto-sequence",
+            "maxMs": 6200,
+            "ageMs": 1506,
+            "frames": 34,
+            "beat": 8,
+            "scheduledNotes": 11,
+            "cadenceMs": 42.54,
+            "energy": 0.746,
+            "audible": true
+          }
+        ]
+      },
+      "auto": {
+        "active": true,
+        "nextIndex": 1,
+        "currentIndex": 0,
+        "currentNumber": 1,
+        "currentId": "wfc",
+        "completed": 0,
+        "startedAt": 31592.90000000596,
+        "endsAt": 37792.90000000596,
+        "remainingMs": 4693,
+        "runMs": 6200,
+        "handoffMs": 650
+      },
+      "consoleText": "Sound: solo · 1 running · auto 001/1000 wfc · auto playing wfc for 6.2s",
+      "stopLabel": "Stop All",
+      "resetLabel": "Reset All",
+      "recipes": 1000
+    },
+    {
+      "label": "auto-second-slot",
+      "audio": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "solo",
+        "liveEventSlots": 0,
+        "runVoiceCount": 1,
+        "audibleRunVoiceCount": 1,
+        "scheduledRunNotes": 101,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 0,
+        "lastMonsterAgeMs": null,
+        "runVoiceIds": [
+          "diffusion"
+        ],
+        "runVoiceDetails": [
+          {
+            "id": "diffusion",
+            "source": "auto-sequence",
+            "maxMs": 6200,
+            "ageMs": 167,
+            "frames": 4,
+            "beat": 4,
+            "scheduledNotes": 6,
+            "cadenceMs": 43.81,
+            "energy": 1.251,
+            "audible": true
+          }
+        ]
+      },
+      "auto": {
+        "active": true,
+        "nextIndex": 2,
+        "currentIndex": 1,
+        "currentNumber": 2,
+        "currentId": "diffusion",
+        "completed": 1,
+        "startedAt": 38530.30000001192,
+        "endsAt": 44730.30000001192,
+        "remainingMs": 6028,
+        "runMs": 6200,
+        "handoffMs": 650
+      },
+      "consoleText": "Sound: solo · 1 running · auto 002/1000 diffusion · auto playing diffusion for 6.2s",
+      "stopLabel": "Stop All",
+      "resetLabel": "Reset All",
+      "recipes": 1000
+    },
+    {
+      "label": "auto-stopped",
+      "audio": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "solo",
+        "liveEventSlots": 0,
+        "runVoiceCount": 0,
+        "audibleRunVoiceCount": 0,
+        "scheduledRunNotes": 101,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 0,
+        "lastMonsterAgeMs": null,
+        "runVoiceIds": [],
+        "runVoiceDetails": []
+      },
+      "auto": {
+        "active": false,
+        "nextIndex": 2,
+        "currentIndex": -1,
+        "currentNumber": 0,
+        "currentId": null,
+        "completed": 1,
+        "startedAt": 0,
+        "endsAt": 0,
+        "remainingMs": 0,
+        "runMs": 6200,
+        "handoffMs": 650
+      },
+      "consoleText": "Sound: solo · 0 running · auto idle · auto stopped",
+      "stopLabel": "Stop All",
+      "resetLabel": "Reset All",
+      "recipes": 1000
+    },
+    {
+      "label": "monster",
+      "audio": {
+        "supported": true,
+        "enabled": true,
+        "unlocked": true,
+        "state": "running",
+        "mode": "solo",
+        "liveEventSlots": 0,
+        "runVoiceCount": 0,
+        "audibleRunVoiceCount": 0,
+        "scheduledRunNotes": 101,
+        "runMasterGain": 0.48,
+        "boundedRunMs": 45000,
+        "lastMonsterCount": 1000,
+        "lastMonsterAgeMs": 434,
+        "runVoiceIds": [],
+        "runVoiceDetails": []
+      },
+      "auto": {
+        "active": false,
+        "nextIndex": 2,
+        "currentIndex": -1,
+        "currentNumber": 0,
+        "currentId": null,
+        "completed": 1,
+        "startedAt": 0,
+        "endsAt": 0,
+        "remainingMs": 0,
+        "runMs": 6200,
+        "handoffMs": 650
+      },
+      "consoleText": "Sound: solo · 0 running · auto idle · monster 1000 · monster 1000",
+      "stopLabel": "Stop All",
+      "resetLabel": "Reset All",
+      "recipes": 1000
+    }
+  ],
+  "issues": []
+}

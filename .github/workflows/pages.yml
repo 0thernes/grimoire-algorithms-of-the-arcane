@@ -1,0 +1,47 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare static artifact
+        run: |
+          mkdir site
+          cp index.html style.css viz.js catalog.json 404.html .nojekyll VERSION site/
+          cp README.md ABOUT.md ARCHITECTURE.md SPECS.md KANBAN.md ISSUES.md RELEASES.md CHANGELOG.md LICENSE.md NOTICE.md CONTRIBUTING.md SECURITY.md CITATION.cff site/
+          cp -R docs site/docs
+          cp -R implementations site/implementations
+          cp -R bibliography site/bibliography
+
+      - name: Upload static artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

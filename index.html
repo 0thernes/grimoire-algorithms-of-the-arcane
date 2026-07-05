@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>GRIMOIRE — Algorithms of the Arcane</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%230a090c'/%3E%3Cpath d='M24 5 43 39H5Z' fill='none' stroke='%23ffd700' stroke-width='2'/%3E%3Ccircle cx='24' cy='30' r='3' fill='%233cffd5'/%3E%3C/svg%3E"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <svg class="logo" viewBox="0 0 48 48" fill="none" aria-label="Grimoire">
+      <polygon points="24,4 44,38 4,38" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.9"/>
+      <polygon points="24,14 36,36 12,36" stroke="currentColor" stroke-width="1" fill="none" opacity="0.5"/>
+      <circle cx="24" cy="30" r="2.5" fill="currentColor"/>
+      <line x1="24" y1="14" x2="24" y2="27" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+    <div class="header-text">
+      <h1 class="site-title">GRIMOIRE</h1>
+      <p class="site-sub">Algorithms of the Arcane</p>
+    </div>
+    <button data-theme-toggle aria-label="Toggle theme" class="theme-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button data-audio-toggle aria-label="Enable algorithm sound" aria-pressed="false" class="theme-btn audio-btn" title="Enable algorithm sound">
+      <svg data-audio-icon width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 10v4h4l5 5V5L8 10H4z"/>
+        <path d="M17 9.5a4 4 0 0 1 0 5"/>
+        <path d="M20 7a8 8 0 0 1 0 10"/>
+      </svg>
+    </button>
+  </div>
+  <p class="header-desc">1000 incantations of pure computational fuckery — organized into 10 selectable volumes, visualized, interactive, and annotated.</p>
+</header>
+
+<main>
+  <section class="volume-switcher" aria-label="Grimoire volume navigation">
+    <button class="volume-cycle" type="button" data-volume-prev aria-label="Previous volume">‹</button>
+    <div class="volume-tabs" data-volume-tabs></div>
+    <button class="volume-cycle" type="button" data-volume-next aria-label="Next volume">›</button>
+    <div class="volume-status" data-volume-status></div>
+    <div class="center-counter" data-center-counter aria-live="polite">Centered: V01-A-01 · 001/1000</div>
+    <div class="sonic-console" data-sonic-console aria-label="Sonic playback controls">
+      <div class="sonic-mode" role="group" aria-label="Playback mode">
+        <button type="button" data-sonic-mode="solo" class="sonic-mode-btn active" aria-pressed="true">Solo</button>
+        <button type="button" data-sonic-mode="overlap" class="sonic-mode-btn" aria-pressed="false">Overlap</button>
+      </div>
+      <div class="sonic-actions" role="group" aria-label="Playback actions">
+        <button type="button" data-sonic-stop>Stop All</button>
+        <button type="button" data-sonic-reset>Reset All</button>
+        <button type="button" data-sonic-auto>Auto 1→1000</button>
+        <button type="button" data-sonic-monster>MONSTER</button>
+      </div>
+      <div class="sonic-status" data-sonic-status aria-live="polite">Sound: solo · idle</div>
+    </div>
+    <div class="filter-console" data-filter-console aria-label="Record search and filters">
+      <label class="filter-search" aria-label="Search records">
+        <span>Search</span>
+        <input type="search" data-filter-search placeholder="Title, tag, proof, use"/>
+      </label>
+      <div class="filter-grid">
+        <label>
+          <span>Volume</span>
+          <select data-filter-volume></select>
+        </label>
+        <label>
+          <span>Tag</span>
+          <select data-filter-tag></select>
+        </label>
+        <label>
+          <span>Engine</span>
+          <select data-filter-engine></select>
+        </label>
+        <label>
+          <span>Source</span>
+          <select data-filter-source></select>
+        </label>
+        <label>
+          <span>Sonic</span>
+          <select data-filter-sonic></select>
+        </label>
+        <label>
+          <span>Visual</span>
+          <select data-filter-visual></select>
+        </label>
+      </div>
+      <div class="filter-actions">
+        <button type="button" data-filter-reset>Reset Filters</button>
+      </div>
+      <div class="filter-status" data-filter-status aria-live="polite">Filters: 100/100 visible</div>
+    </div>
+    <div class="record-picker" data-record-picker aria-label="Pick one of the 100 records in this volume"></div>
+  </section>
+
+  <div data-volume-one>
+  <section class="tier-label">TIER I — THE CLASSICAL RITES</section>
+  <div class="grimoire-grid">
+
+    <!-- 1. Wave Function Collapse -->
+    <article class="spell-card" data-algo="wfc">
+      <div class="card-glyph"><canvas id="c-wfc" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-quantum">Quantum-Inspired</span><span class="tag tag-gen">Generative</span></div>
+        <h2 class="card-title">Wave Function Collapse</h2>
+        <p class="card-desc">Superposition collapsed into inevitability. Each cell exists in all possible states simultaneously until observed — then the wave collapses outward, propagating constraints like quantum entanglement through a tile grid. The universe builds itself by process of elimination.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="wfc">⟳ Regenerate</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. Diffusion -->
+    <article class="spell-card" data-algo="diffusion">
+      <div class="card-glyph"><canvas id="c-diffusion" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-ml">ML</span><span class="tag tag-gen">Generative</span></div>
+        <h2 class="card-title">Diffusion</h2>
+        <p class="card-desc">Signal buried in noise, noise burned away by signal. Forward: annihilate order into chaos. Reverse: learn the score function of reality and walk backward through entropy. A neural network learns to denoise — and in doing so, learns to dream.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="diffusion">⟳ Restart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. Simulated Annealing -->
+    <article class="spell-card" data-algo="annealing">
+      <div class="card-glyph"><canvas id="c-annealing" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-opt">Optimization</span><span class="tag tag-physics">Physics-Inspired</span></div>
+        <h2 class="card-title">Simulated Annealing</h2>
+        <p class="card-desc">Metallurgy encoded in math. Cool too fast and you get a brittle local minimum. Cool slowly and you find the global truth. The algorithm deliberately accepts worse solutions — a controlled chaos that burns away false summits to find the one true peak.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="annealing">⟳ Re-anneal</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. Sleep Sort -->
+    <article class="spell-card" data-algo="sleepsort">
+      <div class="card-glyph"><canvas id="c-sleepsort" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-chaotic">Chaotic</span><span class="tag tag-sort">Sort</span></div>
+        <h2 class="card-title">Sleep Sort</h2>
+        <p class="card-desc">Each element is assigned a thread that sleeps for n milliseconds. Time itself does the sorting. The smallest values wake first and announce themselves. O(max(n)) — technically "correct" if the OS scheduler cooperates. Absurd. Genius. Works.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="sleepsort">⟳ Re-sleep</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. BOGO Sort -->
+    <article class="spell-card" data-algo="bogosort">
+      <div class="card-glyph"><canvas id="c-bogosort" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-chaotic">Chaotic</span><span class="tag tag-sort">Sort</span></div>
+        <h2 class="card-title">BogoSort</h2>
+        <p class="card-desc">Is it sorted? No? Shuffle it. Repeat. Expected O(n·n!) — infinite patience required. The anthropic algorithm: given infinite time and infinite universes, one will be sorted by cosmic accident. This is that universe.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="bogosort">⟳ Re-chaos</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. RSA -->
+    <article class="spell-card" data-algo="rsa">
+      <div class="card-glyph"><canvas id="c-rsa" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-crypto">Cryptography</span><span class="tag tag-math">Number Theory</span></div>
+        <h2 class="card-title">RSA</h2>
+        <p class="card-desc">The trapdoor at the heart of civilization. Multiply two primes: trivial. Factor the product: computationally intractable. Your banking, your identity, your secrets — all protected by the asymmetry between multiplication and factorization. A mathematical one-way door.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="rsa">⟳ New keys</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7. Shor's Algorithm -->
+    <article class="spell-card" data-algo="shors">
+      <div class="card-glyph"><canvas id="c-shors" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-quantum">Quantum</span><span class="tag tag-crypto">Cryptography-Killer</span></div>
+        <h2 class="card-title">Shor's Algorithm</h2>
+        <p class="card-desc">RSA's apocalypse, encoded in quantum gates. QFT finds the period of modular exponentiation in superposition — all possible periods evaluated simultaneously. When quantum computers scale, this algorithm ends the current era of cryptography. The door has a lock pick.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="shors">⟳ Re-compute</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 8. Marching Cubes -->
+    <article class="spell-card" data-algo="marching">
+      <div class="card-glyph"><canvas id="c-marching" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-geo">Geometry</span><span class="tag tag-3d">3D</span></div>
+        <h2 class="card-title">Marching Cubes</h2>
+        <p class="card-desc">Scalar fields turned into surfaces by 256 cube configurations. Every voxel corner is above or below the isosurface threshold — the 8-bit lookup table defines which triangles to draw. Terrain generation, medical imaging, fluid simulation: all march these cubes.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="marching">⟳ Re-mesh</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 9. Byzantine Generals / PBFT -->
+    <article class="spell-card" data-algo="byzantine">
+      <div class="card-glyph"><canvas id="c-byzantine" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-dist">Distributed</span><span class="tag tag-consensus">Consensus</span></div>
+        <h2 class="card-title">Byzantine Generals / PBFT</h2>
+        <p class="card-desc">How do you reach consensus when some messengers lie? The generals must agree on attack or retreat — but traitors send contradictory orders. PBFT guarantees consensus if fewer than ⅓ of nodes are malicious. Blockchain, distributed databases, the foundation of trustless systems.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="byzantine">⟳ New battle</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10. Boyer-Moore -->
+    <article class="spell-card" data-algo="boyermoore">
+      <div class="card-glyph"><canvas id="c-boyermoore" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-string">String</span><span class="tag tag-search">Search</span></div>
+        <h2 class="card-title">Boyer-Moore</h2>
+        <p class="card-desc">Reads right-to-left and skips entire sections of text on mismatch. The bad character and good suffix heuristics let it skip over provably impossible positions. Sub-linear in practice — it reads less text than exists. The best general-purpose string search algorithm ever devised.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="boyermoore">⟳ New search</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <section class="tier-label">TIER II — THE FORBIDDEN TEXTS</section>
+  <div class="grimoire-grid">
+
+    <!-- 11. Stooge Sort -->
+    <article class="spell-card" data-algo="stoogesort">
+      <div class="card-glyph"><canvas id="c-stoogesort" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-chaotic">Cursed</span><span class="tag tag-sort">Sort</span></div>
+        <h2 class="card-title">Stooge Sort</h2>
+        <p class="card-desc">Recursively sort the first ⅔, then the last ⅔, then the first ⅔ again. O(n^2.709...) — slower than bubble sort, theoretically sound, deeply wrong. A sorting algorithm that works through sheer obstinate repetition. Named after The Three Stooges. Nyuk nyuk nyuk.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="stoogesort">⟳ Re-stooge</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 12. Quantum Bogosort -->
+    <article class="spell-card" data-algo="quantumbogo">
+      <div class="card-glyph"><canvas id="c-quantumbogo" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-quantum">Quantum</span><span class="tag tag-chaotic">Apocalyptic</span></div>
+        <h2 class="card-title">Quantum Bogosort</h2>
+        <p class="card-desc">Shuffle the array. Check if it's sorted. If not, destroy the universe. By the anthropic principle, you will only ever observe a sorted result — the unsorted universes cease to exist. O(1) in the surviving timeline. Requires many-worlds interpretation. Side effects: genocide of alternate realities.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="quantumbogo">⟳ Collapse reality</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 13. Cycle Sort -->
+    <article class="spell-card" data-algo="cyclesort">
+      <div class="card-glyph"><canvas id="c-cyclesort" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-sort">Sort</span><span class="tag tag-opt">Optimal Writes</span></div>
+        <h2 class="card-title">Cycle Sort</h2>
+        <p class="card-desc">Minimizes writes to O(n) — the theoretically minimum possible for a comparison sort. Finds the cycle that each element belongs to and rotates it into position. Critical for flash memory and write-expensive storage where every write costs lifespan.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="cyclesort">⟳ Re-cycle</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 14. Reservoir Sampling -->
+    <article class="spell-card" data-algo="reservoir">
+      <div class="card-glyph"><canvas id="c-reservoir" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-stats">Statistics</span><span class="tag tag-stream">Streaming</span></div>
+        <h2 class="card-title">Reservoir Sampling</h2>
+        <p class="card-desc">Sample k items uniformly from a stream of unknown size, seeing each item once. The first k fill the reservoir. For each subsequent item i, replace a random reservoir element with probability k/i. Provably uniform. No second pass. Unknown n. Mathematically beautiful.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="reservoir">⟳ New stream</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 15. Algorithm X -->
+    <article class="spell-card" data-algo="algorithmx">
+      <div class="card-glyph"><canvas id="c-algorithmx" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-csp">Exact Cover</span><span class="tag tag-backtrack">Backtracking</span></div>
+        <h2 class="card-title">Algorithm X</h2>
+        <p class="card-desc">Knuth's exact-cover ritual: choose the constraint with the fewest remaining choices, try a compatible row, cover every column it satisfies, recurse, and backtrack when contradiction appears. Sudoku, polyomino tiling, N-queens: all reduced to a sparse matrix of yes/no obligations.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="algorithmx">⟳ Re-cover</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 16. Dancing Links -->
+    <article class="spell-card" data-algo="dlx">
+      <div class="card-glyph"><canvas id="c-dlx" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-csp">Exact Cover</span><span class="tag tag-backtrack">Backtracking</span></div>
+        <h2 class="card-title">Dancing Links (DLX)</h2>
+        <p class="card-desc">The low-level engine beneath Algorithm X: a doubly linked circular matrix where rows and columns disappear in O(1), then reappear perfectly during backtracking. The links literally dance, letting a combinatorial search undo itself without rebuilding the world.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="dlx">⟳ Re-dance</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 17. Jump Consistency Hashing -->
+    <article class="spell-card" data-algo="jumphash">
+      <div class="card-glyph"><canvas id="c-jumphash" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-dist">Distributed</span><span class="tag tag-hash">Hashing</span></div>
+        <h2 class="card-title">Jump Consistency Hashing</h2>
+        <p class="card-desc">5 lines of code. Maps keys to buckets with perfect uniformity, minimal remapping when buckets change, and O(ln n) time. Uses a PRNG to simulate which bucket a key would "jump" to if the cluster grew. The entire algorithm fits in a tweet. Google runs this in production.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="jumphash">⟳ Re-hash</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 18. Cocktail Shaker Sort -->
+    <article class="spell-card" data-algo="cocktail">
+      <div class="card-glyph"><canvas id="c-cocktail" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-sort">Sort</span><span class="tag tag-vibes">Vibes</span></div>
+        <h2 class="card-title">Cocktail Shaker Sort</h2>
+        <p class="card-desc">Bidirectional bubble sort. Bubbles percolate up from left, then turtles crawl right from the right. The shaking motion addresses the "turtle problem" where small values near the end move agonizingly slowly leftward. Still O(n²) but feels more sophisticated at parties.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="cocktail">⟳ Reshake</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 19. Timsort -->
+    <article class="spell-card" data-algo="timsort">
+      <div class="card-glyph"><canvas id="c-timsort" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-sort">Sort</span><span class="tag tag-prod">Production</span></div>
+        <h2 class="card-title">Timsort</h2>
+        <p class="card-desc">Python's sort. Java's sort. Android's sort. Hybrid merge+insertion that exploits existing runs of sorted data in real-world arrays. Galloping mode shifts to exponential search when one run dominates. Adaptive, stable, O(n log n) worst case, O(n) best case. The most practical sort ever engineered.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="timsort">⟳ Re-sort</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 20. Fast Inverse Square Root -->
+    <article class="spell-card featured" data-algo="fisr">
+      <div class="card-glyph"><canvas id="c-fisr" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-magic">Black Magic</span><span class="tag tag-quake">id Software</span></div>
+        <h2 class="card-title">Fast Inverse Square Root</h2>
+        <p class="card-desc"><code>0x5F3759DF</code>. One bit-level reinterpretation of a float as an integer, one subtraction from a magic constant, one Newton-Raphson iteration. Returns 1/√x accurate to 1%. Used in Quake III for real-time lighting calculations. The magic number is still not fully explained. Someone just tried it and it worked.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="fisr">⟳ Recast</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <section class="tier-label">TIER III — THE DIMENSIONAL FUCKERY</section>
+  <div class="grimoire-grid">
+
+    <!-- 21. A* Search -->
+    <article class="spell-card" data-algo="astar">
+      <div class="card-glyph"><canvas id="c-astar" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-search">Search</span><span class="tag tag-opt">Heuristic</span></div>
+        <h2 class="card-title">A* Search</h2>
+        <p class="card-desc">Shortest-path divination with a compass. Dijkstra explores everything equally; A* adds a heuristic whisper toward the goal. The open set becomes a probability-looking frontier, but the guarantee remains hard: with an admissible heuristic, the first path found is optimal.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="astar">⟳ Re-path</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 22. Perlin Noise -->
+    <article class="spell-card" data-algo="perlin">
+      <div class="card-glyph"><canvas id="c-perlin" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-gen">Procedural</span><span class="tag tag-geo">Noise</span></div>
+        <h2 class="card-title">Perlin Noise</h2>
+        <p class="card-desc">Randomness with memory. Instead of static chaos, gradients blend into coherent fields: clouds, terrain, fire, cave veins, alien skin. It is noise that remembers where it came from, so the fake world feels like it obeys hidden geology.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="perlin">⟳ Re-seed</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 23. Kalman Filter -->
+    <article class="spell-card" data-algo="kalman">
+      <div class="card-glyph"><canvas id="c-kalman" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-stats">Bayesian</span><span class="tag tag-stream">Signal</span></div>
+        <h2 class="card-title">Kalman Filter</h2>
+        <p class="card-desc">A machine for turning noisy lies into a usable estimate. Prediction says where reality should be; measurement says where reality seems to be; uncertainty decides who gets trusted. Missiles, robots, satellites, AR tracking: all drink from this oracle.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="kalman">⟳ Re-track</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 24. HyperLogLog -->
+    <article class="spell-card" data-algo="hyperloglog">
+      <div class="card-glyph"><canvas id="c-hyperloglog" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-stats">Probabilistic</span><span class="tag tag-hash">Cardinality</span></div>
+        <h2 class="card-title">HyperLogLog</h2>
+        <p class="card-desc">Count billions of unique things with a handful of registers. Hashes that begin with many zeros are rare, so the longest zero streak estimates the crowd. It is census-taking by omens: tiny memory, shocking accuracy, no list of the actual souls.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="hyperloglog">⟳ Re-count</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 25. Bloom Filter -->
+    <article class="spell-card" data-algo="bloom">
+      <div class="card-glyph"><canvas id="c-bloom" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-hash">Hashing</span><span class="tag tag-stats">Probabilistic</span></div>
+        <h2 class="card-title">Bloom Filter</h2>
+        <p class="card-desc">A memory-efficient maybe-machine. Ask if an item exists: no means impossible, yes means maybe. Multiple hashes tattoo a bit array, accepting false positives to banish false negatives. Caches, databases, crawlers: all love this suspicious little oracle.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="bloom">⟳ Re-bloom</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 26. Merkle Tree -->
+    <article class="spell-card" data-algo="merkle">
+      <div class="card-glyph"><canvas id="c-merkle" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-crypto">Crypto</span><span class="tag tag-hash">Integrity</span></div>
+        <h2 class="card-title">Merkle Tree</h2>
+        <p class="card-desc">Tamper-evidence by recursive commitment. Hash every leaf, hash pairs into branches, hash branches into a root. Change one byte and the corruption climbs the tree like lightning. Blockchains, package managers, filesystems: all use this truth spine.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="merkle">⟳ Re-root</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 27. Monte Carlo Tree Search -->
+    <article class="spell-card" data-algo="mcts">
+      <div class="card-glyph"><canvas id="c-mcts" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-ml">Planning</span><span class="tag tag-stats">Monte Carlo</span></div>
+        <h2 class="card-title">Monte Carlo Tree Search</h2>
+        <p class="card-desc">Think by hallucinating futures. Selection follows confidence bounds, expansion opens a new branch, simulation rolls dice to the end, backpropagation teaches the ancestors. AlphaGo made it famous; game trees still hear it whisper.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="mcts">⟳ Re-roll</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 28. Genetic Algorithm -->
+    <article class="spell-card" data-algo="genetic">
+      <div class="card-glyph"><canvas id="c-genetic" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-gen">Evolutionary</span><span class="tag tag-opt">Search</span></div>
+        <h2 class="card-title">Genetic Algorithm</h2>
+        <p class="card-desc">Optimization by artificial evolution. Keep the fittest strings, splice them together, mutate the offspring, repeat until nonsense becomes target. It is not smart in the human way; it is a patient pressure gradient wearing Darwin's robe.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="genetic">⟳ Re-evolve</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 29. L-System -->
+    <article class="spell-card" data-algo="lsystem">
+      <div class="card-glyph"><canvas id="c-lsystem" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-gen">Generative</span><span class="tag tag-geo">Fractal</span></div>
+        <h2 class="card-title">L-System</h2>
+        <p class="card-desc">A grammar that grows. Replace symbols with symbols, then interpret the sentence as turtle movement. Ferns, trees, lightning, blood vessels: recursive language becomes organic geometry. Tiny rule, vast botanical hallucination.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="lsystem">⟳ Regrow</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 30. Barnes-Hut Quadtree -->
+    <article class="spell-card featured" data-algo="barneshut">
+      <div class="card-glyph"><canvas id="c-barneshut" width="340" height="200"></canvas></div>
+      <div class="card-body">
+        <div class="card-meta"><span class="tag tag-physics">N-Body</span><span class="tag tag-geo">Quadtree</span></div>
+        <h2 class="card-title">Barnes-Hut Quadtree</h2>
+        <p class="card-desc">Gravity without all-pairs madness. Nearby bodies are handled individually; faraway clusters collapse into one center of mass. O(n²) becomes O(n log n). A universe cheats by summarizing distant stars, and the simulation survives.</p>
+        <div class="card-controls">
+          <button class="btn-run" data-target="barneshut">⟳ Re-cluster</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <section class="tier-label">TIER IV — THE RAGE-QUIT APOCRYPHA</section>
+  <div class="grimoire-grid" data-extra-grid></div>
+  </div>
+
+  <section class="volume-dynamic" data-volume-dynamic hidden>
+    <div class="volume-heading">
+      <p class="volume-kicker" data-volume-kicker></p>
+      <h2 data-volume-title></h2>
+      <p data-volume-subtitle></p>
+    </div>
+    <div class="subcat-strip" data-volume-subcats></div>
+    <div class="grimoire-grid" data-volume-grid></div>
+  </section>
+</main>
+
+<footer>
+  <nav class="doc-links" aria-label="Project documents">
+    <a href="README.md">Readme</a>
+    <a href="ABOUT.md">About</a>
+    <a href="ARCHITECTURE.md">Architecture</a>
+    <a href="SPECS.md">Specs</a>
+    <a href="KANBAN.md">Kanban</a>
+    <a href="ISSUES.md">Issues</a>
+    <a href="RELEASES.md">Releases</a>
+    <a href="CHANGELOG.md">Changelog</a>
+    <a href="catalog.json">Catalog JSON</a>
+    <a href="docs/ERD.md">ERD</a>
+    <a href="docs/ERM.md">ERM</a>
+    <a href="docs/ERP.md">ERP</a>
+    <a href="docs/INDEX.md">Index</a>
+    <a href="docs/GLOSSARY.md">Glossary</a>
+    <a href="docs/SOURCE-LEDGER.md">Source Ledger</a>
+    <a href="docs/BIBLIOGRAPHY.md">Bibliography</a>
+    <a href="docs/REAL-WORLD-EXAMPLES.md">Real-World Examples</a>
+    <a href="docs/SONIFICATION.md">Sonification</a>
+    <a href="docs/VERIFICATION.md">Verification</a>
+    <a href="docs/UNIQUENESS-AUDIT.md">Uniqueness Audit</a>
+    <a href="docs/VISUAL-SYSTEM.md">Visual System</a>
+    <a href="docs/AUDIT-LOG.md">Audit Log</a>
+    <a href="docs/BUILD_RUN_TEST.md">Build Run Test</a>
+    <a href="docs/PERFORMANCE.md">Performance</a>
+    <a href="docs/SECURITY.md">Security</a>
+    <a href="docs/RISK_REGISTER.md">Risk Register</a>
+    <a href="docs/UI_ENTITY_GUIDE.md">UI Guide</a>
+    <a href="docs/COMPLETION-AUDIT.md">Completion Audit</a>
+    <a href="docs/FILE_MAP.md">File Map</a>
+    <a href="docs/HANDOFF.md">Handoff</a>
+    <a href="docs/IMPLEMENTATION-MATRIX.md">Implementation Matrix</a>
+    <a href="docs/ALGORITHMS-1000.md">1000 Algorithms</a>
+    <a href="docs/GITHUB-PUBLISHING.md">GitHub Publishing</a>
+    <a href="docs/LICENSE-POLICY.md">License Policy</a>
+    <a href="LICENSE.md">License</a>
+    <a href="NOTICE.md">Notice</a>
+    <a href="CONTRIBUTING.md">Contributing</a>
+    <a href="SECURITY.md">Security Policy</a>
+    <a href="CITATION.cff">Citation</a>
+    <a href="implementations/README.md">50-Language Scaffold</a>
+    <a href="bibliography/README.md">Bibliography Ledger</a>
+  </nav>
+  <p>Compiled by the Order of the Arcane Stack · 1000 live incantations across 10 volumes · Vanilla Canvas runtime with documented visual, sonic, source, and 50-language implementation scaffolds</p>
+</footer>
+
+<script src="viz.js"></script></body>
+</html>

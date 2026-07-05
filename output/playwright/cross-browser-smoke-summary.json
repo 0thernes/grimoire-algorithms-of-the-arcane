@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-07-05T02:26:58.291Z",
+  "url": "http://127.0.0.1:4177/index.html?crossBrowser=1783218396940",
+  "viewport": "1280x720",
+  "engines": [
+    {
+      "engine": "chromium",
+      "file": "output/playwright/cross-browser-chromium.png",
+      "bytes": 374452,
+      "exists": true
+    },
+    {
+      "engine": "firefox",
+      "file": "output/playwright/cross-browser-firefox.png",
+      "bytes": 389431,
+      "exists": true
+    },
+    {
+      "engine": "webkit",
+      "file": "output/playwright/cross-browser-webkit.png",
+      "bytes": 303123,
+      "exists": true
+    }
+  ],
+  "failures": []
+}

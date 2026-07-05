@@ -1,0 +1,125 @@
+# Kanban
+
+## Done
+
+- Added the 1000 x 50 implementation matrix scaffold under `implementations/`.
+- Added 50 language/script target folders with README gates for future real implementations.
+- Added `implementations/languages.json` and `implementations/coverage-summary.json`; current planned cells are 50,000 and verified cells are 0.
+- Added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`.
+- Added `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff` for public non-commercial attribution posture.
+- Updated the GitHub Pages workflow to deploy root docs, license/notice/contribution/security/citation files, `docs/`, and `implementations/`.
+- Added reusable `output/playwright/implementation-matrix-audit-runner.js`.
+- Added `tools/audit-pages-artifact.mjs` and verified the simulated GitHub Pages artifact payload.
+- Added `tools/cross-browser-smoke.mjs` and refreshed Chromium, Firefox, and WebKit screenshot smoke evidence.
+- Added `tools/audit-requirement-evidence.mjs`, reporting 12 requirement checks, 0 defects, and 3 open blockers.
+- Added `bibliography/` with 1000 record-specific citation-slot bundles and a green bibliography audit.
+- Added sticky record search/filter controls for active volume, tag, engine, source status, sonic family, and visual family.
+- Added visible source-status badges to all 1000 cards and exported source/sonic/visual filter facets in `catalog.json`.
+- Added reusable `output/playwright/filter-source-audit-runner.js`; current evidence reports 1000/1000 visible source markers and 0 issues.
+- Added root `catalog.json` generated from the live browser runtime with 1000 records and source-class bibliography placeholders.
+- Added reusable catalog export and catalog-vs-DOM audit runners.
+- Added reusable keyboard/accessibility audit runner and fixed focus rings, compact record-picker targets, footer link target height, and active volume-tab contrast.
+- Fixed bounded run self-stop status refresh so the sonic console no longer reports stale running counts after timed audio cleanup.
+- Added project-book docs for build/run/test, performance, security, risk register, UI entity guide, completion audit, file map, and handoff.
+- Added reusable `output/playwright/static-readiness-audit-runner.js`.
+- Raised SFX gain again and verified `runMasterGain` at 0.48 in browser transport evidence.
+- Rebuilt Auto 1->1000 as strict sequential playback: one bounded run slot, stop, handoff gap, next record.
+- Forced Auto into Solo mode so manual Overlap mode cannot cause Auto overlap.
+- Renamed and rewired global controls as Stop All and Reset All.
+- Added `autoStatus()` and browser evidence proving Auto waits on the first slot, advances after finish, and keeps at most one voice active.
+- Fixed sonic status text for manual Run/Stop/Reset and record-picker starts.
+- Raised SFX gain levels and bounded explicit run voices so sound is audible, stoppable, resettable, and no longer runs forever.
+- Added sticky sonic console controls: Solo, Overlap, Stop, Reset, Auto 1->1000, and MONSTER.
+- Added per-card Run, Stop, Reset controls and Visual/Code/Math tabs for all 1000 records.
+- Added runtime APIs for `runRecord`, `stopRecord`, `resetRecord`, auto sequence playback, Monster chorus scheduling, recipe collection, and sonic mode switching.
+- Added `output/playwright/audio-control-modes-smoke-runner.js`, `output/playwright/code-math-tabs-audit-runner.js`, and `output/playwright/browser-console-audit-runner.js`.
+- Re-ran 0.9.8 regression audits: sound transport, code/math tabs, continuous Run smoke, audio integrity, audio interaction, live sorting smoke, catalog, responsive/page readiness, network/static, semantic sample, full 1000-canvas pixel/hash, and browser console. All report 0 issues.
+- Added continuous Run-score SFX for explicit Run and record-picker starts across the 1000-record runtime surface.
+- Wired continuous SFX to record tempo, vector, ratio set, waveform, kernel, fingerprint, shimmer carrier, and live requestAnimationFrame cadence.
+- Added `sonic-running` UI state keyed to active card sonic metadata and live energy.
+- Added `output/playwright/audio-continuous-run-smoke-runner.js` and verified one hand-authored plus one generated record keep audible run voices alive, schedule phrase notes, tick frames, and clean up on stop.
+- Re-ran 0.9.7 regression audits: continuous Run smoke, audio integrity, audio interaction, live sorting smoke, catalog, responsive/page readiness, network/static, semantic sample, full 1000-canvas pixel/hash, browser console, and static readiness.
+- Added live sorting-demo SFX events through `window.__grimoireRuntime.algorithmEvent(id, event)`.
+- Wired Sleep Sort, Bogo Sort, Stooge Sort, Quantum Bogosort, Cycle Sort, Cocktail Shaker Sort, and Timsort to emit throttled wake/shuffle/swap/write/phase/insert/merge/done sound from their animation state.
+- Added `output/playwright/audio-live-sorting-smoke-runner.js` and verified 7/7 sampled live sorting events after real Web Audio unlock.
+- Re-ran 0.9.6 regression audits: audio integrity, audio interaction, live sorting smoke, catalog, responsive/page readiness, network/static, semantic sample, full 1000-canvas pixel/hash, browser console, and static readiness.
+- Added deterministic Web Audio SFX for all 1000 records.
+- Added unique `Sonic` proof rows and `SR-0000-XXXX` audio recipe codes for every card.
+- Added audio hover/click/select behavior plus browser-gesture-aware audio unlock.
+- Added recipe-keyed shimmer/sparkle feedback tied to audio metadata.
+- Added audio integrity and audio interaction Playwright runners.
+- Verified 1000 unique audio codes, 1000 unique audio fingerprints, 1000 unique Sonic proof rows, and 8/8 sorting records with inversion/write-trace sonification.
+- Removed external Google Fonts runtime requests; the static app now loads only local `style.css` and `viz.js`.
+- Emptied `.nojekyll` for plain GitHub Pages static publishing.
+- Added reusable static-network audit runner and refreshed evidence with zero external runtime URLs.
+- Strengthened Marching Cubes / Marching Squares visual detail with scalar-field cells, threshold sample markers, and contour edges.
+- Re-ran the guided 0.9.4 QA matrix after static-network and visual-detail changes.
+- Added reusable responsive/layout and catalog-integrity Playwright audit runners.
+- Corrected semantic audit false positive around legitimate barcode chart vocabulary.
+- Re-ran full QA matrix for static readiness, responsive layout, catalog uniqueness, semantic sample uniqueness, exhaustive canvas uniqueness, clean console, and cross-browser screenshots.
+- Removed misleading unused Wave Function Collapse scaffold allocation.
+- Re-ran exhaustive 1000-canvas pixel/hash audit after the WFC cleanup.
+- Cross-browser screenshot smoke passed in Chromium, Firefox, and WebKit.
+- Static readiness audit passed with 0 issues and 0 warnings.
+- GitHub Pages static deployment scaffold added with `.nojekyll`, `.github/workflows/pages.yml`, and `404.html`.
+- Stale source-ledger and first-30 proof-panel documentation claims corrected.
+- Static readiness audit passed with 0 missing local assets, 0 broken Markdown links, and 0 stale checked claims.
+- Browser viewport matrix passed for desktop, tablet landscape, phone portrait, and small phone.
+- Full browser-mounted catalog integrity audit passed for all 1000 records.
+- Visual dialect/plate-composition layer added before and after semantic rendering.
+- PixiJS-inspired scene graph model added to visual recipes and Canvas mini-scene glyphs.
+- ECharts-inspired chart/series model added to visual recipes and Canvas mini-series glyphs.
+- Babylon.js-inspired spatial scene model added to visual recipes and Canvas spatial glyphs.
+- Third exhaustive 1000-card Playwright audit after dialect pass: 1000 unique hashes, 1000 unique recipe codes, no duplicate proof rows, no missing recipes, no low-detail cards, no runtime errors.
+- Vega-Lite-inspired data grammar layer added to visual recipes and Canvas rendering.
+- Rapier-inspired simulation grammar layer added to visual recipes and Canvas rendering.
+- Projection and interaction vocabularies added to visual recipes.
+- Context7 `regl` lookup audited as non-useful/unrelated, so no unsupported `regl` claim was made.
+- Second exhaustive 1000-card Playwright audit after data/simulation grammar expansion: 1000 unique hashes, 1000 unique recipe codes, no duplicate proof rows, no missing recipes, no low-detail cards, no runtime errors.
+- Desktop and mobile screenshot artifacts refreshed after the 0.8 visual pass.
+- Deterministic visual recipe layer for all 1000 records.
+- D3/Cytoscape/Matter.js-informed Canvas scaffolds without runtime dependencies.
+- Static Volume I hand-built cards wired into the same visual proof ledger as generated cards.
+- Quantum Bogosort dense branch/projector/pruning/observation redraw.
+- Exhaustive 1000-canvas Playwright pixel/hash audit: 1000 unique hashes, 1000 unique recipe codes, no duplicate proof rows, no missing recipes, no low-detail cards, no runtime errors.
+- Desktop and mobile element screenshot artifacts for representative visual families.
+- Semantic visual dispatcher for generated records.
+- Pointer-responsive Canvas visuals inspired by p5.js interaction patterns.
+- Plain-Canvas projected geometry inspired by Three.js scene/camera/data-geometry patterns.
+- Numerical-transform renderer for FFT, CORDIC, linear algebra, and robustness records.
+- Generated proof rows now describe semantic visual paths instead of generic mini-panel recipes.
+- Playwright semantic audit runner and screenshot runner.
+- Removed universal static canvas overlay.
+- Removed generated visual seal/barcode/footer decoration layers.
+- Moved record coordinate labels out of canvases.
+- Fixed canvas fit path that could crop/zoom sorting visuals.
+- Landscape side-rail navigation for laptop/tablet viewports.
+- Phone portrait layout remains stacked.
+- Side-rail record-picker jump offset verified.
+- Removed repeated static guide-line backdrop from generated Rage-Quit/volume canvases.
+- Active source-class ledger for card context rows.
+- Runtime source rows no longer describe citation work as a missing pass.
+- Expanded generated visual grammar to 30 renderer families and 50 visual modes.
+- Responsive design pass for landscape laptops/tablets and portrait phones.
+- Fixed rem typography scale, zero letter spacing, tuned spacing, and stronger font fallbacks.
+- Active picker reveal for centered records across dense desktop and mobile picker layouts.
+- 1000 total records across 10 volumes.
+- Sticky volume navigation.
+- Duplicate title audit target.
+- Generated record proof panels.
+- Static proof panels for the original 30 hand-built cards.
+- Deterministic visual signatures.
+- Local documentation scaffold.
+- Browser verification after proof-panel and visual-mode changes.
+- Cross-volume uniqueness audit for titles, IDs, descriptions, records, and visual proof rows.
+- Visible coordinate labels.
+- Active-volume 100-record picker.
+- Centered-record counter.
+- Glossary, index, and real-world examples/source-policy docs.
+
+## Next
+
+- Connect this folder to an actual GitHub repository before attempting commit/push.
+- Add the first real implementation cells in a small verified batch before scaling toward 50,000.
+- Fill per-record bibliography citation slots with source URLs or citation keys.
+- Split broad categories if future source or UX review shows a group is too blended.

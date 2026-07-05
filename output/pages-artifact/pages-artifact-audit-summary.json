@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-07-05T02:29:18.510Z",
+  "target": "GitHub Pages artifact simulation",
+  "version": "0.9.13-local",
+  "siteFileCount": 131,
+  "siteBytes": 7304294,
+  "docsMarkdownFiles": 25,
+  "implementationLanguageTargets": 50,
+  "implementationLanguageReadmes": 50,
+  "plannedCells": 50000,
+  "verifiedCells": 11,
+  "bibliographyRecords": 1000,
+  "bibliographyFilledCitationSlots": 0,
+  "nojekyllBytes": 0,
+  "missing": [],
+  "forbidden": [],
+  "rootRelativeAttrs": [],
+  "runtimeExternalRefs": [],
+  "requiredPagesActions": [
+    "actions/checkout@v6",
+    "actions/configure-pages@v5",
+    "actions/upload-pages-artifact@v4",
+    "actions/deploy-pages@v4"
+  ],
+  "stalePagesActions": [],
+  "issues": [],
+  "siteRemovedAfterAudit": true
+}

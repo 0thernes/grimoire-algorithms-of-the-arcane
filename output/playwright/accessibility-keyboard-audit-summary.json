@@ -1,0 +1,194 @@
+{
+  "generatedAt": "2026-07-05T02:00:55.389Z",
+  "target": "keyboard and accessibility basics",
+  "samples": [
+    {
+      "viewport": "desktop",
+      "namedControls": 760,
+      "unnamedControls": [],
+      "touchTooSmall": [],
+      "ariaLive": true,
+      "tablist": 200,
+      "tabPanels": 600,
+      "selectedTabs": 200,
+      "lowContrast": [],
+      "contrast": [
+        {
+          "selector": "site-title",
+          "color": "rgb(157, 92, 255)",
+          "background": "color(srgb 0.0588235 0.0666667 0.0901961 / 0.94)",
+          "ratio": 5.41,
+          "text": "GRIMOIRE"
+        },
+        {
+          "selector": "header-desc",
+          "color": "rgb(162, 156, 175)",
+          "background": "color(srgb 0.0588235 0.0666667 0.0901961 / 0.94)",
+          "ratio": 7.91,
+          "text": "1000 incantations of pure computational "
+        },
+        {
+          "selector": "volume-tab active",
+          "color": "rgb(236, 233, 244)",
+          "background": "rgb(36, 27, 52)",
+          "ratio": 13.68,
+          "text": "10Data Relics"
+        },
+        {
+          "selector": "sonic-status",
+          "color": "rgb(103, 97, 115)",
+          "background": "rgba(60, 255, 213, 0.043)",
+          "ratio": 4.66,
+          "text": "Sound: solo · 0 running · auto idle"
+        },
+        {
+          "selector": "card-title",
+          "color": "rgb(236, 233, 244)",
+          "background": "rgb(20, 23, 33)",
+          "ratio": 14.93,
+          "text": "Wave Function Collapse"
+        },
+        {
+          "selector": "card-desc",
+          "color": "rgb(162, 156, 175)",
+          "background": "rgb(20, 23, 33)",
+          "ratio": 6.74,
+          "text": "Superposition collapsed into inevitabili"
+        },
+        {
+          "selector": "FOOTER",
+          "color": "rgb(103, 97, 115)",
+          "background": "rgb(10, 11, 15)",
+          "ratio": 3.31,
+          "text": "Readme\n    About\n    Architecture\n    Sp"
+        }
+      ]
+    },
+    {
+      "viewport": "tablet-landscape",
+      "namedControls": 760,
+      "unnamedControls": [],
+      "touchTooSmall": [],
+      "ariaLive": true,
+      "tablist": 200,
+      "tabPanels": 600,
+      "selectedTabs": 200,
+      "lowContrast": [],
+      "contrast": [
+        {
+          "selector": "site-title",
+          "color": "rgb(157, 92, 255)",
+          "background": "color(srgb 0.0588235 0.0666667 0.0901961 / 0.94)",
+          "ratio": 5.41,
+          "text": "GRIMOIRE"
+        },
+        {
+          "selector": "header-desc",
+          "color": "rgb(162, 156, 175)",
+          "background": "color(srgb 0.0588235 0.0666667 0.0901961 / 0.94)",
+          "ratio": 7.91,
+          "text": "1000 incantations of pure computational "
+        },
+        {
+          "selector": "volume-tab active",
+          "color": "rgb(236, 233, 244)",
+          "background": "rgb(36, 27, 52)",
+          "ratio": 13.68,
+          "text": "07Graph Rituals"
+        },
+        {
+          "selector": "sonic-status",
+          "color": "rgb(103, 97, 115)",
+          "background": "rgba(60, 255, 213, 0.043)",
+          "ratio": 4.66,
+          "text": "Sound: solo · 0 running · auto idle"
+        },
+        {
+          "selector": "card-title",
+          "color": "rgb(236, 233, 244)",
+          "background": "rgb(20, 23, 33)",
+          "ratio": 14.93,
+          "text": "Wave Function Collapse"
+        },
+        {
+          "selector": "card-desc",
+          "color": "rgb(162, 156, 175)",
+          "background": "rgb(20, 23, 33)",
+          "ratio": 6.74,
+          "text": "Superposition collapsed into inevitabili"
+        },
+        {
+          "selector": "FOOTER",
+          "color": "rgb(103, 97, 115)",
+          "background": "rgb(10, 11, 15)",
+          "ratio": 3.31,
+          "text": "Readme\n    About\n    Architecture\n    Sp"
+        }
+      ]
+    },
+    {
+      "viewport": "phone-portrait",
+      "namedControls": 760,
+      "unnamedControls": [],
+      "touchTooSmall": [],
+      "ariaLive": true,
+      "tablist": 200,
+      "tabPanels": 600,
+      "selectedTabs": 200,
+      "lowContrast": [],
+      "contrast": [
+        {
+          "selector": "site-title",
+          "color": "rgb(157, 92, 255)",
+          "background": "color(srgb 0.0588235 0.0666667 0.0901961 / 0.94)",
+          "ratio": 5.41,
+          "text": "GRIMOIRE"
+        },
+        {
+          "selector": "header-desc",
+          "color": "rgb(162, 156, 175)",
+          "background": "color(srgb 0.0588235 0.0666667 0.0901961 / 0.94)",
+          "ratio": 7.91,
+          "text": "1000 incantations of pure computational "
+        },
+        {
+          "selector": "volume-tab active",
+          "color": "rgb(236, 233, 244)",
+          "background": "rgb(36, 27, 52)",
+          "ratio": 13.68,
+          "text": "05Stochastic Oracles"
+        },
+        {
+          "selector": "sonic-status",
+          "color": "rgb(103, 97, 115)",
+          "background": "rgba(60, 255, 213, 0.043)",
+          "ratio": 4.66,
+          "text": "Sound: solo · 0 running · auto idle"
+        },
+        {
+          "selector": "card-title",
+          "color": "rgb(236, 233, 244)",
+          "background": "rgb(20, 23, 33)",
+          "ratio": 14.93,
+          "text": "Wave Function Collapse"
+        },
+        {
+          "selector": "card-desc",
+          "color": "rgb(162, 156, 175)",
+          "background": "rgb(20, 23, 33)",
+          "ratio": 6.74,
+          "text": "Superposition collapsed into inevitabili"
+        },
+        {
+          "selector": "FOOTER",
+          "color": "rgb(103, 97, 115)",
+          "background": "rgb(10, 11, 15)",
+          "ratio": 3.31,
+          "text": "Readme\n    About\n    Architecture\n    Sp"
+        }
+      ]
+    }
+  ],
+  "missingFocus": [],
+  "issues": []
+}

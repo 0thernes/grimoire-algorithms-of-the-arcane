@@ -1,0 +1,298 @@
+{
+  "generatedAt": "2026-07-05T02:29:27.294Z",
+  "target": "objective requirement evidence audit",
+  "version": "0.9.13-local",
+  "status": "verified-with-open-blockers",
+  "requirements": [
+    {
+      "id": "version-consistency",
+      "description": "VERSION, catalog, language manifest, and coverage manifest agree on 0.9.13-local.",
+      "evidence": [
+        "VERSION",
+        "catalog.json",
+        "implementations/languages.json",
+        "implementations/coverage-summary.json"
+      ],
+      "status": "verified",
+      "version": "0.9.13-local",
+      "catalogVersion": "0.9.13-local",
+      "coverageVersion": "0.9.13-local",
+      "languagesVersion": "0.9.13-local"
+    },
+    {
+      "id": "catalog-shape",
+      "description": "Catalog contains exactly 1000 records with 10 volumes, 100 per volume, and unique IDs/nav labels/titles.",
+      "evidence": [
+        "catalog.json",
+        "output/playwright/catalog-integrity-audit-summary.json"
+      ],
+      "status": "verified",
+      "records": 1000,
+      "volumeCounts": {
+        "1": 100,
+        "2": 100,
+        "3": 100,
+        "4": 100,
+        "5": 100,
+        "6": 100,
+        "7": 100,
+        "8": 100,
+        "9": 100,
+        "10": 100
+      },
+      "duplicateIds": 0,
+      "duplicateNav": 0,
+      "duplicateTitles": 0
+    },
+    {
+      "id": "docs-and-root-files",
+      "description": "Required root docs, docs/, runtime files, license/notice, and citation files exist.",
+      "evidence": [
+        "README.md",
+        "ABOUT.md",
+        "ARCHITECTURE.md",
+        "SPECS.md",
+        "KANBAN.md",
+        "ISSUES.md",
+        "RELEASES.md",
+        "CHANGELOG.md",
+        "LICENSE.md",
+        "NOTICE.md",
+        "CONTRIBUTING.md",
+        "SECURITY.md",
+        "CITATION.cff",
+        "index.html",
+        "style.css",
+        "viz.js",
+        "catalog.json",
+        "VERSION",
+        ".nojekyll",
+        "404.html",
+        "docs/INDEX.md",
+        "docs/GLOSSARY.md",
+        "docs/ERD.md",
+        "docs/ERM.md",
+        "docs/ERP.md",
+        "docs/SOURCE-LEDGER.md",
+        "docs/BIBLIOGRAPHY.md",
+        "docs/REAL-WORLD-EXAMPLES.md",
+        "docs/SONIFICATION.md",
+        "docs/VERIFICATION.md",
+        "docs/UNIQUENESS-AUDIT.md",
+        "docs/VISUAL-SYSTEM.md",
+        "docs/AUDIT-LOG.md",
+        "docs/BUILD_RUN_TEST.md",
+        "docs/PERFORMANCE.md",
+        "docs/SECURITY.md",
+        "docs/RISK_REGISTER.md",
+        "docs/UI_ENTITY_GUIDE.md",
+        "docs/COMPLETION-AUDIT.md",
+        "docs/FILE_MAP.md",
+        "docs/HANDOFF.md",
+        "docs/IMPLEMENTATION-MATRIX.md",
+        "docs/ALGORITHMS-1000.md",
+        "docs/GITHUB-PUBLISHING.md",
+        "docs/LICENSE-POLICY.md"
+      ],
+      "status": "verified",
+      "missingRoot": [],
+      "missingDocs": []
+    },
+    {
+      "id": "generated-docs-current",
+      "description": "Generated and publish-facing files do not carry stale prior-version markers.",
+      "evidence": [
+        "catalog.json",
+        "implementations/",
+        "docs/ALGORITHMS-1000.md",
+        "docs/GITHUB-PUBLISHING.md",
+        "docs/IMPLEMENTATION-MATRIX.md"
+      ],
+      "status": "verified",
+      "staleGenerated": []
+    },
+    {
+      "id": "implementation-matrix",
+      "description": "Implementation scaffold exposes 50 language targets, 50,000 planned cells, and verified cells that match the implementation ledger.",
+      "evidence": [
+        "implementations/languages.json",
+        "implementations/coverage-summary.json",
+        "implementations/verified-cells.json",
+        "output/playwright/implementation-matrix-audit-summary.json"
+      ],
+      "status": "verified",
+      "languageTargets": 50,
+      "plannedCells": 50000,
+      "verifiedCells": 11
+    },
+    {
+      "id": "implementation-tests",
+      "description": "Ledger-backed verified implementation cells have passing local test evidence.",
+      "evidence": [
+        "tools/verify-implementations.mjs",
+        "implementations/verified-cells.json",
+        "output/implementation-tests/implementation-test-summary.json"
+      ],
+      "status": "verified",
+      "totalCells": 11,
+      "passed": 11,
+      "failed": 0
+    },
+    {
+      "id": "bibliography-ledger",
+      "description": "Bibliography ledger exposes all 1000 record-specific citation slots while keeping publication claims disabled.",
+      "evidence": [
+        "bibliography/records.json",
+        "docs/BIBLIOGRAPHY.md",
+        "output/bibliography/bibliography-audit-summary.json"
+      ],
+      "status": "verified",
+      "bibliographyStatusCounts": {
+        "source-class-only": 1000
+      },
+      "filledCitationSlots": 0,
+      "bibliographyAuditIssues": 0
+    },
+    {
+      "id": "audit-summaries-green",
+      "description": "Current audit summaries report zero issues/failures/actionable console/page errors.",
+      "evidence": [
+        "output/playwright/static-readiness-audit-summary.json",
+        "output/playwright/network-static-audit-summary.json",
+        "output/playwright/pages-readiness-audit-summary.json",
+        "output/playwright/browser-console-audit-summary.json",
+        "output/playwright/accessibility-keyboard-audit-summary.json",
+        "output/playwright/catalog-integrity-audit-summary.json",
+        "output/playwright/catalog-export-audit-summary.json",
+        "output/playwright/code-math-tabs-audit-summary.json",
+        "output/playwright/filter-source-audit-summary.json",
+        "output/playwright/polymath-1000-audit-summary.json",
+        "output/playwright/audio-control-modes-smoke-summary.json",
+        "output/playwright/audio-integrity-audit-summary.json",
+        "output/playwright/audio-continuous-run-smoke-summary.json",
+        "output/playwright/audio-live-sorting-smoke-summary.json",
+        "output/playwright/audio-interaction-smoke-summary.json",
+        "output/playwright/implementation-matrix-audit-summary.json",
+        "output/playwright/cross-browser-smoke-summary.json",
+        "output/playwright/aggregate-audit-summary.json",
+        "output/pages-artifact/pages-artifact-audit-summary.json"
+      ],
+      "status": "verified",
+      "summaryProblems": {}
+    },
+    {
+      "id": "cross-browser-smoke",
+      "description": "Chromium, Firefox, and WebKit screenshot smoke artifacts exist and report zero failures.",
+      "evidence": [
+        "output/playwright/cross-browser-smoke-summary.json",
+        "output/playwright/cross-browser-*.png"
+      ],
+      "status": "verified",
+      "engines": [
+        {
+          "engine": "chromium",
+          "file": "output/playwright/cross-browser-chromium.png",
+          "bytes": 374452,
+          "exists": true
+        },
+        {
+          "engine": "firefox",
+          "file": "output/playwright/cross-browser-firefox.png",
+          "bytes": 389431,
+          "exists": true
+        },
+        {
+          "engine": "webkit",
+          "file": "output/playwright/cross-browser-webkit.png",
+          "bytes": 303123,
+          "exists": true
+        }
+      ],
+      "failures": []
+    },
+    {
+      "id": "pages-artifact",
+      "description": "GitHub Pages artifact simulation copies the intended payload and removes the temporary site folder.",
+      "evidence": [
+        "tools/audit-pages-artifact.mjs",
+        "output/pages-artifact/pages-artifact-audit-summary.json"
+      ],
+      "status": "verified",
+      "siteFileCount": 131,
+      "siteBytes": 7304294,
+      "siteRemovedAfterAudit": true
+    },
+    {
+      "id": "pages-workflow-current",
+      "description": "GitHub Pages workflow uses current action pins and copies docs, implementations, bibliography, and policy files.",
+      "evidence": [
+        ".github/workflows/pages.yml",
+        "docs/GITHUB-PUBLISHING.md",
+        "output/playwright/static-readiness-audit-summary.json"
+      ],
+      "status": "verified",
+      "requiredPagesActions": [
+        "actions/checkout@v6",
+        "actions/configure-pages@v5",
+        "actions/upload-pages-artifact@v4",
+        "actions/deploy-pages@v4"
+      ],
+      "stalePagesActions": []
+    },
+    {
+      "id": "footer-navigation",
+      "description": "App footer links required project-book docs, policy files, and implementation scaffold.",
+      "evidence": [
+        "index.html",
+        "output/playwright/static-readiness-audit-summary.json"
+      ],
+      "status": "verified",
+      "missingFooterDocs": []
+    },
+    {
+      "id": "github-publish",
+      "description": "Actual commit/push/GitHub Pages publication is not complete because the folder is not connected to a GitHub repository.",
+      "evidence": [
+        "docs/GITHUB-PUBLISHING.md",
+        "ISSUES.md",
+        "gh auth status"
+      ],
+      "status": "open",
+      "isRepo": true,
+      "hasOrigin": false,
+      "remote": "",
+      "documented": true
+    },
+    {
+      "id": "record-specific-bibliography",
+      "description": "Per-record historical citation slots exist but remain unfilled; citations must be added before inventor/date/primary-user/deployment claims.",
+      "evidence": [
+        "ISSUES.md",
+        "docs/SOURCE-LEDGER.md",
+        "docs/BIBLIOGRAPHY.md",
+        "bibliography/records.json",
+        "catalog.json"
+      ],
+      "status": "open",
+      "currentBibliographyStatus": "source-class-only",
+      "filledCitationSlots": 0
+    },
+    {
+      "id": "verified-implementation-corpus",
+      "description": "The 50-language implementation corpus is partial; only ledger-tested cells are counted as verified.",
+      "evidence": [
+        "implementations/coverage-summary.json",
+        "docs/IMPLEMENTATION-MATRIX.md"
+      ],
+      "status": "open",
+      "plannedCells": 50000,
+      "verifiedCells": 11
+    }
+  ],
+  "issues": [],
+  "openItems": [
+    "github-publish",
+    "record-specific-bibliography",
+    "verified-implementation-corpus"
+  ]
+}

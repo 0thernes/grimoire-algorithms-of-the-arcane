@@ -1,0 +1,454 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-05T02:29:02.930Z",
+  "catalogVersion": "0.9.13-local",
+  "recordCount": 1000,
+  "languageCount": 50,
+  "plannedCells": 50000,
+  "verifiedCells": 11,
+  "status": "partial-verified",
+  "coverageByLanguage": [
+    {
+      "languageId": "javascript",
+      "languageName": "JavaScript",
+      "planned": 1000,
+      "verified": 1,
+      "status": "partial"
+    },
+    {
+      "languageId": "typescript",
+      "languageName": "TypeScript",
+      "planned": 1000,
+      "verified": 1,
+      "status": "partial"
+    },
+    {
+      "languageId": "python",
+      "languageName": "Python",
+      "planned": 1000,
+      "verified": 1,
+      "status": "partial"
+    },
+    {
+      "languageId": "java",
+      "languageName": "Java",
+      "planned": 1000,
+      "verified": 1,
+      "status": "partial"
+    },
+    {
+      "languageId": "c",
+      "languageName": "C",
+      "planned": 1000,
+      "verified": 1,
+      "status": "partial"
+    },
+    {
+      "languageId": "cpp",
+      "languageName": "C++",
+      "planned": 1000,
+      "verified": 1,
+      "status": "partial"
+    },
+    {
+      "languageId": "csharp",
+      "languageName": "C#",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "go",
+      "languageName": "Go",
+      "planned": 1000,
+      "verified": 1,
+      "status": "partial"
+    },
+    {
+      "languageId": "rust",
+      "languageName": "Rust",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "kotlin",
+      "languageName": "Kotlin",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "swift",
+      "languageName": "Swift",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "ruby",
+      "languageName": "Ruby",
+      "planned": 1000,
+      "verified": 1,
+      "status": "partial"
+    },
+    {
+      "languageId": "php",
+      "languageName": "PHP",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "r",
+      "languageName": "R",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "julia",
+      "languageName": "Julia",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "scala",
+      "languageName": "Scala",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "dart",
+      "languageName": "Dart",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "lua",
+      "languageName": "Lua",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "perl",
+      "languageName": "Perl",
+      "planned": 1000,
+      "verified": 1,
+      "status": "partial"
+    },
+    {
+      "languageId": "bash",
+      "languageName": "Bash",
+      "planned": 1000,
+      "verified": 1,
+      "status": "partial"
+    },
+    {
+      "languageId": "powershell",
+      "languageName": "PowerShell",
+      "planned": 1000,
+      "verified": 1,
+      "status": "partial"
+    },
+    {
+      "languageId": "sql",
+      "languageName": "SQL",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "matlab-octave",
+      "languageName": "MATLAB / Octave",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "haskell",
+      "languageName": "Haskell",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "elixir",
+      "languageName": "Elixir",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "erlang",
+      "languageName": "Erlang",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "clojure",
+      "languageName": "Clojure",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "fsharp",
+      "languageName": "F#",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "ocaml",
+      "languageName": "OCaml",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "zig",
+      "languageName": "Zig",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "nim",
+      "languageName": "Nim",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "crystal",
+      "languageName": "Crystal",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "d",
+      "languageName": "D",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "ada",
+      "languageName": "Ada",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "fortran",
+      "languageName": "Fortran",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "cobol",
+      "languageName": "COBOL",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "common-lisp",
+      "languageName": "Common Lisp",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "scheme",
+      "languageName": "Scheme",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "racket",
+      "languageName": "Racket",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "prolog",
+      "languageName": "Prolog",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "objective-c",
+      "languageName": "Objective-C",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "groovy",
+      "languageName": "Groovy",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "visual-basic",
+      "languageName": "Visual Basic .NET",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "vba",
+      "languageName": "VBA",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "solidity",
+      "languageName": "Solidity",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "move",
+      "languageName": "Move",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "assembly-x86-64",
+      "languageName": "x86-64 Assembly",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "webassembly-wat",
+      "languageName": "WebAssembly Text",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "cuda-cpp",
+      "languageName": "CUDA C++",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    },
+    {
+      "languageId": "verilog-systemverilog",
+      "languageName": "Verilog / SystemVerilog",
+      "planned": 1000,
+      "verified": 0,
+      "status": "planned"
+    }
+  ],
+  "coverageByEngine": [
+    {
+      "engine": "graph",
+      "records": 135,
+      "plannedCells": 6750,
+      "verifiedCells": 11
+    },
+    {
+      "engine": "logic",
+      "records": 122,
+      "plannedCells": 6100,
+      "verifiedCells": 0
+    },
+    {
+      "engine": "probability",
+      "records": 122,
+      "plannedCells": 6100,
+      "verifiedCells": 0
+    },
+    {
+      "engine": "optimization",
+      "records": 104,
+      "plannedCells": 5200,
+      "verifiedCells": 0
+    },
+    {
+      "engine": "distributed",
+      "records": 85,
+      "plannedCells": 4250,
+      "verifiedCells": 0
+    },
+    {
+      "engine": "crypto",
+      "records": 79,
+      "plannedCells": 3950,
+      "verifiedCells": 0
+    },
+    {
+      "engine": "sketch",
+      "records": 70,
+      "plannedCells": 3500,
+      "verifiedCells": 0
+    },
+    {
+      "engine": "topology",
+      "records": 64,
+      "plannedCells": 3200,
+      "verifiedCells": 0
+    },
+    {
+      "engine": "flow",
+      "records": 60,
+      "plannedCells": 3000,
+      "verifiedCells": 0
+    },
+    {
+      "engine": "parsing",
+      "records": 50,
+      "plannedCells": 2500,
+      "verifiedCells": 0
+    },
+    {
+      "engine": "quantum",
+      "records": 44,
+      "plannedCells": 2200,
+      "verifiedCells": 0
+    },
+    {
+      "engine": "automata",
+      "records": 35,
+      "plannedCells": 1750,
+      "verifiedCells": 0
+    },
+    {
+      "engine": "undecidable",
+      "records": 20,
+      "plannedCells": 1000,
+      "verifiedCells": 0
+    },
+    {
+      "engine": "evolution",
+      "records": 10,
+      "plannedCells": 500,
+      "verifiedCells": 0
+    }
+  ],
+  "sourceStatusCounts": [
+    {
+      "status": "source-class-only",
+      "records": 1000
+    }
+  ]
+}

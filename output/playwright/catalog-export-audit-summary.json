@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-07-05T02:00:09.219Z",
+  "target": "catalog.json export",
+  "catalogFetchStatus": 200,
+  "catalogVersion": "0.9.13-local",
+  "catalogRecordCount": 1000,
+  "domRecordCount": 1000,
+  "uniqueIds": 1000,
+  "uniqueNavLabels": 1000,
+  "uniqueAudioCodes": 1000,
+  "uniqueAudioFingerprints": 1000,
+  "uniqueVisualRecipes": 1000,
+  "bibliographyStatusCounts": {
+    "source-class-only": 1000
+  },
+  "sourceStatusCounts": {
+    "source-class-only": 1000
+  },
+  "sourceMarkerCount": 1000,
+  "mismatchSamples": [],
+  "missingFields": [],
+  "issues": []
+}
