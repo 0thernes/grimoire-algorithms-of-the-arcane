@@ -11,7 +11,7 @@ Expected runtime/toolchain: native
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 4
+- Verified implementations: 5
 - Status: partial verified
 
 ## Verified Cells
@@ -20,6 +20,7 @@ Expected runtime/toolchain: native
 - Jump Consistency Hashing (`jumphash`): `g++ implementations/cpp/hashing/jumphash/jump_hash.cpp -std=c++17 -o output/implementation-tests/jumphash_cpp.exe && .\output\implementation-tests\jumphash_cpp.exe`
 - Reservoir Sampling (`reservoir`): `g++ implementations/cpp/sampling/reservoir/reservoir.cpp -std=c++17 -o output/implementation-tests/reservoir_cpp.exe && .\output\implementation-tests\reservoir_cpp.exe`
 - Cycle Sort (`cyclesort`): `g++ implementations/cpp/sorting/cyclesort/cyclesort.cpp -std=c++17 -o output/implementation-tests/cyclesort_cpp.exe && .\output\implementation-tests\cyclesort_cpp.exe`
+- Stooge Sort (`stoogesort`): `g++ implementations/cpp/sorting/stoogesort/stoogesort.cpp -std=c++17 -o output/implementation-tests/stoogesort_cpp.exe && .\output\implementation-tests\stoogesort_cpp.exe`
 
 ## Required Shape For Each Algorithm
 

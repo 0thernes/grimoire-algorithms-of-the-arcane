@@ -11,7 +11,7 @@ Expected runtime/toolchain: Node.js / browser
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 4
+- Verified implementations: 5
 - Status: partial verified
 
 ## Verified Cells
@@ -20,6 +20,7 @@ Expected runtime/toolchain: Node.js / browser
 - Jump Consistency Hashing (`jumphash`): `node implementations/javascript/hashing/jumphash/test.js`
 - Reservoir Sampling (`reservoir`): `node implementations/javascript/sampling/reservoir/test.js`
 - Cycle Sort (`cyclesort`): `node implementations/javascript/sorting/cyclesort/test.js`
+- Stooge Sort (`stoogesort`): `node implementations/javascript/sorting/stoogesort/test.js`
 
 ## Required Shape For Each Algorithm
 

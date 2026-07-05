@@ -11,7 +11,7 @@ Expected runtime/toolchain: native
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 4
+- Verified implementations: 5
 - Status: partial verified
 
 ## Verified Cells
@@ -20,6 +20,7 @@ Expected runtime/toolchain: native
 - Jump Consistency Hashing (`jumphash`): `gcc implementations/c/hashing/jumphash/jump_hash.c -DTEST -o output/implementation-tests/jumphash_c.exe && .\output\implementation-tests\jumphash_c.exe`
 - Reservoir Sampling (`reservoir`): `gcc implementations/c/sampling/reservoir/reservoir.c -DTEST -o output/implementation-tests/reservoir_c.exe && .\output\implementation-tests\reservoir_c.exe`
 - Cycle Sort (`cyclesort`): `gcc implementations/c/sorting/cyclesort/cyclesort.c -DTEST -o output/implementation-tests/cyclesort_c.exe && .\output\implementation-tests\cyclesort_c.exe`
+- Stooge Sort (`stoogesort`): `gcc implementations/c/sorting/stoogesort/stoogesort.c -o output/implementation-tests/stoogesort_c.exe && .\output\implementation-tests\stoogesort_c.exe`
 
 ## Required Shape For Each Algorithm
 

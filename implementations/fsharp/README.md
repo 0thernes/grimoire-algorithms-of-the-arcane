@@ -11,7 +11,7 @@ Expected runtime/toolchain: .NET
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 4
+- Verified implementations: 5
 - Status: partial verified
 
 ## Verified Cells
@@ -20,6 +20,7 @@ Expected runtime/toolchain: .NET
 - Jump Consistency Hashing (`jumphash`): `dotnet build implementations/fsharp/hashing/jumphash/JumpHash.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-jumphash/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-jumphash/ && dotnet .\output\implementation-tests\fsharp-bin-jumphash\JumpHash.dll`
 - Reservoir Sampling (`reservoir`): `dotnet build implementations/fsharp/sampling/reservoir/Reservoir.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-reservoir/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-reservoir/ && dotnet .\output\implementation-tests\fsharp-bin-reservoir\Reservoir.dll`
 - Cycle Sort (`cyclesort`): `dotnet build implementations/fsharp/sorting/cyclesort/CycleSort.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-cyclesort/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-cyclesort/ && dotnet .\output\implementation-tests\fsharp-bin-cyclesort\CycleSort.dll`
+- Stooge Sort (`stoogesort`): `dotnet build implementations/fsharp/sorting/stoogesort/StoogeSort.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-stoogesort/ && dotnet .\output\implementation-tests\fsharp-bin-stoogesort\StoogeSort.dll`
 
 ## Required Shape For Each Algorithm
 

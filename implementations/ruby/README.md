@@ -11,7 +11,7 @@ Expected runtime/toolchain: MRI / JRuby
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 4
+- Verified implementations: 5
 - Status: partial verified
 
 ## Verified Cells
@@ -20,6 +20,7 @@ Expected runtime/toolchain: MRI / JRuby
 - Jump Consistency Hashing (`jumphash`): `ruby implementations/ruby/hashing/jumphash/jump_hash.rb`
 - Reservoir Sampling (`reservoir`): `ruby implementations/ruby/sampling/reservoir/reservoir.rb`
 - Cycle Sort (`cyclesort`): `ruby implementations/ruby/sorting/cyclesort/cyclesort.rb`
+- Stooge Sort (`stoogesort`): `ruby implementations/ruby/sorting/stoogesort/stoogesort.rb`
 
 ## Required Shape For Each Algorithm
 

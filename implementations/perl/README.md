@@ -11,7 +11,7 @@ Expected runtime/toolchain: Perl
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 4
+- Verified implementations: 5
 - Status: partial verified
 
 ## Verified Cells
@@ -20,6 +20,7 @@ Expected runtime/toolchain: Perl
 - Jump Consistency Hashing (`jumphash`): `perl implementations/perl/hashing/jumphash/jump_hash.pl`
 - Reservoir Sampling (`reservoir`): `perl implementations/perl/sampling/reservoir/reservoir.pl`
 - Cycle Sort (`cyclesort`): `perl implementations/perl/sorting/cyclesort/cyclesort.pl`
+- Stooge Sort (`stoogesort`): `perl implementations/perl/sorting/stoogesort/stoogesort.pl`
 
 ## Required Shape For Each Algorithm
 

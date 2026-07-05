@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "catalogVersion": "0.9.13-local",
-  "generatedAt": "2026-07-05T03:35:05.555Z",
+  "generatedAt": "2026-07-05T03:49:23.977Z",
   "verificationPolicy": "A cell is verified only when its source files exist and its testCommand passes locally.",
   "verifiedCells": [
     {
@@ -925,6 +925,233 @@
       ],
       "readme": "implementations/visual-basic/sorting/cyclesort/README.md",
       "testCommand": "dotnet build implementations/visual-basic/sorting/cyclesort/CycleSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-cyclesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-cyclesort/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-cyclesort\\CycleSort.dll",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "javascript:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "javascript",
+      "sourceFiles": [
+        "implementations/javascript/sorting/stoogesort/stoogesort.js"
+      ],
+      "readme": "implementations/javascript/sorting/stoogesort/README.md",
+      "testCommand": "node implementations/javascript/sorting/stoogesort/test.js",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "typescript:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "typescript",
+      "sourceFiles": [
+        "implementations/typescript/sorting/stoogesort/stoogesort.ts"
+      ],
+      "readme": "implementations/typescript/sorting/stoogesort/README.md",
+      "testCommand": "deno run --quiet implementations/typescript/sorting/stoogesort/test.ts",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "python:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "python",
+      "sourceFiles": [
+        "implementations/python/sorting/stoogesort/stoogesort.py"
+      ],
+      "readme": "implementations/python/sorting/stoogesort/README.md",
+      "testCommand": "python -B implementations/python/sorting/stoogesort/test_stoogesort.py",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "powershell:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "powershell",
+      "sourceFiles": [
+        "implementations/powershell/sorting/stoogesort/stoogesort.ps1"
+      ],
+      "readme": "implementations/powershell/sorting/stoogesort/README.md",
+      "testCommand": "pwsh -NoProfile -File implementations/powershell/sorting/stoogesort/test.ps1",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "java:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "java",
+      "sourceFiles": [
+        "implementations/java/sorting/stoogesort/StoogeSort.java"
+      ],
+      "readme": "implementations/java/sorting/stoogesort/README.md",
+      "testCommand": "javac -d output/implementation-tests implementations/java/sorting/stoogesort/StoogeSort.java && java -cp output/implementation-tests StoogeSort",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "csharp:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "csharp",
+      "sourceFiles": [
+        "implementations/csharp/sorting/stoogesort/Program.cs",
+        "implementations/csharp/sorting/stoogesort/StoogeSort.csproj"
+      ],
+      "readme": "implementations/csharp/sorting/stoogesort/README.md",
+      "testCommand": "dotnet build implementations/csharp/sorting/stoogesort/StoogeSort.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-stoogesort/ && dotnet .\\output\\implementation-tests\\csharp-bin-stoogesort\\StoogeSort.dll",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "fsharp:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "fsharp",
+      "sourceFiles": [
+        "implementations/fsharp/sorting/stoogesort/Program.fs",
+        "implementations/fsharp/sorting/stoogesort/StoogeSort.fsproj"
+      ],
+      "readme": "implementations/fsharp/sorting/stoogesort/README.md",
+      "testCommand": "dotnet build implementations/fsharp/sorting/stoogesort/StoogeSort.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-stoogesort/ && dotnet .\\output\\implementation-tests\\fsharp-bin-stoogesort\\StoogeSort.dll",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "c:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "c",
+      "sourceFiles": [
+        "implementations/c/sorting/stoogesort/stoogesort.c"
+      ],
+      "readme": "implementations/c/sorting/stoogesort/README.md",
+      "testCommand": "gcc implementations/c/sorting/stoogesort/stoogesort.c -o output/implementation-tests/stoogesort_c.exe && .\\output\\implementation-tests\\stoogesort_c.exe",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "cpp:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "cpp",
+      "sourceFiles": [
+        "implementations/cpp/sorting/stoogesort/stoogesort.cpp"
+      ],
+      "readme": "implementations/cpp/sorting/stoogesort/README.md",
+      "testCommand": "g++ implementations/cpp/sorting/stoogesort/stoogesort.cpp -std=c++17 -o output/implementation-tests/stoogesort_cpp.exe && .\\output\\implementation-tests\\stoogesort_cpp.exe",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "go:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "go",
+      "sourceFiles": [
+        "implementations/go/sorting/stoogesort/stoogesort.go"
+      ],
+      "readme": "implementations/go/sorting/stoogesort/README.md",
+      "testCommand": "go run implementations/go/sorting/stoogesort/stoogesort.go",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "ruby:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "ruby",
+      "sourceFiles": [
+        "implementations/ruby/sorting/stoogesort/stoogesort.rb"
+      ],
+      "readme": "implementations/ruby/sorting/stoogesort/README.md",
+      "testCommand": "ruby implementations/ruby/sorting/stoogesort/stoogesort.rb",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "perl:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "perl",
+      "sourceFiles": [
+        "implementations/perl/sorting/stoogesort/stoogesort.pl"
+      ],
+      "readme": "implementations/perl/sorting/stoogesort/README.md",
+      "testCommand": "perl implementations/perl/sorting/stoogesort/stoogesort.pl",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "bash:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "bash",
+      "sourceFiles": [
+        "implementations/bash/sorting/stoogesort/stoogesort.sh"
+      ],
+      "readme": "implementations/bash/sorting/stoogesort/README.md",
+      "testCommand": "bash implementations/bash/sorting/stoogesort/test.sh",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "visual-basic:stoogesort",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-01",
+      "algorithmId": "stoogesort",
+      "algorithmTitle": "Stooge Sort",
+      "domain": "sorting",
+      "languageId": "visual-basic",
+      "sourceFiles": [
+        "implementations/visual-basic/sorting/stoogesort/Program.vb",
+        "implementations/visual-basic/sorting/stoogesort/StoogeSort.vbproj"
+      ],
+      "readme": "implementations/visual-basic/sorting/stoogesort/README.md",
+      "testCommand": "dotnet build implementations/visual-basic/sorting/stoogesort/StoogeSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-stoogesort/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-stoogesort\\StoogeSort.dll",
       "verifiedAt": "2026-07-05",
       "status": "verified-local"
     }

@@ -11,7 +11,7 @@ Expected runtime/toolchain: native
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 4
+- Verified implementations: 5
 - Status: partial verified
 
 ## Verified Cells
@@ -20,6 +20,7 @@ Expected runtime/toolchain: native
 - Jump Consistency Hashing (`jumphash`): `go run implementations/go/hashing/jumphash/jump_hash.go`
 - Reservoir Sampling (`reservoir`): `go run implementations/go/sampling/reservoir/reservoir.go`
 - Cycle Sort (`cyclesort`): `go run implementations/go/sorting/cyclesort/cyclesort.go`
+- Stooge Sort (`stoogesort`): `go run implementations/go/sorting/stoogesort/stoogesort.go`
 
 ## Required Shape For Each Algorithm
 

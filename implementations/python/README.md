@@ -11,7 +11,7 @@ Expected runtime/toolchain: CPython
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 4
+- Verified implementations: 5
 - Status: partial verified
 
 ## Verified Cells
@@ -20,6 +20,7 @@ Expected runtime/toolchain: CPython
 - Jump Consistency Hashing (`jumphash`): `python -B implementations/python/hashing/jumphash/test_jumphash.py`
 - Reservoir Sampling (`reservoir`): `python -B implementations/python/sampling/reservoir/test_reservoir.py`
 - Cycle Sort (`cyclesort`): `python -B implementations/python/sorting/cyclesort/test_cyclesort.py`
+- Stooge Sort (`stoogesort`): `python -B implementations/python/sorting/stoogesort/test_stoogesort.py`
 
 ## Required Shape For Each Algorithm
 

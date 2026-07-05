@@ -9,40 +9,40 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Catalog records | 1000 |
 | Language/script targets | 50 |
 | Planned implementation cells | 50000 |
-| Verified implementation cells | 57 |
+| Verified implementation cells | 71 |
 
 ## Language Targets
 
 | Language | ID | Family | Extension | Planned | Verified |
 |---|---|---|---|---:|---:|
-| JavaScript | `javascript` | web scripting | `.js` | 1000 | 4 |
-| TypeScript | `typescript` | typed web scripting | `.ts` | 1000 | 4 |
-| Python | `python` | general scripting | `.py` | 1000 | 4 |
-| Java | `java` | managed OO | `.java` | 1000 | 4 |
-| C | `c` | systems | `.c` | 1000 | 4 |
-| C++ | `cpp` | systems | `.cpp` | 1000 | 4 |
-| C# | `csharp` | managed OO | `.cs` | 1000 | 4 |
-| Go | `go` | systems/networking | `.go` | 1000 | 4 |
+| JavaScript | `javascript` | web scripting | `.js` | 1000 | 5 |
+| TypeScript | `typescript` | typed web scripting | `.ts` | 1000 | 5 |
+| Python | `python` | general scripting | `.py` | 1000 | 5 |
+| Java | `java` | managed OO | `.java` | 1000 | 5 |
+| C | `c` | systems | `.c` | 1000 | 5 |
+| C++ | `cpp` | systems | `.cpp` | 1000 | 5 |
+| C# | `csharp` | managed OO | `.cs` | 1000 | 5 |
+| Go | `go` | systems/networking | `.go` | 1000 | 5 |
 | Rust | `rust` | safe systems | `.rs` | 1000 | 0 |
 | Kotlin | `kotlin` | modern JVM | `.kt` | 1000 | 0 |
 | Swift | `swift` | Apple/native | `.swift` | 1000 | 0 |
-| Ruby | `ruby` | dynamic scripting | `.rb` | 1000 | 4 |
+| Ruby | `ruby` | dynamic scripting | `.rb` | 1000 | 5 |
 | PHP | `php` | web scripting | `.php` | 1000 | 0 |
 | R | `r` | statistics | `.R` | 1000 | 0 |
 | Julia | `julia` | scientific computing | `.jl` | 1000 | 0 |
 | Scala | `scala` | functional JVM | `.scala` | 1000 | 0 |
 | Dart | `dart` | app/web | `.dart` | 1000 | 0 |
 | Lua | `lua` | embedded scripting | `.lua` | 1000 | 0 |
-| Perl | `perl` | text scripting | `.pl` | 1000 | 4 |
-| Bash | `bash` | shell scripting | `.sh` | 1000 | 4 |
-| PowerShell | `powershell` | shell scripting | `.ps1` | 1000 | 4 |
+| Perl | `perl` | text scripting | `.pl` | 1000 | 5 |
+| Bash | `bash` | shell scripting | `.sh` | 1000 | 5 |
+| PowerShell | `powershell` | shell scripting | `.ps1` | 1000 | 5 |
 | SQL | `sql` | database query | `.sql` | 1000 | 0 |
 | MATLAB / Octave | `matlab-octave` | numerical computing | `.m` | 1000 | 0 |
 | Haskell | `haskell` | pure functional | `.hs` | 1000 | 0 |
 | Elixir | `elixir` | actor/concurrent | `.ex` | 1000 | 0 |
 | Erlang | `erlang` | actor/concurrent | `.erl` | 1000 | 0 |
 | Clojure | `clojure` | Lisp/JVM | `.clj` | 1000 | 0 |
-| F# | `fsharp` | functional .NET | `.fs` | 1000 | 4 |
+| F# | `fsharp` | functional .NET | `.fs` | 1000 | 5 |
 | OCaml | `ocaml` | ML functional | `.ml` | 1000 | 0 |
 | Zig | `zig` | systems | `.zig` | 1000 | 0 |
 | Nim | `nim` | systems scripting | `.nim` | 1000 | 0 |
@@ -57,7 +57,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Prolog | `prolog` | logic programming | `.pl` | 1000 | 0 |
 | Objective-C | `objective-c` | Apple/native | `.m` | 1000 | 0 |
 | Groovy | `groovy` | dynamic JVM | `.groovy` | 1000 | 0 |
-| Visual Basic .NET | `visual-basic` | managed OO | `.vb` | 1000 | 4 |
+| Visual Basic .NET | `visual-basic` | managed OO | `.vb` | 1000 | 5 |
 | VBA | `vba` | office automation | `.bas` | 1000 | 0 |
 | Solidity | `solidity` | smart contracts | `.sol` | 1000 | 0 |
 | Move | `move` | smart contracts | `.move` | 1000 | 0 |
@@ -73,7 +73,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 | graph | 135 | 6750 | 15 |
 | logic | 122 | 6100 | 0 |
 | probability | 122 | 6100 | 14 |
-| optimization | 104 | 5200 | 14 |
+| optimization | 104 | 5200 | 28 |
 | distributed | 85 | 4250 | 0 |
 | crypto | 79 | 3950 | 0 |
 | sketch | 70 | 3500 | 14 |
@@ -146,6 +146,20 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Cycle Sort | `cyclesort` | perl | sorting | `perl implementations/perl/sorting/cyclesort/cyclesort.pl` |
 | Cycle Sort | `cyclesort` | bash | sorting | `bash implementations/bash/sorting/cyclesort/test.sh` |
 | Cycle Sort | `cyclesort` | visual-basic | sorting | `dotnet build implementations/visual-basic/sorting/cyclesort/CycleSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-cyclesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-cyclesort/ && dotnet .\output\implementation-tests\visual-basic-bin-cyclesort\CycleSort.dll` |
+| Stooge Sort | `stoogesort` | javascript | sorting | `node implementations/javascript/sorting/stoogesort/test.js` |
+| Stooge Sort | `stoogesort` | typescript | sorting | `deno run --quiet implementations/typescript/sorting/stoogesort/test.ts` |
+| Stooge Sort | `stoogesort` | python | sorting | `python -B implementations/python/sorting/stoogesort/test_stoogesort.py` |
+| Stooge Sort | `stoogesort` | powershell | sorting | `pwsh -NoProfile -File implementations/powershell/sorting/stoogesort/test.ps1` |
+| Stooge Sort | `stoogesort` | java | sorting | `javac -d output/implementation-tests implementations/java/sorting/stoogesort/StoogeSort.java && java -cp output/implementation-tests StoogeSort` |
+| Stooge Sort | `stoogesort` | csharp | sorting | `dotnet build implementations/csharp/sorting/stoogesort/StoogeSort.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-stoogesort/ && dotnet .\output\implementation-tests\csharp-bin-stoogesort\StoogeSort.dll` |
+| Stooge Sort | `stoogesort` | fsharp | sorting | `dotnet build implementations/fsharp/sorting/stoogesort/StoogeSort.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-stoogesort/ && dotnet .\output\implementation-tests\fsharp-bin-stoogesort\StoogeSort.dll` |
+| Stooge Sort | `stoogesort` | c | sorting | `gcc implementations/c/sorting/stoogesort/stoogesort.c -o output/implementation-tests/stoogesort_c.exe && .\output\implementation-tests\stoogesort_c.exe` |
+| Stooge Sort | `stoogesort` | cpp | sorting | `g++ implementations/cpp/sorting/stoogesort/stoogesort.cpp -std=c++17 -o output/implementation-tests/stoogesort_cpp.exe && .\output\implementation-tests\stoogesort_cpp.exe` |
+| Stooge Sort | `stoogesort` | go | sorting | `go run implementations/go/sorting/stoogesort/stoogesort.go` |
+| Stooge Sort | `stoogesort` | ruby | sorting | `ruby implementations/ruby/sorting/stoogesort/stoogesort.rb` |
+| Stooge Sort | `stoogesort` | perl | sorting | `perl implementations/perl/sorting/stoogesort/stoogesort.pl` |
+| Stooge Sort | `stoogesort` | bash | sorting | `bash implementations/bash/sorting/stoogesort/test.sh` |
+| Stooge Sort | `stoogesort` | visual-basic | sorting | `dotnet build implementations/visual-basic/sorting/stoogesort/StoogeSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-stoogesort/ && dotnet .\output\implementation-tests\visual-basic-bin-stoogesort\StoogeSort.dll` |
 
 ## Implementation Gate
 

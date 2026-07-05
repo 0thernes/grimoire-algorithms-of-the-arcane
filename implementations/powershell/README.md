@@ -11,7 +11,7 @@ Expected runtime/toolchain: PowerShell
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 4
+- Verified implementations: 5
 - Status: partial verified
 
 ## Verified Cells
@@ -20,6 +20,7 @@ Expected runtime/toolchain: PowerShell
 - Jump Consistency Hashing (`jumphash`): `pwsh -NoProfile -File implementations/powershell/hashing/jumphash/test.ps1`
 - Reservoir Sampling (`reservoir`): `pwsh -NoProfile -File implementations/powershell/sampling/reservoir/test.ps1`
 - Cycle Sort (`cyclesort`): `pwsh -NoProfile -File implementations/powershell/sorting/cyclesort/test.ps1`
+- Stooge Sort (`stoogesort`): `pwsh -NoProfile -File implementations/powershell/sorting/stoogesort/test.ps1`
 
 ## Required Shape For Each Algorithm
 

@@ -11,7 +11,7 @@ Expected runtime/toolchain: POSIX shell
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 4
+- Verified implementations: 5
 - Status: partial verified
 
 ## Verified Cells
@@ -20,6 +20,7 @@ Expected runtime/toolchain: POSIX shell
 - Jump Consistency Hashing (`jumphash`): `bash implementations/bash/hashing/jumphash/test.sh`
 - Reservoir Sampling (`reservoir`): `bash implementations/bash/sampling/reservoir/test.sh`
 - Cycle Sort (`cyclesort`): `bash implementations/bash/sorting/cyclesort/test.sh`
+- Stooge Sort (`stoogesort`): `bash implementations/bash/sorting/stoogesort/test.sh`
 
 ## Required Shape For Each Algorithm
 

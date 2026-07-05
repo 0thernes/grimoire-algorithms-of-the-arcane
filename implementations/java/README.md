@@ -11,7 +11,7 @@ Expected runtime/toolchain: JVM
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 4
+- Verified implementations: 5
 - Status: partial verified
 
 ## Verified Cells
@@ -20,6 +20,7 @@ Expected runtime/toolchain: JVM
 - Jump Consistency Hashing (`jumphash`): `javac -d output/implementation-tests implementations/java/hashing/jumphash/JumpHash.java && java -cp output/implementation-tests JumpHash`
 - Reservoir Sampling (`reservoir`): `javac -d output/implementation-tests implementations/java/sampling/reservoir/Reservoir.java && java -cp output/implementation-tests Reservoir`
 - Cycle Sort (`cyclesort`): `javac -d output/implementation-tests implementations/java/sorting/cyclesort/CycleSort.java && java -cp output/implementation-tests CycleSort`
+- Stooge Sort (`stoogesort`): `javac -d output/implementation-tests implementations/java/sorting/stoogesort/StoogeSort.java && java -cp output/implementation-tests StoogeSort`
 
 ## Required Shape For Each Algorithm
 

@@ -11,7 +11,7 @@ Expected runtime/toolchain: Node.js / browser
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 4
+- Verified implementations: 5
 - Status: partial verified
 
 ## Verified Cells
@@ -20,6 +20,7 @@ Expected runtime/toolchain: Node.js / browser
 - Jump Consistency Hashing (`jumphash`): `deno run --quiet implementations/typescript/hashing/jumphash/test.ts`
 - Reservoir Sampling (`reservoir`): `deno run --quiet implementations/typescript/sampling/reservoir/test.ts`
 - Cycle Sort (`cyclesort`): `deno run --quiet implementations/typescript/sorting/cyclesort/test.ts`
+- Stooge Sort (`stoogesort`): `deno run --quiet implementations/typescript/sorting/stoogesort/test.ts`
 
 ## Required Shape For Each Algorithm
 

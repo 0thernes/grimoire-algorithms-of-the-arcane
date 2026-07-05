@@ -1946,6 +1946,487 @@ End Module
 `;
 
 
+// ==================== STOOGE SORT ====================
+const st_js = `export function stoogeSort(arr, l = 0, h = arr.length - 1) {
+  if (l >= h) return;
+  if (arr[l] > arr[h]) {
+    const tmp = arr[l];
+    arr[l] = arr[h];
+    arr[h] = tmp;
+  }
+  if (h - l + 1 > 2) {
+    const t = Math.floor((h - l + 1) / 3);
+    stoogeSort(arr, l, h - t);
+    stoogeSort(arr, l + t, h);
+    stoogeSort(arr, l, h - t);
+  }
+}
+`;
+
+const st_js_test = `import { stoogeSort } from './stoogesort.js';
+
+const arr = [12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4];
+const expected = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+stoogeSort(arr);
+
+if (JSON.stringify(arr) !== JSON.stringify(expected)) {
+  throw new Error('Sorting failed');
+}
+console.log('javascript stoogesort ok');
+`;
+
+const st_ts = `export function stoogeSort(arr: number[], l: number = 0, h: number = arr.length - 1): void {
+  if (l >= h) return;
+  if (arr[l] > arr[h]) {
+    const tmp = arr[l];
+    arr[l] = arr[h];
+    arr[h] = tmp;
+  }
+  if (h - l + 1 > 2) {
+    const t = Math.floor((h - l + 1) / 3);
+    stoogeSort(arr, l, h - t);
+    stoogeSort(arr, l + t, h);
+    stoogeSort(arr, l, h - t);
+  }
+}
+`;
+
+const st_ts_test = `import { stoogeSort } from './stoogesort.ts';
+
+const arr = [12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4];
+const expected = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+stoogeSort(arr);
+
+if (JSON.stringify(arr) !== JSON.stringify(expected)) {
+  throw new Error('Sorting failed');
+}
+console.log('typescript stoogesort ok');
+`;
+
+const st_py = `def stooge_sort(arr, l=0, h=None):
+    if h is None:
+        h = len(arr) - 1
+    if l >= h:
+        return
+    if arr[l] > arr[h]:
+        arr[l], arr[h] = arr[h], arr[l]
+    if h - l + 1 > 2:
+        t = (h - l + 1) // 3
+        stooge_sort(arr, l, h - t)
+        stooge_sort(arr, l + t, h)
+        stooge_sort(arr, l, h - t)
+`;
+
+const st_py_test = `from stoogesort import stooge_sort
+
+arr = [12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4]
+expected = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+stooge_sort(arr)
+
+assert arr == expected, f"Sorting failed: {arr}"
+print("python stoogesort ok")
+`;
+
+const st_ps = `function Invoke-StoogeSort {
+  param(
+    [array]$Arr,
+    [int]$L = 0,
+    [int]$H = ($Arr.Length - 1)
+  )
+  if ($L -ge $H) { return }
+  if ($Arr[$L] -gt $Arr[$H]) {
+    $tmp = $Arr[$L]
+    $Arr[$L] = $Arr[$H]
+    $Arr[$H] = $tmp
+  }
+  if (($H - $L + 1) -gt 2) {
+    $t = [Math]::Floor(($H - $L + 1) / 3)
+    Invoke-StoogeSort -Arr $Arr -L $L -H ($H - $t)
+    Invoke-StoogeSort -Arr $Arr -L ($L + $t) -H $H
+    Invoke-StoogeSort -Arr $Arr -L $L -H ($H - $t)
+  }
+}
+`;
+
+const st_ps_test = `. "$PSScriptRoot\\stoogesort.ps1"
+
+$arr = @(12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4)
+$expected = @(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+Invoke-StoogeSort -Arr $arr
+
+for ($i = 0; $i -lt $arr.Length; $i++) {
+  if ($arr[$i] -ne $expected[$i]) {
+    Write-Error "Sorting failed at index $i"
+    exit 1
+  }
+}
+Write-Output 'powershell stoogesort ok'
+`;
+
+const st_java = `import java.util.*;
+
+public class StoogeSort {
+  public static void stoogeSort(int[] arr, int l, int h) {
+    if (l >= h) return;
+    if (arr[l] > arr[h]) {
+      int tmp = arr[l];
+      arr[l] = arr[h];
+      arr[h] = tmp;
+    }
+    if (h - l + 1 > 2) {
+      int t = (h - l + 1) / 3;
+      stoogeSort(arr, l, h - t);
+      stoogeSort(arr, l + t, h);
+      stoogeSort(arr, l, h - t);
+    }
+  }
+
+  public static void main(String[] args) {
+    int[] arr = {12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4};
+    int[] expected = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+    stoogeSort(arr, 0, arr.length - 1);
+    if (!Arrays.equals(arr, expected)) throw new AssertionError("Sorting failed");
+    System.out.println("java stoogesort ok");
+  }
+}
+`;
+
+const st_cs_proj = `<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+</Project>
+`;
+
+const st_cs = `using System;
+using System.Linq;
+
+public static class StoogeSort
+{
+  public static void Sort(int[] arr, int l, int h)
+  {
+    if (l >= h) return;
+    if (arr[l] > arr[h])
+    {
+      int tmp = arr[l];
+      arr[l] = arr[h];
+      arr[h] = tmp;
+    }
+    if (h - l + 1 > 2)
+    {
+      int t = (h - l + 1) / 3;
+      Sort(arr, l, h - t);
+      Sort(arr, l + t, h);
+      Sort(arr, l, h - t);
+    }
+  }
+
+  public static void Main()
+  {
+    int[] arr = {12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4};
+    int[] expected = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+    Sort(arr, 0, arr.Length - 1);
+    if (!arr.SequenceEqual(expected)) throw new Exception("Sorting failed");
+    Console.WriteLine("csharp stoogesort ok");
+  }
+}
+`;
+
+const st_fs_proj = `<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+</Project>
+`;
+
+const st_fs = `open System
+
+let rec stoogeSort (arr: int[]) (l: int) (h: int) =
+    if l < h then
+        if arr.[l] > arr.[h] then
+            let tmp = arr.[l]
+            arr.[l] <- arr.[h]
+            arr.[h] <- tmp
+        if h - l + 1 > 2 then
+            let t = (h - l + 1) / 3
+            stoogeSort arr l (h - t)
+            stoogeSort arr (l + t) h
+            stoogeSort arr l (h - t)
+
+[<EntryPoint>]
+let main _ =
+    let arr = [| 12; 11; 15; 10; 9; 8; 2; 3; 7; 14; 13; 1; 6; 5; 4 |]
+    let expected = [| 1; 2; 3; 4; 5; 6; 7; 8; 9; 10; 11; 12; 13; 14; 15 |]
+    stoogeSort arr 0 (arr.Length - 1)
+    if arr <> expected then failwith "Sorting failed"
+    printfn "fsharp stoogesort ok"
+    0
+`;
+
+const st_c = `#include <stdio.h>
+#include <stdlib.h>
+
+void stooge_sort(int *arr, int l, int h) {
+  if (l >= h) return;
+  if (arr[l] > arr[h]) {
+    int tmp = arr[l];
+    arr[l] = arr[h];
+    arr[h] = tmp;
+  }
+  if (h - l + 1 > 2) {
+    int t = (h - l + 1) / 3;
+    stooge_sort(arr, l, h - t);
+    stooge_sort(arr, l + t, h);
+    stooge_sort(arr, l, h - t);
+  }
+}
+
+int main(void) {
+  int arr[] = {12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4};
+  int expected[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+  int n = 15;
+  stooge_sort(arr, 0, n - 1);
+  for (int i = 0; i < n; i++) {
+    if (arr[i] != expected[i]) { fprintf(stderr, "Sorting failed\\n"); exit(1); }
+  }
+  puts("c stoogesort ok");
+  return 0;
+}
+`;
+
+const st_cpp = `#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <stdexcept>
+
+void stoogeSort(std::vector<int>& arr, int l, int h) {
+  if (l >= h) return;
+  if (arr[l] > arr[h]) {
+    std::swap(arr[l], arr[h]);
+  }
+  if (h - l + 1 > 2) {
+    int t = (h - l + 1) / 3;
+    stoogeSort(arr, l, h - t);
+    stoogeSort(arr, l + t, h);
+    stoogeSort(arr, l, h - t);
+  }
+}
+
+int main() {
+  std::vector<int> arr = {12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4};
+  std::vector<int> expected = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+  stoogeSort(arr, 0, static_cast<int>(arr.size()) - 1);
+  if (arr != expected) throw std::runtime_error("Sorting failed");
+  std::cout << "cpp stoogesort ok\\n";
+  return 0;
+}
+`;
+
+const st_go = `package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func stoogeSort(arr []int, l, h int) {
+	if l >= h {
+		return
+	}
+	if arr[l] > arr[h] {
+		arr[l], arr[h] = arr[h], arr[l]
+	}
+	if h-l+1 > 2 {
+		t := (h - l + 1) / 3
+		stoogeSort(arr, l, h-t)
+		stoogeSort(arr, l+t, h)
+		stoogeSort(arr, l, h-t)
+	}
+}
+
+func main() {
+	arr := []int{12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4}
+	expected := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+	stoogeSort(arr, 0, len(arr)-1)
+	for i, v := range arr {
+		if v != expected[i] {
+			fmt.Println("Sorting failed")
+			os.Exit(1)
+		}
+	}
+	fmt.Println("go stoogesort ok")
+}
+`;
+
+const st_rust = `fn stooge_sort(arr: &mut [i32], l: usize, h: usize) {
+    if l >= h {
+        return;
+    }
+    if arr[l] > arr[h] {
+        arr.swap(l, h);
+    }
+    if h - l + 1 > 2 {
+        let t = (h - l + 1) / 3;
+        stooge_sort(arr, l, h - t);
+        stooge_sort(arr, l + t, h);
+        stooge_sort(arr, l, h - t);
+    }
+}
+
+fn main() {
+    let mut arr = [12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4];
+    let expected = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+    let n = arr.len();
+    if n > 0 {
+        stooge_sort(&mut arr, 0, n - 1);
+    }
+    assert_eq!(arr, expected);
+    println!("rust stoogesort ok");
+}
+`;
+
+const st_rb = `def stooge_sort(arr, l = 0, h = arr.length - 1)
+  return if l >= h
+  if arr[l] > arr[h]
+    arr[l], arr[h] = arr[h], arr[l]
+  end
+  if h - l + 1 > 2
+    t = (h - l + 1) / 3
+    stooge_sort(arr, l, h - t)
+    stooge_sort(arr, l + t, h)
+    stooge_sort(arr, l, h - t)
+  end
+end
+
+arr = [12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4]
+expected = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+stooge_sort(arr)
+raise "Sorting failed" if arr != expected
+puts "ruby stoogesort ok"
+`;
+
+const st_pl = `use strict;
+use warnings;
+
+sub stooge_sort {
+    my ($arr, $l, $h) = @_;
+    return if $l >= $h;
+    if ($arr->[$l] > $arr->[$h]) {
+        my $tmp = $arr->[$l];
+        $arr->[$l] = $arr->[$h];
+        $arr->[$h] = $tmp;
+    }
+    if ($h - $l + 1 > 2) {
+        my $t = int(($h - $l + 1) / 3);
+        stooge_sort($arr, $l, $h - $t);
+        stooge_sort($arr, $l + $t, $h);
+        stooge_sort($arr, $l, $h - $t);
+    }
+}
+
+my @arr = (12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4);
+my @expected = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
+stooge_sort(\\@arr, 0, $#arr);
+for my $i (0 .. $#arr) {
+    if ($arr[$i] != $expected[$i]) {
+        die "Sorting failed";
+    }
+}
+print "perl stoogesort ok\\n";
+`;
+
+const st_sh = `#!/usr/bin/env bash
+
+stooge_sort() {
+  local arr_name=\$1
+  local -n _st_ref=\$arr_name
+  local l=\$2
+  local h=\$3
+  
+  if (( l >= h )); then
+    return
+  fi
+  
+  local val_l=\${_st_ref[l]}
+  local val_h=\${_st_ref[h]}
+  if (( val_l > val_h )); then
+    _st_ref[l]=\$val_h
+    _st_ref[h]=\$val_l
+  fi
+  
+  local len=\$(( h - l + 1 ))
+  if (( len > 2 )); then
+    local t=\$(( len / 3 ))
+    stooge_sort "\$arr_name" \$l \$(( h - t ))
+    stooge_sort "\$arr_name" \$(( l + t )) \$h
+    stooge_sort "\$arr_name" \$l \$(( h - t ))
+  fi
+}
+`;
+
+const st_sh_test = `#!/usr/bin/env bash
+set -euo pipefail
+source "\$(dirname "\$0\")/stoogesort.sh"
+
+arr=(12 11 15 10 9 8 2 3 7 14 13 1 6 5 4)
+expected=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15)
+stooge_sort arr 0 14
+
+for (( i = 0; i < \${#arr[@]}; i++ )); do
+  if (( arr[i] != expected[i] )); then
+    printf "Sorting failed\\n" >&2
+    exit 1
+  fi
+done
+printf "bash stoogesort ok\\n"
+`;
+
+const st_vb_proj = `<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>StoogeSortVisualBasic</RootNamespace>
+  </PropertyGroup>
+</Project>
+`;
+
+const st_vb = `Imports System
+Imports System.Linq
+
+Module StoogeSortProgram
+  Sub Sort(arr As Integer(), l As Integer, h As Integer)
+    If l >= h Then Return
+    If arr(l) > arr(h) Then
+      Dim tmp = arr(l)
+      arr(l) = arr(h)
+      arr(h) = tmp
+    End If
+    If h - l + 1 > 2 Then
+      Dim t = (h - l + 1) \\ 3
+      Sort(arr, l, h - t)
+      Sort(arr, l + t, h)
+      Sort(arr, l, h - t)
+    End If
+  End Sub
+
+  Sub Main()
+    Dim arr As Integer() = {12, 11, 15, 10, 9, 8, 2, 3, 7, 14, 13, 1, 6, 5, 4}
+    Dim expected As Integer() = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+    Sort(arr, 0, arr.Length - 1)
+    If Not arr.SequenceEqual(expected) Then Throw New Exception("Sorting failed")
+    Console.WriteLine("visual-basic stoogesort ok")
+  End Sub
+End Module
+`;
+
+
 // ==================== BATCH DEF ====================
 const batches = [
   {
@@ -2015,6 +2496,29 @@ const batches = [
       ['perl', 'cyclesort.pl', cs_pl, null, null, 'perl implementations/perl/sorting/cyclesort/cyclesort.pl', true],
       ['bash', 'cyclesort.sh', cs_sh, 'test.sh', cs_sh_test, 'bash implementations/bash/sorting/cyclesort/test.sh', true],
       ['visual-basic', 'Program.vb', cs_vb, null, null, 'dotnet build implementations/visual-basic/sorting/cyclesort/CycleSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-cyclesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-cyclesort/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-cyclesort\\CycleSort.dll', true, undefined, [['CycleSort.vbproj', cs_vb_proj]]]
+    ]
+  },
+  {
+    algorithmId: 'stoogesort',
+    algorithmTitle: 'Stooge Sort',
+    navLabel: 'V01-B-01',
+    domain: 'sorting',
+    files: [
+      ['javascript', 'stoogesort.js', st_js, 'test.js', st_js_test, 'node implementations/javascript/sorting/stoogesort/test.js', true],
+      ['typescript', 'stoogesort.ts', st_ts, 'test.ts', st_ts_test, 'deno run --quiet implementations/typescript/sorting/stoogesort/test.ts', true],
+      ['python', 'stoogesort.py', st_py, 'test_stoogesort.py', st_py_test, 'python -B implementations/python/sorting/stoogesort/test_stoogesort.py', true],
+      ['powershell', 'stoogesort.ps1', st_ps, 'test.ps1', st_ps_test, 'pwsh -NoProfile -File implementations/powershell/sorting/stoogesort/test.ps1', true],
+      ['java', 'StoogeSort.java', st_java, null, null, 'javac -d output/implementation-tests implementations/java/sorting/stoogesort/StoogeSort.java && java -cp output/implementation-tests StoogeSort', true],
+      ['csharp', 'Program.cs', st_cs, null, null, 'dotnet build implementations/csharp/sorting/stoogesort/StoogeSort.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-stoogesort/ && dotnet .\\output\\implementation-tests\\csharp-bin-stoogesort\\StoogeSort.dll', true, undefined, [['StoogeSort.csproj', st_cs_proj]]],
+      ['fsharp', 'Program.fs', st_fs, null, null, 'dotnet build implementations/fsharp/sorting/stoogesort/StoogeSort.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-stoogesort/ && dotnet .\\output\\implementation-tests\\fsharp-bin-stoogesort\\StoogeSort.dll', true, undefined, [['StoogeSort.fsproj', st_fs_proj]]],
+      ['c', 'stoogesort.c', st_c, null, null, 'gcc implementations/c/sorting/stoogesort/stoogesort.c -o output/implementation-tests/stoogesort_c.exe && .\\output\\implementation-tests\\stoogesort_c.exe', true],
+      ['cpp', 'stoogesort.cpp', st_cpp, null, null, 'g++ implementations/cpp/sorting/stoogesort/stoogesort.cpp -std=c++17 -o output/implementation-tests/stoogesort_cpp.exe && .\\output\\implementation-tests\\stoogesort_cpp.exe', true],
+      ['go', 'stoogesort.go', st_go, null, null, 'go run implementations/go/sorting/stoogesort/stoogesort.go', true],
+      ['rust', 'stoogesort.rs', st_rust, null, null, 'rustc implementations/rust/sorting/stoogesort/stoogesort.rs -o output/implementation-tests/stoogesort_rust.exe && .\\output\\implementation-tests\\stoogesort_rust.exe', false, 'Rust source is generated, but this Windows host cannot ledger-verify it until MSVC/Windows SDK is fully available.'],
+      ['ruby', 'stoogesort.rb', st_rb, null, null, 'ruby implementations/ruby/sorting/stoogesort/stoogesort.rb', true],
+      ['perl', 'stoogesort.pl', st_pl, null, null, 'perl implementations/perl/sorting/stoogesort/stoogesort.pl', true],
+      ['bash', 'stoogesort.sh', st_sh, 'test.sh', st_sh_test, 'bash implementations/bash/sorting/stoogesort/test.sh', true],
+      ['visual-basic', 'Program.vb', st_vb, null, null, 'dotnet build implementations/visual-basic/sorting/stoogesort/StoogeSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-stoogesort/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-stoogesort\\StoogeSort.dll', true, undefined, [['StoogeSort.vbproj', st_vb_proj]]]
     ]
   }
 ];
