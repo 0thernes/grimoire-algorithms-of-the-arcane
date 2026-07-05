@@ -23,7 +23,7 @@
 - A visual signature should be deterministic from volume, group, title, engine, and tags.
 - A proof record must include a way to falsify the claim.
 - The implementation matrix must contain 50 language targets.
-- The implementation matrix must expose 1000 x 50 = 50,000 planned cells.
+- The implementation matrix must expose 1000 x 50 = 50,000 planned native cells and 50,000 generated catalog-adapter cells.
 - A planned implementation cell must not be called verified until runnable code, tests, complexity notes, and source/provenance notes exist.
 - The current verified implementation cell count is 0.
 

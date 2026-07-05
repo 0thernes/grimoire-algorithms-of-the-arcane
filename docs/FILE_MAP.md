@@ -59,8 +59,10 @@
 
 - `implementations/README.md`: scaffold overview and honesty gate.
 - `implementations/languages.json`: 50 language/script target manifest.
-- `implementations/coverage-summary.json`: planned/verified cell counts by language and engine.
+- `implementations/coverage-summary.json`: planned native, generated adapter, and verified native cell counts by language and engine.
+- `implementations/catalog-adapters-summary.json`: generated full-catalog adapter counts for all 50 language targets.
 - `implementations/verified-cells.json`: ledger of implementation cells with passing local tests.
+- `specs/`: JSON specs used by `tools/generate-matrix-cell.mjs` to emit multi-language native implementation batches.
 - `implementations/<language-id>/README.md`: per-language implementation requirements.
 
 ## Bibliography Scaffold
@@ -71,7 +73,9 @@
 
 ## Tools
 
-- `tools/build-implementation-matrix.mjs`: regenerates implementation scaffold and publishing docs from `catalog.json`.
+- `tools/build-implementation-matrix.mjs`: regenerates implementation scaffold, full-catalog language adapters, and publishing docs from `catalog.json`.
+- `tools/generate-matrix-cell.mjs`: batch-generates native implementation cells from a JSON spec and rebuilds the implementation matrix.
+- `tools/audit-language-catalog-adapters.mjs`: verifies the 50 generated language catalog adapters and their 1000-record coverage.
 - `tools/verify-implementations.mjs`: executes verified-cell test commands and writes implementation test evidence.
 - `tools/audit-pages-artifact.mjs`: simulates the GitHub Pages artifact payload and writes an audit summary.
 - `tools/cross-browser-smoke.mjs`: refreshes Chromium, Firefox, and WebKit screenshot smoke evidence.
@@ -83,7 +87,8 @@
 
 - `output/playwright/*.js`: reusable browser audit runners.
 - `output/playwright/catalog-export-runner.js`: regenerates root `catalog.json` from the live browser runtime.
-- `output/playwright/implementation-matrix-audit-runner.js`: verifies implementation scaffold counts, docs, language README files, and non-overclaim boundaries.
+- `output/playwright/implementation-matrix-audit-runner.js`: verifies implementation scaffold counts, docs, language README files, language catalog adapters, and non-overclaim boundaries.
+- `output/implementation-adapters/language-catalog-adapters-audit-summary.json`: Node audit output for the 50 language catalog adapters.
 - `output/playwright/*summary.json`: latest local audit summaries.
 - `output/playwright/*.png`: screenshot evidence from representative viewport/visual passes.
 - `output/pages-artifact/pages-artifact-audit-summary.json`: latest simulated Pages artifact summary. The temporary copied `site/` folder is removed after audit.

@@ -36,6 +36,7 @@ Current local version: `0.9.13-local`.
 | Visible source-status markers for records needing future citation work | Verified | `filter-source-audit-summary.json` |
 | 50 language/script implementation scaffold | Verified after 0.9.13 audit | `implementation-matrix-audit-summary.json` |
 | 50,000 planned implementation cells with ledger-backed verified count | Verified after implementation starter audit | `implementation-matrix-audit-summary.json`, `implementations/coverage-summary.json`, `implementations/verified-cells.json` |
+| 50 language full-catalog adapters covering all 1000 records | Verified after adapter audit | `implementations/catalog-adapters-summary.json`, `language-catalog-adapters-audit-summary.json` |
 | Special 1000-algorithm MD catalog list | Verified after 0.9.13 audit | `docs/ALGORITHMS-1000.md`, `implementation-matrix-audit-summary.json` |
 | Non-commercial attribution/notice files present | Verified after 0.9.13 audit | `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, `CITATION.cff` |
 | Simulated GitHub Pages artifact payload | Verified after 0.9.13 audit | `output/pages-artifact/pages-artifact-audit-summary.json` |
@@ -46,15 +47,15 @@ Current local version: `0.9.13-local`.
 
 ## Latest Aggregate
 
-The 0.9.13 local audit adds the 50-language implementation scaffold and publishing docs on top of the 0.9.12 search/filter/source-status pass. The implementation matrix audit verifies 1000 catalog records, 50 language targets, 50,000 planned cells, ledger-matched verified cells, 1000 algorithm-list rows, license/notice attribution, and all 50 language README files. The implementation test runner verifies 15 Boyer-Moore cells with 0 failures. The bibliography scaffold audit verifies 1000 record citation-slot bundles with 0 filled citation slots and 0 issues. The Pages artifact simulation verifies the copied deployment payload and reports 0 issues. The cross-browser smoke now refreshes Chromium, Firefox, and WebKit screenshots from the current build. The public repository is live, the GitHub Pages workflow completed successfully, and the Pages URL returned HTTP 200 with the GRIMOIRE title. The requirement evidence ledger reports objective checks with 0 issues and open truth boundaries.
+The 0.9.13 local audit adds the 50-language implementation scaffold and publishing docs on top of the 0.9.12 search/filter/source-status pass. The implementation matrix audit verifies 1000 catalog records, 50 language targets, 50,000 planned native cells, 50,000 generated catalog-adapter cells, ledger-matched verified cells, 1000 algorithm-list rows, license/notice attribution, all 50 language README files, and all 50 language catalog adapters. The implementation test runner verifies 71 native cells with 0 failures. The adapter audit verifies 50 language folders, 1000 records per language, and 50,000 generated adapter cells with 0 issues. The bibliography scaffold audit verifies 1000 record citation-slot bundles with 0 filled citation slots and 0 issues. The Pages artifact simulation verifies the copied deployment payload and reports 0 issues. The cross-browser smoke refreshes Chromium, Firefox, and WebKit screenshots from the current build. The public repository is live, the GitHub Pages workflow completed successfully, and the Pages URL returned HTTP 200 with the GRIMOIRE title. The requirement evidence ledger reports objective checks with 0 issues and open truth boundaries.
 
 ## Open Items
 
 - Per-record historical bibliography slots exist, but source URLs/citation keys are still open.
 - Exact inventor/date/primary-user/deployment claims remain intentionally excluded from card UI until record-specific citations exist.
 - Category splitting remains an ongoing review item if future source or UX review shows a group is too blended.
-- Most real language implementations remain future work; the current verified corpus is the first Boyer-Moore starter batch.
+- Most real language implementations remain future work; the current verified native corpus is a five-algorithm starter batch, while generated catalog adapters cover the full 50 x 1000 addressable matrix.
 
 ## Verdict
 
-The runtime transport, layout, uniqueness, code/math tab, static Pages, and implementation-scaffold contracts are covered by local runners. The historical citation layer and real 50-language implementation corpus remain honest but incomplete: source-class context and planned cells are active, while record-specific bibliography and most verified implementation cells are future work.
+The runtime transport, layout, uniqueness, code/math tab, static Pages, generated catalog-adapter layer, and implementation-scaffold contracts are covered by local runners. The historical citation layer and real 50-language native implementation corpus remain honest but incomplete: source-class context and generated adapters are active, while record-specific bibliography and most verified native implementation cells are future work.

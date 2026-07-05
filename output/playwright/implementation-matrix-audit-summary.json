@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-07-05T02:42:33.372Z",
+  "generatedAt": "2026-07-05T04:54:32.684Z",
   "target": "1000 x 50 implementation matrix scaffold",
   "version": "0.9.13-local",
   "catalogRecords": 1000,
   "languageTargets": 50,
   "plannedCells": 50000,
-  "verifiedCells": 15,
+  "catalogAdapterCells": 50000,
+  "verifiedCells": 71,
   "algorithmRows": 1000,
   "languageReadmesFetched": 50,
+  "languageAdaptersFetched": 50,
   "duplicateTargetIds": [],
   "duplicateTargetLabels": [],
   "status": "partial-verified",
-  "ledgerVerifiedCells": 15,
+  "ledgerVerifiedCells": 71,
   "issues": []
 }

@@ -10,7 +10,7 @@ GRIMOIRE is a plain static browser app for GitHub Pages. It has no package insta
 - `style.css` owns responsive layout, cards, tabs, transport controls, and visual states.
 - `viz.js` owns the 1000-record catalog, canvas renderers, Web Audio runtime, Auto/Monster transport, and audit-facing runtime APIs.
 - `404.html` is the GitHub Pages fallback.
-- `tools/build-implementation-matrix.mjs` generates the 50-language implementation scaffold and publishing docs from `catalog.json`.
+- `tools/build-implementation-matrix.mjs` generates the 50-language implementation scaffold, full-catalog language adapters, and publishing docs from `catalog.json`.
 
 ## Local Run
 
@@ -54,6 +54,8 @@ node --check output\playwright\accessibility-keyboard-audit-runner.js
 node --check output\playwright\filter-source-audit-runner.js
 node --check output\playwright\implementation-matrix-audit-runner.js
 node --check tools\build-implementation-matrix.mjs
+node --check tools\generate-matrix-cell.mjs
+node --check tools\audit-language-catalog-adapters.mjs
 node --check tools\verify-implementations.mjs
 node --check tools\audit-pages-artifact.mjs
 node --check tools\cross-browser-smoke.mjs
@@ -105,8 +107,18 @@ Regenerate the implementation scaffold after `catalog.json` changes:
 
 ```powershell
 node tools\build-implementation-matrix.mjs
+node tools\audit-language-catalog-adapters.mjs
 node tools\verify-implementations.mjs
 ```
+
+Batch-generate native implementation cells from a checked JSON spec:
+
+```powershell
+node tools\generate-matrix-cell.mjs specs\jumphash.json
+node tools\generate-matrix-cell.mjs specs\reservoir.json
+```
+
+Then rerun the adapter, implementation, and requirement audits before counting any new cells as verified.
 
 Then audit:
 

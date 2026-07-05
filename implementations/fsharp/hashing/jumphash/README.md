@@ -8,8 +8,8 @@ Catalog record: `V01-B-07` / `jumphash`
 
 ## Files
 
-- `Program.fs`
 - `JumpHash.fsproj`
+- `Program.fs`
 
 ## Test
 

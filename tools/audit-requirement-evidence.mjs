@@ -74,6 +74,7 @@ const zeroProblemSummaries = [
   'output/playwright/audio-live-sorting-smoke-summary.json',
   'output/playwright/audio-interaction-smoke-summary.json',
   'output/playwright/implementation-matrix-audit-summary.json',
+  'output/implementation-adapters/language-catalog-adapters-audit-summary.json',
   'output/playwright/cross-browser-smoke-summary.json',
   'output/playwright/aggregate-audit-summary.json',
   'output/pages-artifact/pages-artifact-audit-summary.json'
@@ -165,6 +166,7 @@ function main() {
   const cross = ensureSummary('output/playwright/cross-browser-smoke-summary.json', ['node', 'tools/cross-browser-smoke.mjs']);
   const implementationTests = ensureSummary('output/implementation-tests/implementation-test-summary.json', ['node', 'tools/verify-implementations.mjs']);
   const bibliographyAudit = ensureSummary('output/bibliography/bibliography-audit-summary.json', ['node', 'tools/audit-bibliography-ledger.mjs']);
+  const adapterAudit = ensureSummary('output/implementation-adapters/language-catalog-adapters-audit-summary.json', ['node', 'tools/audit-language-catalog-adapters.mjs']);
 
   const volumeCounts = catalog.records.reduce((acc, record) => {
     acc[record.volume] = (acc[record.volume] || 0) + 1;
@@ -231,14 +233,31 @@ function main() {
   addRequirement(
     requirements,
     'implementation-matrix',
-    'Implementation scaffold exposes 50 language targets, 50,000 planned cells, and verified cells that match the implementation ledger.',
-    ['implementations/languages.json', 'implementations/coverage-summary.json', 'implementations/verified-cells.json', 'output/playwright/implementation-matrix-audit-summary.json'],
+    'Implementation scaffold exposes 50 language targets, 50,000 planned cells, 50,000 generated catalog-adapter cells, and verified cells that match the implementation ledger.',
+    ['implementations/languages.json', 'implementations/coverage-summary.json', 'implementations/verified-cells.json', 'implementations/catalog-adapters-summary.json', 'output/playwright/implementation-matrix-audit-summary.json'],
     languageTargets.length === 50 &&
       coverage.recordCount === 1000 &&
       coverage.languageCount === 50 &&
       coverage.plannedCells === 50000 &&
+      coverage.catalogAdapterCells === 50000 &&
+      coverage.catalogAdapterLanguages === 50 &&
       coverage.verifiedCells === verifiedCells.length,
-    { languageTargets: languageTargets.length, plannedCells: coverage.plannedCells, verifiedCells: coverage.verifiedCells }
+    { languageTargets: languageTargets.length, plannedCells: coverage.plannedCells, catalogAdapterCells: coverage.catalogAdapterCells, verifiedCells: coverage.verifiedCells }
+  );
+
+  addRequirement(
+    requirements,
+    'language-catalog-adapters',
+    'Every one of the 50 language/script folders has a generated full-catalog adapter covering all 1000 records.',
+    ['tools/audit-language-catalog-adapters.mjs', 'implementations/catalog-adapters-summary.json', 'implementations/<language-id>/catalog/algorithms.json', 'output/implementation-adapters/language-catalog-adapters-audit-summary.json'],
+    adapterAudit.languageCount === 50 &&
+      adapterAudit.recordsPerLanguage === 1000 &&
+      adapterAudit.adapterCells === 50000 &&
+      adapterAudit.adapterFiles === 50 &&
+      adapterAudit.adapterReadmes === 50 &&
+      Array.isArray(adapterAudit.issues) &&
+      adapterAudit.issues.length === 0,
+    { languageCount: adapterAudit.languageCount, recordsPerLanguage: adapterAudit.recordsPerLanguage, adapterCells: adapterAudit.adapterCells, adapterFiles: adapterAudit.adapterFiles, adapterReadmes: adapterAudit.adapterReadmes }
   );
 
   addRequirement(
@@ -386,9 +405,9 @@ function main() {
   addOpen(
     requirements,
     'verified-implementation-corpus',
-    'The 50-language implementation corpus is partial; only ledger-tested cells are counted as verified.',
+    'The native 50-language implementation corpus is partial; generated catalog adapters cover all 50,000 addressable cells, but only ledger-tested native algorithm cells are counted as verified implementations.',
     ['implementations/coverage-summary.json', 'docs/IMPLEMENTATION-MATRIX.md'],
-    { plannedCells: coverage.plannedCells, verifiedCells: coverage.verifiedCells }
+    { plannedCells: coverage.plannedCells, catalogAdapterCells: coverage.catalogAdapterCells, verifiedCells: coverage.verifiedCells }
   );
 
   for (const requirement of requirements) {

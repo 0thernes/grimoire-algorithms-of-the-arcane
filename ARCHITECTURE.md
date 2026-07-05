@@ -28,6 +28,7 @@ flowchart TD
   U --> S
   Y["catalog.json"] --> Z["Implementation Matrix Generator"]
   Z --> AA["implementations/"]
+  Z --> AC["Language Catalog Adapters"]
   Z --> AB["Publishing Docs"]
   K["style.css"] --> B
   K --> C
@@ -56,8 +57,10 @@ flowchart TD
 - `drawSimulationGrammarLayer`: maps record-derived state into Rapier-inspired simulation structures such as rigid bodies, spring joints, sensors, broadphase sweeps, collision islands, orbitals, constraints, cloths, arms, particles, contacts, ropes, and simplexes.
 - `buildStaticProofRows`: gives the original 30 hand-authored Volume I cards the same semantic visual proof ledger as the generated records while preserving their bespoke canvases.
 - `catalog.json`: browser-exported 1000-record source of truth for publication scaffolds outside the runtime.
-- `tools/build-implementation-matrix.mjs`: derives the 50-language implementation scaffold, coverage summary, special 1000-algorithm list, GitHub publishing notes, and license/notice files from `catalog.json`.
-- `implementations/`: planned source-code expansion tree for 50 language/script targets. It currently has 9 verified Boyer-Moore cells and keeps all other planned cells unverified until real code is added and audited.
+- `tools/build-implementation-matrix.mjs`: derives the 50-language implementation scaffold, full-catalog language adapters, coverage summary, special 1000-algorithm list, GitHub publishing notes, and license/notice files from `catalog.json`.
+- `tools/generate-matrix-cell.mjs`: takes a JSON spec under `specs/`, writes a multi-language native implementation batch, updates `implementations/verified-cells.json` for declared verified cells, and rebuilds the implementation matrix.
+- `tools/audit-language-catalog-adapters.mjs`: verifies all 50 language folders include a generated 1000-record catalog adapter with catalog/version alignment and non-implementation status preserved.
+- `implementations/`: planned source-code expansion tree for 50 language/script targets. It currently has 50 generated full-catalog adapters and 71 verified native implementation cells; all other planned native cells remain unverified until real code is added and audited.
 - `drawAuthenticGlyph`: generated-record render entrypoint; calls the semantic renderer before the older generated canvas fallback.
 - `visualPointer`: global pointer state used for subtle responsive diagram inspection without changing factual rows.
 - `IntersectionObserver`: starts only canvases near the viewport to reduce browser freeze risk.
@@ -84,4 +87,4 @@ Only visible or near-visible canvases animate. Switching volume stops active ani
 - `output/playwright/code-math-tabs-audit-runner.js` verifies all 1000 cards have Run/Stop/Reset plus Visual/Code/Math panels with runtime evidence and math equations.
 - `output/playwright/audio-live-sorting-smoke-runner.js` verifies the live sorting SFX API exists, unlocks Web Audio through a real click, and checks event activation for Sleep Sort, Bogo Sort, Stooge Sort, Quantum Bogosort, Cycle Sort, Cocktail Shaker Sort, and Timsort.
 - `output/playwright/browser-console-audit-runner.js` reloads the HTTP-served page, cycles volumes, touches sonic controls, and fails on actionable console warnings/errors or page errors.
-- `output/playwright/implementation-matrix-audit-runner.js` checks `catalog.json`, `implementations/languages.json`, `implementations/coverage-summary.json`, all 50 language README files, `docs/ALGORITHMS-1000.md`, license/notice files, and the 50,000 planned / ledger-matched verified implementation-cell honesty boundary.
+- `output/playwright/implementation-matrix-audit-runner.js` checks `catalog.json`, `implementations/languages.json`, `implementations/coverage-summary.json`, `implementations/catalog-adapters-summary.json`, all 50 language README files, all 50 language catalog adapters, `docs/ALGORITHMS-1000.md`, license/notice files, and the 50,000 planned native / 50,000 generated adapter / ledger-matched verified implementation-cell honesty boundary.

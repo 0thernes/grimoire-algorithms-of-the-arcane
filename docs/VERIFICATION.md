@@ -49,8 +49,10 @@ Then verify:
 - search/filter controls work for active volume, tag, engine, source status, sonic family, and visual family
 - all cards expose visible source-status badges
 - `implementations/languages.json` exposes exactly 50 language/script targets
-- `implementations/coverage-summary.json` reports 1000 records, 50 languages, 50,000 planned cells, and verified cells matching `implementations/verified-cells.json`
+- `implementations/coverage-summary.json` reports 1000 records, 50 languages, 50,000 planned native cells, 50,000 generated catalog-adapter cells, and verified native cells matching `implementations/verified-cells.json`
+- `implementations/catalog-adapters-summary.json` reports 50 language adapters with 1000 records each
 - `tools/verify-implementations.mjs` runs the ledger-backed implementation test commands and writes `output/implementation-tests/implementation-test-summary.json`
+- `tools/audit-language-catalog-adapters.mjs` verifies all 50 full-catalog language adapters and writes `output/implementation-adapters/language-catalog-adapters-audit-summary.json`
 - `docs/ALGORITHMS-1000.md` contains exactly 1000 generated algorithm rows
 - `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff` are present and included in the Pages artifact
 - `tools/audit-pages-artifact.mjs` simulates the Pages deployment payload and confirms no internal `output/`, `tools/`, `.github/`, `.git/`, or `.playwright-cli/` files are copied
@@ -70,6 +72,8 @@ Current evidence artifacts:
 - `output/playwright/filter-source-audit-summary.json`
 - `output/playwright/implementation-matrix-audit-runner.js`
 - `output/playwright/implementation-matrix-audit-summary.json`
+- `tools/audit-language-catalog-adapters.mjs`
+- `output/implementation-adapters/language-catalog-adapters-audit-summary.json`
 - `tools/audit-pages-artifact.mjs`
 - `output/pages-artifact/pages-artifact-audit-summary.json`
 - `tools/cross-browser-smoke.mjs`

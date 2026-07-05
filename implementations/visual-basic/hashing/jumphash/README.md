@@ -8,8 +8,8 @@ Catalog record: `V01-B-07` / `jumphash`
 
 ## Files
 
-- `Program.vb`
 - `JumpHash.vbproj`
+- `Program.vb`
 
 ## Test
 

@@ -130,15 +130,28 @@ function makeImplementationsReadme(catalog, verifiedCells) {
 
 This folder is the source-code expansion scaffold for GRIMOIRE's 1000-record catalog across 50 coder/developer languages and scripting targets.
 
-Current status: scaffold plus first verified implementation cells. The matrix intentionally marks implementation cells as planned unless code has been written, reviewed, tested, and documented for that language.
+Current status: generated 1000-record catalog adapters for every language plus first verified implementation cells. The matrix intentionally marks native algorithm implementation cells as planned unless code has been written, reviewed, tested, and documented for that language.
 
 ## Scale Target
 
 - Algorithms/records: ${catalog.records.length}
 - Language/script targets: ${languageTargets.length}
 - Planned implementation cells: ${catalog.records.length * languageTargets.length}
+- Generated catalog-adapter cells: ${catalog.records.length * languageTargets.length}
 - Current verified implementation cells: ${verifiedCells.length}
 - Verification ledger: \`implementations/verified-cells.json\`
+- Adapter audit ledger: \`implementations/catalog-adapters-summary.json\`
+
+## Generated Catalog Adapters
+
+Every language folder includes:
+
+\`\`\`text
+implementations/<language-id>/catalog/algorithms.json
+implementations/<language-id>/catalog/README.md
+\`\`\`
+
+Those generated files expose the same 1000-record catalog slice to each language target so tooling, docs, examples, and future implementation generators can address the whole matrix without hand-copying 50,000 rows. They are catalog adapters, not claims that every native algorithm implementation is finished.
 
 ## Folder Convention
 
@@ -182,8 +195,19 @@ Expected runtime/toolchain: ${language.runtime}
 ## Coverage
 
 - Planned algorithms: ${catalog.records.length}
+- Generated catalog-adapter records: ${catalog.records.length}
 - Verified implementations: ${languageCells.length}
 - Status: ${languageCells.length ? 'partial verified' : 'planned scaffold'}
+
+## Full-Catalog Adapter
+
+This language target has a generated full-catalog adapter at:
+
+\`\`\`text
+implementations/${language.id}/catalog/algorithms.json
+\`\`\`
+
+That adapter contains all ${catalog.records.length} GRIMOIRE records for ${language.name}. It is meant for discovery, code generation, docs, and audit tooling. It is not counted as a native algorithm implementation.
 
 ## Verified Cells
 
@@ -233,6 +257,7 @@ function makeCoverageSummary(catalog, verifiedCells) {
   const recordsById = new Map(records.map(record => [record.id, record]));
   const verifiedByLanguage = countVerifiedBy(verifiedCells, cell => cell.languageId);
   const verifiedByEngine = countVerifiedBy(verifiedCells, cell => recordsById.get(cell.algorithmId)?.engine || cell.engine);
+  const catalogAdapterCells = records.length * languageTargets.length;
   return JSON.stringify({
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),
@@ -240,12 +265,16 @@ function makeCoverageSummary(catalog, verifiedCells) {
     recordCount: records.length,
     languageCount: languageTargets.length,
     plannedCells: records.length * languageTargets.length,
+    catalogAdapterCells,
+    catalogAdapterLanguages: languageTargets.length,
+    catalogAdapterStatus: 'generated-full-catalog',
     verifiedCells: verifiedCells.length,
     status: verifiedCells.length ? 'partial-verified' : 'planned-scaffold',
     coverageByLanguage: languageTargets.map(language => ({
       languageId: language.id,
       languageName: language.name,
       planned: records.length,
+      catalogAdapterRecords: records.length,
       verified: verifiedByLanguage.get(language.id) || 0,
       status: (verifiedByLanguage.get(language.id) || 0) ? 'partial' : 'planned'
     })),
@@ -258,6 +287,73 @@ function makeCoverageSummary(catalog, verifiedCells) {
     sourceStatusCounts: familyCount(records, record => record.sourceStatus || record.bibliography?.status).map(([status, count]) => ({
       status,
       records: count
+    }))
+  }, null, 2);
+}
+
+function makeCatalogAdapterRecords(catalog) {
+  return catalog.records.map(record => ({
+    globalIndex: record.globalIndex,
+    navLabel: record.navLabel,
+    volume: record.volume,
+    section: record.section,
+    id: record.id,
+    title: record.title,
+    engine: record.engine,
+    tags: Array.isArray(record.tags) ? record.tags : [],
+    sourceStatus: record.sourceStatus || record.bibliography?.status || 'unknown',
+    sourceLedgerId: record.context?.sourceLedgerId || '',
+    sonicFamily: record.sonicFamily?.label || record.sonicFamily?.value || '',
+    visualFamily: record.visualFamily?.label || record.visualFamily?.value || ''
+  }));
+}
+
+function makeLanguageCatalogAdapter(language, catalog) {
+  return JSON.stringify({
+    schemaVersion: 1,
+    generatedAt: new Date().toISOString(),
+    adapterKind: 'grimoire-language-catalog-adapter',
+    status: 'generated-catalog-adapter-not-native-implementation',
+    catalogVersion: catalog.version,
+    languageId: language.id,
+    languageName: language.name,
+    languageFamily: language.family,
+    runtime: language.runtime,
+    recordCount: catalog.records.length,
+    records: makeCatalogAdapterRecords(catalog)
+  }, null, 2);
+}
+
+function makeLanguageCatalogReadme(language, catalog) {
+  return `# ${language.name} Catalog Adapter
+
+This generated folder exposes the complete GRIMOIRE catalog to the \`${language.id}\` language target.
+
+## Contents
+
+- \`algorithms.json\`: ${catalog.records.length} catalog records with IDs, titles, nav labels, engine/domain facets, source status, and visual/sonic families.
+
+## Boundary
+
+This is a generated catalog adapter. It proves that ${language.name} has an addressable 1000-record input matrix for docs, generators, examples, and future native code batches. It does not claim that all ${catalog.records.length} algorithms have native ${language.name} implementations yet.
+`;
+}
+
+function makeCatalogAdaptersSummary(catalog) {
+  return JSON.stringify({
+    schemaVersion: 1,
+    generatedAt: new Date().toISOString(),
+    catalogVersion: catalog.version,
+    adapterKind: 'grimoire-language-catalog-adapter',
+    languageCount: languageTargets.length,
+    recordsPerLanguage: catalog.records.length,
+    adapterCells: languageTargets.length * catalog.records.length,
+    status: 'generated-full-catalog',
+    languages: languageTargets.map(language => ({
+      languageId: language.id,
+      languageName: language.name,
+      path: `implementations/${language.id}/catalog/algorithms.json`,
+      recordCount: catalog.records.length
     }))
   }, null, 2);
 }
@@ -289,7 +385,18 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Catalog records | ${records.length} |
 | Language/script targets | ${languageTargets.length} |
 | Planned implementation cells | ${records.length * languageTargets.length} |
+| Generated catalog-adapter cells | ${records.length * languageTargets.length} |
 | Verified implementation cells | ${verifiedCells.length} |
+
+## Generated Catalog Adapters
+
+Each of the 50 language/script folders includes a generated full-catalog adapter:
+
+\`\`\`text
+implementations/<language-id>/catalog/algorithms.json
+\`\`\`
+
+These adapters expose all ${records.length} records to every language target for code generation, documentation, QA, and batch implementation planning. They are intentionally not counted as native algorithm implementations.
 
 ## Language Targets
 
@@ -505,7 +612,10 @@ function build() {
 
   for (const language of languageTargets) {
     writeFile(path.join(implementationsDir, language.id, 'README.md'), makeLanguageReadme(language, catalog, verifiedCells));
+    writeFile(path.join(implementationsDir, language.id, 'catalog', 'README.md'), makeLanguageCatalogReadme(language, catalog));
+    writeFile(path.join(implementationsDir, language.id, 'catalog', 'algorithms.json'), makeLanguageCatalogAdapter(language, catalog));
   }
+  writeFile(path.join(implementationsDir, 'catalog-adapters-summary.json'), makeCatalogAdaptersSummary(catalog));
 
   writeFile(path.join(docsDir, 'IMPLEMENTATION-MATRIX.md'), makeImplementationMatrixDoc(catalog, verifiedCells));
   writeFile(path.join(docsDir, 'ALGORITHMS-1000.md'), makeAlgorithms1000Doc(catalog));

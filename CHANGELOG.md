@@ -4,7 +4,8 @@
 
 - Bumped local patch version to `0.9.13-local` for the implementation matrix and publishing scaffold pass.
 - Added `implementations/` with 50 language/script target folders.
-- Added `implementations/languages.json` and `implementations/coverage-summary.json`; current coverage is 50,000 planned cells and 15 locally verified cells.
+- Added `implementations/languages.json`, `implementations/coverage-summary.json`, and `implementations/catalog-adapters-summary.json`; current coverage is 50,000 planned native cells, 50,000 generated catalog-adapter cells, and 71 locally verified native cells.
+- Added `tools/generate-matrix-cell.mjs` and `specs/` as the batch path for producing multi-language native implementation cells from JSON specs.
 - Added Boyer-Moore string-search implementations for JavaScript, TypeScript, Python, PowerShell, Java, C#, F#, C, C++, Fortran, Go, Ruby, Perl, Bash, and Visual Basic .NET, plus a generated but not locally ledger-verified Rust source file.
 - Added `implementations/verified-cells.json` and `tools/verify-implementations.mjs` so verified cells are counted only when their test commands pass.
 - Added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`.

@@ -110,6 +110,7 @@ function audit() {
     'implementations/README.md',
     'implementations/languages.json',
     'implementations/coverage-summary.json',
+    'implementations/catalog-adapters-summary.json',
     'implementations/verified-cells.json',
     'bibliography/README.md',
     'bibliography/schema.json',
@@ -123,19 +124,28 @@ function audit() {
   const forbidden = siteRelFiles.filter(file => forbiddenRoots.some(prefix => file.startsWith(prefix)));
   if (forbidden.length) issues.push(`forbidden generated/internal files copied: ${forbidden.slice(0, 12).join(', ')}`);
 
-  const nojekyllBytes = fs.statSync(path.join(siteRoot, '.nojekyll')).size;
-  if (nojekyllBytes !== 0) issues.push(`.nojekyll expected 0 bytes, saw ${nojekyllBytes}`);
+  const nojekyllPath = path.join(siteRoot, '.nojekyll');
+  const nojekyllBytes = fs.existsSync(nojekyllPath) ? fs.statSync(nojekyllPath).size : null;
+  if (nojekyllBytes === null) issues.push('.nojekyll missing from Pages artifact');
+  else if (nojekyllBytes !== 0) issues.push(`.nojekyll expected 0 bytes, saw ${nojekyllBytes}`);
 
   const version = fs.readFileSync(path.join(siteRoot, 'VERSION'), 'utf8').trim();
   const catalog = JSON.parse(fs.readFileSync(path.join(siteRoot, 'catalog.json'), 'utf8'));
   const languages = JSON.parse(fs.readFileSync(path.join(siteRoot, 'implementations', 'languages.json'), 'utf8'));
   const coverage = JSON.parse(fs.readFileSync(path.join(siteRoot, 'implementations', 'coverage-summary.json'), 'utf8'));
+  const adapterSummary = JSON.parse(fs.readFileSync(path.join(siteRoot, 'implementations', 'catalog-adapters-summary.json'), 'utf8'));
   const verifiedLedger = JSON.parse(fs.readFileSync(path.join(siteRoot, 'implementations', 'verified-cells.json'), 'utf8'));
   const bibliography = JSON.parse(fs.readFileSync(path.join(siteRoot, 'bibliography', 'records.json'), 'utf8'));
   const languageTargets = Array.isArray(languages.targets) ? languages.targets : languages.languages;
   const verifiedCellCount = Array.isArray(verifiedLedger.verifiedCells) ? verifiedLedger.verifiedCells.length : 0;
   const languageReadmes = languageTargets.filter(language =>
     fs.existsSync(path.join(siteRoot, 'implementations', language.id, 'README.md'))
+  ).length;
+  const languageAdapterFiles = languageTargets.filter(language =>
+    fs.existsSync(path.join(siteRoot, 'implementations', language.id, 'catalog', 'algorithms.json'))
+  ).length;
+  const languageAdapterReadmes = languageTargets.filter(language =>
+    fs.existsSync(path.join(siteRoot, 'implementations', language.id, 'catalog', 'README.md'))
   ).length;
 
   if (version !== '0.9.13-local') issues.push(`VERSION expected 0.9.13-local, saw ${version}`);
@@ -147,6 +157,8 @@ function audit() {
     issues.push(`language targets expected 50, saw ${languageTargets?.length || 0}`);
   }
   if (coverage.plannedCells !== 50000) issues.push(`plannedCells expected 50000, saw ${coverage.plannedCells}`);
+  if (coverage.catalogAdapterCells !== 50000) issues.push(`catalogAdapterCells expected 50000, saw ${coverage.catalogAdapterCells}`);
+  if (coverage.catalogAdapterLanguages !== 50) issues.push(`catalogAdapterLanguages expected 50, saw ${coverage.catalogAdapterLanguages}`);
   if (coverage.verifiedCells !== verifiedCellCount) {
     issues.push(`verifiedCells expected ledger count ${verifiedCellCount}, saw ${coverage.verifiedCells}`);
   }
@@ -155,6 +167,11 @@ function audit() {
     issues.push(`coverage status expected ${expectedCoverageStatus}, saw ${coverage.status}`);
   }
   if (languageReadmes !== 50) issues.push(`language README count expected 50, saw ${languageReadmes}`);
+  if (languageAdapterFiles !== 50) issues.push(`language adapter file count expected 50, saw ${languageAdapterFiles}`);
+  if (languageAdapterReadmes !== 50) issues.push(`language adapter README count expected 50, saw ${languageAdapterReadmes}`);
+  if (adapterSummary.languageCount !== 50 || adapterSummary.recordsPerLanguage !== 1000 || adapterSummary.adapterCells !== 50000) {
+    issues.push(`adapter summary expected 50/1000/50000, saw ${adapterSummary.languageCount}/${adapterSummary.recordsPerLanguage}/${adapterSummary.adapterCells}`);
+  }
   if (bibliography.recordCount !== 1000 || !Array.isArray(bibliography.records) || bibliography.records.length !== 1000) {
     issues.push(`bibliography expected 1000 records, saw count=${bibliography.recordCount} length=${bibliography.records?.length || 0}`);
   }
@@ -189,7 +206,10 @@ function audit() {
     docsMarkdownFiles: siteRelFiles.filter(file => file.startsWith('docs/') && file.endsWith('.md')).length,
     implementationLanguageTargets: languageTargets.length,
     implementationLanguageReadmes: languageReadmes,
+    implementationLanguageAdapterFiles: languageAdapterFiles,
+    implementationLanguageAdapterReadmes: languageAdapterReadmes,
     plannedCells: coverage.plannedCells,
+    catalogAdapterCells: coverage.catalogAdapterCells,
     verifiedCells: coverage.verifiedCells,
     bibliographyRecords: bibliography.records?.length || 0,
     bibliographyFilledCitationSlots: bibliography.records?.reduce((sum, record) => sum + (Array.isArray(record.citationKeys) ? record.citationKeys.length : 0), 0) || 0,

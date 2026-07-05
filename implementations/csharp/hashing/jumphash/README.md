@@ -8,8 +8,8 @@ Catalog record: `V01-B-07` / `jumphash`
 
 ## Files
 
-- `Program.cs`
 - `JumpHash.csproj`
+- `Program.cs`
 
 ## Test
 

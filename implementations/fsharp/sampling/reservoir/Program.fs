@@ -1,7 +1,7 @@
 open System
 open System.Collections.Generic
 
-let sample (stream: 'T list) (k: int) =
+let sample (stream: 'T list) (k: int) = 
     if k <= 0 then []
     elif stream.Length <= k then stream
     else
@@ -14,7 +14,7 @@ let sample (stream: 'T list) (k: int) =
         List.ofArray reservoir
 
 [<EntryPoint>]
-let main _ =
+let main _ = 
     let stream = [10; 20; 30; 40; 50; 60; 70; 80; 90; 100]
     let k = 5
     let s = sample stream k

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T02:58:47.569Z",
+  "generatedAt": "2026-07-05T05:01:26.928Z",
   "target": "objective requirement evidence audit",
   "version": "0.9.13-local",
   "status": "verified-with-open-blockers",
@@ -113,17 +113,35 @@
     },
     {
       "id": "implementation-matrix",
-      "description": "Implementation scaffold exposes 50 language targets, 50,000 planned cells, and verified cells that match the implementation ledger.",
+      "description": "Implementation scaffold exposes 50 language targets, 50,000 planned cells, 50,000 generated catalog-adapter cells, and verified cells that match the implementation ledger.",
       "evidence": [
         "implementations/languages.json",
         "implementations/coverage-summary.json",
         "implementations/verified-cells.json",
+        "implementations/catalog-adapters-summary.json",
         "output/playwright/implementation-matrix-audit-summary.json"
       ],
       "status": "verified",
       "languageTargets": 50,
       "plannedCells": 50000,
-      "verifiedCells": 15
+      "catalogAdapterCells": 50000,
+      "verifiedCells": 71
+    },
+    {
+      "id": "language-catalog-adapters",
+      "description": "Every one of the 50 language/script folders has a generated full-catalog adapter covering all 1000 records.",
+      "evidence": [
+        "tools/audit-language-catalog-adapters.mjs",
+        "implementations/catalog-adapters-summary.json",
+        "implementations/<language-id>/catalog/algorithms.json",
+        "output/implementation-adapters/language-catalog-adapters-audit-summary.json"
+      ],
+      "status": "verified",
+      "languageCount": 50,
+      "recordsPerLanguage": 1000,
+      "adapterCells": 50000,
+      "adapterFiles": 50,
+      "adapterReadmes": 50
     },
     {
       "id": "implementation-tests",
@@ -134,8 +152,8 @@
         "output/implementation-tests/implementation-test-summary.json"
       ],
       "status": "verified",
-      "totalCells": 15,
-      "passed": 15,
+      "totalCells": 71,
+      "passed": 71,
       "failed": 0
     },
     {
@@ -173,6 +191,7 @@
         "output/playwright/audio-live-sorting-smoke-summary.json",
         "output/playwright/audio-interaction-smoke-summary.json",
         "output/playwright/implementation-matrix-audit-summary.json",
+        "output/implementation-adapters/language-catalog-adapters-audit-summary.json",
         "output/playwright/cross-browser-smoke-summary.json",
         "output/playwright/aggregate-audit-summary.json",
         "output/pages-artifact/pages-artifact-audit-summary.json"
@@ -218,8 +237,8 @@
         "output/pages-artifact/pages-artifact-audit-summary.json"
       ],
       "status": "verified",
-      "siteFileCount": 142,
-      "siteBytes": 7327623,
+      "siteFileCount": 395,
+      "siteBytes": 30112531,
       "siteRemovedAfterAudit": true
     },
     {
@@ -280,14 +299,15 @@
     },
     {
       "id": "verified-implementation-corpus",
-      "description": "The 50-language implementation corpus is partial; only ledger-tested cells are counted as verified.",
+      "description": "The native 50-language implementation corpus is partial; generated catalog adapters cover all 50,000 addressable cells, but only ledger-tested native algorithm cells are counted as verified implementations.",
       "evidence": [
         "implementations/coverage-summary.json",
         "docs/IMPLEMENTATION-MATRIX.md"
       ],
       "status": "open",
       "plannedCells": 50000,
-      "verifiedCells": 15
+      "catalogAdapterCells": 50000,
+      "verifiedCells": 71
     }
   ],
   "issues": [],

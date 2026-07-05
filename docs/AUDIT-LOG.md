@@ -12,11 +12,12 @@ Verified checks:
 - `node --check output/playwright/implementation-matrix-audit-runner.js`: pass.
 - `node --check output/playwright/static-readiness-audit-runner.js`: pass.
 - `node --check output/playwright/catalog-export-audit-runner.js`: pass.
-- `output/playwright/implementation-matrix-audit-summary.json`: 50 language targets, 50,000 planned cells, ledger-matched verified cells, 1000 algorithm rows, 50 language READMEs, 0 issues.
-- `output/implementation-tests/implementation-test-summary.json`: 15 Boyer-Moore cells tested, 15 passed, 0 failed.
+- `output/playwright/implementation-matrix-audit-summary.json`: 50 language targets, 50,000 planned native cells, 50,000 generated catalog-adapter cells, ledger-matched verified cells, 1000 algorithm rows, 50 language READMEs, 50 language catalog adapters, 0 issues.
+- `output/implementation-adapters/language-catalog-adapters-audit-summary.json`: 50 language folders, 1000 records per language, 50,000 generated adapter cells, 0 issues.
+- `output/implementation-tests/implementation-test-summary.json`: 71 native implementation cells tested, 71 passed, 0 failed.
 - `output/playwright/static-readiness-audit-summary.json`: 0 issues.
 - `output/playwright/catalog-export-audit-summary.json`: 1000 catalog records, 1000 DOM records, 0 issues.
-- `tools/audit-pages-artifact.mjs`: simulated Pages payload with implementation files, 50 implementation language READMEs, 50,000 planned cells, ledger-matched verified cells, and 0 issues. Exact byte count is recorded in `output/pages-artifact/pages-artifact-audit-summary.json`.
+- `tools/audit-pages-artifact.mjs`: simulated Pages payload with implementation files, 50 implementation language READMEs, 50 catalog adapter files, 50,000 planned native cells, 50,000 generated adapter cells, ledger-matched verified cells, and 0 issues. Exact byte count is recorded in `output/pages-artifact/pages-artifact-audit-summary.json`.
 - `tools/cross-browser-smoke.mjs`: refreshed Chromium, Firefox, and WebKit screenshot smoke evidence, 0 failures.
 - `tools/audit-requirement-evidence.mjs`: 12 requirement checks, 0 issues, 3 open items (`github-publish`, `record-specific-bibliography`, `verified-implementation-corpus`).
 - `tools/build-bibliography-ledger.mjs` and `tools/audit-bibliography-ledger.mjs`: generated and verified 1000 record-specific citation-slot bundles, 0 filled citation slots, 0 issues.
@@ -26,7 +27,7 @@ Changes:
 
 - Added the 1000 x 50 implementation matrix scaffold under `implementations/`.
 - Added 50 language/script target folders, `implementations/languages.json`, and `implementations/coverage-summary.json`.
-- Added the first Boyer-Moore source/test batch plus `implementations/verified-cells.json`.
+- Added source/test starter batches plus `implementations/verified-cells.json`.
 - Added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`.
 - Added `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`.
 - Updated `.github/workflows/pages.yml` to copy root policy files, `docs/`, and `implementations/` into the Pages artifact.
@@ -34,7 +35,7 @@ Changes:
 
 Honesty boundary:
 
-- The matrix remains mostly planned, but 15 Boyer-Moore implementation cells are now locally verified. No fake code or fake verification was added.
+- The native matrix remains mostly planned, but 71 implementation cells are now locally verified. Generated catalog adapters cover the full 50 x 1000 addressable matrix without pretending those adapters are native implementations.
 
 ### 0.9.12 search/filter and source-marker audit
 

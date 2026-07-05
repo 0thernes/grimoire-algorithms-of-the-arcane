@@ -8,8 +8,8 @@ Catalog record: `V01-B-04` / `reservoir`
 
 ## Files
 
-- `Program.fs`
 - `Reservoir.fsproj`
+- `Program.fs`
 
 ## Test
 

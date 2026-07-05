@@ -9,7 +9,18 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Catalog records | 1000 |
 | Language/script targets | 50 |
 | Planned implementation cells | 50000 |
+| Generated catalog-adapter cells | 50000 |
 | Verified implementation cells | 71 |
+
+## Generated Catalog Adapters
+
+Each of the 50 language/script folders includes a generated full-catalog adapter:
+
+```text
+implementations/<language-id>/catalog/algorithms.json
+```
+
+These adapters expose all 1000 records to every language target for code generation, documentation, QA, and batch implementation planning. They are intentionally not counted as native algorithm implementations.
 
 ## Language Targets
 

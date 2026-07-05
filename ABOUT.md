@@ -10,7 +10,7 @@ The launch target is a plain static GitHub Pages site. The runtime intentionally
 
 The root `catalog.json` is generated from the live browser runtime. It exports every record's ID, navigation label, description, tags, proof rows, context rows, visual recipe, sonic recipe, filter facets, source status, and explicit bibliography status. Its current bibliography status is `source-class-only` for all records, which is intentional and prevents invented inventor/date/deployment claims.
 
-The `implementations/` tree is a source-code expansion scaffold for 50 coder/developer language and scripting targets. It defines 50,000 planned implementation cells. The current verified corpus has 15 Boyer-Moore cells with runnable local tests; the remaining 49,985 cells stay planned until real language-specific code, tests, complexity notes, and source/provenance notes are added.
+The `implementations/` tree is a source-code expansion scaffold for 50 coder/developer language and scripting targets. It defines 50,000 planned native implementation cells and now generates a full 1000-record catalog adapter for every language target. The current verified native corpus has 71 runnable local-test cells across Boyer-Moore, Cycle Sort, Jump Consistent Hashing, Reservoir Sampling, and Stooge Sort; remaining native cells stay planned until real language-specific code, tests, complexity notes, and source/provenance notes are added.
 
 The non-commercial publication files are project notices, not legal advice. `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff` preserve the intended attribution and non-commercial posture for 0thernes LLC, Alexander Donahue, and GRIMOIRE.
 

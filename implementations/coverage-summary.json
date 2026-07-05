@@ -1,10 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-05T03:50:19.874Z",
+  "generatedAt": "2026-07-05T04:50:27.650Z",
   "catalogVersion": "0.9.13-local",
   "recordCount": 1000,
   "languageCount": 50,
   "plannedCells": 50000,
+  "catalogAdapterCells": 50000,
+  "catalogAdapterLanguages": 50,
+  "catalogAdapterStatus": "generated-full-catalog",
   "verifiedCells": 71,
   "status": "partial-verified",
   "coverageByLanguage": [
@@ -12,6 +15,7 @@
       "languageId": "javascript",
       "languageName": "JavaScript",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -19,6 +23,7 @@
       "languageId": "typescript",
       "languageName": "TypeScript",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -26,6 +31,7 @@
       "languageId": "python",
       "languageName": "Python",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -33,6 +39,7 @@
       "languageId": "java",
       "languageName": "Java",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -40,6 +47,7 @@
       "languageId": "c",
       "languageName": "C",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -47,6 +55,7 @@
       "languageId": "cpp",
       "languageName": "C++",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -54,6 +63,7 @@
       "languageId": "csharp",
       "languageName": "C#",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -61,6 +71,7 @@
       "languageId": "go",
       "languageName": "Go",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -68,6 +79,7 @@
       "languageId": "rust",
       "languageName": "Rust",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -75,6 +87,7 @@
       "languageId": "kotlin",
       "languageName": "Kotlin",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -82,6 +95,7 @@
       "languageId": "swift",
       "languageName": "Swift",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -89,6 +103,7 @@
       "languageId": "ruby",
       "languageName": "Ruby",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -96,6 +111,7 @@
       "languageId": "php",
       "languageName": "PHP",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -103,6 +119,7 @@
       "languageId": "r",
       "languageName": "R",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -110,6 +127,7 @@
       "languageId": "julia",
       "languageName": "Julia",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -117,6 +135,7 @@
       "languageId": "scala",
       "languageName": "Scala",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -124,6 +143,7 @@
       "languageId": "dart",
       "languageName": "Dart",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -131,6 +151,7 @@
       "languageId": "lua",
       "languageName": "Lua",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -138,6 +159,7 @@
       "languageId": "perl",
       "languageName": "Perl",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -145,6 +167,7 @@
       "languageId": "bash",
       "languageName": "Bash",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -152,6 +175,7 @@
       "languageId": "powershell",
       "languageName": "PowerShell",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -159,6 +183,7 @@
       "languageId": "sql",
       "languageName": "SQL",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -166,6 +191,7 @@
       "languageId": "matlab-octave",
       "languageName": "MATLAB / Octave",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -173,6 +199,7 @@
       "languageId": "haskell",
       "languageName": "Haskell",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -180,6 +207,7 @@
       "languageId": "elixir",
       "languageName": "Elixir",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -187,6 +215,7 @@
       "languageId": "erlang",
       "languageName": "Erlang",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -194,6 +223,7 @@
       "languageId": "clojure",
       "languageName": "Clojure",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -201,6 +231,7 @@
       "languageId": "fsharp",
       "languageName": "F#",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -208,6 +239,7 @@
       "languageId": "ocaml",
       "languageName": "OCaml",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -215,6 +247,7 @@
       "languageId": "zig",
       "languageName": "Zig",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -222,6 +255,7 @@
       "languageId": "nim",
       "languageName": "Nim",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -229,6 +263,7 @@
       "languageId": "crystal",
       "languageName": "Crystal",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -236,6 +271,7 @@
       "languageId": "d",
       "languageName": "D",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -243,6 +279,7 @@
       "languageId": "ada",
       "languageName": "Ada",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -250,6 +287,7 @@
       "languageId": "fortran",
       "languageName": "Fortran",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 1,
       "status": "partial"
     },
@@ -257,6 +295,7 @@
       "languageId": "cobol",
       "languageName": "COBOL",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -264,6 +303,7 @@
       "languageId": "common-lisp",
       "languageName": "Common Lisp",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -271,6 +311,7 @@
       "languageId": "scheme",
       "languageName": "Scheme",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -278,6 +319,7 @@
       "languageId": "racket",
       "languageName": "Racket",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -285,6 +327,7 @@
       "languageId": "prolog",
       "languageName": "Prolog",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -292,6 +335,7 @@
       "languageId": "objective-c",
       "languageName": "Objective-C",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -299,6 +343,7 @@
       "languageId": "groovy",
       "languageName": "Groovy",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -306,6 +351,7 @@
       "languageId": "visual-basic",
       "languageName": "Visual Basic .NET",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 5,
       "status": "partial"
     },
@@ -313,6 +359,7 @@
       "languageId": "vba",
       "languageName": "VBA",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -320,6 +367,7 @@
       "languageId": "solidity",
       "languageName": "Solidity",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -327,6 +375,7 @@
       "languageId": "move",
       "languageName": "Move",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -334,6 +383,7 @@
       "languageId": "assembly-x86-64",
       "languageName": "x86-64 Assembly",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -341,6 +391,7 @@
       "languageId": "webassembly-wat",
       "languageName": "WebAssembly Text",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -348,6 +399,7 @@
       "languageId": "cuda-cpp",
       "languageName": "CUDA C++",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     },
@@ -355,6 +407,7 @@
       "languageId": "verilog-systemverilog",
       "languageName": "Verilog / SystemVerilog",
       "planned": 1000,
+      "catalogAdapterRecords": 1000,
       "verified": 0,
       "status": "planned"
     }

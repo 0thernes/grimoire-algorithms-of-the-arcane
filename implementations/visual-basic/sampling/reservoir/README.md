@@ -8,8 +8,8 @@ Catalog record: `V01-B-04` / `reservoir`
 
 ## Files
 
-- `Program.vb`
 - `Reservoir.vbproj`
+- `Program.vb`
 
 ## Test
 

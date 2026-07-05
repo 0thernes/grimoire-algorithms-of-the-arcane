@@ -11,8 +11,19 @@ Expected runtime/toolchain: Dart / Flutter
 ## Coverage
 
 - Planned algorithms: 1000
+- Generated catalog-adapter records: 1000
 - Verified implementations: 0
 - Status: planned scaffold
+
+## Full-Catalog Adapter
+
+This language target has a generated full-catalog adapter at:
+
+```text
+implementations/dart/catalog/algorithms.json
+```
+
+That adapter contains all 1000 GRIMOIRE records for Dart. It is meant for discovery, code generation, docs, and audit tooling. It is not counted as a native algorithm implementation.
 
 ## Verified Cells
 

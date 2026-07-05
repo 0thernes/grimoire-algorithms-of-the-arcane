@@ -1,6 +1,6 @@
 open System
 
-let hash (key: uint64) (numBuckets: int) =
+let hash (key: uint64) (numBuckets: int) = 
     let mutable b = -1L
     let mutable j = 0L
     let mutable k = key
@@ -14,7 +14,7 @@ let hash (key: uint64) (numBuckets: int) =
     int b
 
 [<EntryPoint>]
-let main _ =
+let main _ = 
     let cases = [
         (0UL, 10, 0)
         (1UL, 10, 6)

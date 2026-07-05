@@ -21,7 +21,7 @@ The app targets ordinary laptops, tablets, and phones as a static GitHub Pages s
 - Auto playback is O(1) active run voice per step, O(n) total over the full 1000-record sequence.
 - Monster audio scheduling is O(n) for 1000 recipe events with a fixed bounded duration.
 - Active-volume search/filter is O(m * f) where m = 100 rendered cards and f = selected text/facet checks. It does not mount all 1000 cards at once.
-- Implementation matrix generation is O(n * l) in emitted metadata size where n = 1000 records and l = 50 languages, but it does not generate source-code files for every cell. It writes 50 language folders plus summary manifests.
+- Implementation matrix generation is O(n * l) in emitted metadata size where n = 1000 records and l = 50 languages. It writes 50 full-catalog adapter packages plus summary manifests, while native algorithm source files remain incremental and ledger-verified.
 
 ## Verified Performance-Oriented Evidence
 
@@ -30,7 +30,8 @@ The app targets ordinary laptops, tablets, and phones as a static GitHub Pages s
 - `output/playwright/audio-control-modes-smoke-summary.json`: Auto holds at most one run voice; Monster schedules 1000 recipes.
 - `output/playwright/network-static-audit-summary.json`: runtime loads only local `style.css` and `viz.js`.
 - `output/playwright/filter-source-audit-summary.json`: filter controls operate on active-volume cards and all 1000 source markers exist.
-- `output/playwright/implementation-matrix-audit-summary.json`: implementation scaffold exposes 50 language targets, 50,000 planned cells, ledger-matched verified cells, 1000 algorithm rows, and all 50 language README files.
+- `output/playwright/implementation-matrix-audit-summary.json`: implementation scaffold exposes 50 language targets, 50,000 planned native cells, 50,000 generated adapter cells, ledger-matched verified cells, 1000 algorithm rows, all 50 language README files, and all 50 language catalog adapters.
+- `output/implementation-adapters/language-catalog-adapters-audit-summary.json`: adapter audit verifies 50 language adapters and 50,000 generated addressable adapter cells.
 
 ## Optimization Boundaries
 

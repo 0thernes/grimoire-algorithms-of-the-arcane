@@ -13,7 +13,7 @@ Live site: `https://0thernes.github.io/grimoire-algorithms-of-the-arcane/`
 - Volumes II-X are generated from explicit local blueprint arrays in `viz.js`.
 - All records include deterministic IDs, signatures, visual recipe codes, sonic recipe codes, mechanism notes, verification targets, and falsification rules.
 - The current `0.9.13-local` site combines the semantic/visual renderer with deterministic Web Audio sonification, louder bounded Run-score SFX, true Solo/Overlap modes, strict sequential Auto 1->1000 playback, Stop All pause, Reset All restart, Monster chorus, per-card Visual/Code/Math evidence tabs, live state-driven sorting-demo SFX, searchable/filterable record navigation, visible source-status badges, exportable `catalog.json`, static GitHub Pages deployment scaffolding, refreshed QA evidence, reusable browser audit runners, and zero external runtime requests.
-- The implementation pass adds the 1000 x 50 implementation matrix scaffold: 50 language/script folders, generated language/coverage manifests, a special 1000-algorithm MD index, GitHub publishing notes, license/notice files, contribution/security/citation files, and ledger-aware audits. The current verified corpus has 15 Boyer-Moore cells; 49,985 cells remain planned until real code and tests are added.
+- The implementation pass adds the 1000 x 50 implementation matrix scaffold: 50 language/script folders, generated full-catalog adapters for all 50,000 addressable language/algorithm cells, generated language/coverage manifests, a special 1000-algorithm MD index, GitHub publishing notes, license/notice files, contribution/security/citation files, and ledger-aware audits. The current verified native corpus has 71 tested cells across Boyer-Moore, Cycle Sort, Jump Consistent Hashing, Reservoir Sampling, and Stooge Sort; remaining native cells stay planned until real code and tests are added.
 - The earlier `0.9.12-local` pass added search/filter by title/text, tag, engine, active volume, source status, sonic family, and visual family. It also exposes `source-class-only` status on every card and in `catalog.json` so missing record-specific citations are visible, not buried.
 - Laptop/tablet landscape uses a sticky left navigation rail with active algorithm content on the right.
 - Phone portrait keeps the stacked navigation/content flow.
@@ -105,7 +105,9 @@ A record fails the honesty contract if any of these are true:
 - `implementations/README.md` - implementation scaffold overview
 - `implementations/languages.json` - 50 language/script target manifest
 - `implementations/coverage-summary.json` - machine-readable planned/verified implementation matrix counts
+- `implementations/catalog-adapters-summary.json` - machine-readable summary proving 50 full-catalog language adapters and 50,000 generated adapter cells
 - `implementations/verified-cells.json` - ledger of source cells with passing local test commands
+- `specs/` - JSON specs for batch-generating native implementation cells without hand-copying language files one by one
 - `bibliography/README.md` - bibliography ledger overview
 - `bibliography/schema.json` - JSON schema for record bibliography entries
 - `bibliography/records.json` - one citation-slot bundle per catalog record
@@ -114,6 +116,8 @@ A record fails the honesty contract if any of these are true:
 - `tools/verify-implementations.mjs` - executes verified-cell test commands and writes implementation test evidence
 - `tools/audit-pages-artifact.mjs` - simulates the GitHub Pages artifact copy and verifies the deploy payload
 - `tools/build-implementation-matrix.mjs` - regenerates the implementation scaffold and publishing docs from `catalog.json`
+- `tools/generate-matrix-cell.mjs` - writes a multi-language implementation batch from a JSON spec, updates the verified-cell ledger, and rebuilds the matrix
+- `tools/audit-language-catalog-adapters.mjs` - verifies every language folder has a 1000-record generated catalog adapter
 - `tools/cross-browser-smoke.mjs` - refreshes Chromium, Firefox, and WebKit screenshot smoke evidence
 - `tools/audit-requirement-evidence.mjs` - summarizes objective-level evidence and open blockers
 - `output/playwright/pages-readiness-audit-summary.json` - desktop/tablet/phone Pages readiness audit output
