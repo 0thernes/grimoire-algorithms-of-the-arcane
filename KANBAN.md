@@ -7,7 +7,7 @@
 - Added `implementations/languages.json`, `implementations/coverage-summary.json`, and `implementations/catalog-adapters-summary.json`; current planned native cells are 50,000, generated adapter cells are 50,000, and verified native cells are 103.
 - Added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`.
 - Added `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff` for public non-commercial attribution posture.
-- Updated the GitHub Pages workflow to deploy root docs, license/notice/contribution/security/citation files, `docs/`, and `implementations/`.
+- Updated the GitHub Pages workflow to publish root docs, license/notice/contribution/security/citation files, `docs/`, `implementations/`, and `bibliography/` to a clean `gh-pages` branch.
 - Added reusable `output/playwright/implementation-matrix-audit-runner.js` and `tools/audit-language-catalog-adapters.mjs`.
 - Added `tools/audit-pages-artifact.mjs` and verified the simulated GitHub Pages artifact payload.
 - Added `tools/cross-browser-smoke.mjs` and refreshed Chromium, Firefox, and WebKit screenshot smoke evidence.

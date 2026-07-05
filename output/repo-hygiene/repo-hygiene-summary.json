@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T18:40:18.885Z",
+  "generatedAt": "2026-07-05T18:54:39.234Z",
   "target": "recursive repository hygiene audit",
   "version": "0.9.13-local",
   "fileCount": 587,
@@ -9,7 +9,7 @@
   "toolScriptCount": 15,
   "implementationFileCount": 427,
   "outputFileCount": 89,
-  "totalLines": 1046070,
+  "totalLines": 1046150,
   "catalogRecords": 1000,
   "languageTargets": 50,
   "plannedCells": 50000,

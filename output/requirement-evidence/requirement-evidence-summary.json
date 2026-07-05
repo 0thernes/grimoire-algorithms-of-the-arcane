@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T18:40:25.839Z",
+  "generatedAt": "2026-07-05T18:54:51.055Z",
   "target": "objective requirement evidence audit",
   "version": "0.9.13-local",
   "status": "verified-with-open-blockers",
@@ -257,12 +257,12 @@
       ],
       "status": "verified",
       "siteFileCount": 477,
-      "siteBytes": 30243560,
+      "siteBytes": 30245280,
       "siteRemovedAfterAudit": true
     },
     {
       "id": "pages-workflow-current",
-      "description": "GitHub Pages workflow uses current action pins and copies docs, implementations, bibliography, and policy files.",
+      "description": "GitHub Pages workflow publishes a clean gh-pages branch with docs, implementations, bibliography, and policy files.",
       "evidence": [
         ".github/workflows/pages.yml",
         "docs/GITHUB-PUBLISHING.md",
@@ -270,12 +270,18 @@
       ],
       "status": "verified",
       "requiredPagesActions": [
-        "actions/checkout@v7",
-        "actions/configure-pages@v6",
-        "actions/upload-pages-artifact@v5",
-        "actions/deploy-pages@v5"
+        "actions/checkout@v7"
       ],
-      "stalePagesActions": []
+      "stalePagesActions": [],
+      "requiredPagesMarkers": [
+        "contents: write",
+        "git checkout -b gh-pages",
+        "git push --force origin gh-pages",
+        "cp -R docs site/docs",
+        "cp -R implementations site/implementations",
+        "cp -R bibliography site/bibliography"
+      ],
+      "stalePagesMarkers": []
     },
     {
       "id": "footer-navigation",

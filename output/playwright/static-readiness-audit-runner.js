@@ -106,10 +106,19 @@ async (page) => {
   const deployMissingImplementationsCopy = !/cp -R implementations site\/implementations/.test(workflow);
   const deployMissingBibliographyCopy = !/cp -R bibliography site\/bibliography/.test(workflow);
   const deployMissingLicenseCopy = !/LICENSE\.md NOTICE\.md CONTRIBUTING\.md SECURITY\.md CITATION\.cff site\//.test(workflow);
-  const requiredPagesActions = ['actions/checkout@v7', 'actions/configure-pages@v6', 'actions/upload-pages-artifact@v5', 'actions/deploy-pages@v5'];
+  const requiredPagesActions = ['actions/checkout@v7'];
+  const requiredPagesMarkers = [
+    'contents: write',
+    'git checkout -b gh-pages',
+    'git push --force origin gh-pages',
+    'cp -R docs site/docs',
+    'cp -R implementations site/implementations',
+    'cp -R bibliography site/bibliography'
+  ];
   const stalePagesActions = requiredPagesActions.filter(action =>
     !new RegExp(`uses:\\s*${action.replace('/', '\\/').replace('@', '@')}`).test(workflow)
   );
+  const stalePagesMarkers = requiredPagesMarkers.filter(marker => !workflow.includes(marker));
 
   const issues = [];
   const catalog = fetched.find(item => item.path === 'catalog.json');
@@ -134,6 +143,7 @@ async (page) => {
   if (deployMissingBibliographyCopy) issues.push('Pages workflow does not copy bibliography folder');
   if (deployMissingLicenseCopy) issues.push('Pages workflow does not copy LICENSE.md, NOTICE.md, CONTRIBUTING.md, SECURITY.md, and CITATION.cff');
   if (stalePagesActions.length) issues.push(`Pages workflow missing current action pins: ${stalePagesActions.join(', ')}`);
+  if (stalePagesMarkers.length) issues.push(`Pages workflow missing branch-publish markers: ${stalePagesMarkers.join(', ')}`);
   if (!/cp index\.html style\.css viz\.js catalog\.json 404\.html \.nojekyll VERSION site\//.test(workflow)) {
     issues.push('Pages workflow missing expected runtime file copy command');
   }
@@ -159,6 +169,8 @@ async (page) => {
     httpAttrs: dom.httpAttrs,
     requiredPagesActions,
     stalePagesActions,
+    requiredPagesMarkers,
+    stalePagesMarkers,
     issues
   }, null, 2);
 }

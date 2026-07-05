@@ -89,11 +89,11 @@ Highest-value smoke runners:
 
 ## GitHub Pages Deploy
 
-The workflow is `.github/workflows/pages.yml`. It copies static runtime files, `catalog.json`, root Markdown docs, `VERSION`, `.nojekyll`, `404.html`, license/notice/contribution/security/citation files, the `docs/` folder, the `implementations/` folder, and the `bibliography/` folder into the Pages artifact.
+The workflow is `.github/workflows/pages.yml`. It copies static runtime files, `catalog.json`, root Markdown docs, `VERSION`, `.nojekyll`, `404.html`, license/notice/contribution/security/citation files, the `docs/` folder, the `implementations/` folder, and the `bibliography/` folder into a clean `site/` folder, then force-publishes that folder to the generated `gh-pages` branch.
 
-The current action pins are `actions/checkout@v7`, `actions/configure-pages@v6`, `actions/upload-pages-artifact@v5`, and `actions/deploy-pages@v5`.
+The current workflow markers are `actions/checkout@v7`, `contents: write`, `git checkout -b gh-pages`, and `git push --force origin gh-pages`.
 
-No generated `output/playwright/` evidence is deployed by the workflow.
+GitHub Pages should be configured to serve the `gh-pages` branch root. No generated `output/playwright/` evidence is deployed by the workflow.
 
 ## Catalog Export
 
@@ -132,7 +132,7 @@ npx --yes --package '@playwright/cli' playwright-cli -s=grimoire2 --raw run-code
 
 ## Pages Artifact Simulation
 
-Verify the actual deployment payload shape without committing duplicate site output:
+Verify the actual branch-publish payload shape without committing duplicate site output:
 
 ```powershell
 node tools\audit-pages-artifact.mjs

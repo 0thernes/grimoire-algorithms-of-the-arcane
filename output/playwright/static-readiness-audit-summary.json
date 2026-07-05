@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T18:31:34.831Z",
+  "generatedAt": "2026-07-05T18:54:27.860Z",
   "target": "static docs/assets/deploy readiness",
   "version": "0.9.13-local",
   "title": "GRIMOIRE — Algorithms of the Arcane",
@@ -131,11 +131,17 @@
   "rootRelativeAttrs": [],
   "httpAttrs": [],
   "requiredPagesActions": [
-    "actions/checkout@v7",
-    "actions/configure-pages@v6",
-    "actions/upload-pages-artifact@v5",
-    "actions/deploy-pages@v5"
+    "actions/checkout@v7"
   ],
   "stalePagesActions": [],
+  "requiredPagesMarkers": [
+    "contents: write",
+    "git checkout -b gh-pages",
+    "git push --force origin gh-pages",
+    "cp -R docs site/docs",
+    "cp -R implementations site/implementations",
+    "cp -R bibliography site/bibliography"
+  ],
+  "stalePagesMarkers": [],
   "issues": []
 }

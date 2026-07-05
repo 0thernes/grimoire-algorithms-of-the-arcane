@@ -362,21 +362,31 @@ function main() {
   );
 
   const workflow = text('.github/workflows/pages.yml');
-  const requiredPagesActions = ['actions/checkout@v7', 'actions/configure-pages@v6', 'actions/upload-pages-artifact@v5', 'actions/deploy-pages@v5'];
+  const requiredPagesActions = ['actions/checkout@v7'];
+  const requiredPagesMarkers = [
+    'contents: write',
+    'git checkout -b gh-pages',
+    'git push --force origin gh-pages',
+    'cp -R docs site/docs',
+    'cp -R implementations site/implementations',
+    'cp -R bibliography site/bibliography'
+  ];
   const stalePagesActions = requiredPagesActions.filter(action =>
     !new RegExp(`uses:\\s*${action.replace('/', '\\/').replace('@', '@')}`).test(workflow)
   );
+  const stalePagesMarkers = requiredPagesMarkers.filter(marker => !workflow.includes(marker));
   addRequirement(
     requirements,
     'pages-workflow-current',
-    'GitHub Pages workflow uses current action pins and copies docs, implementations, bibliography, and policy files.',
+    'GitHub Pages workflow publishes a clean gh-pages branch with docs, implementations, bibliography, and policy files.',
     ['.github/workflows/pages.yml', 'docs/GITHUB-PUBLISHING.md', 'output/playwright/static-readiness-audit-summary.json'],
     stalePagesActions.length === 0 &&
+      stalePagesMarkers.length === 0 &&
       /cp -R docs site\/docs/.test(workflow) &&
       /cp -R implementations site\/implementations/.test(workflow) &&
       /cp -R bibliography site\/bibliography/.test(workflow) &&
       /LICENSE\.md NOTICE\.md CONTRIBUTING\.md SECURITY\.md CITATION\.cff site\//.test(workflow),
-    { requiredPagesActions, stalePagesActions }
+    { requiredPagesActions, stalePagesActions, requiredPagesMarkers, stalePagesMarkers }
   );
 
   const footer = text('index.html');

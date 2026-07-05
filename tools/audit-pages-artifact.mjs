@@ -77,13 +77,23 @@ function text(file) {
   return fs.readFileSync(path.join(root, file), 'utf8');
 }
 
-function currentPagesActionPins(workflowText) {
-  const requiredPagesActions = ['actions/checkout@v7', 'actions/configure-pages@v6', 'actions/upload-pages-artifact@v5', 'actions/deploy-pages@v5'];
+function currentPagesWorkflowMarkers(workflowText) {
+  const requiredPagesActions = ['actions/checkout@v7'];
+  const requiredPagesMarkers = [
+    'contents: write',
+    'git checkout -b gh-pages',
+    'git push --force origin gh-pages',
+    'cp -R docs site/docs',
+    'cp -R implementations site/implementations',
+    'cp -R bibliography site/bibliography'
+  ];
   return {
     requiredPagesActions,
     stalePagesActions: requiredPagesActions.filter(action =>
       !new RegExp(`uses:\\s*${action.replace('/', '\\/').replace('@', '@')}`).test(workflowText)
-    )
+    ),
+    requiredPagesMarkers,
+    stalePagesMarkers: requiredPagesMarkers.filter(marker => !workflowText.includes(marker))
   };
 }
 
@@ -100,7 +110,12 @@ function audit() {
   const issues = [];
   const siteFiles = walkFiles(siteRoot);
   const siteRelFiles = siteFiles.map(relFromSite).sort();
-  const { requiredPagesActions, stalePagesActions } = currentPagesActionPins(text('.github/workflows/pages.yml'));
+  const {
+    requiredPagesActions,
+    stalePagesActions,
+    requiredPagesMarkers,
+    stalePagesMarkers
+  } = currentPagesWorkflowMarkers(text('.github/workflows/pages.yml'));
 
   const requiredFiles = [
     ...runtimeFiles,
@@ -178,6 +193,9 @@ function audit() {
   if (stalePagesActions.length) {
     issues.push(`Pages workflow missing current action pins: ${stalePagesActions.join(', ')}`);
   }
+  if (stalePagesMarkers.length) {
+    issues.push(`Pages workflow missing branch-publish markers: ${stalePagesMarkers.join(', ')}`);
+  }
 
   const indexRuntimeText = fs.readFileSync(path.join(siteRoot, 'index.html'), 'utf8');
   const rootRelativeAttrs = [...indexRuntimeText.matchAll(/\s(?:src|href)="\/(?!\/)[^"]+"/g)].map(match => match[0].trim());
@@ -220,6 +238,8 @@ function audit() {
     runtimeExternalRefs: [...new Set(runtimeExternalRefs)],
     requiredPagesActions,
     stalePagesActions,
+    requiredPagesMarkers,
+    stalePagesMarkers,
     issues
   };
 

@@ -23,7 +23,7 @@ Live site: `https://0thernes.github.io/grimoire-algorithms-of-the-arcane/`
 - Runtime assets are local and relative: `index.html` loads only `style.css` and `viz.js`.
 - SFX are synthesized by the browser from record metadata; no audio files, CDN samples, or remote audio APIs are used.
 - Every card has local Run, Stop/Pause, Reset controls plus Visual, Code, and Math tabs. The Code/Math tabs document the real page runtime API, metadata, and scheduler equations used by this implementation; generated records remain deterministic visual/sonic reconstructions, not full reference implementations.
-- GitHub Pages deployment is static-file ready through `.nojekyll` and `.github/workflows/pages.yml`.
+- GitHub Pages deployment is static-file ready through `.nojekyll`, `.github/workflows/pages.yml`, and a generated `gh-pages` branch.
 - Non-commercial publication files are present as project notices: `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`.
 
 ## Run
@@ -38,11 +38,11 @@ Then open `http://127.0.0.1:8123/`.
 
 ## GitHub Pages
 
-This project is intended to publish as a plain static site. The Pages workflow copies the runtime site files, `catalog.json`, root Markdown docs, `VERSION`, `.nojekyll`, `404.html`, license/notice/contribution/security/citation files, `docs/`, `implementations/`, and `bibliography/`.
+This project publishes as a plain static site. The Pages workflow copies the runtime site files, `catalog.json`, root Markdown docs, `VERSION`, `.nojekyll`, `404.html`, license/notice/contribution/security/citation files, `docs/`, `implementations/`, and `bibliography/` into a clean `site/` folder, then force-publishes that folder to the generated `gh-pages` branch.
 
-Current Pages action pins are `actions/checkout@v7`, `actions/configure-pages@v6`, `actions/upload-pages-artifact@v5`, and `actions/deploy-pages@v5`.
+Current Pages workflow markers are `actions/checkout@v7`, `contents: write`, `git checkout -b gh-pages`, and `git push --force origin gh-pages`.
 
-Use the repository root as the Pages source. No bundler, package install, or generated build output is required.
+Use the `gh-pages` branch root as the Pages source. No bundler, package install, or remote runtime dependency is required.
 
 ## Verification Contract
 
@@ -65,7 +65,7 @@ A record fails the honesty contract if any of these are true:
 - `404.html` - GitHub Pages fallback page
 - `.nojekyll` - disables Jekyll processing for this static app
 - `.gitignore` - excludes Playwright session logs and compiled implementation-test outputs while keeping JSON evidence
-- `.github/workflows/pages.yml` - deploys the static site to GitHub Pages through Actions
+- `.github/workflows/pages.yml` - publishes the static site to the `gh-pages` branch for GitHub Pages
 - `VERSION` - current local release marker
 - `CHANGELOG.md` - chronological change log
 - `LICENSE.md` - non-commercial source and content license notice
@@ -118,7 +118,7 @@ A record fails the honesty contract if any of these are true:
 - `tools/build-bibliography-ledger.mjs` - regenerates the bibliography ledger from `catalog.json`
 - `tools/audit-bibliography-ledger.mjs` - validates bibliography/catalog alignment and non-claim gates
 - `tools/verify-implementations.mjs` - executes verified-cell test commands and writes implementation test evidence
-- `tools/audit-pages-artifact.mjs` - simulates the GitHub Pages artifact copy and verifies the deploy payload
+- `tools/audit-pages-artifact.mjs` - simulates the GitHub Pages artifact copy and verifies the branch-publish payload
 - `tools/build-implementation-matrix.mjs` - regenerates the implementation scaffold and publishing docs from `catalog.json`
 - `tools/generate-matrix-cell.mjs` - writes a multi-language implementation batch from a JSON spec, updates the verified-cell ledger, and rebuilds the matrix
 - `tools/audit-language-catalog-adapters.mjs` - verifies every language folder has a 1000-record generated catalog adapter

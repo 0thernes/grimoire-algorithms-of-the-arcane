@@ -17,9 +17,9 @@ Scope:
 - bounded Java verified-cell test commands with small JVM heaps so the full verifier does not fail from native-memory reservation pressure
 - added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`
 - added `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`
-- updated the GitHub Pages workflow to include root policy files, `docs/`, and `implementations/`
+- updated the GitHub Pages workflow to publish root policy files, `docs/`, `implementations/`, and `bibliography/` to a clean generated `gh-pages` branch
 - added `output/playwright/implementation-matrix-audit-runner.js`
-- added `tools/audit-pages-artifact.mjs` to simulate the final GitHub Pages artifact payload
+- added `tools/audit-pages-artifact.mjs` to simulate the final GitHub Pages branch-publish payload
 - added `tools/cross-browser-smoke.mjs` for repeatable Chromium/Firefox/WebKit screenshot smoke
 - added `tools/audit-requirement-evidence.mjs` for objective-level evidence and open-blocker reporting
 - added `bibliography/`, `docs/BIBLIOGRAPHY.md`, and bibliography build/audit tools for record-specific citation slots

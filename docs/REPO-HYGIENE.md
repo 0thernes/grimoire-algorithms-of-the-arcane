@@ -1,6 +1,6 @@
 # Repo Hygiene Audit
 
-Generated: 2026-07-05T18:40:18.885Z
+Generated: 2026-07-05T18:54:39.234Z
 
 ## Scope
 
@@ -24,7 +24,7 @@ This audit uses tracked repository files as the review set. It is meant to catch
 |---|---:|
 | Tracked files audited | 587 |
 | Markdown files audited | 249 |
-| Total tracked text lines | 1046070 |
+| Total tracked text lines | 1046150 |
 | Root docs | 12 |
 | Docs folder Markdown files | 27 |
 | Tool scripts | 15 |

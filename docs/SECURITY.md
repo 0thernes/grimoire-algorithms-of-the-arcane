@@ -10,7 +10,7 @@ GRIMOIRE is a static educational/creative coding site. It has no login, no backe
 - No CDN scripts or remote font requests are required.
 - Web Audio is synthesized locally from deterministic record metadata.
 - `.nojekyll` is an empty sentinel for GitHub Pages.
-- The Pages workflow only copies static files and docs.
+- The Pages workflow only copies static files and docs into a generated `gh-pages` branch.
 - `catalog.json` is static generated metadata and contains no secrets, accounts, tokens, analytics identifiers, or user data.
 - No account, credential, OAuth, billing, SSH, deploy-key, or cloud settings are mutated by local QA.
 

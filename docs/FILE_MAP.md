@@ -15,7 +15,7 @@
 - `CONTRIBUTING.md`: contribution rules and implementation-cell verification gate.
 - `SECURITY.md`: root GitHub security policy.
 - `CITATION.cff`: citation metadata for GitHub attribution.
-- `.github/workflows/pages.yml`: static Pages deployment workflow.
+- `.github/workflows/pages.yml`: static Pages branch-publish workflow.
 
 ## Root Documentation
 
@@ -80,7 +80,7 @@
 - `tools/generate-matrix-cell.mjs`: batch-generates native implementation cells from a JSON spec and rebuilds the implementation matrix.
 - `tools/audit-language-catalog-adapters.mjs`: verifies the 50 generated language catalog adapters and their 1000-record coverage.
 - `tools/verify-implementations.mjs`: executes verified-cell test commands and writes implementation test evidence.
-- `tools/audit-pages-artifact.mjs`: simulates the GitHub Pages artifact payload and writes an audit summary.
+- `tools/audit-pages-artifact.mjs`: simulates the GitHub Pages branch-publish payload and writes an audit summary.
 - `tools/cross-browser-smoke.mjs`: refreshes Chromium, Firefox, and WebKit screenshot smoke evidence.
 - `tools/audit-requirement-evidence.mjs`: writes objective-level evidence, defects, and open blockers.
 - `tools/audit-repo-hygiene.mjs`: writes the recursive repo hygiene summary and `docs/REPO-HYGIENE.md`.
@@ -104,4 +104,4 @@
 - `output/repo-hygiene/repo-hygiene-summary.json`: latest recursive repo hygiene summary.
 - `output/bibliography/bibliography-audit-summary.json`: latest bibliography scaffold audit summary.
 
-The Pages workflow deploys root runtime/docs, `docs/`, `implementations/`, and `bibliography/`. It does not deploy `output/playwright/` or local implementation-test binaries.
+The Pages workflow publishes root runtime/docs, `docs/`, `implementations/`, and `bibliography/` to the generated `gh-pages` branch. It does not publish `output/playwright/` or local implementation-test binaries.

@@ -19,13 +19,13 @@
 - Added `implementations/verified-cells.json` and `tools/verify-implementations.mjs` so verified cells are counted only when their test commands pass.
 - Added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`.
 - Added `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`.
-- Updated the GitHub Pages workflow to deploy policy files, `docs/`, `implementations/`, and `bibliography/` with current Pages action pins.
+- Updated the GitHub Pages workflow to publish policy files, `docs/`, `implementations/`, and `bibliography/` to a clean generated `gh-pages` branch.
 - Added `output/playwright/implementation-matrix-audit-runner.js`.
-- Added `tools/audit-pages-artifact.mjs` and `output/pages-artifact/pages-artifact-audit-summary.json` to simulate and verify the actual GitHub Pages deployment payload.
+- Added `tools/audit-pages-artifact.mjs` and `output/pages-artifact/pages-artifact-audit-summary.json` to simulate and verify the actual GitHub Pages branch-publish payload.
 - Added `tools/cross-browser-smoke.mjs` and refreshed Chromium, Firefox, and WebKit screenshot smoke evidence.
 - Added `tools/audit-requirement-evidence.mjs` and `output/requirement-evidence/requirement-evidence-summary.json` to separate verified requirements from open blockers.
 - Added `bibliography/`, `docs/BIBLIOGRAPHY.md`, `tools/build-bibliography-ledger.mjs`, and `tools/audit-bibliography-ledger.mjs` for 1000 record-specific citation-slot scaffolding.
-- Initialized the local Git repository, created `0thernes/grimoire-algorithms-of-the-arcane`, enabled GitHub Pages with `build_type=workflow`, and verified the live Pages URL.
+- Initialized the local Git repository, created `0thernes/grimoire-algorithms-of-the-arcane`, configured GitHub Pages for static branch publishing, and verified the live Pages URL.
 
 ## 2026-07-05
 

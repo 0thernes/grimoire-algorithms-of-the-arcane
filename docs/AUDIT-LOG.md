@@ -21,6 +21,7 @@ Verified checks:
 - `node tools/audit-summary-aggregate.mjs`: 20 Playwright summary files, 0 total problems.
 - `node tools/audit-pages-artifact.mjs`: simulated Pages artifact, 477 files, 103 verified native cells, 0 issues.
 - `node tools/audit-requirement-evidence.mjs`: 17 requirement checks, 0 issues, 2 open items.
+- GitHub Actions deploy endpoint diagnosis: repeated fresh `actions/deploy-pages` attempts accepted one artifact but failed after deployment creation with `Deployment failed, try again later.`; current workflow now publishes a clean `gh-pages` branch instead.
 
 Changes:
 
@@ -31,10 +32,12 @@ Changes:
 - Added `output/playwright/performance-hud-audit-runner.js` and refreshed the HUD browser summary.
 - Corrected current-facing stale Markdown counts from 87 to 103 verified native cells.
 - Bounded Java verified-cell commands with `javac -J-Xmx128m` and `java -Xmx64m` after the full verifier exposed JVM native-memory reservation failures on this machine.
+- Replaced the failing Pages deploy-action route with a branch-publish workflow that copies the verified static artifact into `site/` and force-publishes it to `gh-pages`.
 
 Honesty boundary:
 
 - The HUD reports browser-exposed device facts. It does not claim direct NPU scheduling or full-device compute control without a future worker/WebGPU architecture and separate tests.
+- The branch-publish workflow avoids the failing Pages deployment endpoint; the site still depends on GitHub Pages serving the configured `gh-pages` branch.
 
 ### Knuth-Morris-Pratt verified implementation batch
 
@@ -106,7 +109,7 @@ Changes:
 - Added source/test starter batches plus `implementations/verified-cells.json`.
 - Added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`.
 - Added `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`.
-- Updated `.github/workflows/pages.yml` to copy root policy files, `docs/`, and `implementations/` into the Pages artifact.
+- Updated `.github/workflows/pages.yml` to copy root policy files, `docs/`, and `implementations/` into the Pages publish payload.
 - Added `output/playwright/implementation-matrix-audit-runner.js`.
 
 Honesty boundary:

@@ -55,7 +55,7 @@ Then verify:
 - `tools/audit-language-catalog-adapters.mjs` verifies all 50 full-catalog language adapters and writes `output/implementation-adapters/language-catalog-adapters-audit-summary.json`
 - `docs/ALGORITHMS-1000.md` contains exactly 1000 generated algorithm rows
 - `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff` are present and included in the Pages artifact
-- `tools/audit-pages-artifact.mjs` simulates the Pages deployment payload and confirms no internal `output/`, `tools/`, `.github/`, `.git/`, or `.playwright-cli/` files are copied
+- `tools/audit-pages-artifact.mjs` simulates the Pages branch-publish payload and confirms no internal `output/`, `tools/`, `.github/`, `.git/`, or `.playwright-cli/` files are copied
 - `tools/cross-browser-smoke.mjs` refreshes Chromium, Firefox, and WebKit screenshot evidence.
 - `tools/audit-requirement-evidence.mjs` records objective-level verified requirements and open blockers.
 - `tools/audit-bibliography-ledger.mjs` confirms the 1000-record bibliography ledger matches `catalog.json` and keeps unsupported publication claims locked.

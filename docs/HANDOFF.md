@@ -33,12 +33,12 @@ Public Pages URL: `https://0thernes.github.io/grimoire-algorithms-of-the-arcane/
 - `implementations/catalog-adapters-summary.json` reports 50 language adapters, 1000 records per language, and 50,000 generated adapter cells.
 - `docs/ALGORITHMS-1000.md` is generated from `catalog.json`.
 - Root non-commercial/attribution files exist: `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`.
-- `output/pages-artifact/pages-artifact-audit-summary.json` verifies the simulated GitHub Pages payload with the adapter files included: 477 files, 0 issues, no internal audit/tooling folders copied.
+- `output/pages-artifact/pages-artifact-audit-summary.json` verifies the simulated GitHub Pages branch-publish payload with the adapter files included: 477 files, 0 issues, no internal audit/tooling folders copied.
 - `output/implementation-adapters/language-catalog-adapters-audit-summary.json` verifies all 50 generated language catalog adapters.
 - `output/repo-hygiene/repo-hygiene-summary.json` verifies tracked-file inventory, Markdown links, current-facing stale-count scan, footer/file-map coverage, duplicate Markdown body scan, and generated-summary freshness.
 - `output/requirement-evidence/requirement-evidence-summary.json` reports objective requirement checks with 0 defects and open truth boundaries.
 - `bibliography/records.json` gives all 1000 records four required citation slots; `output/bibliography/bibliography-audit-summary.json` reports 0 issues and 0 filled slots.
-- The GitHub Pages workflow has completed successfully and deployed the public Pages URL.
+- The GitHub Pages route now publishes a clean generated `gh-pages` branch; the live public Pages URL is the deployment target.
 
 ## Open Truth Boundary
 

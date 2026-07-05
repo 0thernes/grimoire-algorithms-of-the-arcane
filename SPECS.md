@@ -28,7 +28,7 @@ Current local version: `0.9.13-local`.
 - `implementations/` must expose exactly 50 language/script targets and a 50,000-cell planned matrix.
 - `implementations/coverage-summary.json` must report only ledger-backed verified cells. The current verified native count is 103; future cells count only when real implementations, tests, complexity notes, and provenance notes exist.
 - `bibliography/records.json` must expose 1000 record-specific citation-slot bundles and keep inventor/date/user/deployment claims disabled until citations are filled.
-- GitHub Pages deployment must copy root license/notice/contribution/security/citation files plus `docs/` and `implementations/`.
+- GitHub Pages deployment must publish root license/notice/contribution/security/citation files plus `docs/`, `implementations/`, and `bibliography/` to the served static branch.
 - `tools/audit-repo-hygiene.mjs` must keep current-facing Markdown, footer links, file map entries, Markdown links, and generated summary counts aligned with the live ledgers.
 - Keyboard-visible focus, accessible control names, live status regions, tab ARIA, sampled contrast, and minimum control targets must pass the local accessibility audit runner.
 

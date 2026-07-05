@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages
+name: Publish GitHub Pages
 
 on:
   push:
@@ -7,29 +7,22 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v6
-
       - name: Prepare static artifact
         run: |
+          rm -rf site
           mkdir site
           cp index.html style.css viz.js catalog.json 404.html .nojekyll VERSION site/
           cp README.md ABOUT.md ARCHITECTURE.md SPECS.md KANBAN.md ISSUES.md RELEASES.md CHANGELOG.md LICENSE.md NOTICE.md CONTRIBUTING.md SECURITY.md CITATION.cff site/
@@ -37,11 +30,25 @@ jobs:
           cp -R implementations site/implementations
           cp -R bibliography site/bibliography
 
-      - name: Upload static artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: site
+      - name: Validate artifact
+        run: |
+          test -f site/index.html
+          test -f site/style.css
+          test -f site/viz.js
+          test -f site/catalog.json
+          test -f site/.nojekyll
+          test -f site/docs/INDEX.md
+          test -f site/implementations/coverage-summary.json
+          test -f site/bibliography/records.json
 
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v5
+      - name: Publish gh-pages branch
+        run: |
+          cd site
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b gh-pages
+          git add -A
+          git commit -m "Deploy ${GITHUB_SHA}"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin gh-pages
