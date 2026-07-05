@@ -45,6 +45,7 @@ node --check output\playwright\polymath-1000-audit-runner.js
 node --check output\playwright\browser-console-audit-runner.js
 node --check output\playwright\audio-live-sorting-smoke-runner.js
 node --check output\playwright\audio-interaction-smoke-runner.js
+node --check output\playwright\performance-hud-audit-runner.js
 node --check output\playwright\audio-integrity-audit-runner.js
 node --check output\playwright\audio-continuous-run-smoke-runner.js
 node --check output\playwright\static-readiness-audit-runner.js
@@ -60,6 +61,8 @@ node --check tools\verify-implementations.mjs
 node --check tools\audit-pages-artifact.mjs
 node --check tools\cross-browser-smoke.mjs
 node --check tools\audit-requirement-evidence.mjs
+node --check tools\audit-repo-hygiene.mjs
+node --check tools\audit-summary-aggregate.mjs
 node --check tools\build-bibliography-ledger.mjs
 node --check tools\audit-bibliography-ledger.mjs
 ```
@@ -77,6 +80,7 @@ Highest-value smoke runners:
 - `catalog-integrity-audit-runner.js`
 - `polymath-1000-audit-runner.js`
 - `browser-console-audit-runner.js`
+- `performance-hud-audit-runner.js`
 - `static-readiness-audit-runner.js`
 - `catalog-export-audit-runner.js`
 - `accessibility-keyboard-audit-runner.js`
@@ -156,8 +160,12 @@ npx --yes --package '@playwright/cli' playwright-cli install-browser webkit
 Summarize objective-level proof and open blockers:
 
 ```powershell
+node tools\audit-repo-hygiene.mjs
+node tools\audit-summary-aggregate.mjs
 node tools\audit-requirement-evidence.mjs
 ```
+
+`tools/audit-repo-hygiene.mjs` writes `docs/REPO-HYGIENE.md` and `output/repo-hygiene/repo-hygiene-summary.json`. It should pass before the requirement evidence ledger is trusted, because it catches stale current-facing Markdown, broken local links, missing footer/file-map coverage, duplicate Markdown bodies, and stale generated summary counts.
 
 ## Bibliography Ledger
 

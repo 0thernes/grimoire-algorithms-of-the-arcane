@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-07-05T18:40:18.885Z",
+  "target": "recursive repository hygiene audit",
+  "version": "0.9.13-local",
+  "fileCount": 587,
+  "markdownCount": 249,
+  "rootMarkdownCount": 12,
+  "docsMarkdownCount": 27,
+  "toolScriptCount": 15,
+  "implementationFileCount": 427,
+  "outputFileCount": 89,
+  "totalLines": 1046070,
+  "catalogRecords": 1000,
+  "languageTargets": 50,
+  "plannedCells": 50000,
+  "catalogAdapterCells": 50000,
+  "verifiedCells": 103,
+  "remainingCells": 49897,
+  "missingExpectedDocs": [],
+  "footerMissingDocs": [],
+  "fileMapMissingEntries": [],
+  "brokenMarkdownLinks": [],
+  "duplicateMarkdownBodies": [],
+  "duplicateHeadingLabels": [
+    {
+      "heading": "Jump Consistency Hashing",
+      "count": 15
+    },
+    {
+      "heading": "Reservoir Sampling",
+      "count": 15
+    },
+    {
+      "heading": "Cocktail Shaker Sort",
+      "count": 16
+    },
+    {
+      "heading": "Cycle Sort",
+      "count": 15
+    },
+    {
+      "heading": "Stooge Sort",
+      "count": 15
+    },
+    {
+      "heading": "Knuth-Morris-Pratt",
+      "count": 16
+    }
+  ],
+  "staleClaims": [],
+  "summaryFreshness": [
+    {
+      "file": "output/playwright/implementation-matrix-audit-summary.json",
+      "pass": true,
+      "detail": {
+        "verifiedCells": 103,
+        "ledgerVerifiedCells": 103,
+        "expected": 103
+      }
+    },
+    {
+      "file": "output/implementation-tests/implementation-test-summary.json",
+      "pass": true,
+      "detail": {
+        "totalCells": 103,
+        "passed": 103,
+        "failed": 0,
+        "expected": 103
+      }
+    },
+    {
+      "file": "output/pages-artifact/pages-artifact-audit-summary.json",
+      "pass": true,
+      "detail": {
+        "verifiedCells": 103,
+        "expected": 103,
+        "issues": 0
+      }
+    },
+    {
+      "file": "output/implementation-acceleration/acceleration-summary.json",
+      "pass": true,
+      "detail": {
+        "verifiedCells": 103,
+        "remainingCells": 49897,
+        "expectedVerified": 103,
+        "expectedRemaining": 49897
+      }
+    }
+  ],
+  "issues": []
+}

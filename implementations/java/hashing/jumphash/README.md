@@ -13,7 +13,7 @@ Catalog record: `V01-B-07` / `jumphash`
 ## Test
 
 ```powershell
-javac -d output/implementation-tests implementations/java/hashing/jumphash/JumpHash.java && java -cp output/implementation-tests JumpHash
+javac -J-Xmx128m -d output/implementation-tests implementations/java/hashing/jumphash/JumpHash.java && java -Xmx64m -cp output/implementation-tests JumpHash
 ```
 
 ## Verification Status

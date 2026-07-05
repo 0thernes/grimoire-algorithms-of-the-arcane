@@ -13,7 +13,7 @@ Catalog record: `V01-B-04` / `reservoir`
 ## Test
 
 ```powershell
-javac -d output/implementation-tests implementations/java/sampling/reservoir/Reservoir.java && java -cp output/implementation-tests Reservoir
+javac -J-Xmx128m -d output/implementation-tests implementations/java/sampling/reservoir/Reservoir.java && java -Xmx64m -cp output/implementation-tests Reservoir
 ```
 
 ## Verification Status

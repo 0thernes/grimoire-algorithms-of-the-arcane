@@ -17,6 +17,7 @@ Current local version: `0.9.13-local`.
 - Every record must expose local Run, Stop, and Reset controls.
 - Sonic controls must support Solo isolation, Overlap for visible concurrent voices, strict non-overlapping Auto 1->1000 playback, Stop All pause, Reset All restart, and a bounded Monster 1000-recipe chorus.
 - Navigation must include search/filter controls for active volume, tag, engine, source status, sonic family, and visual family.
+- Navigation must include a live Performance HUD reporting frame timing, active canvas/card counts, audio/Auto state, viewport/DPR, browser-exposed heap values, logical CPU lanes, approximate device RAM, WebGPU exposure, and OffscreenCanvas support without downshifting visual quality.
 - Every record must expose a visible source-status marker. Current source-class rows must show `source-class-only` rather than implying record-specific bibliography.
 - Every record must expose Visual, Code, and Math tabs that describe the real runtime path, evidence fields, and scheduler equations used by the page.
 - Hand-built sorting visualizers must keep running if audio is locked, and when audio is unlocked their live state events must route through `window.__grimoireRuntime.algorithmEvent(id, event)`.
@@ -25,9 +26,10 @@ Current local version: `0.9.13-local`.
 - Runtime must not depend on external fonts, CDN scripts, API calls, or secrets.
 - Root `catalog.json` must export exactly 1000 records and match the browser DOM/runtime fields for ID, nav label, title, visual recipe, sonic recipe, source ledger, source status, filter facets, and bibliography status.
 - `implementations/` must expose exactly 50 language/script targets and a 50,000-cell planned matrix.
-- `implementations/coverage-summary.json` must report `verifiedCells: 0` until real implementations, tests, complexity notes, and provenance notes exist.
+- `implementations/coverage-summary.json` must report only ledger-backed verified cells. The current verified native count is 103; future cells count only when real implementations, tests, complexity notes, and provenance notes exist.
 - `bibliography/records.json` must expose 1000 record-specific citation-slot bundles and keep inventor/date/user/deployment claims disabled until citations are filled.
 - GitHub Pages deployment must copy root license/notice/contribution/security/citation files plus `docs/` and `implementations/`.
+- `tools/audit-repo-hygiene.mjs` must keep current-facing Markdown, footer links, file map entries, Markdown links, and generated summary counts aligned with the live ledgers.
 - Keyboard-visible focus, accessible control names, live status regions, tab ARIA, sampled contrast, and minimum control targets must pass the local accessibility audit runner.
 
 ## Non-Goals

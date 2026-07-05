@@ -29,7 +29,7 @@ This is the Boyer-Moore string-search algorithm using:
 ## Test
 
 ```powershell
-javac -d output/implementation-tests implementations/java/string-search/boyermoore/BoyerMoore.java && java -cp output/implementation-tests BoyerMoore
+javac -J-Xmx128m -d output/implementation-tests implementations/java/string-search/boyermoore/BoyerMoore.java && java -Xmx64m -cp output/implementation-tests BoyerMoore
 ```
 
 ## Verification Status

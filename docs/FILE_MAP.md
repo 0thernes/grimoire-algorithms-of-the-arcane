@@ -2,9 +2,9 @@
 
 ## Root
 
-- `index.html`: static app shell, Volume I cards, global navigation, search/filter controls, sonic transport, docs footer.
-- `style.css`: responsive layout, sticky side rail, cards, tabs, proof/context rows, filter console, source badges, sonic visual states.
-- `viz.js`: catalog generation, record metadata, canvas renderers, Web Audio runtime, runtime API, observers, navigation, search/filter state.
+- `index.html`: static app shell, Volume I cards, global navigation, search/filter controls, sonic transport, Performance HUD, docs footer.
+- `style.css`: responsive layout, sticky side rail, cards, tabs, proof/context rows, filter console, Performance HUD, source badges, sonic visual states.
+- `viz.js`: catalog generation, record metadata, canvas renderers, Web Audio runtime, Performance HUD metrics, runtime API, observers, navigation, search/filter state.
 - `catalog.json`: generated 1000-record export for diffing, auditing, source work, filter facets, and reuse outside the browser runtime.
 - `404.html`: GitHub Pages fallback.
 - `.nojekyll`: empty Pages sentinel.
@@ -52,6 +52,7 @@
 - `docs/HANDOFF.md`: current operator handoff.
 - `docs/IMPLEMENTATION-MATRIX.md`: 1000 x 50 implementation matrix architecture.
 - `docs/IMPLEMENTATION-ACCELERATION.md`: contract/emitter acceleration plan for the remaining implementation matrix.
+- `docs/REPO-HYGIENE.md`: recursive tracked-file, Markdown, stale-count, footer/file-map, and summary freshness audit.
 - `docs/ALGORITHMS-1000.md`: generated catalog list of all 1000 records.
 - `docs/GITHUB-PUBLISHING.md`: GitHub repository and Pages publish plan.
 - `docs/LICENSE-POLICY.md`: license-selection notes and non-commercial warning.
@@ -82,12 +83,15 @@
 - `tools/audit-pages-artifact.mjs`: simulates the GitHub Pages artifact payload and writes an audit summary.
 - `tools/cross-browser-smoke.mjs`: refreshes Chromium, Firefox, and WebKit screenshot smoke evidence.
 - `tools/audit-requirement-evidence.mjs`: writes objective-level evidence, defects, and open blockers.
+- `tools/audit-repo-hygiene.mjs`: writes the recursive repo hygiene summary and `docs/REPO-HYGIENE.md`.
+- `tools/audit-summary-aggregate.mjs`: regenerates the aggregate Playwright summary from current summary JSON files.
 - `tools/build-bibliography-ledger.mjs`: regenerates bibliography scaffold files from `catalog.json`.
 - `tools/audit-bibliography-ledger.mjs`: verifies bibliography/catalog alignment and publication-claim locks.
 
 ## Evidence
 
 - `output/playwright/*.js`: reusable browser audit runners.
+- `output/playwright/performance-hud-audit-runner.js`: verifies the live Performance HUD fields, runtime API, and no-throttle quality boundary.
 - `output/playwright/catalog-export-runner.js`: regenerates root `catalog.json` from the live browser runtime.
 - `output/playwright/implementation-matrix-audit-runner.js`: verifies implementation scaffold counts, docs, language README files, language catalog adapters, and non-overclaim boundaries.
 - `output/implementation-adapters/language-catalog-adapters-audit-summary.json`: Node audit output for the 50 language catalog adapters.
@@ -97,6 +101,7 @@
 - `output/requirement-evidence/requirement-evidence-summary.json`: latest requirement evidence summary.
 - `output/implementation-tests/implementation-test-summary.json`: latest verified implementation-cell test summary. Compiled products in this folder are ignored.
 - `output/implementation-acceleration/acceleration-summary.json`: generated implementation acceleration queue and archetype summary.
+- `output/repo-hygiene/repo-hygiene-summary.json`: latest recursive repo hygiene summary.
 - `output/bibliography/bibliography-audit-summary.json`: latest bibliography scaffold audit summary.
 
 The Pages workflow deploys root runtime/docs, `docs/`, `implementations/`, and `bibliography/`. It does not deploy `output/playwright/` or local implementation-test binaries.

@@ -52,6 +52,8 @@ async (page) => {
     'docs/FILE_MAP.md',
     'docs/HANDOFF.md',
     'docs/IMPLEMENTATION-MATRIX.md',
+    'docs/IMPLEMENTATION-ACCELERATION.md',
+    'docs/REPO-HYGIENE.md',
     'docs/ALGORITHMS-1000.md',
     'docs/GITHUB-PUBLISHING.md',
     'docs/LICENSE-POLICY.md',

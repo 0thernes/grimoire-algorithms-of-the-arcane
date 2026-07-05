@@ -1,0 +1,94 @@
+{
+  "generatedAt": "2026-07-05T18:31:08.317Z",
+  "target": "performance HUD runtime metrics",
+  "before": {
+    "hudPresent": true,
+    "togglePressed": "true",
+    "metricTexts": {
+      "fps": "58.3 fps",
+      "frame": "17.15 ms",
+      "canvas": "2/2",
+      "cards": "100/100",
+      "audio": "0/0",
+      "notes": "0",
+      "auto": "idle",
+      "heap": "47 MB / 4.1 GB",
+      "threads": "24 lanes",
+      "ram": "32 GB",
+      "gpu": "exposed",
+      "quality": "full DPR 1.00"
+    },
+    "status": "Auto idle · 1440x900 · WebGPU exposed · OffscreenCanvas yes · heap 47 MB / 4.1 GB · quality held, no visual throttling.",
+    "snapshot": {
+      "fps": 58.6,
+      "frameMs": 17.07,
+      "activeCanvases": 2,
+      "nearViewportCanvases": 2,
+      "visibleCards": 100,
+      "mountedCards": 100,
+      "totalRecords": 1000,
+      "audioVoices": 0,
+      "audibleVoices": 0,
+      "scheduledRunNotes": 0,
+      "autoActive": false,
+      "autoCurrent": 0,
+      "autoId": null,
+      "autoRemainingMs": 0,
+      "heap": {
+        "label": "28 MB / 4.1 GB",
+        "used": 28944035,
+        "limit": 4395630592
+      },
+      "threads": 24,
+      "ramGb": 32,
+      "gpu": "WebGPU exposed",
+      "offscreenCanvas": true,
+      "sharedArrayBuffer": false,
+      "secureContext": true,
+      "viewport": "1440x900",
+      "dpr": 1,
+      "quality": "full DPR 1.00"
+    }
+  },
+  "hold": {
+    "pressed": "false",
+    "label": "Hold",
+    "status": "HUD hold: renderer and audio keep running; metric text is paused."
+  },
+  "after": {
+    "pressed": "true",
+    "label": "Live",
+    "snapshot": {
+      "fps": 60,
+      "frameMs": 16.67,
+      "activeCanvases": 2,
+      "nearViewportCanvases": 2,
+      "visibleCards": 100,
+      "mountedCards": 100,
+      "totalRecords": 1000,
+      "audioVoices": 0,
+      "audibleVoices": 0,
+      "scheduledRunNotes": 0,
+      "autoActive": false,
+      "autoCurrent": 0,
+      "autoId": null,
+      "autoRemainingMs": 0,
+      "heap": {
+        "label": "44 MB / 4.1 GB",
+        "used": 46114455,
+        "limit": 4395630592
+      },
+      "threads": 24,
+      "ramGb": 32,
+      "gpu": "WebGPU exposed",
+      "offscreenCanvas": true,
+      "sharedArrayBuffer": false,
+      "secureContext": true,
+      "viewport": "1440x900",
+      "dpr": 1,
+      "quality": "full DPR 1.00"
+    },
+    "status": "Auto idle · 1440x900 · WebGPU exposed · OffscreenCanvas yes · heap 50 MB / 4.1 GB · quality held, no visual throttling."
+  },
+  "issues": []
+}

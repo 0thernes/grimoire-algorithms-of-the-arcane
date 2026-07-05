@@ -26,6 +26,9 @@ flowchart TD
   X["Card Visual/Code/Math Tabs"] --> E
   H --> U["Live Sorting Event Emitters"]
   U --> S
+  AD["Performance HUD"] --> S
+  AD --> I
+  AD --> AE["Device/Heap/Frame Metrics"]
   Y["catalog.json"] --> Z["Implementation Matrix Generator"]
   Z --> AA["implementations/"]
   Z --> AC["Language Catalog Adapters"]
@@ -47,6 +50,7 @@ flowchart TD
 - `sonicRuntime`: browser Web Audio synthesizer. It respects the browser user-gesture unlock policy, then plays hover/click/select gestures from card metadata, bounded continuous Run-score streams from active visualizer lifecycles, throttled live algorithm-state events from hand-built sorting demos, and a bounded Monster chorus across 1000 sonic recipes.
 - Continuous Run score: explicit Run/record-picker starts create a per-card phrase scheduler. It uses record tempo/vector/ratios/kernel/fingerprint plus live requestAnimationFrame cadence, fades out through `stop(id)`, and self-stops after a bounded duration unless stopped sooner.
 - Sonic transport: `runRecord`, `stopRecord`, `resetRecord`, `startAutoSequence`, `stopAutoSequence`, `monsterButton`, and `setSonicMode` expose the same controls used by the UI. Solo mode isolates the latest run voice; overlap mode permits concurrent visible-card run voices.
+- Performance HUD: reads live requestAnimationFrame cadence, canvas lifecycle state, active cards, audio voice counts, scheduled notes, Auto state, viewport, DPR, Chromium heap values when exposed, logical CPU lanes, approximate device memory, WebGPU exposure, OffscreenCanvas support, and quality posture through `performanceStatus()`. It reports browser-exposed facts only and does not claim hidden NPU/GPU control.
 - Card technical tabs: every card renders Visual, Code, and Math panels from the card's live data attributes. The Code panel documents the real runtime API and evidence fields; the Math panel documents the scheduler equations and algorithm-family model.
 - `emitAlgorithmSound`: safe bridge from canvas visualizer loops into `window.__grimoireRuntime.algorithmEvent(id, event)`. If audio is locked or unavailable, the visualizer keeps running.
 - `applyCardAudioMetadata`: writes audio recipe fields to card data attributes and CSS variables for audio audits and recipe-keyed shimmer.
@@ -60,7 +64,7 @@ flowchart TD
 - `tools/build-implementation-matrix.mjs`: derives the 50-language implementation scaffold, full-catalog language adapters, coverage summary, special 1000-algorithm list, GitHub publishing notes, and license/notice files from `catalog.json`.
 - `tools/generate-matrix-cell.mjs`: takes a JSON spec under `specs/`, writes a multi-language native implementation batch, updates `implementations/verified-cells.json` for declared verified cells, and rebuilds the implementation matrix.
 - `tools/audit-language-catalog-adapters.mjs`: verifies all 50 language folders include a generated 1000-record catalog adapter with catalog/version alignment and non-implementation status preserved.
-- `implementations/`: planned source-code expansion tree for 50 language/script targets. It currently has 50 generated full-catalog adapters and 87 verified native implementation cells; all other planned native cells remain unverified until real code is added and audited.
+- `implementations/`: planned source-code expansion tree for 50 language/script targets. It currently has 50 generated full-catalog adapters and 103 verified native implementation cells; all other planned native cells remain unverified until real code is added and audited.
 - `drawAuthenticGlyph`: generated-record render entrypoint; calls the semantic renderer before the older generated canvas fallback.
 - `visualPointer`: global pointer state used for subtle responsive diagram inspection without changing factual rows.
 - `IntersectionObserver`: starts only canvases near the viewport to reduce browser freeze risk.
@@ -75,6 +79,8 @@ The runtime is a plain static GitHub Pages target. `index.html` uses relative lo
 
 Only visible or near-visible canvases animate. Switching volume stops active animations and clears the visible set. This keeps the page from running all 1000 animations at once.
 
+The Performance HUD does not downshift quality. It samples frame timing and runtime counts while keeping canvases at rendered DPR, preserving visual detail, color, and animation fidelity.
+
 ## Verification Surface
 
 - `output/playwright/polymath-1000-audit-runner.js` renders every record through the live page, reads canvas pixel buffers, and checks duplicate hashes, duplicate visual recipes, duplicate proof rows, missing recipe rows, old-template rows, low-detail cards, and runtime errors.
@@ -88,3 +94,4 @@ Only visible or near-visible canvases animate. Switching volume stops active ani
 - `output/playwright/audio-live-sorting-smoke-runner.js` verifies the live sorting SFX API exists, unlocks Web Audio through a real click, and checks event activation for Sleep Sort, Bogo Sort, Stooge Sort, Quantum Bogosort, Cycle Sort, Cocktail Shaker Sort, and Timsort.
 - `output/playwright/browser-console-audit-runner.js` reloads the HTTP-served page, cycles volumes, touches sonic controls, and fails on actionable console warnings/errors or page errors.
 - `output/playwright/implementation-matrix-audit-runner.js` checks `catalog.json`, `implementations/languages.json`, `implementations/coverage-summary.json`, `implementations/catalog-adapters-summary.json`, all 50 language README files, all 50 language catalog adapters, `docs/ALGORITHMS-1000.md`, license/notice files, and the 50,000 planned native / 50,000 generated adapter / ledger-matched verified implementation-cell honesty boundary.
+- `tools/audit-repo-hygiene.mjs` recursively inventories tracked files, scans Markdown links and stale current-facing counts, checks doc/footer/file-map coverage, compares generated summaries to the live ledgers, and writes `docs/REPO-HYGIENE.md`.

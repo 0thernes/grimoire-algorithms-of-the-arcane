@@ -13,7 +13,7 @@ Catalog record: `V01-B-03` / `cyclesort`
 ## Test
 
 ```powershell
-javac -d output/implementation-tests implementations/java/sorting/cyclesort/CycleSort.java && java -cp output/implementation-tests CycleSort
+javac -J-Xmx128m -d output/implementation-tests implementations/java/sorting/cyclesort/CycleSort.java && java -Xmx64m -cp output/implementation-tests CycleSort
 ```
 
 ## Verification Status

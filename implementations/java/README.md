@@ -27,13 +27,13 @@ That adapter contains all 1000 GRIMOIRE records for Java. It is meant for discov
 
 ## Verified Cells
 
-- Boyer-Moore (`boyermoore`): `javac -d output/implementation-tests implementations/java/string-search/boyermoore/BoyerMoore.java && java -cp output/implementation-tests BoyerMoore`
-- Jump Consistency Hashing (`jumphash`): `javac -d output/implementation-tests implementations/java/hashing/jumphash/JumpHash.java && java -cp output/implementation-tests JumpHash`
-- Reservoir Sampling (`reservoir`): `javac -d output/implementation-tests implementations/java/sampling/reservoir/Reservoir.java && java -cp output/implementation-tests Reservoir`
-- Cycle Sort (`cyclesort`): `javac -d output/implementation-tests implementations/java/sorting/cyclesort/CycleSort.java && java -cp output/implementation-tests CycleSort`
-- Stooge Sort (`stoogesort`): `javac -d output/implementation-tests implementations/java/sorting/stoogesort/StoogeSort.java && java -cp output/implementation-tests StoogeSort`
-- Cocktail Shaker Sort (`cocktail`): `javac -d output/implementation-tests implementations/java/sorting/cocktail/CocktailSort.java && java -cp output/implementation-tests CocktailSort`
-- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `javac -d output/implementation-tests implementations/java/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.java && java -cp output/implementation-tests KmpSearch`
+- Boyer-Moore (`boyermoore`): `javac -J-Xmx128m -d output/implementation-tests implementations/java/string-search/boyermoore/BoyerMoore.java && java -Xmx64m -cp output/implementation-tests BoyerMoore`
+- Jump Consistency Hashing (`jumphash`): `javac -J-Xmx128m -d output/implementation-tests implementations/java/hashing/jumphash/JumpHash.java && java -Xmx64m -cp output/implementation-tests JumpHash`
+- Reservoir Sampling (`reservoir`): `javac -J-Xmx128m -d output/implementation-tests implementations/java/sampling/reservoir/Reservoir.java && java -Xmx64m -cp output/implementation-tests Reservoir`
+- Cycle Sort (`cyclesort`): `javac -J-Xmx128m -d output/implementation-tests implementations/java/sorting/cyclesort/CycleSort.java && java -Xmx64m -cp output/implementation-tests CycleSort`
+- Stooge Sort (`stoogesort`): `javac -J-Xmx128m -d output/implementation-tests implementations/java/sorting/stoogesort/StoogeSort.java && java -Xmx64m -cp output/implementation-tests StoogeSort`
+- Cocktail Shaker Sort (`cocktail`): `javac -J-Xmx128m -d output/implementation-tests implementations/java/sorting/cocktail/CocktailSort.java && java -Xmx64m -cp output/implementation-tests CocktailSort`
+- Knuth-Morris-Pratt (`v8-knuth-morris-pratt-d7l8`): `javac -J-Xmx128m -d output/implementation-tests implementations/java/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.java && java -Xmx64m -cp output/implementation-tests KmpSearch`
 
 ## Required Shape For Each Algorithm
 

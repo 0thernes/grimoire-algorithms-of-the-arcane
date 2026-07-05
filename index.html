@@ -55,6 +55,27 @@
       </div>
       <div class="sonic-status" data-sonic-status aria-live="polite">Sound: solo · idle</div>
     </div>
+    <div class="performance-hud" data-performance-hud aria-label="Performance and device metrics">
+      <div class="performance-hud-head">
+        <span class="performance-title">Performance HUD</span>
+        <button type="button" data-performance-toggle aria-pressed="true">Live</button>
+      </div>
+      <div class="performance-grid" aria-live="polite">
+        <div class="perf-metric"><span>FPS</span><strong data-perf-fps>--</strong></div>
+        <div class="perf-metric"><span>Frame</span><strong data-perf-frame>--</strong></div>
+        <div class="perf-metric"><span>Canvas</span><strong data-perf-canvas>--</strong></div>
+        <div class="perf-metric"><span>Cards</span><strong data-perf-cards>--</strong></div>
+        <div class="perf-metric"><span>Audio</span><strong data-perf-audio>--</strong></div>
+        <div class="perf-metric"><span>Notes</span><strong data-perf-notes>--</strong></div>
+        <div class="perf-metric"><span>Auto</span><strong data-perf-auto>--</strong></div>
+        <div class="perf-metric"><span>Heap</span><strong data-perf-heap>--</strong></div>
+        <div class="perf-metric"><span>Threads</span><strong data-perf-threads>--</strong></div>
+        <div class="perf-metric"><span>RAM</span><strong data-perf-ram>--</strong></div>
+        <div class="perf-metric"><span>GPU</span><strong data-perf-gpu>--</strong></div>
+        <div class="perf-metric"><span>Quality</span><strong data-perf-quality>--</strong></div>
+      </div>
+      <div class="performance-status" data-performance-status>Runtime metrics measuring from this browser/device.</div>
+    </div>
     <div class="filter-console" data-filter-console aria-label="Record search and filters">
       <label class="filter-search" aria-label="Search records">
         <span>Search</span>
@@ -548,6 +569,8 @@
     <a href="docs/FILE_MAP.md">File Map</a>
     <a href="docs/HANDOFF.md">Handoff</a>
     <a href="docs/IMPLEMENTATION-MATRIX.md">Implementation Matrix</a>
+    <a href="docs/IMPLEMENTATION-ACCELERATION.md">Implementation Acceleration</a>
+    <a href="docs/REPO-HYGIENE.md">Repo Hygiene</a>
     <a href="docs/ALGORITHMS-1000.md">1000 Algorithms</a>
     <a href="docs/GITHUB-PUBLISHING.md">GitHub Publishing</a>
     <a href="docs/LICENSE-POLICY.md">License Policy</a>

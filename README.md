@@ -12,9 +12,10 @@ Live site: `https://0thernes.github.io/grimoire-algorithms-of-the-arcane/`
 - Volume I keeps the original 30 hand-built cards and 70 apocrypha.
 - Volumes II-X are generated from explicit local blueprint arrays in `viz.js`.
 - All records include deterministic IDs, signatures, visual recipe codes, sonic recipe codes, mechanism notes, verification targets, and falsification rules.
-- The current `0.9.13-local` site combines the semantic/visual renderer with deterministic Web Audio sonification, louder bounded Run-score SFX, true Solo/Overlap modes, strict sequential Auto 1->1000 playback, Stop All pause, Reset All restart, Monster chorus, per-card Visual/Code/Math evidence tabs, live state-driven sorting-demo SFX, searchable/filterable record navigation, visible source-status badges, exportable `catalog.json`, static GitHub Pages deployment scaffolding, refreshed QA evidence, reusable browser audit runners, and zero external runtime requests.
+- The current `0.9.13-local` site combines the semantic/visual renderer with deterministic Web Audio sonification, louder bounded Run-score SFX, true Solo/Overlap modes, strict sequential Auto 1->1000 playback, Stop All pause, Reset All restart, Monster chorus, per-card Visual/Code/Math evidence tabs, live state-driven sorting-demo SFX, searchable/filterable record navigation, a live Performance HUD, visible source-status badges, exportable `catalog.json`, static GitHub Pages deployment scaffolding, refreshed QA evidence, reusable browser audit runners, and zero external runtime requests.
 - The implementation pass adds the 1000 x 50 implementation matrix scaffold: 50 language/script folders, generated full-catalog adapters for all 50,000 addressable language/algorithm cells, generated language/coverage manifests, a special 1000-algorithm MD index, GitHub publishing notes, license/notice files, contribution/security/citation files, and ledger-aware audits. The current verified native corpus has 103 tested cells across Boyer-Moore, Jump Consistency Hashing, Reservoir Sampling, Cycle Sort, Stooge Sort, Cocktail Shaker Sort, and Knuth-Morris-Pratt; remaining native cells stay planned until real code and tests are added.
 - `docs/IMPLEMENTATION-ACCELERATION.md` and `output/implementation-acceleration/acceleration-summary.json` document the current no-hand-port plan: contracts plus archetype emitters, not blind JS-to-50 transliteration.
+- `tools/audit-repo-hygiene.mjs`, `docs/REPO-HYGIENE.md`, and `output/repo-hygiene/repo-hygiene-summary.json` keep current-facing Markdown, footer links, file-map entries, stale counts, broken links, and generated summary counts aligned with the live ledgers.
 - The earlier `0.9.12-local` pass added search/filter by title/text, tag, engine, active volume, source status, sonic family, and visual family. It also exposes `source-class-only` status on every card and in `catalog.json` so missing record-specific citations are visible, not buried.
 - Laptop/tablet landscape uses a sticky left navigation rail with active algorithm content on the right.
 - Phone portrait keeps the stacked navigation/content flow.
@@ -101,8 +102,9 @@ A record fails the honesty contract if any of these are true:
 - `docs/HANDOFF.md` - current status and next recommended work
 - `docs/IMPLEMENTATION-MATRIX.md` - 1000 x 50 implementation architecture and honesty gate
 - `docs/IMPLEMENTATION-ACCELERATION.md` - generator/emitter acceleration plan for the remaining native implementation cells
+- `docs/REPO-HYGIENE.md` - recursive tracked-file, Markdown link, stale-count, footer/file-map, and summary freshness audit
 - `docs/ALGORITHMS-1000.md` - generated list of all 1000 records, categories, domains, source status, sonic family, and visual family
-- `docs/GITHUB-PUBLISHING.md` - publish blocker and safe repo creation sequence
+- `docs/GITHUB-PUBLISHING.md` - public repository, Pages workflow, and live deployment notes
 - `docs/LICENSE-POLICY.md` - non-commercial/source-available license policy notes
 - `implementations/README.md` - implementation scaffold overview
 - `implementations/languages.json` - 50 language/script target manifest
@@ -122,6 +124,8 @@ A record fails the honesty contract if any of these are true:
 - `tools/audit-language-catalog-adapters.mjs` - verifies every language folder has a 1000-record generated catalog adapter
 - `tools/cross-browser-smoke.mjs` - refreshes Chromium, Firefox, and WebKit screenshot smoke evidence
 - `tools/audit-requirement-evidence.mjs` - summarizes objective-level evidence and open blockers
+- `tools/audit-repo-hygiene.mjs` - audits tracked files, Markdown links, stale counts, doc navigation, file-map coverage, and generated summary freshness
+- `tools/audit-summary-aggregate.mjs` - regenerates the aggregate Playwright summary from current summary JSON files
 - `output/playwright/pages-readiness-audit-summary.json` - desktop/tablet/phone Pages readiness audit output
 - `output/playwright/pages-readiness-audit-runner.js` - reusable responsive/layout audit runner
 - `output/playwright/catalog-integrity-audit-summary.json` - 1000-record browser-mounted catalog integrity output
@@ -136,6 +140,8 @@ A record fails the honesty contract if any of these are true:
 - `output/playwright/code-math-tabs-audit-runner.js` - reusable card technical tab audit runner
 - `output/playwright/browser-console-audit-summary.json` - console/page-error audit output
 - `output/playwright/browser-console-audit-runner.js` - reusable browser console audit runner
+- `output/playwright/performance-hud-audit-summary.json` - Performance HUD runtime audit output
+- `output/playwright/performance-hud-audit-runner.js` - reusable Performance HUD browser audit runner
 - `output/playwright/audio-live-sorting-smoke-summary.json` - live sorting event SFX smoke output
 - `output/playwright/audio-live-sorting-smoke-runner.js` - reusable live sorting event SFX runner
 - `output/playwright/audio-interaction-smoke-summary.json` - Web Audio unlock and shimmer interaction output
@@ -154,6 +160,7 @@ A record fails the honesty contract if any of these are true:
 - `output/playwright/aggregate-audit-summary.json` - aggregate issue/failure count across current summary files
 - `output/pages-artifact/pages-artifact-audit-summary.json` - simulated GitHub Pages artifact audit output
 - `output/requirement-evidence/requirement-evidence-summary.json` - requirement-by-requirement evidence ledger
+- `output/repo-hygiene/repo-hygiene-summary.json` - recursive repo hygiene audit output
 - `output/implementation-tests/implementation-test-summary.json` - verified implementation-cell test results
 - `output/bibliography/bibliography-audit-summary.json` - bibliography ledger audit output
 - `output/playwright/network-static-audit-summary.json` - local/external URL and static-resource audit output

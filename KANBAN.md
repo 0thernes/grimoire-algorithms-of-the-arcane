@@ -4,18 +4,20 @@
 
 - Added the 1000 x 50 implementation matrix scaffold under `implementations/`.
 - Added 50 language/script target folders with README gates for future real implementations.
-- Added `implementations/languages.json`, `implementations/coverage-summary.json`, and `implementations/catalog-adapters-summary.json`; current planned native cells are 50,000, generated adapter cells are 50,000, and verified native cells are 87.
+- Added `implementations/languages.json`, `implementations/coverage-summary.json`, and `implementations/catalog-adapters-summary.json`; current planned native cells are 50,000, generated adapter cells are 50,000, and verified native cells are 103.
 - Added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`.
 - Added `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff` for public non-commercial attribution posture.
 - Updated the GitHub Pages workflow to deploy root docs, license/notice/contribution/security/citation files, `docs/`, and `implementations/`.
 - Added reusable `output/playwright/implementation-matrix-audit-runner.js` and `tools/audit-language-catalog-adapters.mjs`.
 - Added `tools/audit-pages-artifact.mjs` and verified the simulated GitHub Pages artifact payload.
 - Added `tools/cross-browser-smoke.mjs` and refreshed Chromium, Firefox, and WebKit screenshot smoke evidence.
-- Added `tools/audit-requirement-evidence.mjs`, reporting 16 requirement checks, 0 defects, and 2 open blockers.
+- Added `tools/audit-requirement-evidence.mjs`, now paired with repo hygiene evidence so current-facing docs, generated summaries, and ledgers stay aligned.
+- Added `tools/audit-repo-hygiene.mjs` and `docs/REPO-HYGIENE.md` for recursive tracked-file inventory, Markdown link checks, stale-count scanning, footer/file-map coverage, and generated-summary freshness.
 - Added `bibliography/` with 1000 record-specific citation-slot bundles and a green bibliography audit.
 - Added sticky record search/filter controls for active volume, tag, engine, source status, sonic family, and visual family.
 - Added visible source-status badges to all 1000 cards and exported source/sonic/visual filter facets in `catalog.json`.
 - Added reusable `output/playwright/filter-source-audit-runner.js`; current evidence reports 1000/1000 visible source markers and 0 issues.
+- Added live Performance HUD for FPS, frame timing, canvas/card counts, audio/Auto state, heap/device capability facts, viewport/DPR, and no-throttle quality posture.
 - Added root `catalog.json` generated from the live browser runtime with 1000 records and source-class bibliography placeholders.
 - Added reusable catalog export and catalog-vs-DOM audit runners.
 - Added reusable keyboard/accessibility audit runner and fixed focus rings, compact record-picker targets, footer link target height, and active volume-tab contrast.
@@ -119,7 +121,6 @@
 
 ## Next
 
-- Connect this folder to an actual GitHub repository before attempting commit/push.
-- Add the first real implementation cells in a small verified batch before scaling toward 50,000.
+- Add the next real implementation cells in small verified batches before scaling toward 50,000.
 - Fill per-record bibliography citation slots with source URLs or citation keys.
 - Split broad categories if future source or UX review shows a group is too blended.

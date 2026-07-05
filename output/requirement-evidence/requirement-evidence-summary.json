@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-05T06:54:56.134Z",
+  "generatedAt": "2026-07-05T18:40:25.839Z",
   "target": "objective requirement evidence audit",
   "version": "0.9.13-local",
   "status": "verified-with-open-blockers",
   "requirements": [
     {
       "id": "version-consistency",
-      "description": "VERSION, catalog, language manifest, and coverage manifest agree on 0.9.13-local.",
+      "description": "VERSION, catalog, language manifest, and coverage manifest agree on the current local version marker.",
       "evidence": [
         "VERSION",
         "catalog.json",
@@ -90,6 +90,8 @@
         "docs/FILE_MAP.md",
         "docs/HANDOFF.md",
         "docs/IMPLEMENTATION-MATRIX.md",
+        "docs/IMPLEMENTATION-ACCELERATION.md",
+        "docs/REPO-HYGIENE.md",
         "docs/ALGORITHMS-1000.md",
         "docs/GITHUB-PUBLISHING.md",
         "docs/LICENSE-POLICY.md"
@@ -110,6 +112,21 @@
       ],
       "status": "verified",
       "staleGenerated": []
+    },
+    {
+      "id": "repo-hygiene-current",
+      "description": "Recursive repo hygiene audit reports no stale current-facing claims, broken Markdown links, duplicate Markdown bodies, missing doc navigation, or stale generated summaries.",
+      "evidence": [
+        "tools/audit-repo-hygiene.mjs",
+        "docs/REPO-HYGIENE.md",
+        "output/repo-hygiene/repo-hygiene-summary.json"
+      ],
+      "status": "verified",
+      "fileCount": 587,
+      "markdownCount": 249,
+      "staleClaims": 0,
+      "brokenMarkdownLinks": 0,
+      "verifiedCells": 103
     },
     {
       "id": "implementation-matrix",
@@ -190,11 +207,13 @@
         "output/playwright/audio-continuous-run-smoke-summary.json",
         "output/playwright/audio-live-sorting-smoke-summary.json",
         "output/playwright/audio-interaction-smoke-summary.json",
+        "output/playwright/performance-hud-audit-summary.json",
         "output/playwright/implementation-matrix-audit-summary.json",
         "output/implementation-adapters/language-catalog-adapters-audit-summary.json",
         "output/playwright/cross-browser-smoke-summary.json",
         "output/playwright/aggregate-audit-summary.json",
-        "output/pages-artifact/pages-artifact-audit-summary.json"
+        "output/pages-artifact/pages-artifact-audit-summary.json",
+        "output/repo-hygiene/repo-hygiene-summary.json"
       ],
       "status": "verified",
       "summaryProblems": {}
@@ -237,8 +256,8 @@
         "output/pages-artifact/pages-artifact-audit-summary.json"
       ],
       "status": "verified",
-      "siteFileCount": 435,
-      "siteBytes": 30153030,
+      "siteFileCount": 477,
+      "siteBytes": 30243560,
       "siteRemovedAfterAudit": true
     },
     {

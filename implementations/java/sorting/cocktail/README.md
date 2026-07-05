@@ -13,7 +13,7 @@ Catalog record: `V01-B-08` / `cocktail`
 ## Test
 
 ```powershell
-javac -d output/implementation-tests implementations/java/sorting/cocktail/CocktailSort.java && java -cp output/implementation-tests CocktailSort
+javac -J-Xmx128m -d output/implementation-tests implementations/java/sorting/cocktail/CocktailSort.java && java -Xmx64m -cp output/implementation-tests CocktailSort
 ```
 
 ## Verification Status

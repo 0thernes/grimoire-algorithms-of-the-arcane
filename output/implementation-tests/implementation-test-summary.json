@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T06:53:42.161Z",
+  "generatedAt": "2026-07-05T18:37:43.185Z",
   "target": "verified implementation cells",
   "manifest": "implementations/verified-cells.json",
   "totalCells": 103,
@@ -12,7 +12,7 @@
       "languageId": "javascript",
       "command": "node implementations/javascript/string-search/boyermoore/test.js",
       "status": 0,
-      "durationMs": 76,
+      "durationMs": 67,
       "stdout": "javascript boyermoore ok",
       "stderr": ""
     },
@@ -22,7 +22,7 @@
       "languageId": "typescript",
       "command": "deno run --quiet implementations/typescript/string-search/boyermoore/test.ts",
       "status": 0,
-      "durationMs": 109,
+      "durationMs": 108,
       "stdout": "typescript boyermoore ok",
       "stderr": ""
     },
@@ -42,7 +42,7 @@
       "languageId": "powershell",
       "command": "pwsh -NoProfile -File implementations/powershell/string-search/boyermoore/test.ps1",
       "status": 0,
-      "durationMs": 452,
+      "durationMs": 422,
       "stdout": "powershell boyermoore ok",
       "stderr": ""
     },
@@ -50,9 +50,9 @@
       "id": "java:boyermoore",
       "algorithmId": "boyermoore",
       "languageId": "java",
-      "command": "javac -d output/implementation-tests implementations/java/string-search/boyermoore/BoyerMoore.java && java -cp output/implementation-tests BoyerMoore",
+      "command": "javac -J-Xmx128m -d output/implementation-tests implementations/java/string-search/boyermoore/BoyerMoore.java && java -Xmx64m -cp output/implementation-tests BoyerMoore",
       "status": 0,
-      "durationMs": 711,
+      "durationMs": 699,
       "stdout": "java boyermoore ok",
       "stderr": ""
     },
@@ -62,8 +62,8 @@
       "languageId": "csharp",
       "command": "dotnet build implementations/csharp/string-search/boyermoore/BoyerMoore.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin/ && dotnet .\\output\\implementation-tests\\csharp-bin\\BoyerMoore.dll",
       "status": 0,
-      "durationMs": 3666,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:03.36\r\ncsharp boyermoore ok",
+      "durationMs": 1214,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.89\r\ncsharp boyermoore ok",
       "stderr": ""
     },
     {
@@ -72,8 +72,8 @@
       "languageId": "fsharp",
       "command": "dotnet build implementations/fsharp/string-search/boyermoore/BoyerMoore.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin/ && dotnet .\\output\\implementation-tests\\fsharp-bin\\BoyerMoore.dll",
       "status": 0,
-      "durationMs": 3151,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:02.79\r\nfsharp boyermoore ok",
+      "durationMs": 1149,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.84\r\nfsharp boyermoore ok",
       "stderr": ""
     },
     {
@@ -82,7 +82,7 @@
       "languageId": "c",
       "command": "gcc implementations/c/string-search/boyermoore/boyer_moore.c -DTEST -o output/implementation-tests/boyermoore_c.exe && .\\output\\implementation-tests\\boyermoore_c.exe",
       "status": 0,
-      "durationMs": 337,
+      "durationMs": 288,
       "stdout": "c boyermoore ok",
       "stderr": ""
     },
@@ -92,7 +92,7 @@
       "languageId": "cpp",
       "command": "g++ implementations/cpp/string-search/boyermoore/boyer_moore.cpp -std=c++17 -o output/implementation-tests/boyermoore_cpp.exe && .\\output\\implementation-tests\\boyermoore_cpp.exe",
       "status": 0,
-      "durationMs": 1120,
+      "durationMs": 640,
       "stdout": "cpp boyermoore ok",
       "stderr": ""
     },
@@ -102,7 +102,7 @@
       "languageId": "fortran",
       "command": "gfortran implementations/fortran/string-search/boyermoore/boyer_moore.f90 -o output/implementation-tests/boyermoore_fortran.exe && .\\output\\implementation-tests\\boyermoore_fortran.exe",
       "status": 0,
-      "durationMs": 442,
+      "durationMs": 303,
       "stdout": "fortran boyermoore ok",
       "stderr": ""
     },
@@ -112,7 +112,7 @@
       "languageId": "go",
       "command": "go run implementations/go/string-search/boyermoore/boyer_moore.go",
       "status": 0,
-      "durationMs": 397,
+      "durationMs": 488,
       "stdout": "go boyermoore ok",
       "stderr": ""
     },
@@ -122,7 +122,7 @@
       "languageId": "ruby",
       "command": "ruby implementations/ruby/string-search/boyermoore/boyer_moore.rb",
       "status": 0,
-      "durationMs": 164,
+      "durationMs": 120,
       "stdout": "ruby boyermoore ok",
       "stderr": ""
     },
@@ -132,7 +132,7 @@
       "languageId": "perl",
       "command": "perl implementations/perl/string-search/boyermoore/boyer_moore.pl",
       "status": 0,
-      "durationMs": 58,
+      "durationMs": 44,
       "stdout": "perl boyermoore ok",
       "stderr": ""
     },
@@ -142,7 +142,7 @@
       "languageId": "bash",
       "command": "bash implementations/bash/string-search/boyermoore/test.sh",
       "status": 0,
-      "durationMs": 7829,
+      "durationMs": 1778,
       "stdout": "bash boyermoore ok",
       "stderr": ""
     },
@@ -152,8 +152,8 @@
       "languageId": "visual-basic",
       "command": "dotnet build implementations/visual-basic/string-search/boyermoore/BoyerMoore.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin/ && dotnet .\\output\\implementation-tests\\visual-basic-bin\\BoyerMoore.dll",
       "status": 0,
-      "durationMs": 4003,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:03.55\r\nvisual-basic boyermoore ok",
+      "durationMs": 1181,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.88\r\nvisual-basic boyermoore ok",
       "stderr": ""
     },
     {
@@ -162,7 +162,7 @@
       "languageId": "javascript",
       "command": "node implementations/javascript/hashing/jumphash/test.js",
       "status": 0,
-      "durationMs": 92,
+      "durationMs": 73,
       "stdout": "javascript jumphash ok",
       "stderr": ""
     },
@@ -172,7 +172,7 @@
       "languageId": "typescript",
       "command": "deno run --quiet implementations/typescript/hashing/jumphash/test.ts",
       "status": 0,
-      "durationMs": 159,
+      "durationMs": 110,
       "stdout": "typescript jumphash ok",
       "stderr": ""
     },
@@ -182,7 +182,7 @@
       "languageId": "python",
       "command": "python -B implementations/python/hashing/jumphash/test_jumphash.py",
       "status": 0,
-      "durationMs": 83,
+      "durationMs": 66,
       "stdout": "python jumphash ok",
       "stderr": ""
     },
@@ -192,7 +192,7 @@
       "languageId": "powershell",
       "command": "pwsh -NoProfile -File implementations/powershell/hashing/jumphash/test.ps1",
       "status": 0,
-      "durationMs": 1345,
+      "durationMs": 945,
       "stdout": "powershell jumphash ok",
       "stderr": ""
     },
@@ -200,9 +200,9 @@
       "id": "java:jumphash",
       "algorithmId": "jumphash",
       "languageId": "java",
-      "command": "javac -d output/implementation-tests implementations/java/hashing/jumphash/JumpHash.java && java -cp output/implementation-tests JumpHash",
+      "command": "javac -J-Xmx128m -d output/implementation-tests implementations/java/hashing/jumphash/JumpHash.java && java -Xmx64m -cp output/implementation-tests JumpHash",
       "status": 0,
-      "durationMs": 974,
+      "durationMs": 667,
       "stdout": "java jumphash ok",
       "stderr": ""
     },
@@ -212,8 +212,8 @@
       "languageId": "csharp",
       "command": "dotnet build implementations/csharp/hashing/jumphash/JumpHash.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-jumphash/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-jumphash/ && dotnet .\\output\\implementation-tests\\csharp-bin-jumphash\\JumpHash.dll",
       "status": 0,
-      "durationMs": 2025,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.63\r\ncsharp jumphash ok",
+      "durationMs": 1209,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.92\r\ncsharp jumphash ok",
       "stderr": ""
     },
     {
@@ -222,8 +222,8 @@
       "languageId": "fsharp",
       "command": "dotnet build implementations/fsharp/hashing/jumphash/JumpHash.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-jumphash/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-jumphash/ && dotnet .\\output\\implementation-tests\\fsharp-bin-jumphash\\JumpHash.dll",
       "status": 0,
-      "durationMs": 3344,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:02.95\r\nfsharp jumphash ok",
+      "durationMs": 1074,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.78\r\nfsharp jumphash ok",
       "stderr": ""
     },
     {
@@ -232,7 +232,7 @@
       "languageId": "c",
       "command": "gcc implementations/c/hashing/jumphash/jump_hash.c -DTEST -o output/implementation-tests/jumphash_c.exe && .\\output\\implementation-tests\\jumphash_c.exe",
       "status": 0,
-      "durationMs": 365,
+      "durationMs": 285,
       "stdout": "c jumphash ok",
       "stderr": ""
     },
@@ -242,7 +242,7 @@
       "languageId": "cpp",
       "command": "g++ implementations/cpp/hashing/jumphash/jump_hash.cpp -std=c++17 -o output/implementation-tests/jumphash_cpp.exe && .\\output\\implementation-tests\\jumphash_cpp.exe",
       "status": 0,
-      "durationMs": 932,
+      "durationMs": 515,
       "stdout": "cpp jumphash ok",
       "stderr": ""
     },
@@ -252,7 +252,7 @@
       "languageId": "go",
       "command": "go run implementations/go/hashing/jumphash/jump_hash.go",
       "status": 0,
-      "durationMs": 440,
+      "durationMs": 410,
       "stdout": "go jumphash ok",
       "stderr": ""
     },
@@ -262,7 +262,7 @@
       "languageId": "ruby",
       "command": "ruby implementations/ruby/hashing/jumphash/jump_hash.rb",
       "status": 0,
-      "durationMs": 175,
+      "durationMs": 126,
       "stdout": "ruby jumphash ok",
       "stderr": ""
     },
@@ -272,7 +272,7 @@
       "languageId": "perl",
       "command": "perl implementations/perl/hashing/jumphash/jump_hash.pl",
       "status": 0,
-      "durationMs": 113,
+      "durationMs": 105,
       "stdout": "perl jumphash ok",
       "stderr": ""
     },
@@ -282,7 +282,7 @@
       "languageId": "bash",
       "command": "bash implementations/bash/hashing/jumphash/test.sh",
       "status": 0,
-      "durationMs": 223,
+      "durationMs": 163,
       "stdout": "bash jumphash ok",
       "stderr": ""
     },
@@ -292,8 +292,8 @@
       "languageId": "visual-basic",
       "command": "dotnet build implementations/visual-basic/hashing/jumphash/JumpHash.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-jumphash/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-jumphash/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-jumphash\\JumpHash.dll",
       "status": 0,
-      "durationMs": 1616,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.27\r\nvisual-basic jumphash ok",
+      "durationMs": 1149,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.88\r\nvisual-basic jumphash ok",
       "stderr": ""
     },
     {
@@ -302,7 +302,7 @@
       "languageId": "javascript",
       "command": "node implementations/javascript/sampling/reservoir/test.js",
       "status": 0,
-      "durationMs": 103,
+      "durationMs": 67,
       "stdout": "javascript reservoir ok",
       "stderr": ""
     },
@@ -312,7 +312,7 @@
       "languageId": "typescript",
       "command": "deno run --quiet implementations/typescript/sampling/reservoir/test.ts",
       "status": 0,
-      "durationMs": 146,
+      "durationMs": 111,
       "stdout": "typescript reservoir ok",
       "stderr": ""
     },
@@ -322,7 +322,7 @@
       "languageId": "python",
       "command": "python -B implementations/python/sampling/reservoir/test_reservoir.py",
       "status": 0,
-      "durationMs": 98,
+      "durationMs": 65,
       "stdout": "python reservoir ok",
       "stderr": ""
     },
@@ -332,7 +332,7 @@
       "languageId": "powershell",
       "command": "pwsh -NoProfile -File implementations/powershell/sampling/reservoir/test.ps1",
       "status": 0,
-      "durationMs": 555,
+      "durationMs": 451,
       "stdout": "powershell reservoir ok",
       "stderr": ""
     },
@@ -340,9 +340,9 @@
       "id": "java:reservoir",
       "algorithmId": "reservoir",
       "languageId": "java",
-      "command": "javac -d output/implementation-tests implementations/java/sampling/reservoir/Reservoir.java && java -cp output/implementation-tests Reservoir",
+      "command": "javac -J-Xmx128m -d output/implementation-tests implementations/java/sampling/reservoir/Reservoir.java && java -Xmx64m -cp output/implementation-tests Reservoir",
       "status": 0,
-      "durationMs": 966,
+      "durationMs": 687,
       "stdout": "java reservoir ok",
       "stderr": ""
     },
@@ -352,8 +352,8 @@
       "languageId": "csharp",
       "command": "dotnet build implementations/csharp/sampling/reservoir/Reservoir.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-reservoir/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-reservoir/ && dotnet .\\output\\implementation-tests\\csharp-bin-reservoir\\Reservoir.dll",
       "status": 0,
-      "durationMs": 1530,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.17\r\ncsharp reservoir ok",
+      "durationMs": 1114,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.83\r\ncsharp reservoir ok",
       "stderr": ""
     },
     {
@@ -362,8 +362,8 @@
       "languageId": "fsharp",
       "command": "dotnet build implementations/fsharp/sampling/reservoir/Reservoir.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-reservoir/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-reservoir/ && dotnet .\\output\\implementation-tests\\fsharp-bin-reservoir\\Reservoir.dll",
       "status": 0,
-      "durationMs": 3326,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:02.95\r\nfsharp reservoir ok",
+      "durationMs": 1119,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.80\r\nfsharp reservoir ok",
       "stderr": ""
     },
     {
@@ -372,7 +372,7 @@
       "languageId": "c",
       "command": "gcc implementations/c/sampling/reservoir/reservoir.c -DTEST -o output/implementation-tests/reservoir_c.exe && .\\output\\implementation-tests\\reservoir_c.exe",
       "status": 0,
-      "durationMs": 349,
+      "durationMs": 272,
       "stdout": "c reservoir ok",
       "stderr": ""
     },
@@ -382,7 +382,7 @@
       "languageId": "cpp",
       "command": "g++ implementations/cpp/sampling/reservoir/reservoir.cpp -std=c++17 -o output/implementation-tests/reservoir_cpp.exe && .\\output\\implementation-tests\\reservoir_cpp.exe",
       "status": 0,
-      "durationMs": 880,
+      "durationMs": 671,
       "stdout": "cpp reservoir ok",
       "stderr": ""
     },
@@ -392,7 +392,7 @@
       "languageId": "go",
       "command": "go run implementations/go/sampling/reservoir/reservoir.go",
       "status": 0,
-      "durationMs": 605,
+      "durationMs": 348,
       "stdout": "go reservoir ok",
       "stderr": ""
     },
@@ -402,7 +402,7 @@
       "languageId": "ruby",
       "command": "ruby implementations/ruby/sampling/reservoir/reservoir.rb",
       "status": 0,
-      "durationMs": 164,
+      "durationMs": 121,
       "stdout": "ruby reservoir ok",
       "stderr": ""
     },
@@ -412,7 +412,7 @@
       "languageId": "perl",
       "command": "perl implementations/perl/sampling/reservoir/reservoir.pl",
       "status": 0,
-      "durationMs": 57,
+      "durationMs": 44,
       "stdout": "perl reservoir ok",
       "stderr": ""
     },
@@ -422,7 +422,7 @@
       "languageId": "bash",
       "command": "bash implementations/bash/sampling/reservoir/test.sh",
       "status": 0,
-      "durationMs": 166,
+      "durationMs": 133,
       "stdout": "bash reservoir ok",
       "stderr": ""
     },
@@ -432,8 +432,8 @@
       "languageId": "visual-basic",
       "command": "dotnet build implementations/visual-basic/sampling/reservoir/Reservoir.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-reservoir/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-reservoir/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-reservoir\\Reservoir.dll",
       "status": 0,
-      "durationMs": 1477,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.13\r\nvisual-basic reservoir ok",
+      "durationMs": 1109,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.81\r\nvisual-basic reservoir ok",
       "stderr": ""
     },
     {
@@ -442,7 +442,7 @@
       "languageId": "javascript",
       "command": "node implementations/javascript/sorting/cyclesort/test.js",
       "status": 0,
-      "durationMs": 91,
+      "durationMs": 76,
       "stdout": "javascript cyclesort ok",
       "stderr": ""
     },
@@ -452,7 +452,7 @@
       "languageId": "typescript",
       "command": "deno run --quiet implementations/typescript/sorting/cyclesort/test.ts",
       "status": 0,
-      "durationMs": 138,
+      "durationMs": 131,
       "stdout": "typescript cyclesort ok",
       "stderr": ""
     },
@@ -462,7 +462,7 @@
       "languageId": "python",
       "command": "python -B implementations/python/sorting/cyclesort/test_cyclesort.py",
       "status": 0,
-      "durationMs": 68,
+      "durationMs": 63,
       "stdout": "python cyclesort ok",
       "stderr": ""
     },
@@ -472,7 +472,7 @@
       "languageId": "powershell",
       "command": "pwsh -NoProfile -File implementations/powershell/sorting/cyclesort/test.ps1",
       "status": 0,
-      "durationMs": 582,
+      "durationMs": 405,
       "stdout": "powershell cyclesort ok",
       "stderr": ""
     },
@@ -480,9 +480,9 @@
       "id": "java:cyclesort",
       "algorithmId": "cyclesort",
       "languageId": "java",
-      "command": "javac -d output/implementation-tests implementations/java/sorting/cyclesort/CycleSort.java && java -cp output/implementation-tests CycleSort",
+      "command": "javac -J-Xmx128m -d output/implementation-tests implementations/java/sorting/cyclesort/CycleSort.java && java -Xmx64m -cp output/implementation-tests CycleSort",
       "status": 0,
-      "durationMs": 941,
+      "durationMs": 661,
       "stdout": "java cyclesort ok",
       "stderr": ""
     },
@@ -492,8 +492,8 @@
       "languageId": "csharp",
       "command": "dotnet build implementations/csharp/sorting/cyclesort/CycleSort.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-cyclesort/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-cyclesort/ && dotnet .\\output\\implementation-tests\\csharp-bin-cyclesort\\CycleSort.dll",
       "status": 0,
-      "durationMs": 1832,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.45\r\ncsharp cyclesort ok",
+      "durationMs": 1130,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.83\r\ncsharp cyclesort ok",
       "stderr": ""
     },
     {
@@ -502,8 +502,8 @@
       "languageId": "fsharp",
       "command": "dotnet build implementations/fsharp/sorting/cyclesort/CycleSort.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-cyclesort/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-cyclesort/ && dotnet .\\output\\implementation-tests\\fsharp-bin-cyclesort\\CycleSort.dll",
       "status": 0,
-      "durationMs": 2811,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:02.46\r\nfsharp cyclesort ok",
+      "durationMs": 1186,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.87\r\nfsharp cyclesort ok",
       "stderr": ""
     },
     {
@@ -512,7 +512,7 @@
       "languageId": "c",
       "command": "gcc implementations/c/sorting/cyclesort/cyclesort.c -DTEST -o output/implementation-tests/cyclesort_c.exe && .\\output\\implementation-tests\\cyclesort_c.exe",
       "status": 0,
-      "durationMs": 338,
+      "durationMs": 259,
       "stdout": "c cyclesort ok",
       "stderr": ""
     },
@@ -522,7 +522,7 @@
       "languageId": "cpp",
       "command": "g++ implementations/cpp/sorting/cyclesort/cyclesort.cpp -std=c++17 -o output/implementation-tests/cyclesort_cpp.exe && .\\output\\implementation-tests\\cyclesort_cpp.exe",
       "status": 0,
-      "durationMs": 902,
+      "durationMs": 548,
       "stdout": "cpp cyclesort ok",
       "stderr": ""
     },
@@ -532,7 +532,7 @@
       "languageId": "go",
       "command": "go run implementations/go/sorting/cyclesort/cyclesort.go",
       "status": 0,
-      "durationMs": 730,
+      "durationMs": 368,
       "stdout": "go cyclesort ok",
       "stderr": ""
     },
@@ -542,7 +542,7 @@
       "languageId": "ruby",
       "command": "ruby implementations/ruby/sorting/cyclesort/cyclesort.rb",
       "status": 0,
-      "durationMs": 202,
+      "durationMs": 123,
       "stdout": "ruby cyclesort ok",
       "stderr": ""
     },
@@ -552,7 +552,7 @@
       "languageId": "perl",
       "command": "perl implementations/perl/sorting/cyclesort/cyclesort.pl",
       "status": 0,
-      "durationMs": 68,
+      "durationMs": 50,
       "stdout": "perl cyclesort ok",
       "stderr": ""
     },
@@ -562,7 +562,7 @@
       "languageId": "bash",
       "command": "bash implementations/bash/sorting/cyclesort/test.sh",
       "status": 0,
-      "durationMs": 192,
+      "durationMs": 129,
       "stdout": "bash cyclesort ok",
       "stderr": ""
     },
@@ -572,8 +572,8 @@
       "languageId": "visual-basic",
       "command": "dotnet build implementations/visual-basic/sorting/cyclesort/CycleSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-cyclesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-cyclesort/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-cyclesort\\CycleSort.dll",
       "status": 0,
-      "durationMs": 1507,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.16\r\nvisual-basic cyclesort ok",
+      "durationMs": 1187,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.88\r\nvisual-basic cyclesort ok",
       "stderr": ""
     },
     {
@@ -582,7 +582,7 @@
       "languageId": "javascript",
       "command": "node implementations/javascript/sorting/stoogesort/test.js",
       "status": 0,
-      "durationMs": 88,
+      "durationMs": 72,
       "stdout": "javascript stoogesort ok",
       "stderr": ""
     },
@@ -592,7 +592,7 @@
       "languageId": "typescript",
       "command": "deno run --quiet implementations/typescript/sorting/stoogesort/test.ts",
       "status": 0,
-      "durationMs": 138,
+      "durationMs": 124,
       "stdout": "typescript stoogesort ok",
       "stderr": ""
     },
@@ -602,7 +602,7 @@
       "languageId": "python",
       "command": "python -B implementations/python/sorting/stoogesort/test_stoogesort.py",
       "status": 0,
-      "durationMs": 69,
+      "durationMs": 57,
       "stdout": "python stoogesort ok",
       "stderr": ""
     },
@@ -612,7 +612,7 @@
       "languageId": "powershell",
       "command": "pwsh -NoProfile -File implementations/powershell/sorting/stoogesort/test.ps1",
       "status": 0,
-      "durationMs": 512,
+      "durationMs": 459,
       "stdout": "powershell stoogesort ok",
       "stderr": ""
     },
@@ -620,9 +620,9 @@
       "id": "java:stoogesort",
       "algorithmId": "stoogesort",
       "languageId": "java",
-      "command": "javac -d output/implementation-tests implementations/java/sorting/stoogesort/StoogeSort.java && java -cp output/implementation-tests StoogeSort",
+      "command": "javac -J-Xmx128m -d output/implementation-tests implementations/java/sorting/stoogesort/StoogeSort.java && java -Xmx64m -cp output/implementation-tests StoogeSort",
       "status": 0,
-      "durationMs": 769,
+      "durationMs": 631,
       "stdout": "java stoogesort ok",
       "stderr": ""
     },
@@ -632,8 +632,8 @@
       "languageId": "csharp",
       "command": "dotnet build implementations/csharp/sorting/stoogesort/StoogeSort.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-stoogesort/ && dotnet .\\output\\implementation-tests\\csharp-bin-stoogesort\\StoogeSort.dll",
       "status": 0,
-      "durationMs": 1487,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.12\r\ncsharp stoogesort ok",
+      "durationMs": 1197,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.89\r\ncsharp stoogesort ok",
       "stderr": ""
     },
     {
@@ -642,8 +642,8 @@
       "languageId": "fsharp",
       "command": "dotnet build implementations/fsharp/sorting/stoogesort/StoogeSort.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-stoogesort/ && dotnet .\\output\\implementation-tests\\fsharp-bin-stoogesort\\StoogeSort.dll",
       "status": 0,
-      "durationMs": 2767,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:02.39\r\nfsharp stoogesort ok",
+      "durationMs": 1173,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.85\r\nfsharp stoogesort ok",
       "stderr": ""
     },
     {
@@ -652,7 +652,7 @@
       "languageId": "c",
       "command": "gcc implementations/c/sorting/stoogesort/stoogesort.c -o output/implementation-tests/stoogesort_c.exe && .\\output\\implementation-tests\\stoogesort_c.exe",
       "status": 0,
-      "durationMs": 307,
+      "durationMs": 255,
       "stdout": "c stoogesort ok",
       "stderr": ""
     },
@@ -662,7 +662,7 @@
       "languageId": "cpp",
       "command": "g++ implementations/cpp/sorting/stoogesort/stoogesort.cpp -std=c++17 -o output/implementation-tests/stoogesort_cpp.exe && .\\output\\implementation-tests\\stoogesort_cpp.exe",
       "status": 0,
-      "durationMs": 564,
+      "durationMs": 542,
       "stdout": "cpp stoogesort ok",
       "stderr": ""
     },
@@ -672,7 +672,7 @@
       "languageId": "go",
       "command": "go run implementations/go/sorting/stoogesort/stoogesort.go",
       "status": 0,
-      "durationMs": 299,
+      "durationMs": 407,
       "stdout": "go stoogesort ok",
       "stderr": ""
     },
@@ -682,7 +682,7 @@
       "languageId": "ruby",
       "command": "ruby implementations/ruby/sorting/stoogesort/stoogesort.rb",
       "status": 0,
-      "durationMs": 150,
+      "durationMs": 127,
       "stdout": "ruby stoogesort ok",
       "stderr": ""
     },
@@ -692,7 +692,7 @@
       "languageId": "perl",
       "command": "perl implementations/perl/sorting/stoogesort/stoogesort.pl",
       "status": 0,
-      "durationMs": 65,
+      "durationMs": 51,
       "stdout": "perl stoogesort ok",
       "stderr": ""
     },
@@ -702,7 +702,7 @@
       "languageId": "bash",
       "command": "bash implementations/bash/sorting/stoogesort/test.sh",
       "status": 0,
-      "durationMs": 190,
+      "durationMs": 146,
       "stdout": "bash stoogesort ok",
       "stderr": ""
     },
@@ -712,8 +712,8 @@
       "languageId": "visual-basic",
       "command": "dotnet build implementations/visual-basic/sorting/stoogesort/StoogeSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-stoogesort/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-stoogesort\\StoogeSort.dll",
       "status": 0,
-      "durationMs": 1773,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.39\r\nvisual-basic stoogesort ok",
+      "durationMs": 1135,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.84\r\nvisual-basic stoogesort ok",
       "stderr": ""
     },
     {
@@ -722,7 +722,7 @@
       "languageId": "javascript",
       "command": "node implementations/javascript/sorting/cocktail/test.js",
       "status": 0,
-      "durationMs": 90,
+      "durationMs": 74,
       "stdout": "javascript cocktail ok",
       "stderr": ""
     },
@@ -732,7 +732,7 @@
       "languageId": "typescript",
       "command": "deno run --quiet implementations/typescript/sorting/cocktail/test.ts",
       "status": 0,
-      "durationMs": 130,
+      "durationMs": 126,
       "stdout": "typescript cocktail ok",
       "stderr": ""
     },
@@ -742,7 +742,7 @@
       "languageId": "python",
       "command": "python -B implementations/python/sorting/cocktail/test_cocktail.py",
       "status": 0,
-      "durationMs": 67,
+      "durationMs": 59,
       "stdout": "python cocktail ok",
       "stderr": ""
     },
@@ -752,7 +752,7 @@
       "languageId": "powershell",
       "command": "pwsh -NoProfile -File implementations/powershell/sorting/cocktail/test.ps1",
       "status": 0,
-      "durationMs": 517,
+      "durationMs": 395,
       "stdout": "powershell cocktail ok",
       "stderr": ""
     },
@@ -760,9 +760,9 @@
       "id": "java:cocktail",
       "algorithmId": "cocktail",
       "languageId": "java",
-      "command": "javac -d output/implementation-tests implementations/java/sorting/cocktail/CocktailSort.java && java -cp output/implementation-tests CocktailSort",
+      "command": "javac -J-Xmx128m -d output/implementation-tests implementations/java/sorting/cocktail/CocktailSort.java && java -Xmx64m -cp output/implementation-tests CocktailSort",
       "status": 0,
-      "durationMs": 711,
+      "durationMs": 621,
       "stdout": "java cocktail ok",
       "stderr": ""
     },
@@ -772,8 +772,8 @@
       "languageId": "csharp",
       "command": "dotnet build implementations/csharp/sorting/cocktail/CocktailSort.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-cocktail/ && dotnet .\\output\\implementation-tests\\csharp-bin-cocktail\\CocktailSort.dll",
       "status": 0,
-      "durationMs": 1534,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.20\r\ncsharp cocktail ok",
+      "durationMs": 1124,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.83\r\ncsharp cocktail ok",
       "stderr": ""
     },
     {
@@ -782,8 +782,8 @@
       "languageId": "fsharp",
       "command": "dotnet build implementations/fsharp/sorting/cocktail/CocktailSort.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-cocktail/ && dotnet .\\output\\implementation-tests\\fsharp-bin-cocktail\\CocktailSort.dll",
       "status": 0,
-      "durationMs": 3135,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:02.77\r\nfsharp cocktail ok",
+      "durationMs": 1061,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.79\r\nfsharp cocktail ok",
       "stderr": ""
     },
     {
@@ -792,7 +792,7 @@
       "languageId": "c",
       "command": "gcc implementations/c/sorting/cocktail/cocktail_sort.c -DTEST -o output/implementation-tests/cocktail_c.exe && .\\output\\implementation-tests\\cocktail_c.exe",
       "status": 0,
-      "durationMs": 351,
+      "durationMs": 232,
       "stdout": "c cocktail ok",
       "stderr": ""
     },
@@ -802,7 +802,7 @@
       "languageId": "cpp",
       "command": "g++ implementations/cpp/sorting/cocktail/cocktail_sort.cpp -std=c++17 -o output/implementation-tests/cocktail_cpp.exe && .\\output\\implementation-tests\\cocktail_cpp.exe",
       "status": 0,
-      "durationMs": 719,
+      "durationMs": 481,
       "stdout": "cpp cocktail ok",
       "stderr": ""
     },
@@ -812,7 +812,7 @@
       "languageId": "go",
       "command": "go run implementations/go/sorting/cocktail/cocktail_sort.go",
       "status": 0,
-      "durationMs": 353,
+      "durationMs": 257,
       "stdout": "go cocktail ok",
       "stderr": ""
     },
@@ -822,7 +822,7 @@
       "languageId": "rust",
       "command": "rustc --target x86_64-pc-windows-gnu implementations/rust/sorting/cocktail/cocktail_sort.rs -o output/implementation-tests/cocktail_rust.exe && .\\output\\implementation-tests\\cocktail_rust.exe",
       "status": 0,
-      "durationMs": 609,
+      "durationMs": 413,
       "stdout": "rust cocktail ok",
       "stderr": ""
     },
@@ -832,7 +832,7 @@
       "languageId": "ruby",
       "command": "ruby implementations/ruby/sorting/cocktail/cocktail_sort.rb",
       "status": 0,
-      "durationMs": 174,
+      "durationMs": 144,
       "stdout": "ruby cocktail ok",
       "stderr": ""
     },
@@ -842,7 +842,7 @@
       "languageId": "perl",
       "command": "perl implementations/perl/sorting/cocktail/cocktail_sort.pl",
       "status": 0,
-      "durationMs": 59,
+      "durationMs": 56,
       "stdout": "perl cocktail ok",
       "stderr": ""
     },
@@ -852,7 +852,7 @@
       "languageId": "bash",
       "command": "bash implementations/bash/sorting/cocktail/test.sh",
       "status": 0,
-      "durationMs": 168,
+      "durationMs": 146,
       "stdout": "bash cocktail ok",
       "stderr": ""
     },
@@ -862,8 +862,8 @@
       "languageId": "visual-basic",
       "command": "dotnet build implementations/visual-basic/sorting/cocktail/CocktailSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-cocktail/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-cocktail\\CocktailSort.dll",
       "status": 0,
-      "durationMs": 1504,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.12\r\nvisual-basic cocktail ok",
+      "durationMs": 1038,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.76\r\nvisual-basic cocktail ok",
       "stderr": ""
     },
     {
@@ -872,7 +872,7 @@
       "languageId": "fortran",
       "command": "gfortran implementations/fortran/sorting/cocktail/cocktail_sort.f90 -o output/implementation-tests/cocktail_fortran.exe && .\\output\\implementation-tests\\cocktail_fortran.exe",
       "status": 0,
-      "durationMs": 305,
+      "durationMs": 236,
       "stdout": "fortran cocktail ok",
       "stderr": ""
     },
@@ -882,7 +882,7 @@
       "languageId": "javascript",
       "command": "node implementations/javascript/string-search/v8-knuth-morris-pratt-d7l8/test.js",
       "status": 0,
-      "durationMs": 88,
+      "durationMs": 76,
       "stdout": "javascript kmp ok",
       "stderr": ""
     },
@@ -892,7 +892,7 @@
       "languageId": "typescript",
       "command": "deno run --quiet implementations/typescript/string-search/v8-knuth-morris-pratt-d7l8/test.ts",
       "status": 0,
-      "durationMs": 152,
+      "durationMs": 100,
       "stdout": "typescript kmp ok",
       "stderr": ""
     },
@@ -902,7 +902,7 @@
       "languageId": "python",
       "command": "python -B implementations/python/string-search/v8-knuth-morris-pratt-d7l8/test_kmp.py",
       "status": 0,
-      "durationMs": 73,
+      "durationMs": 55,
       "stdout": "python kmp ok",
       "stderr": ""
     },
@@ -912,7 +912,7 @@
       "languageId": "powershell",
       "command": "pwsh -NoProfile -File implementations/powershell/string-search/v8-knuth-morris-pratt-d7l8/test.ps1",
       "status": 0,
-      "durationMs": 582,
+      "durationMs": 392,
       "stdout": "powershell kmp ok",
       "stderr": ""
     },
@@ -920,9 +920,9 @@
       "id": "java:v8-knuth-morris-pratt-d7l8",
       "algorithmId": "v8-knuth-morris-pratt-d7l8",
       "languageId": "java",
-      "command": "javac -d output/implementation-tests implementations/java/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.java && java -cp output/implementation-tests KmpSearch",
+      "command": "javac -J-Xmx128m -d output/implementation-tests implementations/java/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.java && java -Xmx64m -cp output/implementation-tests KmpSearch",
       "status": 0,
-      "durationMs": 924,
+      "durationMs": 682,
       "stdout": "java kmp ok",
       "stderr": ""
     },
@@ -932,8 +932,8 @@
       "languageId": "csharp",
       "command": "dotnet build implementations/csharp/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-kmp/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-kmp/ && dotnet .\\output\\implementation-tests\\csharp-bin-kmp\\KmpSearch.dll",
       "status": 0,
-      "durationMs": 1799,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.43\r\ncsharp kmp ok",
+      "durationMs": 1139,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.84\r\ncsharp kmp ok",
       "stderr": ""
     },
     {
@@ -942,8 +942,8 @@
       "languageId": "fsharp",
       "command": "dotnet build implementations/fsharp/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-kmp/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-kmp/ && dotnet .\\output\\implementation-tests\\fsharp-bin-kmp\\KmpSearch.dll",
       "status": 0,
-      "durationMs": 5377,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:04.99\r\nfsharp kmp ok",
+      "durationMs": 1200,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.89\r\nfsharp kmp ok",
       "stderr": ""
     },
     {
@@ -952,7 +952,7 @@
       "languageId": "c",
       "command": "gcc implementations/c/string-search/v8-knuth-morris-pratt-d7l8/kmp.c -o output/implementation-tests/kmp_c.exe && .\\output\\implementation-tests\\kmp_c.exe",
       "status": 0,
-      "durationMs": 440,
+      "durationMs": 288,
       "stdout": "c kmp ok",
       "stderr": ""
     },
@@ -962,7 +962,7 @@
       "languageId": "cpp",
       "command": "g++ implementations/cpp/string-search/v8-knuth-morris-pratt-d7l8/kmp.cpp -std=c++17 -o output/implementation-tests/kmp_cpp.exe && .\\output\\implementation-tests\\kmp_cpp.exe",
       "status": 0,
-      "durationMs": 771,
+      "durationMs": 584,
       "stdout": "cpp kmp ok",
       "stderr": ""
     },
@@ -972,7 +972,7 @@
       "languageId": "go",
       "command": "go run implementations/go/string-search/v8-knuth-morris-pratt-d7l8/kmp.go",
       "status": 0,
-      "durationMs": 1005,
+      "durationMs": 282,
       "stdout": "go kmp ok",
       "stderr": ""
     },
@@ -982,7 +982,7 @@
       "languageId": "rust",
       "command": "rustc --target x86_64-pc-windows-gnu implementations/rust/string-search/v8-knuth-morris-pratt-d7l8/kmp.rs -o output/implementation-tests/kmp_rust.exe && .\\output\\implementation-tests\\kmp_rust.exe",
       "status": 0,
-      "durationMs": 508,
+      "durationMs": 467,
       "stdout": "rust kmp ok",
       "stderr": ""
     },
@@ -992,7 +992,7 @@
       "languageId": "ruby",
       "command": "ruby implementations/ruby/string-search/v8-knuth-morris-pratt-d7l8/kmp.rb",
       "status": 0,
-      "durationMs": 161,
+      "durationMs": 136,
       "stdout": "ruby kmp ok",
       "stderr": ""
     },
@@ -1002,7 +1002,7 @@
       "languageId": "perl",
       "command": "perl implementations/perl/string-search/v8-knuth-morris-pratt-d7l8/kmp.pl",
       "status": 0,
-      "durationMs": 58,
+      "durationMs": 48,
       "stdout": "perl kmp ok",
       "stderr": ""
     },
@@ -1012,7 +1012,7 @@
       "languageId": "bash",
       "command": "bash implementations/bash/string-search/v8-knuth-morris-pratt-d7l8/test.sh",
       "status": 0,
-      "durationMs": 166,
+      "durationMs": 160,
       "stdout": "bash kmp ok",
       "stderr": ""
     },
@@ -1022,8 +1022,8 @@
       "languageId": "visual-basic",
       "command": "dotnet build implementations/visual-basic/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-kmp/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-kmp/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-kmp\\KmpSearch.dll",
       "status": 0,
-      "durationMs": 1576,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.24\r\nvisual-basic kmp ok",
+      "durationMs": 1131,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.83\r\nvisual-basic kmp ok",
       "stderr": ""
     },
     {
@@ -1032,7 +1032,7 @@
       "languageId": "fortran",
       "command": "gfortran implementations/fortran/string-search/v8-knuth-morris-pratt-d7l8/kmp.f90 -o output/implementation-tests/kmp_fortran.exe && .\\output\\implementation-tests\\kmp_fortran.exe",
       "status": 0,
-      "durationMs": 357,
+      "durationMs": 253,
       "stdout": "fortran kmp ok",
       "stderr": ""
     }

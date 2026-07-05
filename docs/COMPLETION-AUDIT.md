@@ -28,6 +28,7 @@ Current local version: `0.9.13-local`.
 | Monster schedules all 1000 recipes | Verified | `audio-control-modes-smoke-summary.json` |
 | Every card has Run/Stop/Reset and Visual/Code/Math tabs | Verified | `code-math-tabs-audit-summary.json` |
 | Browser console and page errors clean | Verified | `browser-console-audit-summary.json` |
+| Live Performance HUD and runtime metric API | Verified | `performance-hud-audit-summary.json`, `window.__grimoireRuntime.performanceStatus()` |
 | GitHub Pages static constraints | Verified | `network-static-audit-summary.json`, `static-readiness-audit-summary.json` |
 | Docs, specs, issues, releases, architecture, ERD/ERM/ERP, source ledger | Verified current in docs | `README.md`, `docs/INDEX.md`, `docs/AUDIT-LOG.md` |
 | Exportable 1000-record catalog | Verified | `catalog.json`, `catalog-export-audit-summary.json` |
@@ -43,11 +44,12 @@ Current local version: `0.9.13-local`.
 | Current GitHub Pages action pins | Verified after 0.9.13 audit | `.github/workflows/pages.yml`, `static-readiness-audit-summary.json` |
 | Public GitHub repository and Pages deployment | Verified live | `docs/GITHUB-PUBLISHING.md`, live GitHub repository, live Pages URL |
 | Objective-level requirement evidence ledger | Verified with open blockers | `output/requirement-evidence/requirement-evidence-summary.json` |
+| Recursive repo hygiene, stale-count scan, Markdown link scan, and doc navigation coverage | Verified after hygiene audit | `docs/REPO-HYGIENE.md`, `output/repo-hygiene/repo-hygiene-summary.json` |
 | Record-specific bibliography scaffold | Verified with empty citation slots | `bibliography/records.json`, `output/bibliography/bibliography-audit-summary.json` |
 
 ## Latest Aggregate
 
-The 0.9.13 local audit adds the 50-language implementation scaffold and publishing docs on top of the 0.9.12 search/filter/source-status pass. The implementation matrix audit verifies 1000 catalog records, 50 language targets, 50,000 planned native cells, 50,000 generated catalog-adapter cells, ledger-matched verified cells, 1000 algorithm-list rows, license/notice attribution, all 50 language README files, and all 50 language catalog adapters. The implementation test runner verifies 87 native cells with 0 failures. The adapter audit verifies 50 language folders, 1000 records per language, and 50,000 generated adapter cells with 0 issues. The bibliography scaffold audit verifies 1000 record citation-slot bundles with 0 filled citation slots and 0 issues. The Pages artifact simulation verifies the copied deployment payload and reports 0 issues. The cross-browser smoke refreshes Chromium, Firefox, and WebKit screenshots from the current build. The public repository is live, the GitHub Pages workflow completed successfully, and the Pages URL returned HTTP 200 with the GRIMOIRE title. The requirement evidence ledger reports objective checks with 0 issues and open truth boundaries.
+The 0.9.13 local audit adds the 50-language implementation scaffold and publishing docs on top of the 0.9.12 search/filter/source-status pass. The implementation matrix audit verifies 1000 catalog records, 50 language targets, 50,000 planned native cells, 50,000 generated catalog-adapter cells, ledger-matched verified cells, 1000 algorithm-list rows, license/notice attribution, all 50 language README files, and all 50 language catalog adapters. The implementation test runner verifies 103 native cells with 0 failures. The adapter audit verifies 50 language folders, 1000 records per language, and 50,000 generated adapter cells with 0 issues. The bibliography scaffold audit verifies 1000 record citation-slot bundles with 0 filled citation slots and 0 issues. The Pages artifact simulation verifies the copied deployment payload and reports 0 issues. The repo hygiene audit inventories tracked files, scans Markdown links and current-facing stale counts, checks footer/file-map coverage, and compares generated summaries with live ledgers. The cross-browser smoke refreshes Chromium, Firefox, and WebKit screenshots from the current build. The public repository is live, the GitHub Pages workflow completed successfully, and the Pages URL returned HTTP 200 with the GRIMOIRE title. The requirement evidence ledger reports objective checks with 0 issues and open truth boundaries.
 
 ## Open Items
 

@@ -7,6 +7,12 @@
 - Added `implementations/languages.json`, `implementations/coverage-summary.json`, and `implementations/catalog-adapters-summary.json`; current coverage is 50,000 planned native cells, 50,000 generated catalog-adapter cells, and 103 locally verified native cells.
 - Added `tools/create-kmp-batch.mjs` and generated Knuth-Morris-Pratt implementations for the 16-language verified lane.
 - Added `tools/plan-implementation-acceleration.mjs`, `docs/IMPLEMENTATION-ACCELERATION.md`, and `output/implementation-acceleration/acceleration-summary.json` to replace one-by-one hand-porting with a contract/emitter plan.
+- Added live Performance HUD metrics for FPS, frame timing, canvas/card counts, audio/Auto state, browser-exposed heap/device facts, viewport/DPR, and no-throttle quality posture.
+- Added `output/playwright/performance-hud-audit-runner.js` and `output/playwright/performance-hud-audit-summary.json`.
+- Added `tools/audit-repo-hygiene.mjs`, `docs/REPO-HYGIENE.md`, and `output/repo-hygiene/repo-hygiene-summary.json` for recursive file inventory, Markdown link scanning, stale-count scanning, footer/file-map coverage, duplicate Markdown body checks, and generated-summary freshness.
+- Added `tools/audit-summary-aggregate.mjs` to regenerate `output/playwright/aggregate-audit-summary.json` from current browser summary JSON files.
+- Corrected stale current-facing Markdown counts from 87 to 103 verified native cells.
+- Bounded Java verified-cell commands with `javac -J-Xmx128m` and `java -Xmx64m` after the full verifier exposed JVM native-memory reservation failures on this machine.
 - Split the implementation acceleration queue into 18 honesty lanes, separating easy emitters from suffix indexes, coding theory, compression, succinct structures, distributed protocols, and specialist research records.
 - Added `tools/generate-matrix-cell.mjs` and `specs/` as the batch path for producing multi-language native implementation cells from JSON specs.
 - Added Boyer-Moore string-search implementations for JavaScript, TypeScript, Python, PowerShell, Java, C#, F#, C, C++, Fortran, Go, Ruby, Perl, Bash, and Visual Basic .NET, plus a generated but not locally ledger-verified Rust source file.

@@ -69,6 +69,7 @@ The current project-book docs for future audit passes are:
 - `docs/FILE_MAP.md`
 - `docs/HANDOFF.md`
 - `docs/IMPLEMENTATION-ACCELERATION.md`
+- `docs/REPO-HYGIENE.md`
 
 These extend the existing evidence docs rather than replacing the runtime source ledger, visual system, sonification contract, or audit log.
 
@@ -83,3 +84,7 @@ Root `catalog.json` exports the full 1000-record index for diffing, citation wor
 `implementations/languages.json` is the 50-language target index. `implementations/coverage-summary.json` is the current implementation ledger, `implementations/catalog-adapters-summary.json` is the generated full-catalog adapter ledger, and `implementations/verified-cells.json` is the proof list for cells that have passing local test commands. Current coverage is partial: 50,000 planned native cells, 50,000 generated catalog-adapter cells, 103 verified native cells, and the remaining native cells still planned.
 
 `docs/IMPLEMENTATION-ACCELERATION.md` and `output/implementation-acceleration/acceleration-summary.json` define the next implementation route: use canonical contracts and language emitters for high-yield archetypes, then specialist passes for the records that cannot honestly be generated from a simple JS template.
+
+## Hygiene Index
+
+`docs/REPO-HYGIENE.md` and `output/repo-hygiene/repo-hygiene-summary.json` record the tracked-file inventory, Markdown link scan, current-facing stale-count scan, footer/file-map coverage, duplicate Markdown body scan, and generated-summary freshness checks.

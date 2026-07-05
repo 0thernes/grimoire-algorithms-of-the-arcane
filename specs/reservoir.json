@@ -62,7 +62,7 @@
     },
     "java": {
       "verified": true,
-      "testCommand": "javac -d output/implementation-tests implementations/java/sampling/reservoir/Reservoir.java && java -cp output/implementation-tests Reservoir",
+      "testCommand": "javac -J-Xmx128m -d output/implementation-tests implementations/java/sampling/reservoir/Reservoir.java && java -Xmx64m -cp output/implementation-tests Reservoir",
       "files": [
         {
           "name": "Reservoir.java",

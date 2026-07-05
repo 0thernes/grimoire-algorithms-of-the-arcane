@@ -62,7 +62,7 @@
     },
     "java": {
       "verified": true,
-      "testCommand": "javac -d output/implementation-tests implementations/java/hashing/jumphash/JumpHash.java && java -cp output/implementation-tests JumpHash",
+      "testCommand": "javac -J-Xmx128m -d output/implementation-tests implementations/java/hashing/jumphash/JumpHash.java && java -Xmx64m -cp output/implementation-tests JumpHash",
       "files": [
         {
           "name": "JumpHash.java",

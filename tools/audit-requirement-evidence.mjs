@@ -52,6 +52,8 @@ const requiredDocs = [
   'docs/FILE_MAP.md',
   'docs/HANDOFF.md',
   'docs/IMPLEMENTATION-MATRIX.md',
+  'docs/IMPLEMENTATION-ACCELERATION.md',
+  'docs/REPO-HYGIENE.md',
   'docs/ALGORITHMS-1000.md',
   'docs/GITHUB-PUBLISHING.md',
   'docs/LICENSE-POLICY.md'
@@ -73,11 +75,13 @@ const zeroProblemSummaries = [
   'output/playwright/audio-continuous-run-smoke-summary.json',
   'output/playwright/audio-live-sorting-smoke-summary.json',
   'output/playwright/audio-interaction-smoke-summary.json',
+  'output/playwright/performance-hud-audit-summary.json',
   'output/playwright/implementation-matrix-audit-summary.json',
   'output/implementation-adapters/language-catalog-adapters-audit-summary.json',
   'output/playwright/cross-browser-smoke-summary.json',
   'output/playwright/aggregate-audit-summary.json',
-  'output/pages-artifact/pages-artifact-audit-summary.json'
+  'output/pages-artifact/pages-artifact-audit-summary.json',
+  'output/repo-hygiene/repo-hygiene-summary.json'
 ];
 
 function readJson(relPath) {
@@ -167,6 +171,7 @@ function main() {
   const implementationTests = ensureSummary('output/implementation-tests/implementation-test-summary.json', ['node', 'tools/verify-implementations.mjs']);
   const bibliographyAudit = ensureSummary('output/bibliography/bibliography-audit-summary.json', ['node', 'tools/audit-bibliography-ledger.mjs']);
   const adapterAudit = ensureSummary('output/implementation-adapters/language-catalog-adapters-audit-summary.json', ['node', 'tools/audit-language-catalog-adapters.mjs']);
+  const hygieneAudit = ensureSummary('output/repo-hygiene/repo-hygiene-summary.json', ['node', 'tools/audit-repo-hygiene.mjs']);
 
   const volumeCounts = catalog.records.reduce((acc, record) => {
     acc[record.volume] = (acc[record.volume] || 0) + 1;
@@ -179,10 +184,9 @@ function main() {
   addRequirement(
     requirements,
     'version-consistency',
-    'VERSION, catalog, language manifest, and coverage manifest agree on 0.9.13-local.',
+    'VERSION, catalog, language manifest, and coverage manifest agree on the current local version marker.',
     ['VERSION', 'catalog.json', 'implementations/languages.json', 'implementations/coverage-summary.json'],
-    version === '0.9.13-local' &&
-      catalog.version === version &&
+    catalog.version === version &&
       coverage.catalogVersion === version &&
       languages.catalogVersion === version,
     { version, catalogVersion: catalog.version, coverageVersion: coverage.catalogVersion, languagesVersion: languages.catalogVersion }
@@ -228,6 +232,24 @@ function main() {
     ['catalog.json', 'implementations/', 'docs/ALGORITHMS-1000.md', 'docs/GITHUB-PUBLISHING.md', 'docs/IMPLEMENTATION-MATRIX.md'],
     staleGenerated.length === 0,
     { staleGenerated }
+  );
+
+  addRequirement(
+    requirements,
+    'repo-hygiene-current',
+    'Recursive repo hygiene audit reports no stale current-facing claims, broken Markdown links, duplicate Markdown bodies, missing doc navigation, or stale generated summaries.',
+    ['tools/audit-repo-hygiene.mjs', 'docs/REPO-HYGIENE.md', 'output/repo-hygiene/repo-hygiene-summary.json'],
+    Array.isArray(hygieneAudit.issues) &&
+      hygieneAudit.issues.length === 0 &&
+      hygieneAudit.verifiedCells === verifiedCells.length &&
+      hygieneAudit.plannedCells === coverage.plannedCells,
+    {
+      fileCount: hygieneAudit.fileCount,
+      markdownCount: hygieneAudit.markdownCount,
+      staleClaims: hygieneAudit.staleClaims?.length ?? null,
+      brokenMarkdownLinks: hygieneAudit.brokenMarkdownLinks?.length ?? null,
+      verifiedCells: hygieneAudit.verifiedCells
+    }
   );
 
   addRequirement(

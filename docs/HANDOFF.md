@@ -4,7 +4,7 @@
 
 Current local version: `0.9.13-local`.
 
-This pass adds the 1000 x 50 implementation matrix scaffold, generated full-catalog adapters for all 50 language targets, public non-commercial attribution files, GitHub publishing notes, Pages artifact wiring for `implementations/`, and reusable implementation-matrix and adapter audit runners on top of the search/filter/source-status work.
+This pass includes the 1000 x 50 implementation matrix scaffold, generated full-catalog adapters for all 50 language targets, public non-commercial attribution files, GitHub publishing notes, Pages artifact wiring for `implementations/`, reusable implementation-matrix and adapter audit runners, the live Performance HUD, and the recursive repo hygiene audit on top of the search/filter/source-status work.
 
 Public repository: `https://github.com/0thernes/grimoire-algorithms-of-the-arcane`
 
@@ -23,6 +23,7 @@ Public Pages URL: `https://0thernes.github.io/grimoire-algorithms-of-the-arcane/
 - Monster schedules all 1000 sonic recipes as a bounded chorus.
 - Every card exposes Visual, Code, and Math tabs.
 - Search/filter works by active volume, tag, engine, source status, sonic family, and visual family.
+- Performance HUD reports FPS, frame time, active canvases/cards, audio voices, scheduled notes, Auto state, heap when exposed, logical CPU lanes, approximate device memory, WebGPU exposure, OffscreenCanvas support, viewport, DPR, and no-throttle quality posture.
 - Visible source-status badges mark all current records as source-class ledger only.
 - `catalog.json` exports 1000 records with source-class bibliography placeholders and matches browser DOM/runtime identity, visual, sonic, source, and filter-facet fields.
 - Keyboard/accessibility audit passes sampled desktop, tablet landscape, and phone portrait states.
@@ -32,8 +33,9 @@ Public Pages URL: `https://0thernes.github.io/grimoire-algorithms-of-the-arcane/
 - `implementations/catalog-adapters-summary.json` reports 50 language adapters, 1000 records per language, and 50,000 generated adapter cells.
 - `docs/ALGORITHMS-1000.md` is generated from `catalog.json`.
 - Root non-commercial/attribution files exist: `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`.
-- `output/pages-artifact/pages-artifact-audit-summary.json` verifies the simulated GitHub Pages payload with the adapter files included: 435 files, 0 issues, no internal audit/tooling folders copied.
+- `output/pages-artifact/pages-artifact-audit-summary.json` verifies the simulated GitHub Pages payload with the adapter files included: 477 files, 0 issues, no internal audit/tooling folders copied.
 - `output/implementation-adapters/language-catalog-adapters-audit-summary.json` verifies all 50 generated language catalog adapters.
+- `output/repo-hygiene/repo-hygiene-summary.json` verifies tracked-file inventory, Markdown links, current-facing stale-count scan, footer/file-map coverage, duplicate Markdown body scan, and generated-summary freshness.
 - `output/requirement-evidence/requirement-evidence-summary.json` reports objective requirement checks with 0 defects and open truth boundaries.
 - `bibliography/records.json` gives all 1000 records four required citation slots; `output/bibliography/bibliography-audit-summary.json` reports 0 issues and 0 filled slots.
 - The GitHub Pages workflow has completed successfully and deployed the public Pages URL.

@@ -11,6 +11,10 @@ Scope:
 - added the first real Boyer-Moore source batch for JavaScript, TypeScript, Python, PowerShell, Java, C#, F#, C, C++, Fortran, Go, Ruby, Perl, Bash, and Visual Basic .NET
 - added a verified 16-language Knuth-Morris-Pratt source batch
 - added `docs/IMPLEMENTATION-ACCELERATION.md` and `output/implementation-acceleration/acceleration-summary.json` to define the contract/emitter route for the remaining planned native cells
+- added a live Performance HUD and browser audit for FPS, frame timing, active canvas/card counts, audio/Auto state, heap/device capability facts, viewport/DPR, and no-throttle quality posture
+- added `tools/audit-repo-hygiene.mjs`, `docs/REPO-HYGIENE.md`, and `output/repo-hygiene/repo-hygiene-summary.json` for recursive file inventory, Markdown link checks, stale-count checks, footer/file-map coverage, duplicate Markdown body checks, and generated-summary freshness
+- added `tools/audit-summary-aggregate.mjs` to regenerate the aggregate Playwright summary
+- bounded Java verified-cell test commands with small JVM heaps so the full verifier does not fail from native-memory reservation pressure
 - added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`
 - added `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`
 - updated the GitHub Pages workflow to include root policy files, `docs/`, and `implementations/`
@@ -24,19 +28,22 @@ Evidence targets:
 
 - `implementations/coverage-summary.json`
 - `docs/IMPLEMENTATION-ACCELERATION.md`
+- `docs/REPO-HYGIENE.md`
 - `output/implementation-acceleration/acceleration-summary.json`
 - `docs/ALGORITHMS-1000.md`
+- `output/playwright/performance-hud-audit-summary.json`
 - `output/playwright/implementation-matrix-audit-summary.json`
 - `output/playwright/static-readiness-audit-summary.json`
 - `output/playwright/catalog-export-audit-summary.json`
 - `output/pages-artifact/pages-artifact-audit-summary.json`
 - `output/requirement-evidence/requirement-evidence-summary.json`
+- `output/repo-hygiene/repo-hygiene-summary.json`
 - `output/playwright/cross-browser-smoke-summary.json`
 - `output/bibliography/bibliography-audit-summary.json`
 
 Honesty boundary:
 
-- The matrix is architecture and QA scaffolding, not a completed 50-language implementation corpus. Verified implementation cells are limited to the ledger-backed Boyer-Moore starter batch. The bibliography ledger is also a scaffold: it creates citation slots for all 1000 records, but filled record-specific citations remain 0.
+- The matrix is architecture and QA scaffolding, not a completed 50-language implementation corpus. Verified implementation cells are limited to ledger-backed local-test cells. The bibliography ledger is also a scaffold: it creates citation slots for all 1000 records, but filled record-specific citations remain 0. The Performance HUD reports browser-exposed metrics only; it does not claim direct NPU scheduling or full-device compute control.
 
 ## 0.9.12 - Search Filters and Source-Status Markers
 

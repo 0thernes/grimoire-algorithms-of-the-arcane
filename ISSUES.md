@@ -34,3 +34,5 @@
 24. The UI did not expose visible source-status markers for records needing future source verification.
 25. The repo lacked a 50-language implementation matrix scaffold, special 1000-algorithm MD index, public non-commercial license/notice surface, and implementation-matrix audit runner.
 26. Public GitHub repository and GitHub Pages deployment were not live.
+27. Current-facing Markdown surfaces drifted after verified-cell counts changed.
+28. The UI lacked a live Performance HUD for frame timing, canvas/card state, audio/Auto state, and browser-exposed device metrics.

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-05T02:38:37.226Z",
-  "summaryFiles": 19,
+  "generatedAt": "2026-07-05T18:40:18.763Z",
+  "summaryFiles": 20,
   "problemTotal": 0,
   "details": [
     {
@@ -125,6 +125,14 @@
     },
     {
       "file": "output/playwright/pages-readiness-audit-summary.json",
+      "issues": 0,
+      "failures": 0,
+      "actionableConsole": 0,
+      "pageErrors": 0,
+      "problems": 0
+    },
+    {
+      "file": "output/playwright/performance-hud-audit-summary.json",
       "issues": 0,
       "failures": 0,
       "actionableConsole": 0,

@@ -13,7 +13,7 @@ Catalog record: `V01-B-01` / `stoogesort`
 ## Test
 
 ```powershell
-javac -d output/implementation-tests implementations/java/sorting/stoogesort/StoogeSort.java && java -cp output/implementation-tests StoogeSort
+javac -J-Xmx128m -d output/implementation-tests implementations/java/sorting/stoogesort/StoogeSort.java && java -Xmx64m -cp output/implementation-tests StoogeSort
 ```
 
 ## Verification Status

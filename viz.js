@@ -8628,6 +8628,169 @@ function setupTechnicalTabs() {
   });
 }
 
+const performanceHudState = {
+  enabled: true,
+  mounted: false,
+  lastFrameAt: 0,
+  lastPaintAt: 0,
+  samples: [],
+  fps: 0,
+  frameMs: 0,
+  device: null
+};
+
+function formatBytes(bytes) {
+  if (!Number.isFinite(bytes) || bytes <= 0) return 'n/a';
+  const units = ['B', 'KB', 'MB', 'GB'];
+  let value = bytes;
+  let index = 0;
+  while (value >= 1024 && index < units.length - 1) {
+    value /= 1024;
+    index++;
+  }
+  return `${value >= 10 ? value.toFixed(0) : value.toFixed(1)} ${units[index]}`;
+}
+
+function readDeviceProfile() {
+  if (performanceHudState.device) return performanceHudState.device;
+  const threads = Number(navigator.hardwareConcurrency) || null;
+  const ramGb = Number(navigator.deviceMemory) || null;
+  performanceHudState.device = {
+    threads,
+    ramGb,
+    gpu: navigator.gpu ? 'WebGPU exposed' : 'WebGPU unavailable',
+    offscreenCanvas: 'OffscreenCanvas' in window,
+    sharedArrayBuffer: Boolean(window.crossOriginIsolated && window.SharedArrayBuffer),
+    secureContext: Boolean(window.isSecureContext)
+  };
+  return performanceHudState.device;
+}
+
+function readHeapSnapshot() {
+  const memory = performance.memory;
+  if (!memory) return { label: 'n/a', used: null, limit: null };
+  return {
+    label: `${formatBytes(memory.usedJSHeapSize)} / ${formatBytes(memory.jsHeapSizeLimit)}`,
+    used: memory.usedJSHeapSize,
+    limit: memory.jsHeapSizeLimit
+  };
+}
+
+function currentPerformanceSnapshot() {
+  const device = readDeviceProfile();
+  const audio = sonicRuntime.status();
+  const auto = window.__grimoireRuntime?.autoStatus?.() || {
+    active: autoSequence.active,
+    currentNumber: autoSequence.currentIndex + 1,
+    currentId: autoSequence.currentId,
+    remainingMs: 0
+  };
+  const cards = activeVolumeCards({ includeFiltered: true });
+  const visibleCards = cards.filter(card => !card.hidden && !card.classList.contains('filtered-out')).length;
+  const activeCanvases = Object.keys(frames).filter(id => Boolean(frames[id])).length;
+  const heap = readHeapSnapshot();
+  const viewport = `${window.innerWidth}x${window.innerHeight}`;
+  const dpr = Number(window.devicePixelRatio || 1);
+
+  return {
+    fps: Number(performanceHudState.fps.toFixed(1)),
+    frameMs: Number(performanceHudState.frameMs.toFixed(2)),
+    activeCanvases,
+    nearViewportCanvases: visibleIds.size,
+    visibleCards,
+    mountedCards: cards.length,
+    totalRecords: ALL.length,
+    audioVoices: audio.runVoiceCount || 0,
+    audibleVoices: audio.audibleRunVoiceCount || 0,
+    scheduledRunNotes: audio.scheduledRunNotes || 0,
+    autoActive: Boolean(auto.active),
+    autoCurrent: auto.currentNumber || 0,
+    autoId: auto.currentId || null,
+    autoRemainingMs: auto.remainingMs || 0,
+    heap,
+    threads: device.threads,
+    ramGb: device.ramGb,
+    gpu: device.gpu,
+    offscreenCanvas: device.offscreenCanvas,
+    sharedArrayBuffer: device.sharedArrayBuffer,
+    secureContext: device.secureContext,
+    viewport,
+    dpr,
+    quality: `full DPR ${dpr.toFixed(2)}`
+  };
+}
+
+function setHudText(selector, value) {
+  const node = document.querySelector(selector);
+  if (node) node.textContent = value;
+}
+
+function renderPerformanceHud() {
+  const hud = document.querySelector('[data-performance-hud]');
+  if (!hud) return;
+  const snapshot = currentPerformanceSnapshot();
+  setHudText('[data-perf-fps]', `${snapshot.fps} fps`);
+  setHudText('[data-perf-frame]', `${snapshot.frameMs} ms`);
+  setHudText('[data-perf-canvas]', `${snapshot.activeCanvases}/${snapshot.nearViewportCanvases}`);
+  setHudText('[data-perf-cards]', `${snapshot.visibleCards}/${snapshot.mountedCards}`);
+  setHudText('[data-perf-audio]', `${snapshot.audibleVoices}/${snapshot.audioVoices}`);
+  setHudText('[data-perf-notes]', String(snapshot.scheduledRunNotes));
+  setHudText('[data-perf-auto]', snapshot.autoActive ? `${String(snapshot.autoCurrent).padStart(3, '0')}/1000` : 'idle');
+  setHudText('[data-perf-heap]', snapshot.heap.label);
+  setHudText('[data-perf-threads]', snapshot.threads ? `${snapshot.threads} lanes` : 'n/a');
+  setHudText('[data-perf-ram]', snapshot.ramGb ? `${snapshot.ramGb} GB` : 'n/a');
+  setHudText('[data-perf-gpu]', snapshot.gpu.replace('WebGPU ', ''));
+  setHudText('[data-perf-quality]', snapshot.quality);
+
+  const autoText = snapshot.autoActive
+    ? `Auto ${snapshot.autoCurrent}/1000 ${snapshot.autoId || ''} · ${Math.ceil(snapshot.autoRemainingMs / 1000)}s left`
+    : 'Auto idle';
+  const status = document.querySelector('[data-performance-status]');
+  if (status) {
+    status.textContent = `${autoText} · ${snapshot.viewport} · ${snapshot.gpu} · OffscreenCanvas ${snapshot.offscreenCanvas ? 'yes' : 'no'} · heap ${snapshot.heap.label} · quality held, no visual throttling.`;
+  }
+}
+
+function tickPerformanceHud(now) {
+  if (!performanceHudState.lastFrameAt) performanceHudState.lastFrameAt = now;
+  const delta = now - performanceHudState.lastFrameAt;
+  performanceHudState.lastFrameAt = now;
+  if (delta > 0 && delta < 1000) {
+    performanceHudState.samples.push(delta);
+    if (performanceHudState.samples.length > 90) performanceHudState.samples.shift();
+    const average = performanceHudState.samples.reduce((sum, sample) => sum + sample, 0) / performanceHudState.samples.length;
+    performanceHudState.frameMs = average;
+    performanceHudState.fps = average ? 1000 / average : 0;
+  }
+  if (performanceHudState.enabled && now - performanceHudState.lastPaintAt > 500) {
+    performanceHudState.lastPaintAt = now;
+    renderPerformanceHud();
+  }
+  requestAnimationFrame(tickPerformanceHud);
+}
+
+function setupPerformanceHud() {
+  const toggle = document.querySelector('[data-performance-toggle]');
+  if (toggle?.dataset.mounted !== 'true') {
+    toggle.dataset.mounted = 'true';
+    toggle.addEventListener('click', () => {
+      performanceHudState.enabled = !performanceHudState.enabled;
+      toggle.setAttribute('aria-pressed', String(performanceHudState.enabled));
+      toggle.textContent = performanceHudState.enabled ? 'Live' : 'Hold';
+      if (performanceHudState.enabled) renderPerformanceHud();
+      else {
+        const status = document.querySelector('[data-performance-status]');
+        if (status) status.textContent = 'HUD hold: renderer and audio keep running; metric text is paused.';
+      }
+    });
+  }
+  if (!performanceHudState.mounted) {
+    performanceHudState.mounted = true;
+    renderPerformanceHud();
+    requestAnimationFrame(tickPerformanceHud);
+  }
+}
+
 window.__grimoireRuntime = {
   activeIds: () => ALL.filter(id => Boolean(frames[id])),
   visibleIds: () => [...visibleIds],
@@ -8674,6 +8837,7 @@ window.__grimoireRuntime = {
   resetRecordFilters,
   applyRecordFilters,
   audioStatus: () => sonicRuntime.status(),
+  performanceStatus: () => currentPerformanceSnapshot(),
   algorithmEvent: (id, event) => sonicRuntime.algorithmEvent(id, event),
   startRunAudio: (id, meta) => sonicRuntime.startRunAudio(id, meta),
   stopRunAudio: (id) => sonicRuntime.stopRunAudio(id),
@@ -9206,6 +9370,7 @@ setupRecordFilters();
 setActiveVolume(1);
 setupSonicConsole();
 setupTechnicalTabs();
+setupPerformanceHud();
 window.addEventListener('scroll', scheduleCenteredRecordUpdate, { passive: true });
 
 document.addEventListener('visibilitychange', () => {

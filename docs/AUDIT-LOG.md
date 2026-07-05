@@ -2,6 +2,40 @@
 
 ## 2026-07-05
 
+### Repo hygiene, Performance HUD, and Java test stability pass
+
+Verified checks:
+
+- `node --check viz.js`: pass.
+- `node --check tools/audit-repo-hygiene.mjs`: pass.
+- `node --check tools/audit-summary-aggregate.mjs`: pass.
+- `node --check output/playwright/performance-hud-audit-runner.js`: pass.
+- `output/playwright/performance-hud-audit-summary.json`: Performance HUD present, `performanceStatus()` present, 58-60 fps sample, 100 mounted cards, 1000 total records, browser-exposed heap/thread/RAM/GPU/OffscreenCanvas fields present, Live/Hold toggle verified, 0 issues.
+- `output/playwright/static-readiness-audit-summary.json`: 0 issues after adding the new docs.
+- `output/playwright/pages-readiness-audit-summary.json`: 0 issues after adding the HUD to the navigation rail.
+- `output/playwright/accessibility-keyboard-audit-summary.json`: 0 issues.
+- `output/playwright/browser-console-audit-summary.json`: 0 actionable console entries and 0 page errors.
+- `output/playwright/network-static-audit-summary.json`: 0 issues.
+- `node tools/verify-implementations.mjs`: 103 verified implementation cells, 103 passed, 0 failed.
+- `node tools/audit-repo-hygiene.mjs`: 587 current files scanned, 249 Markdown files scanned, 0 stale current-facing claims, 0 broken Markdown links, 0 duplicate Markdown bodies, 0 issues.
+- `node tools/audit-summary-aggregate.mjs`: 20 Playwright summary files, 0 total problems.
+- `node tools/audit-pages-artifact.mjs`: simulated Pages artifact, 477 files, 103 verified native cells, 0 issues.
+- `node tools/audit-requirement-evidence.mjs`: 17 requirement checks, 0 issues, 2 open items.
+
+Changes:
+
+- Added a left-rail Performance HUD with FPS, frame time, canvas/card counts, audio/Auto state, scheduled notes, heap/device capability facts, viewport/DPR, WebGPU exposure, OffscreenCanvas support, and no-throttle quality posture.
+- Added `window.__grimoireRuntime.performanceStatus()` for audit-facing runtime metrics.
+- Added `tools/audit-repo-hygiene.mjs`, `docs/REPO-HYGIENE.md`, and `output/repo-hygiene/repo-hygiene-summary.json`.
+- Added `tools/audit-summary-aggregate.mjs` so `output/playwright/aggregate-audit-summary.json` is reproducible.
+- Added `output/playwright/performance-hud-audit-runner.js` and refreshed the HUD browser summary.
+- Corrected current-facing stale Markdown counts from 87 to 103 verified native cells.
+- Bounded Java verified-cell commands with `javac -J-Xmx128m` and `java -Xmx64m` after the full verifier exposed JVM native-memory reservation failures on this machine.
+
+Honesty boundary:
+
+- The HUD reports browser-exposed device facts. It does not claim direct NPU scheduling or full-device compute control without a future worker/WebGPU architecture and separate tests.
+
 ### Knuth-Morris-Pratt verified implementation batch
 
 Verified checks:

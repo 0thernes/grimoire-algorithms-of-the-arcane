@@ -14,7 +14,7 @@ Catalog record: `V08-A-01` / `v8-knuth-morris-pratt-d7l8`
 ## Test
 
 ```powershell
-javac -d output/implementation-tests implementations/java/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.java && java -cp output/implementation-tests KmpSearch
+javac -J-Xmx128m -d output/implementation-tests implementations/java/string-search/v8-knuth-morris-pratt-d7l8/KmpSearch.java && java -Xmx64m -cp output/implementation-tests KmpSearch
 ```
 
 ## Verification Status

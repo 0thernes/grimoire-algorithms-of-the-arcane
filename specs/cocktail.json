@@ -62,7 +62,7 @@
     },
     "java": {
       "verified": true,
-      "testCommand": "javac -d output/implementation-tests implementations/java/sorting/cocktail/CocktailSort.java && java -cp output/implementation-tests CocktailSort",
+      "testCommand": "javac -J-Xmx128m -d output/implementation-tests implementations/java/sorting/cocktail/CocktailSort.java && java -Xmx64m -cp output/implementation-tests CocktailSort",
       "files": [
         {
           "name": "CocktailSort.java",
