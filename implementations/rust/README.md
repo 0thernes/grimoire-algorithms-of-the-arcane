@@ -12,8 +12,8 @@ Expected runtime/toolchain: native
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 0
-- Status: planned scaffold
+- Verified implementations: 1
+- Status: partial verified
 
 ## Full-Catalog Adapter
 
@@ -27,7 +27,7 @@ That adapter contains all 1000 GRIMOIRE records for Rust. It is meant for discov
 
 ## Verified Cells
 
-- None yet.
+- Cocktail Shaker Sort (`cocktail`): `rustc --target x86_64-pc-windows-gnu implementations/rust/sorting/cocktail/cocktail_sort.rs -o output/implementation-tests/cocktail_rust.exe && .\output\implementation-tests\cocktail_rust.exe`
 
 ## Required Shape For Each Algorithm
 

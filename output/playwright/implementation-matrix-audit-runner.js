@@ -1,5 +1,5 @@
 async (page) => {
-  await page.goto('http://127.0.0.1:4177/index.html', { waitUntil: 'networkidle' });
+  await page.goto('http://127.0.0.1:4177/index.html', { waitUntil: 'domcontentloaded' });
 
   const fetched = await page.evaluate(async () => {
     const paths = [

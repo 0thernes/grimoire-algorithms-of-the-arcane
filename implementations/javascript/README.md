@@ -12,7 +12,7 @@ Expected runtime/toolchain: Node.js / browser
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 5
+- Verified implementations: 6
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -32,6 +32,7 @@ That adapter contains all 1000 GRIMOIRE records for JavaScript. It is meant for 
 - Reservoir Sampling (`reservoir`): `node implementations/javascript/sampling/reservoir/test.js`
 - Cycle Sort (`cyclesort`): `node implementations/javascript/sorting/cyclesort/test.js`
 - Stooge Sort (`stoogesort`): `node implementations/javascript/sorting/stoogesort/test.js`
+- Cocktail Shaker Sort (`cocktail`): `node implementations/javascript/sorting/cocktail/test.js`
 
 ## Required Shape For Each Algorithm
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T05:01:26.928Z",
+  "generatedAt": "2026-07-05T05:33:41.780Z",
   "target": "objective requirement evidence audit",
   "version": "0.9.13-local",
   "status": "verified-with-open-blockers",
@@ -125,7 +125,7 @@
       "languageTargets": 50,
       "plannedCells": 50000,
       "catalogAdapterCells": 50000,
-      "verifiedCells": 71
+      "verifiedCells": 87
     },
     {
       "id": "language-catalog-adapters",
@@ -152,8 +152,8 @@
         "output/implementation-tests/implementation-test-summary.json"
       ],
       "status": "verified",
-      "totalCells": 71,
-      "passed": 71,
+      "totalCells": 87,
+      "passed": 87,
       "failed": 0
     },
     {
@@ -237,8 +237,8 @@
         "output/pages-artifact/pages-artifact-audit-summary.json"
       ],
       "status": "verified",
-      "siteFileCount": 395,
-      "siteBytes": 30112531,
+      "siteFileCount": 435,
+      "siteBytes": 30153030,
       "siteRemovedAfterAudit": true
     },
     {
@@ -307,7 +307,7 @@
       "status": "open",
       "plannedCells": 50000,
       "catalogAdapterCells": 50000,
-      "verifiedCells": 71
+      "verifiedCells": 87
     }
   ],
   "issues": [],

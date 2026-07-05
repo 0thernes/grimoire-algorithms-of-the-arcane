@@ -14,12 +14,12 @@ Verified checks:
 - `node --check output/playwright/catalog-export-audit-runner.js`: pass.
 - `output/playwright/implementation-matrix-audit-summary.json`: 50 language targets, 50,000 planned native cells, 50,000 generated catalog-adapter cells, ledger-matched verified cells, 1000 algorithm rows, 50 language READMEs, 50 language catalog adapters, 0 issues.
 - `output/implementation-adapters/language-catalog-adapters-audit-summary.json`: 50 language folders, 1000 records per language, 50,000 generated adapter cells, 0 issues.
-- `output/implementation-tests/implementation-test-summary.json`: 71 native implementation cells tested, 71 passed, 0 failed.
+- `output/implementation-tests/implementation-test-summary.json`: 87 native implementation cells tested, 87 passed, 0 failed.
 - `output/playwright/static-readiness-audit-summary.json`: 0 issues.
 - `output/playwright/catalog-export-audit-summary.json`: 1000 catalog records, 1000 DOM records, 0 issues.
 - `tools/audit-pages-artifact.mjs`: simulated Pages payload with implementation files, 50 implementation language READMEs, 50 catalog adapter files, 50,000 planned native cells, 50,000 generated adapter cells, ledger-matched verified cells, and 0 issues. Exact byte count is recorded in `output/pages-artifact/pages-artifact-audit-summary.json`.
 - `tools/cross-browser-smoke.mjs`: refreshed Chromium, Firefox, and WebKit screenshot smoke evidence, 0 failures.
-- `tools/audit-requirement-evidence.mjs`: 12 requirement checks, 0 issues, 3 open items (`github-publish`, `record-specific-bibliography`, `verified-implementation-corpus`).
+- `tools/audit-requirement-evidence.mjs`: 16 requirement checks, 0 issues, 2 open items (`record-specific-bibliography`, `verified-implementation-corpus`).
 - `tools/build-bibliography-ledger.mjs` and `tools/audit-bibliography-ledger.mjs`: generated and verified 1000 record-specific citation-slot bundles, 0 filled citation slots, 0 issues.
 - `output/playwright/aggregate-audit-summary.json`: 19 summary JSON files, 0 total issues/failures/actionable console/page errors.
 

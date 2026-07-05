@@ -67,10 +67,11 @@ function main() {
     : { schemaVersion: 1, catalogVersion: '0.9.13-local', verifiedCells: [] };
 
   const verifiedCells = [...existingManifest.verifiedCells];
-  const seenKeys = new Set(verifiedCells.map(c => c.id));
+  const cellIndexByKey = new Map(verifiedCells.map((c, index) => [c.id, index]));
 
   let createdCellsCount = 0;
   let registeredCellsCount = 0;
+  let updatedCellsCount = 0;
 
   for (const [languageId, langConfig] of Object.entries(languages)) {
     const dir = `${base}/${languageId}/${domain}/${algorithmId}`;
@@ -97,8 +98,8 @@ function main() {
 
     // Register cell in verified-cells ledger if applicable
     const cellKey = `${languageId}:${algorithmId}`;
-    if (langConfig.verified && !seenKeys.has(cellKey)) {
-      verifiedCells.push({
+    if (langConfig.verified) {
+      const cell = {
         id: cellKey,
         catalogVersion: '0.9.13-local',
         navLabel,
@@ -111,9 +112,16 @@ function main() {
         testCommand,
         verifiedAt: new Date().toISOString().split('T')[0],
         status: 'verified-local'
-      });
-      seenKeys.add(cellKey);
-      registeredCellsCount++;
+      };
+
+      if (cellIndexByKey.has(cellKey)) {
+        verifiedCells[cellIndexByKey.get(cellKey)] = cell;
+        updatedCellsCount++;
+      } else {
+        verifiedCells.push(cell);
+        cellIndexByKey.set(cellKey, verifiedCells.length - 1);
+        registeredCellsCount++;
+      }
     }
   }
 
@@ -128,6 +136,7 @@ function main() {
 
   console.log(`[AMS] Created ${createdCellsCount} implementation cells.`);
   console.log(`[AMS] Registered ${registeredCellsCount} new verified cells in verified-cells.json.`);
+  console.log(`[AMS] Updated ${updatedCellsCount} existing verified cells in verified-cells.json.`);
 
   // Rebuild the matrix and indices
   console.log('[AMS] Rebuilding implementation matrix and index READMEs...');

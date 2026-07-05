@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "catalogVersion": "0.9.13-local",
-  "generatedAt": "2026-07-05T03:55:14.632Z",
+  "generatedAt": "2026-07-05T05:21:57.399Z",
   "verificationPolicy": "A cell is verified only when its source files exist and its testCommand passes locally.",
   "verifiedCells": [
     {
@@ -1152,6 +1152,262 @@
       ],
       "readme": "implementations/visual-basic/sorting/stoogesort/README.md",
       "testCommand": "dotnet build implementations/visual-basic/sorting/stoogesort/StoogeSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-stoogesort/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-stoogesort\\StoogeSort.dll",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "javascript:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "javascript",
+      "sourceFiles": [
+        "implementations/javascript/sorting/cocktail/cocktail_sort.js"
+      ],
+      "readme": "implementations/javascript/sorting/cocktail/README.md",
+      "testCommand": "node implementations/javascript/sorting/cocktail/test.js",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "typescript:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "typescript",
+      "sourceFiles": [
+        "implementations/typescript/sorting/cocktail/cocktail_sort.ts"
+      ],
+      "readme": "implementations/typescript/sorting/cocktail/README.md",
+      "testCommand": "deno run --quiet implementations/typescript/sorting/cocktail/test.ts",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "python:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "python",
+      "sourceFiles": [
+        "implementations/python/sorting/cocktail/cocktail_sort.py"
+      ],
+      "readme": "implementations/python/sorting/cocktail/README.md",
+      "testCommand": "python -B implementations/python/sorting/cocktail/test_cocktail.py",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "powershell:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "powershell",
+      "sourceFiles": [
+        "implementations/powershell/sorting/cocktail/cocktail_sort.ps1"
+      ],
+      "readme": "implementations/powershell/sorting/cocktail/README.md",
+      "testCommand": "pwsh -NoProfile -File implementations/powershell/sorting/cocktail/test.ps1",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "java:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "java",
+      "sourceFiles": [
+        "implementations/java/sorting/cocktail/CocktailSort.java"
+      ],
+      "readme": "implementations/java/sorting/cocktail/README.md",
+      "testCommand": "javac -d output/implementation-tests implementations/java/sorting/cocktail/CocktailSort.java && java -cp output/implementation-tests CocktailSort",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "csharp:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "csharp",
+      "sourceFiles": [
+        "implementations/csharp/sorting/cocktail/Program.cs"
+      ],
+      "readme": "implementations/csharp/sorting/cocktail/README.md",
+      "testCommand": "dotnet build implementations/csharp/sorting/cocktail/CocktailSort.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-cocktail/ && dotnet .\\output\\implementation-tests\\csharp-bin-cocktail\\CocktailSort.dll",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "fsharp:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "fsharp",
+      "sourceFiles": [
+        "implementations/fsharp/sorting/cocktail/Program.fs"
+      ],
+      "readme": "implementations/fsharp/sorting/cocktail/README.md",
+      "testCommand": "dotnet build implementations/fsharp/sorting/cocktail/CocktailSort.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-cocktail/ && dotnet .\\output\\implementation-tests\\fsharp-bin-cocktail\\CocktailSort.dll",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "c:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "c",
+      "sourceFiles": [
+        "implementations/c/sorting/cocktail/cocktail_sort.c"
+      ],
+      "readme": "implementations/c/sorting/cocktail/README.md",
+      "testCommand": "gcc implementations/c/sorting/cocktail/cocktail_sort.c -DTEST -o output/implementation-tests/cocktail_c.exe && .\\output\\implementation-tests\\cocktail_c.exe",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "cpp:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "cpp",
+      "sourceFiles": [
+        "implementations/cpp/sorting/cocktail/cocktail_sort.cpp"
+      ],
+      "readme": "implementations/cpp/sorting/cocktail/README.md",
+      "testCommand": "g++ implementations/cpp/sorting/cocktail/cocktail_sort.cpp -std=c++17 -o output/implementation-tests/cocktail_cpp.exe && .\\output\\implementation-tests\\cocktail_cpp.exe",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "go:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "go",
+      "sourceFiles": [
+        "implementations/go/sorting/cocktail/cocktail_sort.go"
+      ],
+      "readme": "implementations/go/sorting/cocktail/README.md",
+      "testCommand": "go run implementations/go/sorting/cocktail/cocktail_sort.go",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "rust:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "rust",
+      "sourceFiles": [
+        "implementations/rust/sorting/cocktail/cocktail_sort.rs"
+      ],
+      "readme": "implementations/rust/sorting/cocktail/README.md",
+      "testCommand": "rustc --target x86_64-pc-windows-gnu implementations/rust/sorting/cocktail/cocktail_sort.rs -o output/implementation-tests/cocktail_rust.exe && .\\output\\implementation-tests\\cocktail_rust.exe",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "ruby:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "ruby",
+      "sourceFiles": [
+        "implementations/ruby/sorting/cocktail/cocktail_sort.rb"
+      ],
+      "readme": "implementations/ruby/sorting/cocktail/README.md",
+      "testCommand": "ruby implementations/ruby/sorting/cocktail/cocktail_sort.rb",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "perl:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "perl",
+      "sourceFiles": [
+        "implementations/perl/sorting/cocktail/cocktail_sort.pl"
+      ],
+      "readme": "implementations/perl/sorting/cocktail/README.md",
+      "testCommand": "perl implementations/perl/sorting/cocktail/cocktail_sort.pl",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "bash:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "bash",
+      "sourceFiles": [
+        "implementations/bash/sorting/cocktail/cocktail_sort.sh"
+      ],
+      "readme": "implementations/bash/sorting/cocktail/README.md",
+      "testCommand": "bash implementations/bash/sorting/cocktail/test.sh",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "visual-basic:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "visual-basic",
+      "sourceFiles": [
+        "implementations/visual-basic/sorting/cocktail/Program.vb"
+      ],
+      "readme": "implementations/visual-basic/sorting/cocktail/README.md",
+      "testCommand": "dotnet build implementations/visual-basic/sorting/cocktail/CocktailSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-cocktail/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-cocktail\\CocktailSort.dll",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "fortran:cocktail",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-B-08",
+      "algorithmId": "cocktail",
+      "algorithmTitle": "Cocktail Shaker Sort",
+      "domain": "sorting",
+      "languageId": "fortran",
+      "sourceFiles": [
+        "implementations/fortran/sorting/cocktail/cocktail_sort.f90"
+      ],
+      "readme": "implementations/fortran/sorting/cocktail/README.md",
+      "testCommand": "gfortran implementations/fortran/sorting/cocktail/cocktail_sort.f90 -o output/implementation-tests/cocktail_fortran.exe && .\\output\\implementation-tests\\cocktail_fortran.exe",
       "verifiedAt": "2026-07-05",
       "status": "verified-local"
     }

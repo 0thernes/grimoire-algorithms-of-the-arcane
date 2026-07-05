@@ -12,7 +12,7 @@ Expected runtime/toolchain: .NET
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 5
+- Verified implementations: 6
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -32,6 +32,7 @@ That adapter contains all 1000 GRIMOIRE records for Visual Basic .NET. It is mea
 - Reservoir Sampling (`reservoir`): `dotnet build implementations/visual-basic/sampling/reservoir/Reservoir.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-reservoir/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-reservoir/ && dotnet .\output\implementation-tests\visual-basic-bin-reservoir\Reservoir.dll`
 - Cycle Sort (`cyclesort`): `dotnet build implementations/visual-basic/sorting/cyclesort/CycleSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-cyclesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-cyclesort/ && dotnet .\output\implementation-tests\visual-basic-bin-cyclesort\CycleSort.dll`
 - Stooge Sort (`stoogesort`): `dotnet build implementations/visual-basic/sorting/stoogesort/StoogeSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-stoogesort/ && dotnet .\output\implementation-tests\visual-basic-bin-stoogesort\StoogeSort.dll`
+- Cocktail Shaker Sort (`cocktail`): `dotnet build implementations/visual-basic/sorting/cocktail/CocktailSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-cocktail/ && dotnet .\output\implementation-tests\visual-basic-bin-cocktail\CocktailSort.dll`
 
 ## Required Shape For Each Algorithm
 

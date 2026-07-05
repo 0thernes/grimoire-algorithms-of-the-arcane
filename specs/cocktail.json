@@ -1,0 +1,200 @@
+{
+  "algorithmId": "cocktail",
+  "algorithmTitle": "Cocktail Shaker Sort",
+  "navLabel": "V01-B-08",
+  "domain": "sorting",
+  "languages": {
+    "javascript": {
+      "verified": true,
+      "testCommand": "node implementations/javascript/sorting/cocktail/test.js",
+      "files": [
+        {
+          "name": "cocktail_sort.js",
+          "content": "export function cocktailShakerSort(values) {\n  const a = [...values];\n  let start = 0;\n  let end = a.length - 1;\n  let swapped = true;\n  while (swapped) {\n    swapped = false;\n    for (let i = start; i < end; i++) {\n      if (a[i] > a[i + 1]) {\n        [a[i], a[i + 1]] = [a[i + 1], a[i]];\n        swapped = true;\n      }\n    }\n    if (!swapped) break;\n    swapped = false;\n    end--;\n    for (let i = end; i > start; i--) {\n      if (a[i - 1] > a[i]) {\n        [a[i - 1], a[i]] = [a[i], a[i - 1]];\n        swapped = true;\n      }\n    }\n    start++;\n  }\n  return a;\n}\n"
+        },
+        {
+          "name": "test.js",
+          "content": "import { cocktailShakerSort } from './cocktail_sort.js';\n\nconst cases = [\n  [[5, 1, 4, 2, 8, 0, -3], [-3, 0, 1, 2, 4, 5, 8]],\n  [[3, 3, 2, 1], [1, 2, 3, 3]],\n  [[], []]\n];\nfor (const [input, expected] of cases) {\n  const actual = cocktailShakerSort(input);\n  if (JSON.stringify(actual) !== JSON.stringify(expected)) throw new Error('Expected ' + expected + ', saw ' + actual);\n}\nconsole.log('javascript cocktail ok');\n"
+        }
+      ]
+    },
+    "typescript": {
+      "verified": true,
+      "testCommand": "deno run --quiet implementations/typescript/sorting/cocktail/test.ts",
+      "files": [
+        {
+          "name": "cocktail_sort.ts",
+          "content": "export function cocktailShakerSort(values: number[]): number[] {\n  const a = [...values];\n  let start = 0;\n  let end = a.length - 1;\n  let swapped = true;\n  while (swapped) {\n    swapped = false;\n    for (let i = start; i < end; i++) {\n      if (a[i] > a[i + 1]) {\n        [a[i], a[i + 1]] = [a[i + 1], a[i]];\n        swapped = true;\n      }\n    }\n    if (!swapped) break;\n    swapped = false;\n    end--;\n    for (let i = end; i > start; i--) {\n      if (a[i - 1] > a[i]) {\n        [a[i - 1], a[i]] = [a[i], a[i - 1]];\n        swapped = true;\n      }\n    }\n    start++;\n  }\n  return a;\n}\n"
+        },
+        {
+          "name": "test.ts",
+          "content": "import { cocktailShakerSort } from './cocktail_sort.ts';\n\nconst cases: Array<[number[], number[]]> = [\n  [[5, 1, 4, 2, 8, 0, -3], [-3, 0, 1, 2, 4, 5, 8]],\n  [[3, 3, 2, 1], [1, 2, 3, 3]],\n  [[], []]\n];\nfor (const [input, expected] of cases) {\n  const actual = cocktailShakerSort(input);\n  if (JSON.stringify(actual) !== JSON.stringify(expected)) throw new Error('Expected ' + expected + ', saw ' + actual);\n}\nconsole.log('typescript cocktail ok');\n"
+        }
+      ]
+    },
+    "python": {
+      "verified": true,
+      "testCommand": "python -B implementations/python/sorting/cocktail/test_cocktail.py",
+      "files": [
+        {
+          "name": "cocktail_sort.py",
+          "content": "def cocktail_shaker_sort(values):\n    a = list(values)\n    start = 0\n    end = len(a) - 1\n    swapped = True\n    while swapped:\n        swapped = False\n        for i in range(start, end):\n            if a[i] > a[i + 1]:\n                a[i], a[i + 1] = a[i + 1], a[i]\n                swapped = True\n        if not swapped:\n            break\n        swapped = False\n        end -= 1\n        for i in range(end, start, -1):\n            if a[i - 1] > a[i]:\n                a[i - 1], a[i] = a[i], a[i - 1]\n                swapped = True\n        start += 1\n    return a\n"
+        },
+        {
+          "name": "test_cocktail.py",
+          "content": "from cocktail_sort import cocktail_shaker_sort\n\ncases = [\n    ([5, 1, 4, 2, 8, 0, -3], [-3, 0, 1, 2, 4, 5, 8]),\n    ([3, 3, 2, 1], [1, 2, 3, 3]),\n    ([], []),\n]\nfor values, expected in cases:\n    actual = cocktail_shaker_sort(values)\n    assert actual == expected, f\"expected {expected}, saw {actual}\"\nprint('python cocktail ok')\n"
+        }
+      ]
+    },
+    "powershell": {
+      "verified": true,
+      "testCommand": "pwsh -NoProfile -File implementations/powershell/sorting/cocktail/test.ps1",
+      "files": [
+        {
+          "name": "cocktail_sort.ps1",
+          "content": "function Invoke-CocktailShakerSort {\n  param([int[]]$Values)\n  $a = [int[]]$Values.Clone()\n  $start = 0\n  $end = $a.Length - 1\n  $swapped = $true\n  while ($swapped) {\n    $swapped = $false\n    for ($i = $start; $i -lt $end; $i++) {\n      if ($a[$i] -gt $a[$i + 1]) {\n        $tmp = $a[$i]; $a[$i] = $a[$i + 1]; $a[$i + 1] = $tmp\n        $swapped = $true\n      }\n    }\n    if (-not $swapped) { break }\n    $swapped = $false\n    $end--\n    for ($i = $end; $i -gt $start; $i--) {\n      if ($a[$i - 1] -gt $a[$i]) {\n        $tmp = $a[$i - 1]; $a[$i - 1] = $a[$i]; $a[$i] = $tmp\n        $swapped = $true\n      }\n    }\n    $start++\n  }\n  return $a\n}\n"
+        },
+        {
+          "name": "test.ps1",
+          "content": ". \"$PSScriptRoot\\cocktail_sort.ps1\"\n$actual = Invoke-CocktailShakerSort -Values @(5, 1, 4, 2, 8, 0, -3)\n$expected = @(-3, 0, 1, 2, 4, 5, 8)\nif (($actual -join ',') -ne ($expected -join ',')) { throw \"expected $($expected -join ','), saw $($actual -join ',')\" }\n$dup = Invoke-CocktailShakerSort -Values @(3, 3, 2, 1)\nif (($dup -join ',') -ne '1,2,3,3') { throw \"duplicate case failed: $($dup -join ',')\" }\nWrite-Output 'powershell cocktail ok'\n"
+        }
+      ]
+    },
+    "java": {
+      "verified": true,
+      "testCommand": "javac -d output/implementation-tests implementations/java/sorting/cocktail/CocktailSort.java && java -cp output/implementation-tests CocktailSort",
+      "files": [
+        {
+          "name": "CocktailSort.java",
+          "content": "import java.util.*;\n\npublic class CocktailSort {\n  public static int[] sort(int[] values) {\n    int[] a = values.clone();\n    int start = 0, end = a.length - 1;\n    boolean swapped = true;\n    while (swapped) {\n      swapped = false;\n      for (int i = start; i < end; i++) if (a[i] > a[i + 1]) { int t = a[i]; a[i] = a[i + 1]; a[i + 1] = t; swapped = true; }\n      if (!swapped) break;\n      swapped = false;\n      end--;\n      for (int i = end; i > start; i--) if (a[i - 1] > a[i]) { int t = a[i - 1]; a[i - 1] = a[i]; a[i] = t; swapped = true; }\n      start++;\n    }\n    return a;\n  }\n  public static void main(String[] args) {\n    int[] actual = sort(new int[]{5, 1, 4, 2, 8, 0, -3});\n    if (!Arrays.equals(actual, new int[]{-3, 0, 1, 2, 4, 5, 8})) throw new AssertionError(Arrays.toString(actual));\n    int[] dup = sort(new int[]{3, 3, 2, 1});\n    if (!Arrays.equals(dup, new int[]{1, 2, 3, 3})) throw new AssertionError(Arrays.toString(dup));\n    System.out.println(\"java cocktail ok\");\n  }\n}\n"
+        }
+      ]
+    },
+    "csharp": {
+      "verified": true,
+      "testCommand": "dotnet build implementations/csharp/sorting/cocktail/CocktailSort.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-cocktail/ && dotnet .\\output\\implementation-tests\\csharp-bin-cocktail\\CocktailSort.dll",
+      "files": [
+        {
+          "name": "CocktailSort.csproj",
+          "content": "<Project Sdk=\"Microsoft.NET.Sdk\">\n  <PropertyGroup>\n    <OutputType>Exe</OutputType>\n    <TargetFramework>net10.0</TargetFramework>\n    <ImplicitUsings>enable</ImplicitUsings>\n    <Nullable>enable</Nullable>\n  </PropertyGroup>\n</Project>\n"
+        },
+        {
+          "name": "Program.cs",
+          "content": "using System;\nusing System.Linq;\n\npublic static class CocktailSort\n{\n  public static int[] Sort(int[] values)\n  {\n    var a = (int[])values.Clone();\n    int start = 0, end = a.Length - 1;\n    bool swapped = true;\n    while (swapped)\n    {\n      swapped = false;\n      for (int i = start; i < end; i++) if (a[i] > a[i + 1]) { (a[i], a[i + 1]) = (a[i + 1], a[i]); swapped = true; }\n      if (!swapped) break;\n      swapped = false;\n      end--;\n      for (int i = end; i > start; i--) if (a[i - 1] > a[i]) { (a[i - 1], a[i]) = (a[i], a[i - 1]); swapped = true; }\n      start++;\n    }\n    return a;\n  }\n  public static void Main()\n  {\n    if (!Sort(new[] {5, 1, 4, 2, 8, 0, -3}).SequenceEqual(new[] {-3, 0, 1, 2, 4, 5, 8})) throw new Exception(\"primary case failed\");\n    if (!Sort(new[] {3, 3, 2, 1}).SequenceEqual(new[] {1, 2, 3, 3})) throw new Exception(\"duplicate case failed\");\n    Console.WriteLine(\"csharp cocktail ok\");\n  }\n}\n"
+        }
+      ]
+    },
+    "fsharp": {
+      "verified": true,
+      "testCommand": "dotnet build implementations/fsharp/sorting/cocktail/CocktailSort.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin-cocktail/ && dotnet .\\output\\implementation-tests\\fsharp-bin-cocktail\\CocktailSort.dll",
+      "files": [
+        {
+          "name": "CocktailSort.fsproj",
+          "content": "<Project Sdk=\"Microsoft.NET.Sdk\">\n  <PropertyGroup>\n    <OutputType>Exe</OutputType>\n    <TargetFramework>net10.0</TargetFramework>\n  </PropertyGroup>\n  <ItemGroup>\n    <Compile Include=\"Program.fs\" />\n  </ItemGroup>\n</Project>\n"
+        },
+        {
+          "name": "Program.fs",
+          "content": "let sort (values: int array) =\n    let a = Array.copy values\n    let mutable start = 0\n    let mutable finish = a.Length - 1\n    let mutable swapped = true\n    while swapped do\n        swapped <- false\n        for i in start .. finish - 1 do\n            if a[i] > a[i + 1] then\n                let t = a[i]\n                a[i] <- a[i + 1]\n                a[i + 1] <- t\n                swapped <- true\n        if swapped then\n            swapped <- false\n            finish <- finish - 1\n            for i in finish .. -1 .. start + 1 do\n                if a[i - 1] > a[i] then\n                    let t = a[i - 1]\n                    a[i - 1] <- a[i]\n                    a[i] <- t\n                    swapped <- true\n            start <- start + 1\n    a\n\n[<EntryPoint>]\nlet main _ =\n    if sort [|5; 1; 4; 2; 8; 0; -3|] <> [|-3; 0; 1; 2; 4; 5; 8|] then failwith \"primary case failed\"\n    if sort [|3; 3; 2; 1|] <> [|1; 2; 3; 3|] then failwith \"duplicate case failed\"\n    printfn \"fsharp cocktail ok\"\n    0\n"
+        }
+      ]
+    },
+    "c": {
+      "verified": true,
+      "testCommand": "gcc implementations/c/sorting/cocktail/cocktail_sort.c -DTEST -o output/implementation-tests/cocktail_c.exe && .\\output\\implementation-tests\\cocktail_c.exe",
+      "files": [
+        {
+          "name": "cocktail_sort.c",
+          "content": "#include <stdio.h>\n#include <stdbool.h>\n#include <stdlib.h>\n\nvoid cocktail_shaker_sort(int *a, int n) {\n  int start = 0, end = n - 1;\n  bool swapped = true;\n  while (swapped) {\n    swapped = false;\n    for (int i = start; i < end; i++) if (a[i] > a[i + 1]) { int t = a[i]; a[i] = a[i + 1]; a[i + 1] = t; swapped = true; }\n    if (!swapped) break;\n    swapped = false;\n    end--;\n    for (int i = end; i > start; i--) if (a[i - 1] > a[i]) { int t = a[i - 1]; a[i - 1] = a[i]; a[i] = t; swapped = true; }\n    start++;\n  }\n}\n#ifdef TEST\nstatic void expect(int *a, int *e, int n) { for (int i = 0; i < n; i++) if (a[i] != e[i]) { fprintf(stderr, \"mismatch at %d\\n\", i); exit(1); } }\nint main(void) {\n  int a[] = {5, 1, 4, 2, 8, 0, -3}; int e[] = {-3, 0, 1, 2, 4, 5, 8};\n  cocktail_shaker_sort(a, 7); expect(a, e, 7);\n  int b[] = {3, 3, 2, 1}; int f[] = {1, 2, 3, 3};\n  cocktail_shaker_sort(b, 4); expect(b, f, 4);\n  puts(\"c cocktail ok\");\n  return 0;\n}\n#endif\n"
+        }
+      ]
+    },
+    "cpp": {
+      "verified": true,
+      "testCommand": "g++ implementations/cpp/sorting/cocktail/cocktail_sort.cpp -std=c++17 -o output/implementation-tests/cocktail_cpp.exe && .\\output\\implementation-tests\\cocktail_cpp.exe",
+      "files": [
+        {
+          "name": "cocktail_sort.cpp",
+          "content": "#include <algorithm>\n#include <iostream>\n#include <stdexcept>\n#include <vector>\n\nstd::vector<int> cocktailShakerSort(std::vector<int> a) {\n  int start = 0;\n  int end = static_cast<int>(a.size()) - 1;\n  bool swapped = true;\n  while (swapped) {\n    swapped = false;\n    for (int i = start; i < end; ++i) if (a[i] > a[i + 1]) { std::swap(a[i], a[i + 1]); swapped = true; }\n    if (!swapped) break;\n    swapped = false;\n    --end;\n    for (int i = end; i > start; --i) if (a[i - 1] > a[i]) { std::swap(a[i - 1], a[i]); swapped = true; }\n    ++start;\n  }\n  return a;\n}\nint main() {\n  if (cocktailShakerSort({5, 1, 4, 2, 8, 0, -3}) != std::vector<int>({-3, 0, 1, 2, 4, 5, 8})) throw std::runtime_error(\"primary\");\n  if (cocktailShakerSort({3, 3, 2, 1}) != std::vector<int>({1, 2, 3, 3})) throw std::runtime_error(\"duplicate\");\n  std::cout << \"cpp cocktail ok\\n\";\n}\n"
+        }
+      ]
+    },
+    "go": {
+      "verified": true,
+      "testCommand": "go run implementations/go/sorting/cocktail/cocktail_sort.go",
+      "files": [
+        {
+          "name": "cocktail_sort.go",
+          "content": "package main\n\nimport (\n  \"fmt\"\n  \"reflect\"\n)\n\nfunc cocktailShakerSort(values []int) []int {\n  a := append([]int(nil), values...)\n  start, end := 0, len(a)-1\n  swapped := true\n  for swapped {\n    swapped = false\n    for i := start; i < end; i++ { if a[i] > a[i+1] { a[i], a[i+1] = a[i+1], a[i]; swapped = true } }\n    if !swapped { break }\n    swapped = false\n    end--\n    for i := end; i > start; i-- { if a[i-1] > a[i] { a[i-1], a[i] = a[i], a[i-1]; swapped = true } }\n    start++\n  }\n  return a\n}\nfunc main() {\n  if !reflect.DeepEqual(cocktailShakerSort([]int{5,1,4,2,8,0,-3}), []int{-3,0,1,2,4,5,8}) { panic(\"primary case failed\") }\n  if !reflect.DeepEqual(cocktailShakerSort([]int{3,3,2,1}), []int{1,2,3,3}) { panic(\"duplicate case failed\") }\n  fmt.Println(\"go cocktail ok\")\n}\n"
+        }
+      ]
+    },
+    "rust": {
+      "verified": true,
+      "testCommand": "rustc --target x86_64-pc-windows-gnu implementations/rust/sorting/cocktail/cocktail_sort.rs -o output/implementation-tests/cocktail_rust.exe && .\\output\\implementation-tests\\cocktail_rust.exe",
+      "files": [
+        {
+          "name": "cocktail_sort.rs",
+          "content": "fn cocktail_shaker_sort(values: &[i32]) -> Vec<i32> {\n    let mut a = values.to_vec();\n    if a.len() < 2 { return a; }\n    let mut start = 0usize;\n    let mut end = a.len() - 1;\n    let mut swapped = true;\n    while swapped {\n        swapped = false;\n        for i in start..end { if a[i] > a[i + 1] { a.swap(i, i + 1); swapped = true; } }\n        if !swapped { break; }\n        swapped = false;\n        end -= 1;\n        for i in (start + 1..=end).rev() { if a[i - 1] > a[i] { a.swap(i - 1, i); swapped = true; } }\n        start += 1;\n    }\n    a\n}\nfn main() {\n    assert_eq!(cocktail_shaker_sort(&[5, 1, 4, 2, 8, 0, -3]), vec![-3, 0, 1, 2, 4, 5, 8]);\n    assert_eq!(cocktail_shaker_sort(&[3, 3, 2, 1]), vec![1, 2, 3, 3]);\n    println!(\"rust cocktail ok\");\n}\n"
+        }
+      ]
+    },
+    "ruby": {
+      "verified": true,
+      "testCommand": "ruby implementations/ruby/sorting/cocktail/cocktail_sort.rb",
+      "files": [
+        {
+          "name": "cocktail_sort.rb",
+          "content": "def cocktail_shaker_sort(values)\n  a = values.dup\n  start = 0\n  finish = a.length - 1\n  swapped = true\n  while swapped\n    swapped = false\n    (start...finish).each do |i|\n      if a[i] > a[i + 1]\n        a[i], a[i + 1] = a[i + 1], a[i]\n        swapped = true\n      end\n    end\n    break unless swapped\n    swapped = false\n    finish -= 1\n    finish.downto(start + 1) do |i|\n      if a[i - 1] > a[i]\n        a[i - 1], a[i] = a[i], a[i - 1]\n        swapped = true\n      end\n    end\n    start += 1\n  end\n  a\nend\nraise 'primary' unless cocktail_shaker_sort([5, 1, 4, 2, 8, 0, -3]) == [-3, 0, 1, 2, 4, 5, 8]\nraise 'duplicate' unless cocktail_shaker_sort([3, 3, 2, 1]) == [1, 2, 3, 3]\nputs 'ruby cocktail ok'\n"
+        }
+      ]
+    },
+    "perl": {
+      "verified": true,
+      "testCommand": "perl implementations/perl/sorting/cocktail/cocktail_sort.pl",
+      "files": [
+        {
+          "name": "cocktail_sort.pl",
+          "content": "use strict;\nuse warnings;\nsub cocktail_shaker_sort {\n  my @a = @_;\n  my $start = 0;\n  my $end = $#a;\n  my $swapped = 1;\n  while ($swapped) {\n    $swapped = 0;\n    for my $i ($start .. $end - 1) { if ($a[$i] > $a[$i + 1]) { @a[$i, $i + 1] = @a[$i + 1, $i]; $swapped = 1; } }\n    last unless $swapped;\n    $swapped = 0;\n    $end--;\n    for (my $i = $end; $i > $start; $i--) { if ($a[$i - 1] > $a[$i]) { @a[$i - 1, $i] = @a[$i, $i - 1]; $swapped = 1; } }\n    $start++;\n  }\n  return @a;\n}\nmy @a = cocktail_shaker_sort(5, 1, 4, 2, 8, 0, -3);\ndie 'primary' unless join(',', @a) eq '-3,0,1,2,4,5,8';\nmy @b = cocktail_shaker_sort(3, 3, 2, 1);\ndie 'duplicate' unless join(',', @b) eq '1,2,3,3';\nprint \"perl cocktail ok\n\";\n"
+        }
+      ]
+    },
+    "bash": {
+      "verified": true,
+      "testCommand": "bash implementations/bash/sorting/cocktail/test.sh",
+      "files": [
+        {
+          "name": "cocktail_sort.sh",
+          "content": "cocktail_shaker_sort() {\n  local -n arr=$1\n  local start=0\n  local end=$((${#arr[@]} - 1))\n  local swapped=1\n  local i tmp\n  while (( swapped )); do\n    swapped=0\n    for ((i=start; i<end; i++)); do\n      if (( arr[i] > arr[i+1] )); then\n        tmp=${arr[i]}; arr[i]=${arr[i+1]}; arr[i+1]=$tmp\n        swapped=1\n      fi\n    done\n    (( swapped )) || break\n    swapped=0\n    ((end--))\n    for ((i=end; i>start; i--)); do\n      if (( arr[i-1] > arr[i] )); then\n        tmp=${arr[i-1]}; arr[i-1]=${arr[i]}; arr[i]=$tmp\n        swapped=1\n      fi\n    done\n    ((start+=1))\n  done\n}\n"
+        },
+        {
+          "name": "test.sh",
+          "content": "#!/usr/bin/env bash\nset -euo pipefail\nsource \"$(dirname \"$0\")/cocktail_sort.sh\"\nvalues=(5 1 4 2 8 0 -3)\ncocktail_shaker_sort values\n[[ \"${values[*]}\" == \"-3 0 1 2 4 5 8\" ]] || { echo \"primary failed: ${values[*]}\" >&2; exit 1; }\ndup=(3 3 2 1)\ncocktail_shaker_sort dup\n[[ \"${dup[*]}\" == \"1 2 3 3\" ]] || { echo \"duplicate failed: ${dup[*]}\" >&2; exit 1; }\necho 'bash cocktail ok'\n"
+        }
+      ]
+    },
+    "visual-basic": {
+      "verified": true,
+      "testCommand": "dotnet build implementations/visual-basic/sorting/cocktail/CocktailSort.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin-cocktail/ && dotnet .\\output\\implementation-tests\\visual-basic-bin-cocktail\\CocktailSort.dll",
+      "files": [
+        {
+          "name": "CocktailSort.vbproj",
+          "content": "<Project Sdk=\"Microsoft.NET.Sdk\">\n  <PropertyGroup>\n    <OutputType>Exe</OutputType>\n    <TargetFramework>net10.0</TargetFramework>\n  </PropertyGroup>\n</Project>\n"
+        },
+        {
+          "name": "Program.vb",
+          "content": "Imports System\nImports System.Linq\nModule Program\n  Function CocktailShakerSort(values As Integer()) As Integer()\n    Dim a = CType(values.Clone(), Integer())\n    Dim start = 0\n    Dim finish = a.Length - 1\n    Dim swapped = True\n    While swapped\n      swapped = False\n      For i = start To finish - 1\n        If a(i) > a(i + 1) Then\n          Dim t = a(i) : a(i) = a(i + 1) : a(i + 1) = t\n          swapped = True\n        End If\n      Next\n      If Not swapped Then Exit While\n      swapped = False\n      finish -= 1\n      For i = finish To start + 1 Step -1\n        If a(i - 1) > a(i) Then\n          Dim t = a(i - 1) : a(i - 1) = a(i) : a(i) = t\n          swapped = True\n        End If\n      Next\n      start += 1\n    End While\n    Return a\n  End Function\n  Sub Main()\n    If Not CocktailShakerSort({5, 1, 4, 2, 8, 0, -3}).SequenceEqual({-3, 0, 1, 2, 4, 5, 8}) Then Throw New Exception(\"primary\")\n    If Not CocktailShakerSort({3, 3, 2, 1}).SequenceEqual({1, 2, 3, 3}) Then Throw New Exception(\"duplicate\")\n    Console.WriteLine(\"visual-basic cocktail ok\")\n  End Sub\nEnd Module\n"
+        }
+      ]
+    },
+    "fortran": {
+      "verified": true,
+      "testCommand": "gfortran implementations/fortran/sorting/cocktail/cocktail_sort.f90 -o output/implementation-tests/cocktail_fortran.exe && .\\output\\implementation-tests\\cocktail_fortran.exe",
+      "files": [
+        {
+          "name": "cocktail_sort.f90",
+          "content": "program cocktail_sort_test\n  implicit none\n  integer :: a(7) = [5, 1, 4, 2, 8, 0, -3]\n  integer :: e(7) = [-3, 0, 1, 2, 4, 5, 8]\n  integer :: b(4) = [3, 3, 2, 1]\n  integer :: f(4) = [1, 2, 3, 3]\n  call cocktail_shaker_sort(a)\n  if (any(a /= e)) error stop 'primary case failed'\n  call cocktail_shaker_sort(b)\n  if (any(b /= f)) error stop 'duplicate case failed'\n  print *, 'fortran cocktail ok'\ncontains\n  subroutine cocktail_shaker_sort(values)\n    integer, intent(inout) :: values(:)\n    integer :: start, finish, i, tmp\n    logical :: swapped\n    start = 1\n    finish = size(values)\n    swapped = .true.\n    do while (swapped)\n      swapped = .false.\n      do i = start, finish - 1\n        if (values(i) > values(i + 1)) then\n          tmp = values(i); values(i) = values(i + 1); values(i + 1) = tmp\n          swapped = .true.\n        end if\n      end do\n      if (.not. swapped) exit\n      swapped = .false.\n      finish = finish - 1\n      do i = finish, start + 1, -1\n        if (values(i - 1) > values(i)) then\n          tmp = values(i - 1); values(i - 1) = values(i); values(i) = tmp\n          swapped = .true.\n        end if\n      end do\n      start = start + 1\n    end do\n  end subroutine cocktail_shaker_sort\nend program cocktail_sort_test\n"
+        }
+      ]
+    }
+  }
+}

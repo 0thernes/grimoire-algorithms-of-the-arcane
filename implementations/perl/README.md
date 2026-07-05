@@ -12,7 +12,7 @@ Expected runtime/toolchain: Perl
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 5
+- Verified implementations: 6
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -32,6 +32,7 @@ That adapter contains all 1000 GRIMOIRE records for Perl. It is meant for discov
 - Reservoir Sampling (`reservoir`): `perl implementations/perl/sampling/reservoir/reservoir.pl`
 - Cycle Sort (`cyclesort`): `perl implementations/perl/sorting/cyclesort/cyclesort.pl`
 - Stooge Sort (`stoogesort`): `perl implementations/perl/sorting/stoogesort/stoogesort.pl`
+- Cocktail Shaker Sort (`cocktail`): `perl implementations/perl/sorting/cocktail/cocktail_sort.pl`
 
 ## Required Shape For Each Algorithm
 

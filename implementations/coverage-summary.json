@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-05T04:50:27.650Z",
+  "generatedAt": "2026-07-05T05:21:57.481Z",
   "catalogVersion": "0.9.13-local",
   "recordCount": 1000,
   "languageCount": 50,
@@ -8,7 +8,7 @@
   "catalogAdapterCells": 50000,
   "catalogAdapterLanguages": 50,
   "catalogAdapterStatus": "generated-full-catalog",
-  "verifiedCells": 71,
+  "verifiedCells": 87,
   "status": "partial-verified",
   "coverageByLanguage": [
     {
@@ -16,7 +16,7 @@
       "languageName": "JavaScript",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -24,7 +24,7 @@
       "languageName": "TypeScript",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -32,7 +32,7 @@
       "languageName": "Python",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -40,7 +40,7 @@
       "languageName": "Java",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -48,7 +48,7 @@
       "languageName": "C",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -56,7 +56,7 @@
       "languageName": "C++",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -64,7 +64,7 @@
       "languageName": "C#",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -72,7 +72,7 @@
       "languageName": "Go",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -80,8 +80,8 @@
       "languageName": "Rust",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 0,
-      "status": "planned"
+      "verified": 1,
+      "status": "partial"
     },
     {
       "languageId": "kotlin",
@@ -104,7 +104,7 @@
       "languageName": "Ruby",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -160,7 +160,7 @@
       "languageName": "Perl",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -168,7 +168,7 @@
       "languageName": "Bash",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -176,7 +176,7 @@
       "languageName": "PowerShell",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -232,7 +232,7 @@
       "languageName": "F#",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -288,7 +288,7 @@
       "languageName": "Fortran",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 1,
+      "verified": 2,
       "status": "partial"
     },
     {
@@ -352,7 +352,7 @@
       "languageName": "Visual Basic .NET",
       "planned": 1000,
       "catalogAdapterRecords": 1000,
-      "verified": 5,
+      "verified": 6,
       "status": "partial"
     },
     {
@@ -435,7 +435,7 @@
       "engine": "optimization",
       "records": 104,
       "plannedCells": 5200,
-      "verifiedCells": 28
+      "verifiedCells": 44
     },
     {
       "engine": "distributed",

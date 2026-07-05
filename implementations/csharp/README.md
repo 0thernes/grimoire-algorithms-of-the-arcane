@@ -12,7 +12,7 @@ Expected runtime/toolchain: .NET
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 5
+- Verified implementations: 6
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -32,6 +32,7 @@ That adapter contains all 1000 GRIMOIRE records for C#. It is meant for discover
 - Reservoir Sampling (`reservoir`): `dotnet build implementations/csharp/sampling/reservoir/Reservoir.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-reservoir/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-reservoir/ && dotnet .\output\implementation-tests\csharp-bin-reservoir\Reservoir.dll`
 - Cycle Sort (`cyclesort`): `dotnet build implementations/csharp/sorting/cyclesort/CycleSort.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-cyclesort/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-cyclesort/ && dotnet .\output\implementation-tests\csharp-bin-cyclesort\CycleSort.dll`
 - Stooge Sort (`stoogesort`): `dotnet build implementations/csharp/sorting/stoogesort/StoogeSort.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-stoogesort/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-stoogesort/ && dotnet .\output\implementation-tests\csharp-bin-stoogesort\StoogeSort.dll`
+- Cocktail Shaker Sort (`cocktail`): `dotnet build implementations/csharp/sorting/cocktail/CocktailSort.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj-cocktail/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin-cocktail/ && dotnet .\output\implementation-tests\csharp-bin-cocktail\CocktailSort.dll`
 
 ## Required Shape For Each Algorithm
 

@@ -60,7 +60,7 @@ flowchart TD
 - `tools/build-implementation-matrix.mjs`: derives the 50-language implementation scaffold, full-catalog language adapters, coverage summary, special 1000-algorithm list, GitHub publishing notes, and license/notice files from `catalog.json`.
 - `tools/generate-matrix-cell.mjs`: takes a JSON spec under `specs/`, writes a multi-language native implementation batch, updates `implementations/verified-cells.json` for declared verified cells, and rebuilds the implementation matrix.
 - `tools/audit-language-catalog-adapters.mjs`: verifies all 50 language folders include a generated 1000-record catalog adapter with catalog/version alignment and non-implementation status preserved.
-- `implementations/`: planned source-code expansion tree for 50 language/script targets. It currently has 50 generated full-catalog adapters and 71 verified native implementation cells; all other planned native cells remain unverified until real code is added and audited.
+- `implementations/`: planned source-code expansion tree for 50 language/script targets. It currently has 50 generated full-catalog adapters and 87 verified native implementation cells; all other planned native cells remain unverified until real code is added and audited.
 - `drawAuthenticGlyph`: generated-record render entrypoint; calls the semantic renderer before the older generated canvas fallback.
 - `visualPointer`: global pointer state used for subtle responsive diagram inspection without changing factual rows.
 - `IntersectionObserver`: starts only canvases near the viewport to reduce browser freeze risk.

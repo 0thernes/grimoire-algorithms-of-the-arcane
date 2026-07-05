@@ -4,14 +4,14 @@
 
 - Added the 1000 x 50 implementation matrix scaffold under `implementations/`.
 - Added 50 language/script target folders with README gates for future real implementations.
-- Added `implementations/languages.json`, `implementations/coverage-summary.json`, and `implementations/catalog-adapters-summary.json`; current planned native cells are 50,000, generated adapter cells are 50,000, and verified native cells are 71.
+- Added `implementations/languages.json`, `implementations/coverage-summary.json`, and `implementations/catalog-adapters-summary.json`; current planned native cells are 50,000, generated adapter cells are 50,000, and verified native cells are 87.
 - Added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`.
 - Added `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff` for public non-commercial attribution posture.
 - Updated the GitHub Pages workflow to deploy root docs, license/notice/contribution/security/citation files, `docs/`, and `implementations/`.
 - Added reusable `output/playwright/implementation-matrix-audit-runner.js` and `tools/audit-language-catalog-adapters.mjs`.
 - Added `tools/audit-pages-artifact.mjs` and verified the simulated GitHub Pages artifact payload.
 - Added `tools/cross-browser-smoke.mjs` and refreshed Chromium, Firefox, and WebKit screenshot smoke evidence.
-- Added `tools/audit-requirement-evidence.mjs`, reporting 12 requirement checks, 0 defects, and 3 open blockers.
+- Added `tools/audit-requirement-evidence.mjs`, reporting 16 requirement checks, 0 defects, and 2 open blockers.
 - Added `bibliography/` with 1000 record-specific citation-slot bundles and a green bibliography audit.
 - Added sticky record search/filter controls for active volume, tag, engine, source status, sonic family, and visual family.
 - Added visible source-status badges to all 1000 cards and exported source/sonic/visual filter facets in `catalog.json`.

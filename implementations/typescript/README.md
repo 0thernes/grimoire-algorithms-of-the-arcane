@@ -12,7 +12,7 @@ Expected runtime/toolchain: Node.js / browser
 
 - Planned algorithms: 1000
 - Generated catalog-adapter records: 1000
-- Verified implementations: 5
+- Verified implementations: 6
 - Status: partial verified
 
 ## Full-Catalog Adapter
@@ -32,6 +32,7 @@ That adapter contains all 1000 GRIMOIRE records for TypeScript. It is meant for 
 - Reservoir Sampling (`reservoir`): `deno run --quiet implementations/typescript/sampling/reservoir/test.ts`
 - Cycle Sort (`cyclesort`): `deno run --quiet implementations/typescript/sorting/cyclesort/test.ts`
 - Stooge Sort (`stoogesort`): `deno run --quiet implementations/typescript/sorting/stoogesort/test.ts`
+- Cocktail Shaker Sort (`cocktail`): `deno run --quiet implementations/typescript/sorting/cocktail/test.ts`
 
 ## Required Shape For Each Algorithm
 
