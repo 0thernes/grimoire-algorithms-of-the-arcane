@@ -109,4 +109,4 @@ This repo now exposes source-class ledger IDs, falsification targets, root `cata
 
 ## Implementation Verification
 
-The 50-language implementation matrix is an architecture scaffold. A future implementation cell becomes verified only when the language folder contains real runnable code, deterministic tests or examples, complexity notes, and source/provenance notes. Until then, `verifiedCells` must remain `0`.
+The 50-language implementation matrix is an architecture scaffold. A future implementation cell becomes verified only when the language folder contains real runnable code, deterministic tests or examples, complexity notes, and source/provenance notes. Unverified cells must stay planned, and `verifiedCells` must match `implementations/verified-cells.json`.

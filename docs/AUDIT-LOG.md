@@ -13,7 +13,7 @@ Verified checks:
 - `node --check output/playwright/static-readiness-audit-runner.js`: pass.
 - `node --check output/playwright/catalog-export-audit-runner.js`: pass.
 - `output/playwright/implementation-matrix-audit-summary.json`: 50 language targets, 50,000 planned cells, ledger-matched verified cells, 1000 algorithm rows, 50 language READMEs, 0 issues.
-- `output/implementation-tests/implementation-test-summary.json`: 11 Boyer-Moore cells tested, 11 passed, 0 failed.
+- `output/implementation-tests/implementation-test-summary.json`: 13 Boyer-Moore cells tested, 13 passed, 0 failed.
 - `output/playwright/static-readiness-audit-summary.json`: 0 issues.
 - `output/playwright/catalog-export-audit-summary.json`: 1000 catalog records, 1000 DOM records, 0 issues.
 - `tools/audit-pages-artifact.mjs`: simulated Pages payload with implementation files, 50 implementation language READMEs, 50,000 planned cells, ledger-matched verified cells, and 0 issues. Exact byte count is recorded in `output/pages-artifact/pages-artifact-audit-summary.json`.
@@ -34,7 +34,7 @@ Changes:
 
 Honesty boundary:
 
-- The matrix remains mostly planned, but 11 Boyer-Moore implementation cells are now locally verified. No fake code or fake verification was added.
+- The matrix remains mostly planned, but 13 Boyer-Moore implementation cells are now locally verified. No fake code or fake verification was added.
 
 ### 0.9.12 search/filter and source-marker audit
 

@@ -6,6 +6,10 @@ Current local version: `0.9.13-local`.
 
 This pass adds the 1000 x 50 implementation matrix scaffold, public non-commercial attribution files, GitHub publishing notes, Pages artifact wiring for `implementations/`, and a reusable implementation-matrix audit runner on top of the search/filter/source-status work.
 
+Public repository: `https://github.com/0thernes/grimoire-algorithms-of-the-arcane`
+
+Public Pages URL: `https://0thernes.github.io/grimoire-algorithms-of-the-arcane/`
+
 ## Verified Runtime Contracts
 
 - 1000 records, 10 volumes, 100 records per volume.
@@ -23,12 +27,13 @@ This pass adds the 1000 x 50 implementation matrix scaffold, public non-commerci
 - `catalog.json` exports 1000 records with source-class bibliography placeholders and matches browser DOM/runtime identity, visual, sonic, source, and filter-facet fields.
 - Keyboard/accessibility audit passes sampled desktop, tablet landscape, and phone portrait states.
 - `implementations/` exposes 50 language/script targets.
-- `implementations/coverage-summary.json` reports 50,000 planned cells and 11 verified Boyer-Moore cells.
+- `implementations/coverage-summary.json` reports 50,000 planned cells and 13 verified Boyer-Moore cells.
 - `docs/ALGORITHMS-1000.md` is generated from `catalog.json`.
 - Root non-commercial/attribution files exist: `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`.
-- `output/pages-artifact/pages-artifact-audit-summary.json` verifies the simulated GitHub Pages payload: 131 files, 0 issues, no internal audit/tooling folders copied.
-- `output/requirement-evidence/requirement-evidence-summary.json` reports 12 requirement checks, 0 defects, and 3 open blockers.
+- `output/pages-artifact/pages-artifact-audit-summary.json` verifies the simulated GitHub Pages payload: 137 files, 0 issues, no internal audit/tooling folders copied.
+- `output/requirement-evidence/requirement-evidence-summary.json` reports objective requirement checks with 0 defects and open truth boundaries.
 - `bibliography/records.json` gives all 1000 records four required citation slots; `output/bibliography/bibliography-audit-summary.json` reports 0 issues and 0 filled slots.
+- GitHub Actions run `28727003236` completed successfully and deployed GitHub Pages.
 
 ## Open Truth Boundary
 
@@ -36,12 +41,9 @@ Per-record historical citations are still not complete. The UI may make source-c
 
 The 50-language implementation matrix is not a completed implementation corpus. It now has a first ledger-backed Boyer-Moore batch, but each remaining language/algorithm cell still needs real code and evidence before it can be counted.
 
-Public push is blocked locally because the folder is not a Git repository and no `origin` remote is configured.
-
 ## Next Recommended Work
 
-1. Connect this folder to the intended GitHub repo, then commit and push.
-2. Expand the verified implementation corpus beyond the first Boyer-Moore batch.
-3. Fill per-record bibliography slots with source URLs or citation keys.
-4. Consider splitting broad categories if future source or UX review shows a group is too blended.
-5. Consider splitting `viz.js` only after the catalog export is used as a regression oracle; the giant file is awkward but currently verified.
+1. Expand the verified implementation corpus beyond the first Boyer-Moore batch.
+2. Fill per-record bibliography slots with source URLs or citation keys.
+3. Consider splitting broad categories if future source or UX review shows a group is too blended.
+4. Consider splitting `viz.js` only after the catalog export is used as a regression oracle; the giant file is awkward but currently verified.

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "catalogVersion": "0.9.13-local",
-  "generatedAt": "2026-07-05T02:27:05.356Z",
+  "generatedAt": "2026-07-05T02:32:20.289Z",
   "verificationPolicy": "A cell is verified only when its source files exist and its testCommand passes locally.",
   "verifiedCells": [
     {
@@ -81,6 +81,23 @@
       ],
       "readme": "implementations/java/string-search/boyermoore/README.md",
       "testCommand": "javac -d output/implementation-tests implementations/java/string-search/boyermoore/BoyerMoore.java && java -cp output/implementation-tests BoyerMoore",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "csharp:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "csharp",
+      "sourceFiles": [
+        "implementations/csharp/string-search/boyermoore/Program.cs",
+        "implementations/csharp/string-search/boyermoore/BoyerMoore.csproj"
+      ],
+      "readme": "implementations/csharp/string-search/boyermoore/README.md",
+      "testCommand": "dotnet build implementations/csharp/string-search/boyermoore/BoyerMoore.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin/ && dotnet .\\output\\implementation-tests\\csharp-bin\\BoyerMoore.dll",
       "verifiedAt": "2026-07-05",
       "status": "verified-local"
     },
@@ -177,6 +194,23 @@
       ],
       "readme": "implementations/bash/string-search/boyermoore/README.md",
       "testCommand": "bash implementations/bash/string-search/boyermoore/test.sh",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "visual-basic:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "visual-basic",
+      "sourceFiles": [
+        "implementations/visual-basic/string-search/boyermoore/Program.vb",
+        "implementations/visual-basic/string-search/boyermoore/BoyerMoore.vbproj"
+      ],
+      "readme": "implementations/visual-basic/string-search/boyermoore/README.md",
+      "testCommand": "dotnet build implementations/visual-basic/string-search/boyermoore/BoyerMoore.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin/ && dotnet .\\output\\implementation-tests\\visual-basic-bin\\BoyerMoore.dll",
       "verifiedAt": "2026-07-05",
       "status": "verified-local"
     }

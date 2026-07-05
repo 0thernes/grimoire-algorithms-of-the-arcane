@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T02:29:27.294Z",
+  "generatedAt": "2026-07-05T02:34:25.640Z",
   "target": "objective requirement evidence audit",
   "version": "0.9.13-local",
   "status": "verified-with-open-blockers",
@@ -123,7 +123,7 @@
       "status": "verified",
       "languageTargets": 50,
       "plannedCells": 50000,
-      "verifiedCells": 11
+      "verifiedCells": 13
     },
     {
       "id": "implementation-tests",
@@ -134,8 +134,8 @@
         "output/implementation-tests/implementation-test-summary.json"
       ],
       "status": "verified",
-      "totalCells": 11,
-      "passed": 11,
+      "totalCells": 13,
+      "passed": 13,
       "failed": 0
     },
     {
@@ -218,8 +218,8 @@
         "output/pages-artifact/pages-artifact-audit-summary.json"
       ],
       "status": "verified",
-      "siteFileCount": 131,
-      "siteBytes": 7304294,
+      "siteFileCount": 137,
+      "siteBytes": 7316602,
       "siteRemovedAfterAudit": true
     },
     {
@@ -251,16 +251,17 @@
     },
     {
       "id": "github-publish",
-      "description": "Actual commit/push/GitHub Pages publication is not complete because the folder is not connected to a GitHub repository.",
+      "description": "Local repository has an origin remote and publishing docs record the live public repo and Pages URL.",
       "evidence": [
         "docs/GITHUB-PUBLISHING.md",
         "ISSUES.md",
-        "gh auth status"
+        "gh repo view",
+        "gh run view"
       ],
-      "status": "open",
+      "status": "verified",
       "isRepo": true,
-      "hasOrigin": false,
-      "remote": "",
+      "hasOrigin": true,
+      "remote": "https://github.com/0thernes/grimoire-algorithms-of-the-arcane.git",
       "documented": true
     },
     {
@@ -286,12 +287,11 @@
       ],
       "status": "open",
       "plannedCells": 50000,
-      "verifiedCells": 11
+      "verifiedCells": 13
     }
   ],
   "issues": [],
   "openItems": [
-    "github-publish",
     "record-specific-bibliography",
     "verified-implementation-corpus"
   ]

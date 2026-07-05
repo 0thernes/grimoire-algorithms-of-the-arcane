@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-05T02:29:02.930Z",
+  "generatedAt": "2026-07-05T02:32:32.273Z",
   "catalogVersion": "0.9.13-local",
   "recordCount": 1000,
   "languageCount": 50,
   "plannedCells": 50000,
-  "verifiedCells": 11,
+  "verifiedCells": 13,
   "status": "partial-verified",
   "coverageByLanguage": [
     {
@@ -54,8 +54,8 @@
       "languageId": "csharp",
       "languageName": "C#",
       "planned": 1000,
-      "verified": 0,
-      "status": "planned"
+      "verified": 1,
+      "status": "partial"
     },
     {
       "languageId": "go",
@@ -306,8 +306,8 @@
       "languageId": "visual-basic",
       "languageName": "Visual Basic .NET",
       "planned": 1000,
-      "verified": 0,
-      "status": "planned"
+      "verified": 1,
+      "status": "partial"
     },
     {
       "languageId": "vba",
@@ -364,7 +364,7 @@
       "engine": "graph",
       "records": 135,
       "plannedCells": 6750,
-      "verifiedCells": 11
+      "verifiedCells": 13
     },
     {
       "engine": "logic",

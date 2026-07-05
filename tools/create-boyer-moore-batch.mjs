@@ -461,6 +461,174 @@ public class BoyerMoore {
 }
 `;
 
+const csharpProject = String.raw`<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+</Project>
+`;
+
+const csharp = String.raw`using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public static class BoyerMoore
+{
+  public static List<int> Search(string text, string pattern)
+  {
+    if (pattern.Length == 0) return new List<int> { 0 };
+    if (pattern.Length > text.Length) return new List<int>();
+    int m = pattern.Length;
+    int n = text.Length;
+    var last = new Dictionary<char, int>();
+    for (int i = 0; i < m; i++) last[pattern[i]] = i;
+    int[] shift = new int[m + 1];
+    int[] bpos = new int[m + 1];
+    int ii = m;
+    int j = m + 1;
+    bpos[ii] = j;
+    while (ii > 0)
+    {
+      while (j <= m && pattern[ii - 1] != pattern[j - 1])
+      {
+        if (shift[j] == 0) shift[j] = j - ii;
+        j = bpos[j];
+      }
+      ii--;
+      j--;
+      bpos[ii] = j;
+    }
+    j = bpos[0];
+    for (int i = 0; i <= m; i++)
+    {
+      if (shift[i] == 0) shift[i] = j;
+      if (i == j) j = bpos[j];
+    }
+    var matches = new List<int>();
+    int s = 0;
+    while (s <= n - m)
+    {
+      j = m - 1;
+      while (j >= 0 && pattern[j] == text[s + j]) j--;
+      if (j < 0)
+      {
+        matches.Add(s);
+        s += shift[0];
+      }
+      else
+      {
+        int lastIndex = last.TryGetValue(text[s + j], out int found) ? found : -1;
+        int bad = j - lastIndex;
+        s += Math.Max(1, Math.Max(bad, shift[j + 1]));
+      }
+    }
+    return matches;
+  }
+
+  private static void Expect(string text, string pattern, params int[] expected)
+  {
+    var actual = Search(text, pattern);
+    if (!actual.SequenceEqual(expected))
+      throw new Exception(text + "/" + pattern + ": " + string.Join(",", actual) + " != " + string.Join(",", expected));
+  }
+
+  public static void Main()
+  {
+    Expect("HERE IS A SIMPLE EXAMPLE", "EXAMPLE", 17);
+    Expect("bananana", "ana", 1, 3, 5);
+    Expect("aaaaa", "aa", 0, 1, 2, 3);
+    Expect("abcdef", "gh");
+    Expect("needle", "needle", 0);
+    Expect("anything", "", 0);
+    Console.WriteLine("csharp boyermoore ok");
+  }
+}
+`;
+
+const visualBasicProject = String.raw`<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>BoyerMooreVisualBasic</RootNamespace>
+  </PropertyGroup>
+</Project>
+`;
+
+const visualBasic = String.raw`Imports System
+Imports System.Collections.Generic
+Imports System.Linq
+
+Module BoyerMooreProgram
+  Function Search(text As String, pattern As String) As List(Of Integer)
+    If pattern.Length = 0 Then Return New List(Of Integer) From {0}
+    If pattern.Length > text.Length Then Return New List(Of Integer)()
+    Dim m = pattern.Length
+    Dim n = text.Length
+    Dim last As New Dictionary(Of Char, Integer)()
+    For i = 0 To m - 1
+      last(pattern(i)) = i
+    Next
+    Dim shift(m) As Integer
+    Dim bpos(m) As Integer
+    Dim ii = m
+    Dim j = m + 1
+    bpos(ii) = j
+    While ii > 0
+      While j <= m AndAlso pattern(ii - 1) <> pattern(j - 1)
+        If shift(j) = 0 Then shift(j) = j - ii
+        j = bpos(j)
+      End While
+      ii -= 1
+      j -= 1
+      bpos(ii) = j
+    End While
+    j = bpos(0)
+    For i = 0 To m
+      If shift(i) = 0 Then shift(i) = j
+      If i = j Then j = bpos(j)
+    Next
+    Dim matches As New List(Of Integer)()
+    Dim s = 0
+    While s <= n - m
+      j = m - 1
+      While j >= 0 AndAlso pattern(j) = text(s + j)
+        j -= 1
+      End While
+      If j < 0 Then
+        matches.Add(s)
+        s += shift(0)
+      Else
+        Dim lastIndex As Integer = -1
+        If last.ContainsKey(text(s + j)) Then lastIndex = last(text(s + j))
+        Dim bad = j - lastIndex
+        s += Math.Max(1, Math.Max(bad, shift(j + 1)))
+      End If
+    End While
+    Return matches
+  End Function
+
+  Sub Expect(text As String, pattern As String, ParamArray expected() As Integer)
+    Dim actual = Search(text, pattern)
+    If Not actual.SequenceEqual(expected) Then
+      Throw New Exception(text & "/" & pattern & ": mismatch")
+    End If
+  End Sub
+
+  Sub Main()
+    Expect("HERE IS A SIMPLE EXAMPLE", "EXAMPLE", 17)
+    Expect("bananana", "ana", 1, 3, 5)
+    Expect("aaaaa", "aa", 0, 1, 2, 3)
+    Expect("abcdef", "gh")
+    Expect("needle", "needle", 0)
+    Expect("anything", "", 0)
+    Console.WriteLine("visual-basic boyermoore ok")
+  End Sub
+End Module
+`;
+
 const c = String.raw`#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -883,21 +1051,29 @@ const files = [
   ['python', 'boyer_moore.py', py, 'test_boyer_moore.py', pyTest, 'python -B implementations/python/string-search/boyermoore/test_boyer_moore.py', true],
   ['powershell', 'boyer_moore.ps1', ps, 'test.ps1', psTest, 'pwsh -NoProfile -File implementations/powershell/string-search/boyermoore/test.ps1', true],
   ['java', 'BoyerMoore.java', java, null, null, 'javac -d output/implementation-tests implementations/java/string-search/boyermoore/BoyerMoore.java && java -cp output/implementation-tests BoyerMoore', true],
+  ['csharp', 'Program.cs', csharp, null, null, 'dotnet build implementations/csharp/string-search/boyermoore/BoyerMoore.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin/ && dotnet .\\output\\implementation-tests\\csharp-bin\\BoyerMoore.dll', true, undefined, [['BoyerMoore.csproj', csharpProject]]],
   ['c', 'boyer_moore.c', c, null, null, 'gcc implementations/c/string-search/boyermoore/boyer_moore.c -DTEST -o output/implementation-tests/boyermoore_c.exe && .\\output\\implementation-tests\\boyermoore_c.exe', true],
   ['cpp', 'boyer_moore.cpp', cpp, null, null, 'g++ implementations/cpp/string-search/boyermoore/boyer_moore.cpp -std=c++17 -o output/implementation-tests/boyermoore_cpp.exe && .\\output\\implementation-tests\\boyermoore_cpp.exe', true],
   ['go', 'boyer_moore.go', go, null, null, 'go run implementations/go/string-search/boyermoore/boyer_moore.go', true],
   ['rust', 'boyer_moore.rs', rust, null, null, 'rustc implementations/rust/string-search/boyermoore/boyer_moore.rs -o output/implementation-tests/boyermoore_rust.exe && .\\output\\implementation-tests\\boyermoore_rust.exe', false, 'Rust source is generated, but this Windows host cannot ledger-verify it until the MSVC/Windows SDK linker stack is available to rustc.'],
   ['ruby', 'boyer_moore.rb', ruby, null, null, 'ruby implementations/ruby/string-search/boyermoore/boyer_moore.rb', true],
   ['perl', 'boyer_moore.pl', perl, null, null, 'perl implementations/perl/string-search/boyermoore/boyer_moore.pl', true],
-  ['bash', 'boyer_moore.sh', bash, 'test.sh', bashTest, 'bash implementations/bash/string-search/boyermoore/test.sh', true]
+  ['bash', 'boyer_moore.sh', bash, 'test.sh', bashTest, 'bash implementations/bash/string-search/boyermoore/test.sh', true],
+  ['visual-basic', 'Program.vb', visualBasic, null, null, 'dotnet build implementations/visual-basic/string-search/boyermoore/BoyerMoore.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin/ && dotnet .\\output\\implementation-tests\\visual-basic-bin\\BoyerMoore.dll', true, undefined, [['BoyerMoore.vbproj', visualBasicProject]]]
 ];
 
 const verifiedCells = [];
-for (const [languageId, sourceName, sourceText, testName, testText, testCommand, verified, verificationNote] of files) {
+for (const [languageId, sourceName, sourceText, testName, testText, testCommand, verified, verificationNote, extraFiles = []] of files) {
   const dir = `${base}/${languageId}/${domain}/${algorithmId}`;
   const sourcePath = `${dir}/${sourceName}`;
   const fileList = [sourceName];
+  const sourceFiles = [sourcePath];
   write(sourcePath, sourceText);
+  for (const [extraName, extraText] of extraFiles) {
+    write(`${dir}/${extraName}`, extraText);
+    fileList.push(extraName);
+    sourceFiles.push(`${dir}/${extraName}`);
+  }
   if (testName) {
     write(`${dir}/${testName}`, testText);
     fileList.push(testName);
@@ -912,7 +1088,7 @@ for (const [languageId, sourceName, sourceText, testName, testText, testCommand,
       algorithmTitle,
       domain,
       languageId,
-      sourceFiles: [sourcePath],
+      sourceFiles,
       readme: `${dir}/README.md`,
       testCommand,
       verifiedAt,

@@ -4,8 +4,8 @@
 
 - Bumped local patch version to `0.9.13-local` for the implementation matrix and publishing scaffold pass.
 - Added `implementations/` with 50 language/script target folders.
-- Added `implementations/languages.json` and `implementations/coverage-summary.json`; current coverage is 50,000 planned cells and 11 locally verified cells.
-- Added Boyer-Moore string-search implementations for JavaScript, TypeScript, Python, PowerShell, Java, C, C++, Go, Ruby, Perl, and Bash, plus a generated but not locally ledger-verified Rust source file.
+- Added `implementations/languages.json` and `implementations/coverage-summary.json`; current coverage is 50,000 planned cells and 13 locally verified cells.
+- Added Boyer-Moore string-search implementations for JavaScript, TypeScript, Python, PowerShell, Java, C#, C, C++, Go, Ruby, Perl, Bash, and Visual Basic .NET, plus a generated but not locally ledger-verified Rust source file.
 - Added `implementations/verified-cells.json` and `tools/verify-implementations.mjs` so verified cells are counted only when their test commands pass.
 - Added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`.
 - Added `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`.
@@ -15,6 +15,7 @@
 - Added `tools/cross-browser-smoke.mjs` and refreshed Chromium, Firefox, and WebKit screenshot smoke evidence.
 - Added `tools/audit-requirement-evidence.mjs` and `output/requirement-evidence/requirement-evidence-summary.json` to separate verified requirements from open blockers.
 - Added `bibliography/`, `docs/BIBLIOGRAPHY.md`, `tools/build-bibliography-ledger.mjs`, and `tools/audit-bibliography-ledger.mjs` for 1000 record-specific citation-slot scaffolding.
+- Initialized the local Git repository, created `0thernes/grimoire-algorithms-of-the-arcane`, enabled GitHub Pages with `build_type=workflow`, and verified the live Pages URL.
 
 ## 2026-07-05
 

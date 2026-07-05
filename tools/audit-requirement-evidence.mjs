@@ -334,14 +334,28 @@ function main() {
   );
 
   const git = gitStatus();
-  const publishDocsMentionBlocker = /not initialized|no `origin` remote|Publishing Blocker/i.test(text('docs/GITHUB-PUBLISHING.md'));
-  addOpen(
-    requirements,
-    'github-publish',
-    'Actual commit/push/GitHub Pages publication is not complete because the folder is not connected to a GitHub repository.',
-    ['docs/GITHUB-PUBLISHING.md', 'ISSUES.md', 'gh auth status'],
-    { ...git, documented: publishDocsMentionBlocker }
-  );
+  const publishingDoc = text('docs/GITHUB-PUBLISHING.md');
+  const publishDocsMentionLive = /github\.com\/0thernes\/grimoire-algorithms-of-the-arcane/.test(publishingDoc) &&
+    /0thernes\.github\.io\/grimoire-algorithms-of-the-arcane/.test(publishingDoc) &&
+    /result: success/.test(publishingDoc);
+  if (git.isRepo && git.hasOrigin) {
+    addRequirement(
+      requirements,
+      'github-publish',
+      'Local repository has an origin remote and publishing docs record the live public repo and Pages URL.',
+      ['docs/GITHUB-PUBLISHING.md', 'ISSUES.md', 'gh repo view', 'gh run view'],
+      /github\.com[:/]0thernes\/grimoire-algorithms-of-the-arcane/.test(git.remote) && publishDocsMentionLive,
+      { ...git, documented: publishDocsMentionLive }
+    );
+  } else {
+    addOpen(
+      requirements,
+      'github-publish',
+      'Actual commit/push/GitHub Pages publication is not complete because the folder is not connected to a GitHub repository.',
+      ['docs/GITHUB-PUBLISHING.md', 'ISSUES.md', 'gh auth status'],
+      { ...git, documented: publishDocsMentionLive }
+    );
+  }
 
   addOpen(
     requirements,

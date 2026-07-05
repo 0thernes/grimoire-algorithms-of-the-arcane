@@ -4,8 +4,7 @@
 
 1. Per-record historical bibliography slots are now present, but unfilled. The active source-class ledger keeps current context rows honest; individual records still need record-specific citations before naming inventors, exact first-publication dates, primary users, or deployments.
 2. Some categories are broad by design; future audit should split any group that becomes too blended.
-3. The 1000 x 50 implementation matrix is still mostly scaffold. It has 50,000 planned cells, 11 locally verified Boyer-Moore cells, and 49,989 cells still requiring real code, tests, complexity notes, and provenance notes.
-4. Public GitHub publishing is blocked because the working folder is not currently a Git repository and has no configured `origin` remote.
+3. The 1000 x 50 implementation matrix is still mostly scaffold. It has 50,000 planned cells, 13 locally verified Boyer-Moore cells, and 49,987 cells still requiring real code, tests, complexity notes, and provenance notes.
 
 ## Closed
 
@@ -34,3 +33,4 @@
 23. Search/filter by tag, engine, volume, source status, and sonic/visual family was not implemented.
 24. The UI did not expose visible source-status markers for records needing future source verification.
 25. The repo lacked a 50-language implementation matrix scaffold, special 1000-algorithm MD index, public non-commercial license/notice surface, and implementation-matrix audit runner.
+26. Public GitHub repository and GitHub Pages deployment were not live.

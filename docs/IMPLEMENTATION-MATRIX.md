@@ -9,7 +9,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Catalog records | 1000 |
 | Language/script targets | 50 |
 | Planned implementation cells | 50000 |
-| Verified implementation cells | 11 |
+| Verified implementation cells | 13 |
 
 ## Language Targets
 
@@ -21,7 +21,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Java | `java` | managed OO | `.java` | 1000 | 1 |
 | C | `c` | systems | `.c` | 1000 | 1 |
 | C++ | `cpp` | systems | `.cpp` | 1000 | 1 |
-| C# | `csharp` | managed OO | `.cs` | 1000 | 0 |
+| C# | `csharp` | managed OO | `.cs` | 1000 | 1 |
 | Go | `go` | systems/networking | `.go` | 1000 | 1 |
 | Rust | `rust` | safe systems | `.rs` | 1000 | 0 |
 | Kotlin | `kotlin` | modern JVM | `.kt` | 1000 | 0 |
@@ -57,7 +57,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Prolog | `prolog` | logic programming | `.pl` | 1000 | 0 |
 | Objective-C | `objective-c` | Apple/native | `.m` | 1000 | 0 |
 | Groovy | `groovy` | dynamic JVM | `.groovy` | 1000 | 0 |
-| Visual Basic .NET | `visual-basic` | managed OO | `.vb` | 1000 | 0 |
+| Visual Basic .NET | `visual-basic` | managed OO | `.vb` | 1000 | 1 |
 | VBA | `vba` | office automation | `.bas` | 1000 | 0 |
 | Solidity | `solidity` | smart contracts | `.sol` | 1000 | 0 |
 | Move | `move` | smart contracts | `.move` | 1000 | 0 |
@@ -70,7 +70,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 
 | Engine | Records | Planned Cells | Verified Cells |
 |---|---:|---:|---:|
-| graph | 135 | 6750 | 11 |
+| graph | 135 | 6750 | 13 |
 | logic | 122 | 6100 | 0 |
 | probability | 122 | 6100 | 0 |
 | optimization | 104 | 5200 | 0 |
@@ -94,12 +94,14 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Boyer-Moore | `boyermoore` | python | string-search | `python -B implementations/python/string-search/boyermoore/test_boyer_moore.py` |
 | Boyer-Moore | `boyermoore` | powershell | string-search | `pwsh -NoProfile -File implementations/powershell/string-search/boyermoore/test.ps1` |
 | Boyer-Moore | `boyermoore` | java | string-search | `javac -d output/implementation-tests implementations/java/string-search/boyermoore/BoyerMoore.java && java -cp output/implementation-tests BoyerMoore` |
+| Boyer-Moore | `boyermoore` | csharp | string-search | `dotnet build implementations/csharp/string-search/boyermoore/BoyerMoore.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin/ && dotnet .\output\implementation-tests\csharp-bin\BoyerMoore.dll` |
 | Boyer-Moore | `boyermoore` | c | string-search | `gcc implementations/c/string-search/boyermoore/boyer_moore.c -DTEST -o output/implementation-tests/boyermoore_c.exe && .\output\implementation-tests\boyermoore_c.exe` |
 | Boyer-Moore | `boyermoore` | cpp | string-search | `g++ implementations/cpp/string-search/boyermoore/boyer_moore.cpp -std=c++17 -o output/implementation-tests/boyermoore_cpp.exe && .\output\implementation-tests\boyermoore_cpp.exe` |
 | Boyer-Moore | `boyermoore` | go | string-search | `go run implementations/go/string-search/boyermoore/boyer_moore.go` |
 | Boyer-Moore | `boyermoore` | ruby | string-search | `ruby implementations/ruby/string-search/boyermoore/boyer_moore.rb` |
 | Boyer-Moore | `boyermoore` | perl | string-search | `perl implementations/perl/string-search/boyermoore/boyer_moore.pl` |
 | Boyer-Moore | `boyermoore` | bash | string-search | `bash implementations/bash/string-search/boyermoore/test.sh` |
+| Boyer-Moore | `boyermoore` | visual-basic | string-search | `dotnet build implementations/visual-basic/string-search/boyermoore/BoyerMoore.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin/ && dotnet .\output\implementation-tests\visual-basic-bin\BoyerMoore.dll` |
 
 ## Implementation Gate
 
