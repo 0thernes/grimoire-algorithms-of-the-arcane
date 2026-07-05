@@ -40,13 +40,13 @@ Current local version: `0.9.13-local`.
 | Non-commercial attribution/notice files present | Verified after 0.9.13 audit | `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, `CITATION.cff` |
 | Simulated GitHub Pages artifact payload | Verified after 0.9.13 audit | `output/pages-artifact/pages-artifact-audit-summary.json` |
 | Current GitHub Pages action pins | Verified after 0.9.13 audit | `.github/workflows/pages.yml`, `static-readiness-audit-summary.json` |
-| Public GitHub repository and Pages deployment | Verified live | `docs/GITHUB-PUBLISHING.md`, GitHub Actions run `28727003236` |
+| Public GitHub repository and Pages deployment | Verified live | `docs/GITHUB-PUBLISHING.md`, live GitHub repository, live Pages URL |
 | Objective-level requirement evidence ledger | Verified with open blockers | `output/requirement-evidence/requirement-evidence-summary.json` |
 | Record-specific bibliography scaffold | Verified with empty citation slots | `bibliography/records.json`, `output/bibliography/bibliography-audit-summary.json` |
 
 ## Latest Aggregate
 
-The 0.9.13 local audit adds the 50-language implementation scaffold and publishing docs on top of the 0.9.12 search/filter/source-status pass. The implementation matrix audit verifies 1000 catalog records, 50 language targets, 50,000 planned cells, ledger-matched verified cells, 1000 algorithm-list rows, license/notice attribution, and all 50 language README files. The implementation test runner verifies 14 Boyer-Moore cells with 0 failures. The bibliography scaffold audit verifies 1000 record citation-slot bundles with 0 filled citation slots and 0 issues. The Pages artifact simulation verifies the copied deployment payload and reports 0 issues. The cross-browser smoke now refreshes Chromium, Firefox, and WebKit screenshots from the current build. The public repository is live, the GitHub Pages workflow completed successfully, and the Pages URL returned HTTP 200 with the GRIMOIRE title. The requirement evidence ledger reports objective checks with 0 issues and open truth boundaries.
+The 0.9.13 local audit adds the 50-language implementation scaffold and publishing docs on top of the 0.9.12 search/filter/source-status pass. The implementation matrix audit verifies 1000 catalog records, 50 language targets, 50,000 planned cells, ledger-matched verified cells, 1000 algorithm-list rows, license/notice attribution, and all 50 language README files. The implementation test runner verifies 15 Boyer-Moore cells with 0 failures. The bibliography scaffold audit verifies 1000 record citation-slot bundles with 0 filled citation slots and 0 issues. The Pages artifact simulation verifies the copied deployment payload and reports 0 issues. The cross-browser smoke now refreshes Chromium, Firefox, and WebKit screenshots from the current build. The public repository is live, the GitHub Pages workflow completed successfully, and the Pages URL returned HTTP 200 with the GRIMOIRE title. The requirement evidence ledger reports objective checks with 0 issues and open truth boundaries.
 
 ## Open Items
 

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "catalogVersion": "0.9.13-local",
-  "generatedAt": "2026-07-05T02:37:09.474Z",
+  "generatedAt": "2026-07-05T02:40:36.926Z",
   "verificationPolicy": "A cell is verified only when its source files exist and its testCommand passes locally.",
   "verifiedCells": [
     {
@@ -147,6 +147,22 @@
       ],
       "readme": "implementations/cpp/string-search/boyermoore/README.md",
       "testCommand": "g++ implementations/cpp/string-search/boyermoore/boyer_moore.cpp -std=c++17 -o output/implementation-tests/boyermoore_cpp.exe && .\\output\\implementation-tests\\boyermoore_cpp.exe",
+      "verifiedAt": "2026-07-05",
+      "status": "verified-local"
+    },
+    {
+      "id": "fortran:boyermoore",
+      "catalogVersion": "0.9.13-local",
+      "navLabel": "V01-A-10",
+      "algorithmId": "boyermoore",
+      "algorithmTitle": "Boyer-Moore",
+      "domain": "string-search",
+      "languageId": "fortran",
+      "sourceFiles": [
+        "implementations/fortran/string-search/boyermoore/boyer_moore.f90"
+      ],
+      "readme": "implementations/fortran/string-search/boyermoore/README.md",
+      "testCommand": "gfortran implementations/fortran/string-search/boyermoore/boyer_moore.f90 -o output/implementation-tests/boyermoore_fortran.exe && .\\output\\implementation-tests\\boyermoore_fortran.exe",
       "verifiedAt": "2026-07-05",
       "status": "verified-local"
     },

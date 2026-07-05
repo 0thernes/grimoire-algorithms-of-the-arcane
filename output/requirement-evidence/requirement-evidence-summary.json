@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T02:38:37.342Z",
+  "generatedAt": "2026-07-05T02:44:03.367Z",
   "target": "objective requirement evidence audit",
   "version": "0.9.13-local",
   "status": "verified-with-open-blockers",
@@ -123,7 +123,7 @@
       "status": "verified",
       "languageTargets": 50,
       "plannedCells": 50000,
-      "verifiedCells": 14
+      "verifiedCells": 15
     },
     {
       "id": "implementation-tests",
@@ -134,8 +134,8 @@
         "output/implementation-tests/implementation-test-summary.json"
       ],
       "status": "verified",
-      "totalCells": 14,
-      "passed": 14,
+      "totalCells": 15,
+      "passed": 15,
       "failed": 0
     },
     {
@@ -218,8 +218,8 @@
         "output/pages-artifact/pages-artifact-audit-summary.json"
       ],
       "status": "verified",
-      "siteFileCount": 140,
-      "siteBytes": 7322130,
+      "siteFileCount": 142,
+      "siteBytes": 7327623,
       "siteRemovedAfterAudit": true
     },
     {
@@ -251,7 +251,7 @@
     },
     {
       "id": "github-publish",
-      "description": "Local repository has an origin remote and publishing docs record the live public repo and Pages URL.",
+      "description": "Local repository has an origin remote and publishing docs record the live public repo, Pages workflow, and Pages URL.",
       "evidence": [
         "docs/GITHUB-PUBLISHING.md",
         "ISSUES.md",
@@ -287,7 +287,7 @@
       ],
       "status": "open",
       "plannedCells": 50000,
-      "verifiedCells": 14
+      "verifiedCells": 15
     }
   ],
   "issues": [],

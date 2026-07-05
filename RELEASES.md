@@ -7,8 +7,8 @@ Status: verified local release candidate, `0.9.13-local`.
 Scope:
 
 - added `implementations/` as a 50-language/script source-code expansion scaffold
-- added `implementations/languages.json`, `implementations/coverage-summary.json`, and `implementations/verified-cells.json` with 50,000 planned cells and 14 verified cells
-- added the first real Boyer-Moore source batch for JavaScript, TypeScript, Python, PowerShell, Java, C#, F#, C, C++, Go, Ruby, Perl, Bash, and Visual Basic .NET
+- added `implementations/languages.json`, `implementations/coverage-summary.json`, and `implementations/verified-cells.json` with 50,000 planned cells and 15 verified cells
+- added the first real Boyer-Moore source batch for JavaScript, TypeScript, Python, PowerShell, Java, C#, F#, C, C++, Fortran, Go, Ruby, Perl, Bash, and Visual Basic .NET
 - added `docs/IMPLEMENTATION-MATRIX.md`, `docs/ALGORITHMS-1000.md`, `docs/GITHUB-PUBLISHING.md`, and `docs/LICENSE-POLICY.md`
 - added `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`
 - updated the GitHub Pages workflow to include root policy files, `docs/`, and `implementations/`

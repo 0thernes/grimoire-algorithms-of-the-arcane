@@ -9,7 +9,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Catalog records | 1000 |
 | Language/script targets | 50 |
 | Planned implementation cells | 50000 |
-| Verified implementation cells | 14 |
+| Verified implementation cells | 15 |
 
 ## Language Targets
 
@@ -49,7 +49,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Crystal | `crystal` | typed Ruby-like | `.cr` | 1000 | 0 |
 | D | `d` | systems | `.d` | 1000 | 0 |
 | Ada | `ada` | high-integrity systems | `.adb` | 1000 | 0 |
-| Fortran | `fortran` | scientific computing | `.f90` | 1000 | 0 |
+| Fortran | `fortran` | scientific computing | `.f90` | 1000 | 1 |
 | COBOL | `cobol` | business systems | `.cob` | 1000 | 0 |
 | Common Lisp | `common-lisp` | Lisp | `.lisp` | 1000 | 0 |
 | Scheme | `scheme` | Lisp | `.scm` | 1000 | 0 |
@@ -70,7 +70,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 
 | Engine | Records | Planned Cells | Verified Cells |
 |---|---:|---:|---:|
-| graph | 135 | 6750 | 14 |
+| graph | 135 | 6750 | 15 |
 | logic | 122 | 6100 | 0 |
 | probability | 122 | 6100 | 0 |
 | optimization | 104 | 5200 | 0 |
@@ -98,6 +98,7 @@ This document defines the source-code expansion architecture requested for GRIMO
 | Boyer-Moore | `boyermoore` | fsharp | string-search | `dotnet build implementations/fsharp/string-search/boyermoore/BoyerMoore.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin/ && dotnet .\output\implementation-tests\fsharp-bin\BoyerMoore.dll` |
 | Boyer-Moore | `boyermoore` | c | string-search | `gcc implementations/c/string-search/boyermoore/boyer_moore.c -DTEST -o output/implementation-tests/boyermoore_c.exe && .\output\implementation-tests\boyermoore_c.exe` |
 | Boyer-Moore | `boyermoore` | cpp | string-search | `g++ implementations/cpp/string-search/boyermoore/boyer_moore.cpp -std=c++17 -o output/implementation-tests/boyermoore_cpp.exe && .\output\implementation-tests\boyermoore_cpp.exe` |
+| Boyer-Moore | `boyermoore` | fortran | string-search | `gfortran implementations/fortran/string-search/boyermoore/boyer_moore.f90 -o output/implementation-tests/boyermoore_fortran.exe && .\output\implementation-tests\boyermoore_fortran.exe` |
 | Boyer-Moore | `boyermoore` | go | string-search | `go run implementations/go/string-search/boyermoore/boyer_moore.go` |
 | Boyer-Moore | `boyermoore` | ruby | string-search | `ruby implementations/ruby/string-search/boyermoore/boyer_moore.rb` |
 | Boyer-Moore | `boyermoore` | perl | string-search | `perl implementations/perl/string-search/boyermoore/boyer_moore.pl` |

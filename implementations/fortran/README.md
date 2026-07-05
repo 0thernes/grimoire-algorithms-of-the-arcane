@@ -11,12 +11,12 @@ Expected runtime/toolchain: native
 ## Coverage
 
 - Planned algorithms: 1000
-- Verified implementations: 0
-- Status: planned scaffold
+- Verified implementations: 1
+- Status: partial verified
 
 ## Verified Cells
 
-- None yet.
+- Boyer-Moore (`boyermoore`): `gfortran implementations/fortran/string-search/boyermoore/boyer_moore.f90 -o output/implementation-tests/boyermoore_fortran.exe && .\output\implementation-tests\boyermoore_fortran.exe`
 
 ## Required Shape For Each Algorithm
 

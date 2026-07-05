@@ -27,13 +27,13 @@ Public Pages URL: `https://0thernes.github.io/grimoire-algorithms-of-the-arcane/
 - `catalog.json` exports 1000 records with source-class bibliography placeholders and matches browser DOM/runtime identity, visual, sonic, source, and filter-facet fields.
 - Keyboard/accessibility audit passes sampled desktop, tablet landscape, and phone portrait states.
 - `implementations/` exposes 50 language/script targets.
-- `implementations/coverage-summary.json` reports 50,000 planned cells and 14 verified Boyer-Moore cells.
+- `implementations/coverage-summary.json` reports 50,000 planned cells and 15 verified Boyer-Moore cells.
 - `docs/ALGORITHMS-1000.md` is generated from `catalog.json`.
 - Root non-commercial/attribution files exist: `LICENSE.md`, `NOTICE.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `CITATION.cff`.
-- `output/pages-artifact/pages-artifact-audit-summary.json` verifies the simulated GitHub Pages payload: 140 files, 0 issues, no internal audit/tooling folders copied.
+- `output/pages-artifact/pages-artifact-audit-summary.json` verifies the simulated GitHub Pages payload: 142 files, 0 issues, no internal audit/tooling folders copied.
 - `output/requirement-evidence/requirement-evidence-summary.json` reports objective requirement checks with 0 defects and open truth boundaries.
 - `bibliography/records.json` gives all 1000 records four required citation slots; `output/bibliography/bibliography-audit-summary.json` reports 0 issues and 0 filled slots.
-- GitHub Actions run `28727003236` completed successfully and deployed GitHub Pages.
+- The GitHub Pages workflow has completed successfully and deployed the public Pages URL.
 
 ## Open Truth Boundary
 
