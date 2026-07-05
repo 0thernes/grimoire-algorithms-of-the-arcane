@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T18:54:51.055Z",
+  "generatedAt": "2026-07-05T19:02:59.746Z",
   "target": "objective requirement evidence audit",
   "version": "0.9.13-local",
   "status": "verified-with-open-blockers",
@@ -257,7 +257,7 @@
       ],
       "status": "verified",
       "siteFileCount": 477,
-      "siteBytes": 30245280,
+      "siteBytes": 30245761,
       "siteRemovedAfterAudit": true
     },
     {

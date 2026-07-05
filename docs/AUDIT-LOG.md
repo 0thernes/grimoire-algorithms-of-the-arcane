@@ -22,6 +22,7 @@ Verified checks:
 - `node tools/audit-pages-artifact.mjs`: simulated Pages artifact, 477 files, 103 verified native cells, 0 issues.
 - `node tools/audit-requirement-evidence.mjs`: 17 requirement checks, 0 issues, 2 open items.
 - GitHub Actions deploy endpoint diagnosis: repeated fresh `actions/deploy-pages` attempts accepted one artifact but failed after deployment creation with `Deployment failed, try again later.`; current workflow now publishes a clean `gh-pages` branch instead.
+- GitHub Pages recovery: `gh-pages /` source configured, `POST /pages/builds` queued and returned `built`, and live URL content contained current `Performance HUD` and `REPO-HYGIENE` markers.
 
 Changes:
 
@@ -37,7 +38,7 @@ Changes:
 Honesty boundary:
 
 - The HUD reports browser-exposed device facts. It does not claim direct NPU scheduling or full-device compute control without a future worker/WebGPU architecture and separate tests.
-- The branch-publish workflow avoids the failing Pages deployment endpoint; the site still depends on GitHub Pages serving the configured `gh-pages` branch.
+- The branch-publish workflow prepares the served branch; if GitHub's final Pages deployment endpoint stalls, the non-destructive Pages rebuild endpoint can promote the current `gh-pages` artifact.
 
 ### Knuth-Morris-Pratt verified implementation batch
 

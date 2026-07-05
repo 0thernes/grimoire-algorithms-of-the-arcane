@@ -1,6 +1,6 @@
 # Repo Hygiene Audit
 
-Generated: 2026-07-05T18:54:39.234Z
+Generated: 2026-07-05T19:02:53.895Z
 
 ## Scope
 
@@ -24,7 +24,7 @@ This audit uses tracked repository files as the review set. It is meant to catch
 |---|---:|
 | Tracked files audited | 587 |
 | Markdown files audited | 249 |
-| Total tracked text lines | 1046150 |
+| Total tracked text lines | 1046163 |
 | Root docs | 12 |
 | Docs folder Markdown files | 27 |
 | Tool scripts | 15 |
@@ -67,7 +67,6 @@ This audit uses tracked repository files as the review set. It is meant to catch
 |---|---|---|
 | output/playwright/implementation-matrix-audit-summary.json | pass | {"verifiedCells":103,"ledgerVerifiedCells":103,"expected":103} |
 | output/implementation-tests/implementation-test-summary.json | pass | {"totalCells":103,"passed":103,"failed":0,"expected":103} |
-| output/pages-artifact/pages-artifact-audit-summary.json | pass | {"verifiedCells":103,"expected":103,"issues":0} |
 | output/implementation-acceleration/acceleration-summary.json | pass | {"verifiedCells":103,"remainingCells":49897,"expectedVerified":103,"expectedRemaining":49897} |
 
 ## Consolidation Notes

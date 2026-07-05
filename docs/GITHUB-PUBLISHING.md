@@ -13,7 +13,7 @@
 
 ## Published Status
 
-The source folder is committed and pushed on `main`. The Pages workflow creates a clean generated `gh-pages` branch from the static artifact, and GitHub Pages should be configured to serve the `gh-pages` branch root.
+The source folder is committed and pushed on `main`. The Pages workflow creates a clean generated `gh-pages` branch from the static artifact, and GitHub Pages is configured to serve the `gh-pages` branch root.
 
 Verified deployment anchor:
 
@@ -22,7 +22,7 @@ workflow: Publish GitHub Pages
 actions: https://github.com/0thernes/grimoire-algorithms-of-the-arcane/actions/workflows/pages.yml
 pages: https://0thernes.github.io/grimoire-algorithms-of-the-arcane/
 source branch: gh-pages /
-result: the live Pages URL returned HTTP 200 during the 2026-07-05 audit.
+result: the live Pages URL returned HTTP 200 and contained current Performance HUD / REPO-HYGIENE markers during the 2026-07-05 audit.
 ```
 
 ## Reproducible Publish Sequence
@@ -46,7 +46,7 @@ gh workflow run pages.yml --ref main
 '@ | gh api -X PUT repos/0thernes/grimoire-algorithms-of-the-arcane/pages --input -
 ```
 
-The earlier `build_type=workflow` route was retired after `actions/deploy-pages` accepted the artifact but returned an opaque `Deployment failed, try again later.` status on repeated fresh dispatches. The branch-publish route avoids that failing deployment endpoint while keeping the shipped site artifact clean.
+The earlier `build_type=workflow` route was retired after `actions/deploy-pages` accepted the artifact but returned an opaque `Deployment failed, try again later.` status on repeated fresh dispatches. The branch-publish route keeps the shipped site artifact clean. After switching the Pages source to `gh-pages /`, a non-destructive `POST /pages/builds` rebuild promoted the branch artifact successfully.
 
 ## Pages Evidence
 
