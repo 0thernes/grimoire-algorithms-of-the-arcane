@@ -104,7 +104,7 @@ async (page) => {
   const deployMissingImplementationsCopy = !/cp -R implementations site\/implementations/.test(workflow);
   const deployMissingBibliographyCopy = !/cp -R bibliography site\/bibliography/.test(workflow);
   const deployMissingLicenseCopy = !/LICENSE\.md NOTICE\.md CONTRIBUTING\.md SECURITY\.md CITATION\.cff site\//.test(workflow);
-  const requiredPagesActions = ['actions/checkout@v6', 'actions/configure-pages@v5', 'actions/upload-pages-artifact@v4', 'actions/deploy-pages@v4'];
+  const requiredPagesActions = ['actions/checkout@v7', 'actions/configure-pages@v6', 'actions/upload-pages-artifact@v5', 'actions/deploy-pages@v5'];
   const stalePagesActions = requiredPagesActions.filter(action =>
     !new RegExp(`uses:\\s*${action.replace('/', '\\/').replace('@', '@')}`).test(workflow)
   );

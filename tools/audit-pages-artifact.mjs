@@ -78,7 +78,7 @@ function text(file) {
 }
 
 function currentPagesActionPins(workflowText) {
-  const requiredPagesActions = ['actions/checkout@v6', 'actions/configure-pages@v5', 'actions/upload-pages-artifact@v4', 'actions/deploy-pages@v4'];
+  const requiredPagesActions = ['actions/checkout@v7', 'actions/configure-pages@v6', 'actions/upload-pages-artifact@v5', 'actions/deploy-pages@v5'];
   return {
     requiredPagesActions,
     stalePagesActions: requiredPagesActions.filter(action =>

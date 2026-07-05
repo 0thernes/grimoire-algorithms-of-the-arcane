@@ -371,7 +371,7 @@ function makePublishingDoc(catalog) {
 - Catalog version: \`${catalog.version}\`
 - Static site: \`index.html\`, \`style.css\`, \`viz.js\`, \`catalog.json\`
 - GitHub Pages workflow: \`.github/workflows/pages.yml\`
-- Pages action pins: \`actions/checkout@v6\`, \`actions/configure-pages@v5\`, \`actions/upload-pages-artifact@v4\`, \`actions/deploy-pages@v4\`
+- Pages action pins: \`actions/checkout@v7\`, \`actions/configure-pages@v6\`, \`actions/upload-pages-artifact@v5\`, \`actions/deploy-pages@v5\`
 - Local Git repository: initialized on \`main\`
 - Public remote: \`https://github.com/0thernes/grimoire-algorithms-of-the-arcane.git\`
 - Public repository: \`https://github.com/0thernes/grimoire-algorithms-of-the-arcane\`
@@ -381,13 +381,13 @@ function makePublishingDoc(catalog) {
 
 The folder has been committed, pushed, and deployed through the GitHub Pages workflow.
 
-Latest verified deployment:
+Verified deployment anchor:
 
 \`\`\`text
 workflow: Deploy GitHub Pages
-run: https://github.com/0thernes/grimoire-algorithms-of-the-arcane/actions/runs/28727003236
-commit: c854b6ea50c7ef23cb92ff657e64f7aeaac69235
-result: success
+actions: https://github.com/0thernes/grimoire-algorithms-of-the-arcane/actions/workflows/pages.yml
+pages: https://0thernes.github.io/grimoire-algorithms-of-the-arcane/
+result: current successful runs are visible in GitHub Actions; the live Pages URL returned HTTP 200 during the 2026-07-05 audit.
 \`\`\`
 
 ## Reproducible Publish Sequence
@@ -402,7 +402,7 @@ gh repo edit 0thernes/grimoire-algorithms-of-the-arcane --description "GRIMOIRE:
 gh api -X POST repos/0thernes/grimoire-algorithms-of-the-arcane/pages -f build_type=workflow
 \`\`\`
 
-The first workflow attempt ran before Pages was enabled and failed at \`configure-pages\`. After \`build_type=workflow\` was enabled, the same run was rerun and completed successfully.
+The first workflow attempt ran before Pages was enabled and failed at \`configure-pages\`. After \`build_type=workflow\` was enabled, reruns completed successfully and deployed the static site.
 
 ## Pages Evidence
 

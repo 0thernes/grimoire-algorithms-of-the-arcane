@@ -85,7 +85,7 @@ Highest-value smoke runners:
 
 The workflow is `.github/workflows/pages.yml`. It copies static runtime files, `catalog.json`, root Markdown docs, `VERSION`, `.nojekyll`, `404.html`, license/notice/contribution/security/citation files, the `docs/` folder, the `implementations/` folder, and the `bibliography/` folder into the Pages artifact.
 
-The current action pins are `actions/checkout@v6`, `actions/configure-pages@v5`, `actions/upload-pages-artifact@v4`, and `actions/deploy-pages@v4`.
+The current action pins are `actions/checkout@v7`, `actions/configure-pages@v6`, `actions/upload-pages-artifact@v5`, and `actions/deploy-pages@v5`.
 
 No generated `output/playwright/` evidence is deployed by the workflow.
 

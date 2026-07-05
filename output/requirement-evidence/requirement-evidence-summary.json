@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T02:44:03.367Z",
+  "generatedAt": "2026-07-05T02:47:23.297Z",
   "target": "objective requirement evidence audit",
   "version": "0.9.13-local",
   "status": "verified-with-open-blockers",
@@ -232,10 +232,10 @@
       ],
       "status": "verified",
       "requiredPagesActions": [
-        "actions/checkout@v6",
-        "actions/configure-pages@v5",
-        "actions/upload-pages-artifact@v4",
-        "actions/deploy-pages@v4"
+        "actions/checkout@v7",
+        "actions/configure-pages@v6",
+        "actions/upload-pages-artifact@v5",
+        "actions/deploy-pages@v5"
       ],
       "stalePagesActions": []
     },

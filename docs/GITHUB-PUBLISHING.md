@@ -5,7 +5,7 @@
 - Catalog version: `0.9.13-local`
 - Static site: `index.html`, `style.css`, `viz.js`, `catalog.json`
 - GitHub Pages workflow: `.github/workflows/pages.yml`
-- Pages action pins: `actions/checkout@v6`, `actions/configure-pages@v5`, `actions/upload-pages-artifact@v4`, `actions/deploy-pages@v4`
+- Pages action pins: `actions/checkout@v7`, `actions/configure-pages@v6`, `actions/upload-pages-artifact@v5`, `actions/deploy-pages@v5`
 - Local Git repository: initialized on `main`
 - Public remote: `https://github.com/0thernes/grimoire-algorithms-of-the-arcane.git`
 - Public repository: `https://github.com/0thernes/grimoire-algorithms-of-the-arcane`

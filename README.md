@@ -38,7 +38,7 @@ Then open `http://127.0.0.1:8123/`.
 
 This project is intended to publish as a plain static site. The Pages workflow copies the runtime site files, `catalog.json`, root Markdown docs, `VERSION`, `.nojekyll`, `404.html`, license/notice/contribution/security/citation files, `docs/`, `implementations/`, and `bibliography/`.
 
-Current Pages action pins are `actions/checkout@v6`, `actions/configure-pages@v5`, `actions/upload-pages-artifact@v4`, and `actions/deploy-pages@v4`.
+Current Pages action pins are `actions/checkout@v7`, `actions/configure-pages@v6`, `actions/upload-pages-artifact@v5`, and `actions/deploy-pages@v5`.
 
 Use the repository root as the Pages source. No bundler, package install, or generated build output is required.
 
