@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T02:47:19.034Z",
+  "generatedAt": "2026-07-05T02:53:41.317Z",
   "target": "verified implementation cells",
   "manifest": "implementations/verified-cells.json",
   "totalCells": 15,
@@ -12,7 +12,7 @@
       "languageId": "javascript",
       "command": "node implementations/javascript/string-search/boyermoore/test.js",
       "status": 0,
-      "durationMs": 80,
+      "durationMs": 72,
       "stdout": "javascript boyermoore ok",
       "stderr": ""
     },
@@ -22,7 +22,7 @@
       "languageId": "typescript",
       "command": "deno run --quiet implementations/typescript/string-search/boyermoore/test.ts",
       "status": 0,
-      "durationMs": 99,
+      "durationMs": 110,
       "stdout": "typescript boyermoore ok",
       "stderr": ""
     },
@@ -32,7 +32,7 @@
       "languageId": "python",
       "command": "python -B implementations/python/string-search/boyermoore/test_boyer_moore.py",
       "status": 0,
-      "durationMs": 50,
+      "durationMs": 59,
       "stdout": "python boyermoore ok",
       "stderr": ""
     },
@@ -42,7 +42,7 @@
       "languageId": "powershell",
       "command": "pwsh -NoProfile -File implementations/powershell/string-search/boyermoore/test.ps1",
       "status": 0,
-      "durationMs": 377,
+      "durationMs": 395,
       "stdout": "powershell boyermoore ok",
       "stderr": ""
     },
@@ -52,7 +52,7 @@
       "languageId": "java",
       "command": "javac -d output/implementation-tests implementations/java/string-search/boyermoore/BoyerMoore.java && java -cp output/implementation-tests BoyerMoore",
       "status": 0,
-      "durationMs": 656,
+      "durationMs": 568,
       "stdout": "java boyermoore ok",
       "stderr": ""
     },
@@ -62,8 +62,8 @@
       "languageId": "csharp",
       "command": "dotnet build implementations/csharp/string-search/boyermoore/BoyerMoore.csproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/csharp-obj/ -p:OutputPath=../../../../output/implementation-tests/csharp-bin/ && dotnet .\\output\\implementation-tests\\csharp-bin\\BoyerMoore.dll",
       "status": 0,
-      "durationMs": 1049,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.81\r\ncsharp boyermoore ok",
+      "durationMs": 946,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.71\r\ncsharp boyermoore ok",
       "stderr": ""
     },
     {
@@ -72,8 +72,8 @@
       "languageId": "fsharp",
       "command": "dotnet build implementations/fsharp/string-search/boyermoore/BoyerMoore.fsproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/fsharp-obj/ -p:OutputPath=../../../../output/implementation-tests/fsharp-bin/ && dotnet .\\output\\implementation-tests\\fsharp-bin\\BoyerMoore.dll",
       "status": 0,
-      "durationMs": 1924,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.67\r\nfsharp boyermoore ok",
+      "durationMs": 1020,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.77\r\nfsharp boyermoore ok",
       "stderr": ""
     },
     {
@@ -82,7 +82,7 @@
       "languageId": "c",
       "command": "gcc implementations/c/string-search/boyermoore/boyer_moore.c -DTEST -o output/implementation-tests/boyermoore_c.exe && .\\output\\implementation-tests\\boyermoore_c.exe",
       "status": 0,
-      "durationMs": 225,
+      "durationMs": 233,
       "stdout": "c boyermoore ok",
       "stderr": ""
     },
@@ -92,7 +92,7 @@
       "languageId": "cpp",
       "command": "g++ implementations/cpp/string-search/boyermoore/boyer_moore.cpp -std=c++17 -o output/implementation-tests/boyermoore_cpp.exe && .\\output\\implementation-tests\\boyermoore_cpp.exe",
       "status": 0,
-      "durationMs": 575,
+      "durationMs": 553,
       "stdout": "cpp boyermoore ok",
       "stderr": ""
     },
@@ -102,7 +102,7 @@
       "languageId": "fortran",
       "command": "gfortran implementations/fortran/string-search/boyermoore/boyer_moore.f90 -o output/implementation-tests/boyermoore_fortran.exe && .\\output\\implementation-tests\\boyermoore_fortran.exe",
       "status": 0,
-      "durationMs": 228,
+      "durationMs": 207,
       "stdout": "fortran boyermoore ok",
       "stderr": ""
     },
@@ -112,7 +112,7 @@
       "languageId": "go",
       "command": "go run implementations/go/string-search/boyermoore/boyer_moore.go",
       "status": 0,
-      "durationMs": 244,
+      "durationMs": 228,
       "stdout": "go boyermoore ok",
       "stderr": ""
     },
@@ -122,7 +122,7 @@
       "languageId": "ruby",
       "command": "ruby implementations/ruby/string-search/boyermoore/boyer_moore.rb",
       "status": 0,
-      "durationMs": 111,
+      "durationMs": 100,
       "stdout": "ruby boyermoore ok",
       "stderr": ""
     },
@@ -132,7 +132,7 @@
       "languageId": "perl",
       "command": "perl implementations/perl/string-search/boyermoore/boyer_moore.pl",
       "status": 0,
-      "durationMs": 43,
+      "durationMs": 37,
       "stdout": "perl boyermoore ok",
       "stderr": ""
     },
@@ -142,7 +142,7 @@
       "languageId": "bash",
       "command": "bash implementations/bash/string-search/boyermoore/test.sh",
       "status": 0,
-      "durationMs": 3567,
+      "durationMs": 4517,
       "stdout": "bash boyermoore ok",
       "stderr": ""
     },
@@ -152,8 +152,8 @@
       "languageId": "visual-basic",
       "command": "dotnet build implementations/visual-basic/string-search/boyermoore/BoyerMoore.vbproj --nologo -v:q -p:BaseIntermediateOutputPath=../../../../output/implementation-tests/visual-basic-obj/ -p:OutputPath=../../../../output/implementation-tests/visual-basic-bin/ && dotnet .\\output\\implementation-tests\\visual-basic-bin\\BoyerMoore.dll",
       "status": 0,
-      "durationMs": 1136,
-      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:00.86\r\nvisual-basic boyermoore ok",
+      "durationMs": 1525,
+      "stdout": "Build succeeded.\r\n    0 Warning(s)\r\n    0 Error(s)\r\n\r\nTime Elapsed 00:00:01.14\r\nvisual-basic boyermoore ok",
       "stderr": ""
     }
   ]

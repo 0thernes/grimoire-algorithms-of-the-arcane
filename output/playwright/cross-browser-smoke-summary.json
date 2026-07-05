@@ -1,26 +1,30 @@
 {
-  "generatedAt": "2026-07-05T02:26:58.291Z",
-  "url": "http://127.0.0.1:4177/index.html?crossBrowser=1783218396940",
+  "generatedAt": "2026-07-05T02:54:30.797Z",
+  "url": "http://127.0.0.1:4177/index.html?crossBrowser=1783220041930",
   "viewport": "1280x720",
   "engines": [
     {
       "engine": "chromium",
       "file": "output/playwright/cross-browser-chromium.png",
-      "bytes": 374452,
+      "bytes": 17023,
       "exists": true
     },
     {
       "engine": "firefox",
       "file": "output/playwright/cross-browser-firefox.png",
-      "bytes": 389431,
+      "bytes": 38737,
       "exists": true
     },
     {
       "engine": "webkit",
       "file": "output/playwright/cross-browser-webkit.png",
-      "bytes": 303123,
+      "bytes": 5596,
       "exists": true
     }
   ],
-  "failures": []
+  "failures": [
+    "chromium: screenshot too small (17023 bytes)",
+    "firefox: screenshot too small (38737 bytes)",
+    "webkit: screenshot too small (5596 bytes)"
+  ]
 }

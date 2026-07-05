@@ -83,6 +83,23 @@ function readJson(relPath) {
   return JSON.parse(fs.readFileSync(path.join(root, relPath), 'utf8'));
 }
 
+function ensureSummary(relPath, fallbackCommand) {
+  const absPath = path.join(root, relPath);
+  if (fs.existsSync(absPath)) return readJson(relPath);
+
+  if (fallbackCommand) {
+    const command = Array.isArray(fallbackCommand) ? fallbackCommand[0] : fallbackCommand;
+    const args = Array.isArray(fallbackCommand) ? fallbackCommand.slice(1) : [];
+    const result = spawnSync(command, args, { cwd: root, encoding: 'utf8', shell: true });
+    if (result.status !== 0 || !fs.existsSync(absPath)) {
+      throw new Error(`Missing summary ${relPath} and fallback command failed: ${fallbackCommand[0]} ${fallbackCommand.slice(1).join(' ')}`);
+    }
+    return readJson(relPath);
+  }
+
+  throw new Error(`Missing summary ${relPath}. Run its producing script first.`);
+}
+
 function exists(relPath) {
   return fs.existsSync(path.join(root, relPath));
 }
@@ -144,10 +161,10 @@ function main() {
   const bibliography = readJson('bibliography/records.json');
   const languageTargets = Array.isArray(languages.targets) ? languages.targets : languages.languages;
   const verifiedCells = Array.isArray(verifiedLedger.verifiedCells) ? verifiedLedger.verifiedCells : [];
-  const artifact = readJson('output/pages-artifact/pages-artifact-audit-summary.json');
-  const cross = readJson('output/playwright/cross-browser-smoke-summary.json');
-  const implementationTests = readJson('output/implementation-tests/implementation-test-summary.json');
-  const bibliographyAudit = readJson('output/bibliography/bibliography-audit-summary.json');
+  const artifact = ensureSummary('output/pages-artifact/pages-artifact-audit-summary.json', ['node', 'tools/audit-pages-artifact.mjs']);
+  const cross = ensureSummary('output/playwright/cross-browser-smoke-summary.json', ['node', 'tools/cross-browser-smoke.mjs']);
+  const implementationTests = ensureSummary('output/implementation-tests/implementation-test-summary.json', ['node', 'tools/verify-implementations.mjs']);
+  const bibliographyAudit = ensureSummary('output/bibliography/bibliography-audit-summary.json', ['node', 'tools/audit-bibliography-ledger.mjs']);
 
   const volumeCounts = catalog.records.reduce((acc, record) => {
     acc[record.volume] = (acc[record.volume] || 0) + 1;
